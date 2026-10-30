@@ -10,10 +10,9 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-blue" alt="License"></a>
 </p>
 
-<p align="center">
-  <a href="https://axis-bench.github.io/"><img src="docs/assets/teaser-poster.jpg" width="100%" alt="The AXIS-Bench title card over a mosaic of pretraining scenes, with a play button. Opens the overview video."></a>
-  <br><sub>Watch the three-minute introduction to AXIS-Bench.</sub>
-</p>
+https://github.com/user-attachments/assets/abdf2851-a6c9-43d9-9556-e4a4b285cb27
+
+<p align="center"><sub>The three-minute introduction to AXIS-Bench. More on the <a href="https://axis-bench.github.io/">website</a>.</sub></p>
 
 # Overview
 

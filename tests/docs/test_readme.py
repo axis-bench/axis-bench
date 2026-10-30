@@ -19,13 +19,13 @@ SECTIONS = ["Overview", "Updates", "Installation", "Task information", "Real-wor
 BADGES = [("Paper", "https://arxiv.org/abs/2610.18869"), ("Website", "https://axis-bench.github.io/"),
           ("Docs", "https://axis-bench.github.io/axis-bench/"), ("Data", "https://huggingface.co/axisrobotics"),
           ("AXIS paper", "https://arxiv.org/abs/2607.21588"), ("License", "LICENSE")]
-POSTER = "docs/assets/teaser-poster.jpg"
-MEDIA = [POSTER, "docs/assets/overview.png", "docs/assets/pretraining-tasks.gif",
+VIDEO = "https://github.com/user-attachments/assets/abdf2851-a6c9-43d9-9556-e4a4b285cb27"
+MEDIA = ["docs/assets/overview.png", "docs/assets/pretraining-tasks.gif",
          "docs/assets/quality-levels.gif", "docs/assets/evaluation.gif", "docs/assets/realworld-demo.gif",
          "docs/assets/realworld-workspace.jpg", "docs/assets/realworld-pretraining.gif"]
 CITED = ("@article{yan2026matters,", "@article{zhao2026axis,")
 MAX_LINES = 140
-# The page's weight as built: the poster (0.1 MB), the overview figure (0.6 MB), GIFs of 7.0, 3.8, 3.9,
+# The page's weight as built (the overview video is a GitHub attachment, not a repository file): the overview figure (0.6 MB), GIFs of 7.0, 3.8, 3.9,
 # 3.8 (the real-robot comparison) and 4.0 MB and the workspace still (0.02 MB): 23.19 MB.
 MAX_MEDIA_BYTES = 23_200_000
 MAX_FILE_BYTES = 8_000_000           # any one of them: a GIF over this is too slow on a page
@@ -46,12 +46,13 @@ def test_title_badges_then_exactly_the_sections_in_order():
     assert re.findall(r"^# (.+)$", TEXT, re.M) == SECTIONS
 
 
-def test_the_video_poster_links_to_the_website_and_no_author_list_ships():
-    assert re.search(rf'<a href="https://axis-bench\.github\.io/"><img src="{re.escape(POSTER)}"', HEAD)
+def test_the_overview_video_plays_inline_with_the_website_link_and_no_author_list_ships():
+    assert VIDEO in LINES                    # a bare attachment URL on its own line renders as a player
+    assert '<a href="https://axis-bench.github.io/">website</a>' in HEAD
     assert "<sup>" not in TEXT and "Corresponding author" not in TEXT
 
 
-def test_the_media_are_the_poster_the_overview_figure_the_gifs_and_the_workspace_still_within_the_budget():
+def test_the_media_are_the_overview_figure_the_gifs_and_the_workspace_still_within_the_budget():
     images = [i for i in re.findall(r'<img src="([^"]+)"', TEXT) if not i.startswith("https://")]
     assert images == MEDIA
     assert sum(public_file(i).stat().st_size for i in images) <= MAX_MEDIA_BYTES
