@@ -1,0 +1,29 @@
+schema = "qvla.env/1"
+tier = "lerobot"
+description = "SmolVLA and X-VLA training: the LeRobot line (Python >= 3.12, numpy 2.x, torch 2.11 for CUDA 12.8). The reference policy servers also need openpi-client, which pins numpy < 2; it is installed without its dependencies and works with numpy 2."
+checkout = "third_party/lerobot"
+python = "3.12"
+lock = "uv.lock"
+lock_sha256 = "6e131e749b9893f1b622c4690f913c3d35216204405708356592222b5fd16238"
+# The client's own dependencies other than numpy (which LeRobot's numpy 2 serves) are not in the
+# extras' closure; they are installed at the versions the openpi line locks, and dm-tree's own two
+# (absl-py, wrapt) at the versions this install resolved when the environment was first built,
+# pinned so every build installs the closure `env check` expects. A later `uv sync` removes them
+# again: rerun the last two lines after one.
+build = [
+  "uv sync --frozen --python 3.12 --extra training --extra smolvla --extra xvla --extra test",
+  "uv pip install --python .venv/bin/python --no-deps ../openpi/packages/openpi-client",
+  "uv pip install --python .venv/bin/python msgpack==1.1.0 websockets==15.0.1 dm-tree==0.1.9 absl-py==2.5.1 wrapt==2.5.1",
+]
+
+[versions]
+numpy = "2.2.6"
+torch = "2.11.0+cu128"
+transformers = "5.5.4"
+accelerate = "1.14.0"
+datasets = "4.8.5"
+draccus = "0.11.6"
+lerobot = "0.6.2"
+
+[gate]
+imports = ["lerobot.scripts.lerobot_train", "lerobot.scripts.axis_resolve_config", "openpi_client.websocket_client_policy"]

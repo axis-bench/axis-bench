@@ -1,0 +1,24 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+π0.5,BC pretraining / plain FT,untagged inference,bc|bare,50.0,50.0,0.0,38.490017945975055,the plain-BC reference band; native protocol
+π0.5,BC pretraining / plain FT,tag-5 inference,bc|cond,,50.0,,,Sec. V.D only; not a Fig. 7 bar
+π0.5,BC pretraining / tagged FT,untagged inference,bct|bare,,50.0,,,
+π0.5,BC pretraining / tagged FT,tag-5 inference,bct|cond,,50.0,,,native protocol
+π0.5,conditioning / plain FT,untagged inference,cfgnp|bare,,50.0,,,native protocol
+π0.5,conditioning / plain FT,tag-5 inference,cfgnp|cond,,50.0,,,
+π0.5,conditioning / tagged FT,untagged inference,cfg_ph_ep|bare,,50.0,,,
+π0.5,conditioning / tagged FT,tag-5 inference,cfg_ph_ep|cond,83.33333333333333,50.0,66.66666666666667,27.21655269759087,native protocol
+SmolVLA,BC pretraining / plain FT,untagged inference,svla_bc|bare,,,,,the plain-BC reference band; native protocol
+SmolVLA,BC pretraining / plain FT,tag-5 inference,svla_bc|cond,,,,,Sec. V.D only; not a Fig. 7 bar
+SmolVLA,BC pretraining / tagged FT,untagged inference,svla_bct|bare,,,,,
+SmolVLA,BC pretraining / tagged FT,tag-5 inference,svla_bct|cond,,,,,native protocol
+SmolVLA,conditioning / plain FT,untagged inference,svla_cfgnp|bare,,,,,native protocol
+SmolVLA,conditioning / plain FT,tag-5 inference,svla_cfgnp|cond,,,,,
+SmolVLA,conditioning / tagged FT,untagged inference,svla_cfgph|bare,,,,,
+SmolVLA,conditioning / tagged FT,tag-5 inference,svla_cfgph|cond,,,,,native protocol
+X-VLA,BC pretraining / plain FT,untagged inference,xvla_bc|bare,,,,,the plain-BC reference band; native protocol
+X-VLA,BC pretraining / tagged FT,untagged inference,xvla_bct|bare,,,,,
+X-VLA,BC pretraining / tagged FT,tag-5 inference,xvla_bct|cond,,,,,native protocol
+X-VLA,conditioning / plain FT,untagged inference,xvla_cfgnp|bare,,,,,native protocol
+X-VLA,conditioning / plain FT,tag-5 inference,xvla_cfgnp|cond,,,,,
+X-VLA,conditioning / tagged FT,untagged inference,xvla_cfgph|bare,,,,,
+X-VLA,conditioning / tagged FT,tag-5 inference,xvla_cfgph|cond,,,,,native protocol

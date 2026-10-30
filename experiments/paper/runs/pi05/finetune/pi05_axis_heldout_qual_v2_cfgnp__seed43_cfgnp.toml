@@ -1,0 +1,31 @@
+[arm]
+id = "pi05.finetune.pi05_axis_heldout_qual_v2_cfgnp__seed43_cfgnp"
+backbone = "pi05-openpi"
+stage = "finetune"
+track = "paper"
+paper_ref = "pi05_axis_heldout_qual_v2_cfgnp"
+
+[init]
+ckpt = "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s43/20604#sha256:ff52a2f1a6587668e4c5b6fc76495a02bc80aed4ca9cd5fec8bbe106461a81f8"
+
+[data]
+rowspace = "heldout24_ft#sha256:813de4957527d3394cadc9e564f9718769c82415c9091f4971ba5e47641960f9"
+action_space = "droid8"
+asset_id = "Devon018/Franka-Datasets-v2"
+image = "center_crop"
+
+[norm]
+artifact = "heldout24_qual_v2#sha256:b1808cdd0c7000f30b93eff8246e814e5e90e1a8dbb33a83be47936500fa6454"
+
+[recipe]
+preset = "pi05.finetune.lora.paper"
+seed = 42
+
+[paper]
+cells = ["cfgnp43|bare", "cfgnp43|cond"]
+checkpoint = "pi05/ft/pi05_axis_heldout_qual_v2_cfgnp__seed43_cfgnp"
+launch_overrides = ["--lr-schedule.warmup-steps=500", "--weight-loader.params-path=<init axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s43/20604#sha256:ff52a2f1a6587668e4c5b6fc76495a02bc80aed4ca9cd5fec8bbe106461a81f8>"]
+pretrain_seed = 43
+registered_config = "pi05_axis_heldout_qual_v2_cfgnp"
+signals = ["ft:plain"]
+train_config = "pi05_axis_heldout_qual_v2_cfgnp"

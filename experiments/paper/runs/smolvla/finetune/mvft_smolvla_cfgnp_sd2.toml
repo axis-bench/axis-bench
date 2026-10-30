@@ -1,0 +1,24 @@
+[arm]
+id = "smolvla.finetune.mvft_smolvla_cfgnp_sd2"
+backbone = "smolvla-lerobot"
+stage = "finetune"
+track = "paper"
+
+[init]
+ckpt = "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase_sd2/020621#sha256:6c6a0e967d9d60e8f3bbb978d6c18fa4cdff6d2dd2bc8590de1df54fde2c6bed"
+
+[data]
+rowspace = "heldout24_ft#sha256:813de4957527d3394cadc9e564f9718769c82415c9091f4971ba5e47641960f9"
+
+[signal]
+bundle = "sha256:74b6f3d20b42a997f09ccfefb9ce72675be1148f685ad325d31ff936446e8500"
+
+[recipe]
+preset = "smolvla.finetune.paper"
+seed = 2
+
+[paper]
+cells = ["svla_cfgnp_sd2|bare", "svla_cfgnp_sd2|cond"]
+checkpoint = "smolvla/ft/mvft_smolvla_cfgnp_sd2"
+pretrain_seed = 2
+signals = ["lerobot.ft_rows_all"]

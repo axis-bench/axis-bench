@@ -1,0 +1,20 @@
+[arm]
+id = "pi05.finetune.realrobot_awr"
+backbone = "pi05-openpi"
+stage = "finetune"
+track = "realrobot"
+
+[init]
+ckpt = "run:pi05.pretrain.realrobot_awr"
+
+[data]
+rowspace = "local:fr3_392_tail10"
+action_space = "droid8"
+image = "center_crop"
+
+[norm]
+artifact = "local:norm_fr3"
+
+[recipe]
+preset = "pi05.finetune.lora.realrobot"
+seed = 42

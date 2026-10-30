@@ -1,0 +1,95 @@
+AXIS-Bench
+Copyright 2026 the AXIS-Bench authors.
+
+The code in this repository is licensed under the Apache License, Version 2.0 (LICENSE). This file
+lists the third-party material that the repository, its submodules and its released data and
+checkpoints include or build on, and the terms each is under.
+
+
+Submodules (third_party/)
+-------------------------
+
+third_party/openpi
+  openpi by Physical Intelligence (https://github.com/Physical-Intelligence/openpi), Apache-2.0,
+  with the AXIS-Bench training and serving hooks. Its LICENSE_GEMMA.txt holds the Gemma Terms of
+  Use, which apply to the pi0.5 weights.
+
+third_party/lerobot
+  LeRobot by Hugging Face (https://github.com/huggingface/lerobot), Apache-2.0, Copyright 2024 The
+  Hugging Face team, with the AXIS-Bench signal hooks for SmolVLA and X-VLA.
+
+third_party/axis-render
+  The AXIS-Render evaluation subset, Apache-2.0, with:
+  - assets/robots/robotiq_2f85/: the Robotiq 2F-85 model from MuJoCo Menagerie
+    (https://github.com/google-deepmind/mujoco_menagerie, commit 71f066ad), BSD-2-Clause,
+    Copyright (c) 2013, ROS-Industrial. Its LICENSE ships in that directory.
+  - assets/table_textures/: textures from Poly Haven (https://polyhaven.com), CC0-1.0.
+  - config/scenes/: AXIS-authored procedural scene recipes, Apache-2.0. They cite Kujiale showcase
+    scenes by number; no Kujiale asset is included.
+
+
+Data (https://huggingface.co/axisrobotics)
+------------------------------------------
+
+qvla-v1-corpus, qvla-v1-bench, qvla-v1-results and qvla-v1-realworld are licensed under CC-BY-4.0
+(https://creativecommons.org/licenses/by/4.0/; the LICENSE file of each repository), except:
+  - qvla-v1-bench assets/robots/franka_emika_panda/ and qvla-v1-realworld
+    robots/franka_emika_panda/: the Franka Emika Panda model from MuJoCo Menagerie, Apache-2.0.
+    Its LICENSE ships with it (qvla-v1-bench LICENSES/franka_emika_panda/LICENSE, qvla-v1-realworld
+    robots/franka_emika_panda/LICENSE).
+  - qvla-v1-bench assets/textures/polyhaven/ and assets/textures/table/: textures from Poly Haven,
+    CC0-1.0.
+  - qvla-v1-bench assets/tabletopgen/ and the tabletopgen meshes of qvla-v1-realworld: AXIS's
+    generated table-top object meshes and textures, CC-BY-4.0.
+
+Preferred attribution for the data: Yan et al., "What Matters in Quality-Aware VLA Pretraining: A
+Benchmark and Empirical Study", arXiv:2610.18869 (2026), https://arxiv.org/abs/2610.18869, and the
+repository's name and URL (https://huggingface.co/axisrobotics/<repository>).
+
+
+Checkpoints (https://huggingface.co/axisrobotics)
+-------------------------------------------------
+
+qvla-v1-pi05
+  pi0.5 checkpoints. pi0.5 derives from PaliGemma (Gemma), so these are Model Derivatives of Gemma:
+  Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
+  (a copy: LICENSE_GEMMA.txt in the repository and in third_party/openpi).
+  The checkpoints are modified weights: the AXIS-Bench authors further pretrained and fine-tuned
+  Physical Intelligence's pi05_base and pi05_droid to produce them.
+  Their use is subject to the use restrictions of Section 3.2 of the Gemma Terms of Use, including the
+  Gemma Prohibited Use Policy at ai.google.dev/gemma/prohibited_use_policy.
+
+qvla-v1-smolvla
+  SmolVLA checkpoints, Apache-2.0, trained from lerobot/smolvla_base, which builds on
+  HuggingFaceTB/SmolVLM2-500M-Video-Instruct (Apache-2.0).
+
+qvla-v1-xvla
+  X-VLA checkpoints, Apache-2.0, trained from lerobot/xvla-base with the facebook/bart-large
+  tokenizer (both Apache-2.0).
+
+
+Base weights (downloaded from their publishers, not redistributed)
+------------------------------------------------------------------
+
+`qvla data get base-weights` downloads each base from its publisher, whose terms you accept;
+conf/recipes/bases.lock.json pins every file:
+  - pi05_droid and pi05_base (gs://openpi-assets/checkpoints/) and the PaliGemma tokenizer
+    (gs://big_vision/paligemma_tokenizer.model): the Gemma Terms of Use, with the use restrictions
+    of its Section 3.2.
+  - smolvla_base (lerobot/smolvla_base) and SmolVLM2-500M-Video-Instruct
+    (HuggingFaceTB/SmolVLM2-500M-Video-Instruct): Apache-2.0.
+  - xvla_base (lerobot/xvla-base) and its tokenizer facebook/bart-large: Apache-2.0.
+
+
+Real-robot data tools
+---------------------
+
+The FR3 real-robot data tools (axis_qvla/realrobot/realdata) re-implement data-preparation steps written by
+Litian Gong and Zhixu Li for the FR3 dataset Litian2002/tasl-fr3-10task-250ep-video.
+
+
+Documentation media
+-------------------
+
+The captions of the GIFs in docs/assets are set in DejaVu Sans Condensed; no font file is
+distributed.

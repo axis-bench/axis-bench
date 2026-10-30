@@ -1,0 +1,12 @@
+{
+ "files": {
+  "ASSETS.lock.json": "c053a3353f7994b40ac1ce9aea05c941e8ae5ec3665ddf6984485c1b16eb9450",
+  "execution.json": "b50112ccb5e2134a0adb38d8f786f8c87e5b061831cdd9fefe298caed9616cac",
+  "franka_heldout24.json": "6982b5f0dc55f79aab261e815a4b29084d49d37f3fa8e29443e6d6fd1effecfa",
+  "franka_heldout24.layouts.json": "208ff51c93da759b808d0ee9d39731c98900602b121a26b9762f8fadc453f446",
+  "franka_heldout24.tasks.json": "0944a7bbf52da88564cf456deaa5d63c684859c25b71918b7c1a82f42c081f4c"
+ },
+ "schema": "qvla.benchmark_version/1",
+ "sha256": "b1d47d1d379da64353ebdd2c65249745584dd6c8f034af9b58651f25deb40cfe",
+ "version": "axis-heldout-v1"
+}

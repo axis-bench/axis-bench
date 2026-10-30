@@ -1,0 +1,48 @@
+schema = "qvla.recipe/1"
+id = "pi05.pretrain.full.paper"
+backbone = "pi05-openpi"
+stage = "pretrain"
+track = "paper"
+paper_budget = true
+description = "Paper pretraining of pi0.5: full weights from pi05_droid, 20,605 steps at global batch 64 (one pass over the 1,319,784 trainable rows), 2,060 warmup steps then a constant 5e-5, EMA 0.999."
+nulls = ["fields.data.default_prompt"]
+
+[budget]
+steps = 20605
+global_batch = 64
+per_rank_batch = 64
+world = 1
+
+[fields]
+batch_size = 64
+num_train_steps = 20605
+ema_decay = 0.999
+"lr_schedule.warmup_steps" = 2060
+"lr_schedule.peak_lr" = 5e-05
+"lr_schedule.decay_steps" = 1000000
+"lr_schedule.decay_lr" = 5e-05
+"optimizer.b1" = 0.9
+"optimizer.b2" = 0.95
+"optimizer.eps" = 1e-08
+"optimizer.weight_decay" = 1e-10
+"optimizer.clip_gradient_norm" = 1.0
+"model.pi05" = true
+"model.action_dim" = 32
+"model.action_horizon" = 10
+"model.max_token_len" = 200
+"model.dtype" = "bfloat16"
+"model.paligemma_variant" = "gemma_2b"
+"model.action_expert_variant" = "gemma_300m"
+"model.discrete_state_input" = true
+"model.pytorch_compile_mode" = "max-autotune"
+"data.repo_id" = "Devon018/Franka-Datasets-v2"
+"data.image_center_crop" = true
+
+[structure]
+freeze = "none"
+fsdp_devices = 8
+num_workers = 8
+save_interval = 2000
+keep_period = 6000
+log_interval = 100
+prompt_from_task = true

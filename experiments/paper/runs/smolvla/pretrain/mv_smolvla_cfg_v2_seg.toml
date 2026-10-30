@@ -1,0 +1,27 @@
+[arm]
+id = "smolvla.pretrain.mv_smolvla_cfg_v2_seg"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:smolvlm2_500m"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:ef486f33dd9010df63fc0a7013248517d0a93982b824a72e6dd956ec0c96bb1c"
+
+[recipe]
+preset = "smolvla.pretrain.paper"
+seed = 0
+
+[recipe.overrides]
+axis_expected_reward = "v2"
+axis_quality_token_budget = 48
+
+[paper]
+cells = []
+checkpoint = "smolvla/pretrain/mv_smolvla_cfg_v2_seg"
+signals = ["lerobot.rows", "object_centric.chunk.tags"]

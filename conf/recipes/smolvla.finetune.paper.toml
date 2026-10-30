@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "smolvla.finetune.paper"
+backbone = "smolvla-lerobot"
+stage = "finetune"
+track = "paper"
+paper_budget = true
+description = "Paper held-out finetune of SmolVLA: 6,790 steps at 32 per GPU on 2 GPUs (5 epochs of the finetune set)."
+template = "lerobot/smolvla.finetune.json"
+
+[budget]
+steps = 6790
+global_batch = 64
+per_rank_batch = 32
+world = 2

@@ -1,0 +1,8 @@
+schema = "qvla.track/1"
+name = "realrobot"
+paper_budget = true
+description = "The real-world line at the paper's budgets: stage 1 on the re-rendered simulation demonstrations of qvla-v1-realworld, stage 2 on your FR3 demonstrations. `qvla realrobot pretrain` and `qvla realrobot finetune` write the run specs that train on it."
+
+[budgets.pi05-openpi]
+pretrain = { steps = 20000, global_batch = 64 }
+finetune = { steps = 16000, global_batch = 64 }

@@ -1,0 +1,2270 @@
+{
+ "arms": {
+  "pi05.finetune.pi05_axis_heldout_qual_v2_awr__qual_v2_awr": {
+   "cells": [
+    "awr_v2_row|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_awr__qual_v2_awr",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_awr__qual_v2_awr.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_awr_d8__libero5k_d8_awr_v2/20604#sha256:e27c860367f68502e1119889da84a0d69775b08643777f98bc99b8c702cf9d2a",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_awrp2__qual_v2_awrp2": {
+   "cells": [
+    "awr_ph_row|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_awrp2__qual_v2_awrp2",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_awrp2__qual_v2_awrp2.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_awr_d8__libero5k_d8_awr_phase/20604#sha256:43bbe2b306ff89a1155afc32d61000199506a1d394d9aa904f1ad074ff29a5fa",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_awrpep__awrep_ft": {
+   "cells": [
+    "awr_ph_ep|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_awrpep__awrep_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_awrpep__awrep_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_awr_d8__libero5k_d8_awr_phase_ep/20604#sha256:efff408f410311aa6a9d41d1a8738af77193b835d58b641c92063ed01c7e3d7f",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_awrvep__awrvep_ft": {
+   "cells": [
+    "awr_v2_ep|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_awrvep__awrvep_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_awrvep__awrvep_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_awr_d8__libero5k_d8_awr_v2_ep/20604#sha256:b5d48e704d4d7b0dc318d0f1bd0059495df0221f3dceb42865e54afc51cf71f1",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc": {
+   "cells": [
+    "bc|bare",
+    "bc|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_bc__qual_v2_bc",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_bc__qual_v2_bc.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc/20604#sha256:1b395465e1a329f294c5da299120ebf15ba0ced605330519a4fe61a741966d73",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_bc__seed44_bc": {
+   "cells": [
+    "bc44|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_bc__seed44_bc",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_bc__seed44_bc.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s44/20604#sha256:713a57b36f6c6d2ee2a8fe54ff142b3fb66b1f605b181fca1398a968d1326428",
+   "pretrain_seed": 44,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_bc_s43__seed43_bc": {
+   "cells": [
+    "bc43|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_bc_s43__seed43_bc",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_bc_s43__seed43_bc.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s43/20604#sha256:9f7bcbd17edac5d2a18222581afddabafeb5cbb97770441677bfd6e206b6af66",
+   "pretrain_seed": 43,
+   "seed": 43
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_bct__night13_bct": {
+   "cells": [
+    "bct|bare",
+    "bct|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_bct__night13_bct",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_bct__night13_bct.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc/20604#sha256:1b395465e1a329f294c5da299120ebf15ba0ced605330519a4fe61a741966d73",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgnp__cfgnp_ft": {
+   "cells": [
+    "cfgnp|bare",
+    "cfgnp|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgnp__cfgnp_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgnp__cfgnp_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase/20604#sha256:ef0b8b782180ba9f10109aebb00592b0d52776249488ed111c044b09acb10a36",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgnp__seed43_cfgnp": {
+   "cells": [
+    "cfgnp43|bare",
+    "cfgnp43|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgnp__seed43_cfgnp",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgnp__seed43_cfgnp.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s43/20604#sha256:ff52a2f1a6587668e4c5b6fc76495a02bc80aed4ca9cd5fec8bbe106461a81f8",
+   "pretrain_seed": 43,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgnp__seed44_cfgnp": {
+   "cells": [
+    "cfgnp44|bare",
+    "cfgnp44|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgnp__seed44_cfgnp",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgnp__seed44_cfgnp.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s44/20604#sha256:09b8a0a192efcc548c12005d0c4dad4e44d186ac6c58c315aaa7e47b4202ba1e",
+   "pretrain_seed": 44,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpst__seed43_cfgpst": {
+   "cells": [
+    "cfgrow43|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgpst__seed43_cfgpst",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgpst__seed43_cfgpst.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s43/20604#sha256:52a7926853426d1c6a5f3d2e4e2a0018013b41b039f47ffdc2137fdffec4da7c",
+   "pretrain_seed": 43,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpst__seed44_cfgpst": {
+   "cells": [
+    "cfgrow44|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgpst__seed44_cfgpst",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgpst__seed44_cfgpst.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s44/20604#sha256:56c668aa24a587825a32c9d06cb9519bc18ca132c8210a74bd88f4a5631092a1",
+   "pretrain_seed": 44,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpst__seg_cfgpst": {
+   "cells": [
+    "cfg_ph_row|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgpst__seg_cfgpst",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgpst__seg_cfgpst.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg/20604#sha256:7c113b27f392b36ed69a91f8630389f91b2872f6dd727f6b06d251010f6ea782",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed43_cfgpt": {
+   "cells": [
+    "cfgpt43|bare",
+    "cfgpt43|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed43_cfgpt",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed43_cfgpt.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s43/20604#sha256:ff52a2f1a6587668e4c5b6fc76495a02bc80aed4ca9cd5fec8bbe106461a81f8",
+   "pretrain_seed": 43,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed44_cfgpt": {
+   "cells": [
+    "cfgpt44|bare",
+    "cfgpt44|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed44_cfgpt",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed44_cfgpt.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s44/20604#sha256:09b8a0a192efcc548c12005d0c4dad4e44d186ac6c58c315aaa7e47b4202ba1e",
+   "pretrain_seed": 44,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgt__night12_cfgpt": {
+   "cells": [
+    "cfg_ph_ep|bare",
+    "cfg_ph_ep|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgt__night12_cfgpt",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgt__night12_cfgpt.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase/20604#sha256:ef0b8b782180ba9f10109aebb00592b0d52776249488ed111c044b09acb10a36",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgv2st__v2seg_cfgv2st": {
+   "cells": [
+    "cfg_v2_row|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgv2st__v2seg_cfgv2st",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgv2st__v2seg_cfgv2st.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_v2_seg/20604#sha256:f0f06fbb9e9c526e7def853280b1f2afb38dce6f64df0b62cada988112fb20c7",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_cfgv2t__qual_v2_cfgv2t": {
+   "cells": [
+    "cfg_v2_ep|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_cfgv2t__qual_v2_cfgv2t",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_cfgv2t__qual_v2_cfgv2t.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_v2/20604#sha256:761b82e6be9c299402909d2f662462d95c124c07a070ebeb2a06b4c06483cbff",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droidctl__droidctl_ft": {
+   "cells": [
+    "droidinit|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droidctl__droidctl_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droidctl__droidctl_ft.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_dropt__qual_v2_dropt": {
+   "cells": [
+    "drop_v2_row|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_dropt__qual_v2_dropt",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_dropt__qual_v2_dropt.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2/20604#sha256:a69b3a1ac7e53f69c5b36db449ea38524c60a07c4c632f8c820804471a5f697b",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droptp2__qual_v2_droptp2": {
+   "cells": [
+    "drop_ph_row|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droptp2__qual_v2_droptp2",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droptp2__qual_v2_droptp2.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase/20604#sha256:dec66b0e482114b2b90175a9d6c95e36d288fa8a0f4494cb0b8974d3049b77bf",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droptp__seed43_droptp": {
+   "cells": [
+    "droprow43|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droptp__seed43_droptp",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droptp__seed43_droptp.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s43/20604#sha256:a9544ed9a47144c2dcd9cb74394ff40148dec2f07831f307d79581f34dde3b9d",
+   "pretrain_seed": 43,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droptp__seed44_droptp": {
+   "cells": [
+    "droprow44|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droptp__seed44_droptp",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droptp__seed44_droptp.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s44/20604#sha256:f4ca0fc53b1609b594a85594599dcecf9cb66f43345f2854fcb444437f039834",
+   "pretrain_seed": 44,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droptpep__dropep_ft": {
+   "cells": [
+    "drop_ph_ep|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droptpep__dropep_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droptpep__dropep_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep/20604#sha256:abbc3435a1ebce761e2f19d44d2ddbb2f7682fcc6335ccd345a1fa372494f8e8",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droptpep__seed43_droptpep": {
+   "cells": [
+    "dropep43|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droptpep__seed43_droptpep",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droptpep__seed43_droptpep.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s43/20604#sha256:61867700f5adbe1d9307501e81bc847c46b6f37896f7d7414e1826aa85f87275",
+   "pretrain_seed": 43,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droptpep__seed44_droptpep": {
+   "cells": [
+    "dropep44|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droptpep__seed44_droptpep",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droptpep__seed44_droptpep.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s44/20604#sha256:e4471c81ccf9b11b0cda702a3ada80fcbfa5fb3c5ea7cd80b9ecedaa269e4b5e",
+   "pretrain_seed": 44,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_droptvep__dropvep_ft": {
+   "cells": [
+    "drop_v2_ep|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_droptvep__dropvep_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_droptvep__dropvep_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2_ep/20604#sha256:ae1034805405f203d334d105b6eb1440f6732d9b087cb8f6f75c65ae8b7382b7",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_s1000bc__s1000bc_ft": {
+   "cells": [
+    "s1000bc|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_s1000bc__s1000bc_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_s1000bc__s1000bc_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s1000/4167#sha256:d5a44d4e7eeb8addc581671f0cbff5f199a78ed53ef1c4f1f4a6b8fa16ba9f76",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_s1000cfg__s1000cfg_ft": {
+   "cells": [
+    "s1000cfg|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_s1000cfg__s1000cfg_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_s1000cfg__s1000cfg_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s1000/4167#sha256:2125488f3038df96f92968ed31bdff834a701a5f0816c8023023a75b5dc206d5",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_s2500bc__s2500bc_ft": {
+   "cells": [
+    "s2500bc|bare"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_s2500bc__s2500bc_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_s2500bc__s2500bc_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s2500/10471#sha256:563aca737d82a776e874667d1d66567a1f2b8b784391a51c4efa13342842f584",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.finetune.pi05_axis_heldout_qual_v2_s2500cfg__s2500cfg_ft": {
+   "cells": [
+    "s2500cfg|cond"
+   ],
+   "checkpoint": "pi05/ft/pi05_axis_heldout_qual_v2_s2500cfg__s2500cfg_ft",
+   "file": "pi05/finetune/pi05_axis_heldout_qual_v2_s2500cfg__s2500cfg_ft.toml",
+   "init": "axisrobotics/qvla-v1-pi05:pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s2500/10471#sha256:e88bc2a54cf3691db24036e071c8061f847d36ce5bd5c3d18d7a564dc7139c50",
+   "pretrain_seed": 42,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_awr_d8__libero5k_d8_awr_phase": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_phase",
+   "file": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_phase.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_awr_d8__libero5k_d8_awr_phase_ep": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_phase_ep",
+   "file": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_phase_ep.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_awr_d8__libero5k_d8_awr_v2": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_v2",
+   "file": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_v2.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_awr_d8__libero5k_d8_awr_v2_ep": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_v2_ep",
+   "file": "pi05/pretrain/pi05_axis_awr_d8__libero5k_d8_awr_v2_ep.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s1000": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s1000",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s1000.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s2500": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s2500",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s2500.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s43": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s43",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s43.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 43
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s44": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s44",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s44.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 44
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s43": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s43",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s43.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 43
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s44": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s44",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg_s44.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 44
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_v2": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_v2",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_v2.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_v2_seg": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_v2_seg",
+   "file": "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_v2_seg.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s43": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s43",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s43.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 43
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s44": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s44",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep_s44.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 44
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s43": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s43",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s43.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 43
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s44": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s44",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_s44.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 44
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2_ep": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2_ep",
+   "file": "pi05/pretrain/pi05_axis_drop_top_d8__libero5k_d8_drop_top_v2_ep.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc",
+   "file": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s1000": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s1000",
+   "file": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s1000.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s2500": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s2500",
+   "file": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s2500.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 42
+  },
+  "pi05.pretrain.pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s43": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s43",
+   "file": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s43.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 43
+  },
+  "pi05.pretrain.pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s44": {
+   "cells": [],
+   "checkpoint": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s44",
+   "file": "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s44.toml",
+   "init": "base:pi05_droid",
+   "pretrain_seed": null,
+   "seed": 44
+  },
+  "smolvla.finetune.mvft_smolvla_awr": {
+   "cells": [
+    "svla_awr_ph_ep|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_awr",
+   "file": "smolvla/finetune/mvft_smolvla_awr.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_awr/020621#sha256:28e6ef77f897ecc474473c7dad39b1b5c4d76dca13e629c1d353a7f291843ec5",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_awr_phase": {
+   "cells": [
+    "svla_awr_ph_row|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_awr_phase",
+   "file": "smolvla/finetune/mvft_smolvla_awr_phase.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_awr_phase/020621#sha256:24c231ceb8c0097f37919afedf9abdd0d45a9ae789892a9321737324c7665e1f",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_awr_v2": {
+   "cells": [
+    "svla_awr_v2_row|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_awr_v2",
+   "file": "smolvla/finetune/mvft_smolvla_awr_v2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_awr_v2/020621#sha256:9ef1c51331b62edabb6c28a753bfa5e0283ab32af630ef86974338dbe1f4b44a",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_awr_v2_ep": {
+   "cells": [
+    "svla_awr_v2_ep|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_awr_v2_ep",
+   "file": "smolvla/finetune/mvft_smolvla_awr_v2_ep.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_awr_v2_ep/020621#sha256:1ca6997f2917912326d82f1320556976b39c09886a09c1093705fb4e280398ae",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_base": {
+   "cells": [
+    "svla_base_rand|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_base",
+   "file": "smolvla/finetune/mvft_smolvla_base.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_bc": {
+   "cells": [
+    "svla_bc|bare",
+    "svla_bc|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_bc",
+   "file": "smolvla/finetune/mvft_smolvla_bc.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_bc/020621#sha256:342faf0c03fbde79bb38db4f4995c0328ae9abd260e38af58cb8f40a4a4890a8",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_bc_s1000": {
+   "cells": [
+    "svla_s1000bc|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_bc_s1000",
+   "file": "smolvla/finetune/mvft_smolvla_bc_s1000.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_bc_s1000/004168#sha256:d4c92d40b34c891df453e6b21fb7b8213d60429a7e58151b501eb3d9bf384aed",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_bc_s2500": {
+   "cells": [
+    "svla_s2500bc|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_bc_s2500",
+   "file": "smolvla/finetune/mvft_smolvla_bc_s2500.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_bc_s2500/010472#sha256:d0ac5962603e1f75861165b08f8f718a88bc6d9eb02ff3fe529231251ca0a84f",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_bc_sd1": {
+   "cells": [
+    "svla_bc_sd1|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_bc_sd1",
+   "file": "smolvla/finetune/mvft_smolvla_bc_sd1.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_bc_sd1/020621#sha256:483e2cf81431c2fb0256004ae5c4a2d1b04cbed51c80040a4f1d7821f29a4fce",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "smolvla.finetune.mvft_smolvla_bc_sd2": {
+   "cells": [
+    "svla_bc_sd2|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_bc_sd2",
+   "file": "smolvla/finetune/mvft_smolvla_bc_sd2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_bc_sd2/020621#sha256:358fe6d17126ad0bae3a9bc045cd9a1f7308aa0cf548223d7ed3879090ee4ddc",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "smolvla.finetune.mvft_smolvla_bct": {
+   "cells": [
+    "svla_bct|bare",
+    "svla_bct|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_bct",
+   "file": "smolvla/finetune/mvft_smolvla_bct.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_bc/020621#sha256:342faf0c03fbde79bb38db4f4995c0328ae9abd260e38af58cb8f40a4a4890a8",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfg_phase_seg": {
+   "cells": [
+    "svla_cfg_ph_row|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfg_phase_seg",
+   "file": "smolvla/finetune/mvft_smolvla_cfg_phase_seg.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfg_phase_seg/020621#sha256:65f14bd4a367091245fa2f242dd859c03e1c5d19baacf5e3013e416f439eb39c",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfg_phase_seg_sd1": {
+   "cells": [
+    "svla_cfg_ph_row_sd1|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfg_phase_seg_sd1",
+   "file": "smolvla/finetune/mvft_smolvla_cfg_phase_seg_sd1.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfg_phase_seg_sd1/020621#sha256:af7bd4940ca408f8c626bdfa44d7b0e49404b0cfcec1527756a8c9c250bd62c7",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "smolvla.finetune.mvft_smolvla_cfg_phase_seg_sd2": {
+   "cells": [
+    "svla_cfg_ph_row_sd2|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfg_phase_seg_sd2",
+   "file": "smolvla/finetune/mvft_smolvla_cfg_phase_seg_sd2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfg_phase_seg_sd2/020621#sha256:de0a847e29943774cd8cfdbc891a528e70d23db4ac26fba77ff124590d5a5fdb",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "smolvla.finetune.mvft_smolvla_cfg_v2": {
+   "cells": [
+    "svla_cfg_v2_ep|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfg_v2",
+   "file": "smolvla/finetune/mvft_smolvla_cfg_v2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfg_v2/020621#sha256:dd4e2bfaaa6457bfc70581dc944f0dd3a4c5ae29c8023ed8aa288a4e35401423",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfg_v2_seg": {
+   "cells": [
+    "svla_cfg_v2_row|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfg_v2_seg",
+   "file": "smolvla/finetune/mvft_smolvla_cfg_v2_seg.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfg_v2_seg/020621#sha256:773e47841b9ffab736f1971903d26d7b9e41640b19ff5f96d58b504428237424",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfgnp": {
+   "cells": [
+    "svla_cfgnp|bare",
+    "svla_cfgnp|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgnp",
+   "file": "smolvla/finetune/mvft_smolvla_cfgnp.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase/020621#sha256:c9357ce82b4df79bfb2e91a34b238a4cc4a2c16619c6154aac7ba9e3c47b76c0",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfgnp_sd1": {
+   "cells": [
+    "svla_cfgnp_sd1|bare",
+    "svla_cfgnp_sd1|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgnp_sd1",
+   "file": "smolvla/finetune/mvft_smolvla_cfgnp_sd1.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase_sd1/020621#sha256:f764b83ef7e7999d1214b0fafcf587735e921eb327d9802bd03262ebae7c9764",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "smolvla.finetune.mvft_smolvla_cfgnp_sd2": {
+   "cells": [
+    "svla_cfgnp_sd2|bare",
+    "svla_cfgnp_sd2|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgnp_sd2",
+   "file": "smolvla/finetune/mvft_smolvla_cfgnp_sd2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase_sd2/020621#sha256:6c6a0e967d9d60e8f3bbb978d6c18fa4cdff6d2dd2bc8590de1df54fde2c6bed",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "smolvla.finetune.mvft_smolvla_cfgphase": {
+   "cells": [
+    "svla_cfgph|bare",
+    "svla_cfgph|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgphase",
+   "file": "smolvla/finetune/mvft_smolvla_cfgphase.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase/020621#sha256:c9357ce82b4df79bfb2e91a34b238a4cc4a2c16619c6154aac7ba9e3c47b76c0",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfgphase_s1000": {
+   "cells": [
+    "svla_s1000cfg|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgphase_s1000",
+   "file": "smolvla/finetune/mvft_smolvla_cfgphase_s1000.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase_s1000/004168#sha256:328b3fb1ee5cf03ef8c489d24ed72aeafc89b784d732c14b216f769bb86544e6",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfgphase_s2500": {
+   "cells": [
+    "svla_s2500cfg|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgphase_s2500",
+   "file": "smolvla/finetune/mvft_smolvla_cfgphase_s2500.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase_s2500/010472#sha256:e6d4af5f9d16242f5c07ab9a45e71faa27879bab9bbe6e95a91b949605691f8b",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_cfgphase_sd1": {
+   "cells": [
+    "svla_cfgph_sd1|bare",
+    "svla_cfgph_sd1|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgphase_sd1",
+   "file": "smolvla/finetune/mvft_smolvla_cfgphase_sd1.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase_sd1/020621#sha256:f764b83ef7e7999d1214b0fafcf587735e921eb327d9802bd03262ebae7c9764",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "smolvla.finetune.mvft_smolvla_cfgphase_sd2": {
+   "cells": [
+    "svla_cfgph_sd2|bare",
+    "svla_cfgph_sd2|cond"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_cfgphase_sd2",
+   "file": "smolvla/finetune/mvft_smolvla_cfgphase_sd2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_cfgphase_sd2/020621#sha256:6c6a0e967d9d60e8f3bbb978d6c18fa4cdff6d2dd2bc8590de1df54fde2c6bed",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "smolvla.finetune.mvft_smolvla_drop50": {
+   "cells": [
+    "svla_drop_ph_ep|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop50",
+   "file": "smolvla/finetune/mvft_smolvla_drop50.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop50/020621#sha256:8e3755ee082287369de4f2c62c1c9ae8ca8621b1bb53300bf9049a1dbb1a0b6f",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_drop50_sd1": {
+   "cells": [
+    "svla_drop_ph_ep_sd1|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop50_sd1",
+   "file": "smolvla/finetune/mvft_smolvla_drop50_sd1.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop50_sd1/020621#sha256:f63382ecdd6f54205ea453985e009d44e393000a5cac22ce5ed835f091cfab85",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "smolvla.finetune.mvft_smolvla_drop50_sd2": {
+   "cells": [
+    "svla_drop_ph_ep_sd2|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop50_sd2",
+   "file": "smolvla/finetune/mvft_smolvla_drop50_sd2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop50_sd2/020621#sha256:dc53cef1e5739328e5200229ffd237a604b3a3608fab4a779df9428435a37dc1",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "smolvla.finetune.mvft_smolvla_drop_top_phase": {
+   "cells": [
+    "svla_drop_ph_row|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop_top_phase",
+   "file": "smolvla/finetune/mvft_smolvla_drop_top_phase.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop_top_phase/020621#sha256:4018c61c944d205a9af6ad8fa0206fa8af5ed717976a353a388f04c27d90ca30",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_drop_top_phase_sd1": {
+   "cells": [
+    "svla_drop_ph_row_sd1|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop_top_phase_sd1",
+   "file": "smolvla/finetune/mvft_smolvla_drop_top_phase_sd1.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop_top_phase_sd1/020621#sha256:c068be21942782c30de4fa76215f4ba6d01459c3f25c784537ab5eb55cc943e2",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "smolvla.finetune.mvft_smolvla_drop_top_phase_sd2": {
+   "cells": [
+    "svla_drop_ph_row_sd2|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop_top_phase_sd2",
+   "file": "smolvla/finetune/mvft_smolvla_drop_top_phase_sd2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop_top_phase_sd2/020621#sha256:f591b9ecfac7fd1c6b3eec75db89c76c63bb76b1a92d5c70b1571bf27789c77a",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "smolvla.finetune.mvft_smolvla_drop_top_v2": {
+   "cells": [
+    "svla_drop_v2_row|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop_top_v2",
+   "file": "smolvla/finetune/mvft_smolvla_drop_top_v2.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop_top_v2/020621#sha256:fd058e65b652cdeef73499831aed0b24e701647e391d01175640d56ff9b8e6f9",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_drop_top_v2_ep": {
+   "cells": [
+    "svla_drop_v2_ep|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_drop_top_v2_ep",
+   "file": "smolvla/finetune/mvft_smolvla_drop_top_v2_ep.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop_top_v2_ep/020621#sha256:d3465a881f9e527be1a4adfd6749b3c4f567a87bec047ade554c83b4ed651829",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_rand50_ep": {
+   "cells": [
+    "svla_rand_ep|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_rand50_ep",
+   "file": "smolvla/finetune/mvft_smolvla_rand50_ep.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_rand50_ep/020621#sha256:7945f143852aa3aa6ebafca57bcfad507d6d2a0da073a3ce26bcc61bb311df50",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.finetune.mvft_smolvla_rand50_row": {
+   "cells": [
+    "svla_rand_row|bare"
+   ],
+   "checkpoint": "smolvla/ft/mvft_smolvla_rand50_row",
+   "file": "smolvla/finetune/mvft_smolvla_rand50_row.toml",
+   "init": "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_rand50_row/020621#sha256:ad99ec36e1061a418c9112b220429d7122dfea44d80b5d38a49d4bf67c91544f",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_awr": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_awr",
+   "file": "smolvla/pretrain/mv_smolvla_awr.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_awr_phase": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_awr_phase",
+   "file": "smolvla/pretrain/mv_smolvla_awr_phase.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_awr_v2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_awr_v2",
+   "file": "smolvla/pretrain/mv_smolvla_awr_v2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_awr_v2_ep": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_awr_v2_ep",
+   "file": "smolvla/pretrain/mv_smolvla_awr_v2_ep.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_bc": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_bc",
+   "file": "smolvla/pretrain/mv_smolvla_bc.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_bc_s1000": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_bc_s1000",
+   "file": "smolvla/pretrain/mv_smolvla_bc_s1000.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_bc_s2500": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_bc_s2500",
+   "file": "smolvla/pretrain/mv_smolvla_bc_s2500.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_bc_sd1": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_bc_sd1",
+   "file": "smolvla/pretrain/mv_smolvla_bc_sd1.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "smolvla.pretrain.mv_smolvla_bc_sd2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_bc_sd2",
+   "file": "smolvla/pretrain/mv_smolvla_bc_sd2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "smolvla.pretrain.mv_smolvla_cfg_phase_seg": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfg_phase_seg",
+   "file": "smolvla/pretrain/mv_smolvla_cfg_phase_seg.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_cfg_phase_seg_sd1": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfg_phase_seg_sd1",
+   "file": "smolvla/pretrain/mv_smolvla_cfg_phase_seg_sd1.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "smolvla.pretrain.mv_smolvla_cfg_phase_seg_sd2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfg_phase_seg_sd2",
+   "file": "smolvla/pretrain/mv_smolvla_cfg_phase_seg_sd2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "smolvla.pretrain.mv_smolvla_cfg_v2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfg_v2",
+   "file": "smolvla/pretrain/mv_smolvla_cfg_v2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_cfg_v2_seg": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfg_v2_seg",
+   "file": "smolvla/pretrain/mv_smolvla_cfg_v2_seg.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_cfgphase": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfgphase",
+   "file": "smolvla/pretrain/mv_smolvla_cfgphase.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_cfgphase_s1000": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfgphase_s1000",
+   "file": "smolvla/pretrain/mv_smolvla_cfgphase_s1000.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_cfgphase_s2500": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfgphase_s2500",
+   "file": "smolvla/pretrain/mv_smolvla_cfgphase_s2500.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_cfgphase_sd1": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfgphase_sd1",
+   "file": "smolvla/pretrain/mv_smolvla_cfgphase_sd1.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "smolvla.pretrain.mv_smolvla_cfgphase_sd2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_cfgphase_sd2",
+   "file": "smolvla/pretrain/mv_smolvla_cfgphase_sd2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "smolvla.pretrain.mv_smolvla_drop50": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop50",
+   "file": "smolvla/pretrain/mv_smolvla_drop50.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_drop50_sd1": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop50_sd1",
+   "file": "smolvla/pretrain/mv_smolvla_drop50_sd1.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "smolvla.pretrain.mv_smolvla_drop50_sd2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop50_sd2",
+   "file": "smolvla/pretrain/mv_smolvla_drop50_sd2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "smolvla.pretrain.mv_smolvla_drop_top_phase": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop_top_phase",
+   "file": "smolvla/pretrain/mv_smolvla_drop_top_phase.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_drop_top_phase_sd1": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop_top_phase_sd1",
+   "file": "smolvla/pretrain/mv_smolvla_drop_top_phase_sd1.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "smolvla.pretrain.mv_smolvla_drop_top_phase_sd2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop_top_phase_sd2",
+   "file": "smolvla/pretrain/mv_smolvla_drop_top_phase_sd2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "smolvla.pretrain.mv_smolvla_drop_top_v2": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop_top_v2",
+   "file": "smolvla/pretrain/mv_smolvla_drop_top_v2.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_drop_top_v2_ep": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_drop_top_v2_ep",
+   "file": "smolvla/pretrain/mv_smolvla_drop_top_v2_ep.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_rand50_ep": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_rand50_ep",
+   "file": "smolvla/pretrain/mv_smolvla_rand50_ep.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "smolvla.pretrain.mv_smolvla_rand50_row": {
+   "cells": [],
+   "checkpoint": "smolvla/pretrain/mv_smolvla_rand50_row",
+   "file": "smolvla/pretrain/mv_smolvla_rand50_row.toml",
+   "init": "base:smolvlm2_500m",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_awr": {
+   "cells": [
+    "xvla_awr_ph_ep|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_awr",
+   "file": "xvla/finetune/mvft_xvla_awr.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_awr/020621#sha256:ad8f7988d7cbaa7e869e45da5fc4af4622332f305448f8aa11b84d96e9d57b42",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_awr_phase": {
+   "cells": [
+    "xvla_awr_ph_row|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_awr_phase",
+   "file": "xvla/finetune/mvft_xvla_awr_phase.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_awr_phase/020621#sha256:4e3415510bfaac26447c83a1f156dff5fe5ab990af62abc1eabaa3df6f4111da",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_awr_v2": {
+   "cells": [
+    "xvla_awr_v2_row|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_awr_v2",
+   "file": "xvla/finetune/mvft_xvla_awr_v2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_awr_v2/020621#sha256:03774e35114eb8382b362fc791ab89f01334297fa8a451d8024a0e94bc2981ff",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_awr_v2_ep": {
+   "cells": [
+    "xvla_awr_v2_ep|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_awr_v2_ep",
+   "file": "xvla/finetune/mvft_xvla_awr_v2_ep.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_awr_v2_ep/020621#sha256:36b852c16645f4032d2d2827ae435504a7aa3013eb1fdd88311ab7f19276ede6",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_base": {
+   "cells": [
+    "xvla_base|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_base",
+   "file": "xvla/finetune/mvft_xvla_base.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_bc": {
+   "cells": [
+    "xvla_bc|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_bc",
+   "file": "xvla/finetune/mvft_xvla_bc.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_bc/020621#sha256:c461b9da7a1db2f512ed1f45cb0ac7a3465ba1656157d83065634c042de19c75",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_bc_s1000": {
+   "cells": [
+    "xvla_s1000bc|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_bc_s1000",
+   "file": "xvla/finetune/mvft_xvla_bc_s1000.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_bc_s1000/004168#sha256:6d7b3de08132dfb6f65159ad520021a020d6895264735c2cfeb47f64709db952",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_bc_s2500": {
+   "cells": [
+    "xvla_s2500bc|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_bc_s2500",
+   "file": "xvla/finetune/mvft_xvla_bc_s2500.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_bc_s2500/010472#sha256:73cd2f07adcf129c5109a2203d4f285e0396e4984bfb20652090fbed1368ac93",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_bc_sd1": {
+   "cells": [
+    "xvla_bc_sd1|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_bc_sd1",
+   "file": "xvla/finetune/mvft_xvla_bc_sd1.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_bc_sd1/020621#sha256:80b9df6105dcd5df76969ea28a9ee5d7f06f5a08f59db9d00ecf970a7d5df307",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "xvla.finetune.mvft_xvla_bc_sd2": {
+   "cells": [
+    "xvla_bc_sd2|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_bc_sd2",
+   "file": "xvla/finetune/mvft_xvla_bc_sd2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_bc_sd2/020621#sha256:35952b2c98a8f89f581eb269eb5f3efa0280078e420836abd5805696a6f59109",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "xvla.finetune.mvft_xvla_bct": {
+   "cells": [
+    "xvla_bct|bare",
+    "xvla_bct|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_bct",
+   "file": "xvla/finetune/mvft_xvla_bct.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_bc/020621#sha256:c461b9da7a1db2f512ed1f45cb0ac7a3465ba1656157d83065634c042de19c75",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfg_phase_seg": {
+   "cells": [
+    "xvla_cfg_ph_row|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfg_phase_seg",
+   "file": "xvla/finetune/mvft_xvla_cfg_phase_seg.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfg_phase_seg/020621#sha256:a0dc14646eb929ced242039fd3614abe3451360f708faff838f7f282f3341fbf",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfg_phase_seg_sd1": {
+   "cells": [
+    "xvla_cfg_ph_row_sd1|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfg_phase_seg_sd1",
+   "file": "xvla/finetune/mvft_xvla_cfg_phase_seg_sd1.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfg_phase_seg_sd1/020621#sha256:4f94e8c0d58d0ba4b8456b6ae0dfd33eb7d7726c5654f45679aa7a1ecc9f81e9",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "xvla.finetune.mvft_xvla_cfg_phase_seg_sd2": {
+   "cells": [
+    "xvla_cfg_ph_row_sd2|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfg_phase_seg_sd2",
+   "file": "xvla/finetune/mvft_xvla_cfg_phase_seg_sd2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfg_phase_seg_sd2/020621#sha256:4947d87f004376773529d2fd8280d6ddfc47567443102dfa18dd16cee0324f0c",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "xvla.finetune.mvft_xvla_cfg_v2": {
+   "cells": [
+    "xvla_cfg_v2_ep|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfg_v2",
+   "file": "xvla/finetune/mvft_xvla_cfg_v2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfg_v2/020621#sha256:b41ca6a266ce5f0ac965ddb5027a78126a723e639a997ea67523116b49701c89",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfg_v2_seg": {
+   "cells": [
+    "xvla_cfg_v2_row|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfg_v2_seg",
+   "file": "xvla/finetune/mvft_xvla_cfg_v2_seg.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfg_v2_seg/020621#sha256:0d26a97f7e28efe0973986582666d594c394bf9dc55cd827750049408f9e56e9",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfgnp": {
+   "cells": [
+    "xvla_cfgnp|bare",
+    "xvla_cfgnp|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgnp",
+   "file": "xvla/finetune/mvft_xvla_cfgnp.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase/020621#sha256:d35887eeb2ce264d058bb3899a6c402b7c6947c9af5696b145842ed363184a3e",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfgnp_sd1": {
+   "cells": [
+    "xvla_cfgnp_sd1|bare",
+    "xvla_cfgnp_sd1|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgnp_sd1",
+   "file": "xvla/finetune/mvft_xvla_cfgnp_sd1.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase_sd1/020621#sha256:022fedaa3a0e95e67d0cd09ccdc2e202ce165ad31f30328bd80b2118664fb86f",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "xvla.finetune.mvft_xvla_cfgnp_sd2": {
+   "cells": [
+    "xvla_cfgnp_sd2|bare",
+    "xvla_cfgnp_sd2|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgnp_sd2",
+   "file": "xvla/finetune/mvft_xvla_cfgnp_sd2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase_sd2/020621#sha256:7189abb94f70d1e0f6a0ca1cb0c159d3090acaa040d2910464abd043af95486c",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "xvla.finetune.mvft_xvla_cfgphase": {
+   "cells": [
+    "xvla_cfgph|bare",
+    "xvla_cfgph|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgphase",
+   "file": "xvla/finetune/mvft_xvla_cfgphase.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase/020621#sha256:d35887eeb2ce264d058bb3899a6c402b7c6947c9af5696b145842ed363184a3e",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfgphase_s1000": {
+   "cells": [
+    "xvla_s1000cfg|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgphase_s1000",
+   "file": "xvla/finetune/mvft_xvla_cfgphase_s1000.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase_s1000/004168#sha256:6a62969ecf675ec32c4fcb86d2ffe8b7a6ca7679499ae3cbd363dbbe24a9eeba",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfgphase_s2500": {
+   "cells": [
+    "xvla_s2500cfg|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgphase_s2500",
+   "file": "xvla/finetune/mvft_xvla_cfgphase_s2500.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase_s2500/010472#sha256:639d02d260248ec8c4fc91befbb80611c802431834e8ab568818ba1d7750b27b",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_cfgphase_sd1": {
+   "cells": [
+    "xvla_cfgph_sd1|bare",
+    "xvla_cfgph_sd1|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgphase_sd1",
+   "file": "xvla/finetune/mvft_xvla_cfgphase_sd1.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase_sd1/020621#sha256:022fedaa3a0e95e67d0cd09ccdc2e202ce165ad31f30328bd80b2118664fb86f",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "xvla.finetune.mvft_xvla_cfgphase_sd2": {
+   "cells": [
+    "xvla_cfgph_sd2|bare",
+    "xvla_cfgph_sd2|cond"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_cfgphase_sd2",
+   "file": "xvla/finetune/mvft_xvla_cfgphase_sd2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfgphase_sd2/020621#sha256:7189abb94f70d1e0f6a0ca1cb0c159d3090acaa040d2910464abd043af95486c",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "xvla.finetune.mvft_xvla_drop50": {
+   "cells": [
+    "xvla_drop_ph_ep|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop50",
+   "file": "xvla/finetune/mvft_xvla_drop50.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop50/020621#sha256:9f772165e0884607d709ad18324067e35535fcf55d1267299583fc8814f379c0",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_drop50_sd1": {
+   "cells": [
+    "xvla_drop_ph_ep_sd1|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop50_sd1",
+   "file": "xvla/finetune/mvft_xvla_drop50_sd1.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop50_sd1/020621#sha256:d88a3d91a3dca3776727a13f1b80f7151a55fac27141da30bc6468b805789712",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "xvla.finetune.mvft_xvla_drop50_sd2": {
+   "cells": [
+    "xvla_drop_ph_ep_sd2|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop50_sd2",
+   "file": "xvla/finetune/mvft_xvla_drop50_sd2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop50_sd2/020621#sha256:0125b0d6b624fdcda44256fff083185bc1b2b471bbc5e010319a4c371682d401",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "xvla.finetune.mvft_xvla_drop_top_phase": {
+   "cells": [
+    "xvla_drop_ph_row|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop_top_phase",
+   "file": "xvla/finetune/mvft_xvla_drop_top_phase.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop_top_phase/020621#sha256:7681c994c2a348c1389ad45a82129b94892ec2ce4f24b487c53d93f63eab6db2",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_drop_top_phase_sd1": {
+   "cells": [
+    "xvla_drop_ph_row_sd1|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop_top_phase_sd1",
+   "file": "xvla/finetune/mvft_xvla_drop_top_phase_sd1.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop_top_phase_sd1/020621#sha256:aba123a3a2a38a57d0b26a023fd38ab8f7a5c6c72435ae11e4b539ab79ab54ff",
+   "pretrain_seed": 1,
+   "seed": 1
+  },
+  "xvla.finetune.mvft_xvla_drop_top_phase_sd2": {
+   "cells": [
+    "xvla_drop_ph_row_sd2|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop_top_phase_sd2",
+   "file": "xvla/finetune/mvft_xvla_drop_top_phase_sd2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop_top_phase_sd2/020621#sha256:e0d8d43b432d3e927fcc8c7634658c7e7b10dba98d0d05d8b6a2d0939a090824",
+   "pretrain_seed": 2,
+   "seed": 2
+  },
+  "xvla.finetune.mvft_xvla_drop_top_v2": {
+   "cells": [
+    "xvla_drop_v2_row|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop_top_v2",
+   "file": "xvla/finetune/mvft_xvla_drop_top_v2.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop_top_v2/020621#sha256:fd9d874d8e85d5f65670043a6454a02a79748878597fef7ea78c53c8c40e221e",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_drop_top_v2_ep": {
+   "cells": [
+    "xvla_drop_v2_ep|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_drop_top_v2_ep",
+   "file": "xvla/finetune/mvft_xvla_drop_top_v2_ep.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_drop_top_v2_ep/020621#sha256:4df73063839c8d0dd64cb5c69e715cef0db84ebb5425c5f7f906dcb5f47ad385",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_rand50_ep": {
+   "cells": [
+    "xvla_rand_ep|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_rand50_ep",
+   "file": "xvla/finetune/mvft_xvla_rand50_ep.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_rand50_ep/020621#sha256:5d5431b278ecddd3d778fd3749b01c7a8673c2f0ab22831d8d9d802ef1e5b35e",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.finetune.mvft_xvla_rand50_row": {
+   "cells": [
+    "xvla_rand_row|bare"
+   ],
+   "checkpoint": "xvla/ft/mvft_xvla_rand50_row",
+   "file": "xvla/finetune/mvft_xvla_rand50_row.toml",
+   "init": "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_rand50_row/020621#sha256:81a410d1651a94345f6f5451a1e46c0bf1cebad57779d3ed9c14f88fae0408e3",
+   "pretrain_seed": 0,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_awr": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_awr",
+   "file": "xvla/pretrain/mv_xvla_awr.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_awr_phase": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_awr_phase",
+   "file": "xvla/pretrain/mv_xvla_awr_phase.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_awr_v2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_awr_v2",
+   "file": "xvla/pretrain/mv_xvla_awr_v2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_awr_v2_ep": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_awr_v2_ep",
+   "file": "xvla/pretrain/mv_xvla_awr_v2_ep.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_bc": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_bc",
+   "file": "xvla/pretrain/mv_xvla_bc.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_bc_s1000": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_bc_s1000",
+   "file": "xvla/pretrain/mv_xvla_bc_s1000.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_bc_s2500": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_bc_s2500",
+   "file": "xvla/pretrain/mv_xvla_bc_s2500.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_bc_sd1": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_bc_sd1",
+   "file": "xvla/pretrain/mv_xvla_bc_sd1.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "xvla.pretrain.mv_xvla_bc_sd2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_bc_sd2",
+   "file": "xvla/pretrain/mv_xvla_bc_sd2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "xvla.pretrain.mv_xvla_cfg_phase_seg": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfg_phase_seg",
+   "file": "xvla/pretrain/mv_xvla_cfg_phase_seg.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_cfg_phase_seg_sd1": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfg_phase_seg_sd1",
+   "file": "xvla/pretrain/mv_xvla_cfg_phase_seg_sd1.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "xvla.pretrain.mv_xvla_cfg_phase_seg_sd2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfg_phase_seg_sd2",
+   "file": "xvla/pretrain/mv_xvla_cfg_phase_seg_sd2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "xvla.pretrain.mv_xvla_cfg_v2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfg_v2",
+   "file": "xvla/pretrain/mv_xvla_cfg_v2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_cfg_v2_seg": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfg_v2_seg",
+   "file": "xvla/pretrain/mv_xvla_cfg_v2_seg.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_cfgphase": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfgphase",
+   "file": "xvla/pretrain/mv_xvla_cfgphase.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_cfgphase_s1000": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfgphase_s1000",
+   "file": "xvla/pretrain/mv_xvla_cfgphase_s1000.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_cfgphase_s2500": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfgphase_s2500",
+   "file": "xvla/pretrain/mv_xvla_cfgphase_s2500.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_cfgphase_sd1": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfgphase_sd1",
+   "file": "xvla/pretrain/mv_xvla_cfgphase_sd1.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "xvla.pretrain.mv_xvla_cfgphase_sd2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_cfgphase_sd2",
+   "file": "xvla/pretrain/mv_xvla_cfgphase_sd2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "xvla.pretrain.mv_xvla_drop50": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop50",
+   "file": "xvla/pretrain/mv_xvla_drop50.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_drop50_sd1": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop50_sd1",
+   "file": "xvla/pretrain/mv_xvla_drop50_sd1.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "xvla.pretrain.mv_xvla_drop50_sd2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop50_sd2",
+   "file": "xvla/pretrain/mv_xvla_drop50_sd2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "xvla.pretrain.mv_xvla_drop_top_phase": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop_top_phase",
+   "file": "xvla/pretrain/mv_xvla_drop_top_phase.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_drop_top_phase_sd1": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop_top_phase_sd1",
+   "file": "xvla/pretrain/mv_xvla_drop_top_phase_sd1.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 1
+  },
+  "xvla.pretrain.mv_xvla_drop_top_phase_sd2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop_top_phase_sd2",
+   "file": "xvla/pretrain/mv_xvla_drop_top_phase_sd2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 2
+  },
+  "xvla.pretrain.mv_xvla_drop_top_v2": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop_top_v2",
+   "file": "xvla/pretrain/mv_xvla_drop_top_v2.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_drop_top_v2_ep": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_drop_top_v2_ep",
+   "file": "xvla/pretrain/mv_xvla_drop_top_v2_ep.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_rand50_ep": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_rand50_ep",
+   "file": "xvla/pretrain/mv_xvla_rand50_ep.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  },
+  "xvla.pretrain.mv_xvla_rand50_row": {
+   "cells": [],
+   "checkpoint": "xvla/pretrain/mv_xvla_rand50_row",
+   "file": "xvla/pretrain/mv_xvla_rand50_row.toml",
+   "init": "base:xvla_base",
+   "pretrain_seed": null,
+   "seed": 0
+  }
+ },
+ "replicates": [
+  {
+   "backbone": "pi05-openpi",
+   "family": "pi05_axis_cfg_d8__libero5k_d8_cfg_phase ft:plain",
+   "members": [
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgnp__cfgnp_ft",
+     "cells": [
+      "cfgnp|bare",
+      "cfgnp|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 42
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgnp__seed43_cfgnp",
+     "cells": [
+      "cfgnp43|bare",
+      "cfgnp43|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 43
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgnp__seed44_cfgnp",
+     "cells": [
+      "cfgnp44|bare",
+      "cfgnp44|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 44
+    }
+   ]
+  },
+  {
+   "backbone": "pi05-openpi",
+   "family": "pi05_axis_cfg_d8__libero5k_d8_cfg_phase ft:tag5",
+   "members": [
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgt__night12_cfgpt",
+     "cells": [
+      "cfg_ph_ep|bare",
+      "cfg_ph_ep|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 42
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed43_cfgpt",
+     "cells": [
+      "cfgpt43|bare",
+      "cfgpt43|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 43
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpt_s43_s2__seed44_cfgpt",
+     "cells": [
+      "cfgpt44|bare",
+      "cfgpt44|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 44
+    }
+   ]
+  },
+  {
+   "backbone": "pi05-openpi",
+   "family": "pi05_axis_cfg_d8__libero5k_d8_cfg_phase_seg ft:tag5",
+   "members": [
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpst__seg_cfgpst",
+     "cells": [
+      "cfg_ph_row|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 42
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpst__seed43_cfgpst",
+     "cells": [
+      "cfgrow43|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 43
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_cfgpst__seed44_cfgpst",
+     "cells": [
+      "cfgrow44|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 44
+    }
+   ]
+  },
+  {
+   "backbone": "pi05-openpi",
+   "family": "pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase ft:plain",
+   "members": [
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_droptp2__qual_v2_droptp2",
+     "cells": [
+      "drop_ph_row|bare"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 42
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_droptp__seed43_droptp",
+     "cells": [
+      "droprow43|bare"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 43
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_droptp__seed44_droptp",
+     "cells": [
+      "droprow44|bare"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 44
+    }
+   ]
+  },
+  {
+   "backbone": "pi05-openpi",
+   "family": "pi05_axis_drop_top_d8__libero5k_d8_drop_top_phase_ep ft:plain",
+   "members": [
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_droptpep__dropep_ft",
+     "cells": [
+      "drop_ph_ep|bare"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 42
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_droptpep__seed43_droptpep",
+     "cells": [
+      "dropep43|bare"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 43
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_droptpep__seed44_droptpep",
+     "cells": [
+      "dropep44|bare"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 44
+    }
+   ]
+  },
+  {
+   "backbone": "pi05-openpi",
+   "family": "pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc ft:plain",
+   "members": [
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_bc__qual_v2_bc",
+     "cells": [
+      "bc|bare",
+      "bc|cond"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 42
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_bc_s43__seed43_bc",
+     "cells": [
+      "bc43|bare"
+     ],
+     "ft_seed": 43,
+     "pretrain_seed": 43
+    },
+    {
+     "arm": "pi05.finetune.pi05_axis_heldout_qual_v2_bc__seed44_bc",
+     "cells": [
+      "bc44|bare"
+     ],
+     "ft_seed": 42,
+     "pretrain_seed": 44
+    }
+   ]
+  },
+  {
+   "backbone": "smolvla-lerobot",
+   "family": "mvft_smolvla_bc",
+   "members": [
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_bc",
+     "cells": [
+      "svla_bc|bare",
+      "svla_bc|cond"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_bc_sd1",
+     "cells": [
+      "svla_bc_sd1|bare"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_bc_sd2",
+     "cells": [
+      "svla_bc_sd2|bare"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "smolvla-lerobot",
+   "family": "mvft_smolvla_cfg_phase_seg",
+   "members": [
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfg_phase_seg",
+     "cells": [
+      "svla_cfg_ph_row|cond"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfg_phase_seg_sd1",
+     "cells": [
+      "svla_cfg_ph_row_sd1|cond"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfg_phase_seg_sd2",
+     "cells": [
+      "svla_cfg_ph_row_sd2|cond"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "smolvla-lerobot",
+   "family": "mvft_smolvla_cfgnp",
+   "members": [
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfgnp",
+     "cells": [
+      "svla_cfgnp|bare",
+      "svla_cfgnp|cond"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfgnp_sd1",
+     "cells": [
+      "svla_cfgnp_sd1|bare",
+      "svla_cfgnp_sd1|cond"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfgnp_sd2",
+     "cells": [
+      "svla_cfgnp_sd2|bare",
+      "svla_cfgnp_sd2|cond"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "smolvla-lerobot",
+   "family": "mvft_smolvla_cfgphase",
+   "members": [
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfgphase",
+     "cells": [
+      "svla_cfgph|bare",
+      "svla_cfgph|cond"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfgphase_sd1",
+     "cells": [
+      "svla_cfgph_sd1|bare",
+      "svla_cfgph_sd1|cond"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_cfgphase_sd2",
+     "cells": [
+      "svla_cfgph_sd2|bare",
+      "svla_cfgph_sd2|cond"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "smolvla-lerobot",
+   "family": "mvft_smolvla_drop50",
+   "members": [
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_drop50",
+     "cells": [
+      "svla_drop_ph_ep|bare"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_drop50_sd1",
+     "cells": [
+      "svla_drop_ph_ep_sd1|bare"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_drop50_sd2",
+     "cells": [
+      "svla_drop_ph_ep_sd2|bare"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "smolvla-lerobot",
+   "family": "mvft_smolvla_drop_top_phase",
+   "members": [
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_drop_top_phase",
+     "cells": [
+      "svla_drop_ph_row|bare"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_drop_top_phase_sd1",
+     "cells": [
+      "svla_drop_ph_row_sd1|bare"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "smolvla.finetune.mvft_smolvla_drop_top_phase_sd2",
+     "cells": [
+      "svla_drop_ph_row_sd2|bare"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "xvla-lerobot",
+   "family": "mvft_xvla_bc",
+   "members": [
+    {
+     "arm": "xvla.finetune.mvft_xvla_bc",
+     "cells": [
+      "xvla_bc|bare"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_bc_sd1",
+     "cells": [
+      "xvla_bc_sd1|bare"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_bc_sd2",
+     "cells": [
+      "xvla_bc_sd2|bare"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "xvla-lerobot",
+   "family": "mvft_xvla_cfg_phase_seg",
+   "members": [
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfg_phase_seg",
+     "cells": [
+      "xvla_cfg_ph_row|cond"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfg_phase_seg_sd1",
+     "cells": [
+      "xvla_cfg_ph_row_sd1|cond"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfg_phase_seg_sd2",
+     "cells": [
+      "xvla_cfg_ph_row_sd2|cond"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "xvla-lerobot",
+   "family": "mvft_xvla_cfgnp",
+   "members": [
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfgnp",
+     "cells": [
+      "xvla_cfgnp|bare",
+      "xvla_cfgnp|cond"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfgnp_sd1",
+     "cells": [
+      "xvla_cfgnp_sd1|bare",
+      "xvla_cfgnp_sd1|cond"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfgnp_sd2",
+     "cells": [
+      "xvla_cfgnp_sd2|bare",
+      "xvla_cfgnp_sd2|cond"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "xvla-lerobot",
+   "family": "mvft_xvla_cfgphase",
+   "members": [
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfgphase",
+     "cells": [
+      "xvla_cfgph|bare",
+      "xvla_cfgph|cond"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfgphase_sd1",
+     "cells": [
+      "xvla_cfgph_sd1|bare",
+      "xvla_cfgph_sd1|cond"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_cfgphase_sd2",
+     "cells": [
+      "xvla_cfgph_sd2|bare",
+      "xvla_cfgph_sd2|cond"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "xvla-lerobot",
+   "family": "mvft_xvla_drop50",
+   "members": [
+    {
+     "arm": "xvla.finetune.mvft_xvla_drop50",
+     "cells": [
+      "xvla_drop_ph_ep|bare"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_drop50_sd1",
+     "cells": [
+      "xvla_drop_ph_ep_sd1|bare"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_drop50_sd2",
+     "cells": [
+      "xvla_drop_ph_ep_sd2|bare"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  },
+  {
+   "backbone": "xvla-lerobot",
+   "family": "mvft_xvla_drop_top_phase",
+   "members": [
+    {
+     "arm": "xvla.finetune.mvft_xvla_drop_top_phase",
+     "cells": [
+      "xvla_drop_ph_row|bare"
+     ],
+     "ft_seed": 0,
+     "pretrain_seed": 0
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_drop_top_phase_sd1",
+     "cells": [
+      "xvla_drop_ph_row_sd1|bare"
+     ],
+     "ft_seed": 1,
+     "pretrain_seed": 1
+    },
+    {
+     "arm": "xvla.finetune.mvft_xvla_drop_top_phase_sd2",
+     "cells": [
+      "xvla_drop_ph_row_sd2|bare"
+     ],
+     "ft_seed": 2,
+     "pretrain_seed": 2
+    }
+   ]
+  }
+ ],
+ "schema": "qvla.paper_arms/1"
+}

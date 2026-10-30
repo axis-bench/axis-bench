@@ -1,0 +1,3352 @@
+{
+ "schema": "axis_franka_heldout_eval_manifest_v1",
+ "source_dataset": "axisrobotics/qvla-v1-bench@v1.0:ft_demos/out_eef/",
+ "selection": "franka_heldout24: the 24 scored held-out tasks; each task is evaluated on one scene variant (scene_variant_index)",
+ "n_tasks": 24,
+ "tasks": {
+  "1459": {
+   "layout_center_xy": [
+    0.526028,
+    -0.138395
+   ],
+   "layout_box_m": 0.5,
+   "n_objects": 5,
+   "layout_spread_xy_m": [
+    0.547268,
+    0.712553
+   ],
+   "layout_center_provenance": "midpoint of target-object bbox over the 20 adaptation demos",
+   "target_body": "",
+   "task_id": 1459,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "held-out benchmark: support = the 20 adaptation demos",
+   "train": [
+    {
+     "attempt_id": 1395311,
+     "episode_index": 0,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1395472,
+     "episode_index": 1,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1409072,
+     "episode_index": 2,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1409900,
+     "episode_index": 3,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1409968,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1411067,
+     "episode_index": 5,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1415308,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423119,
+     "episode_index": 7,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423910,
+     "episode_index": 8,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1433788,
+     "episode_index": 9,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1434776,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1457202,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1457465,
+     "episode_index": 12,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1457499,
+     "episode_index": 13,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1457580,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1459450,
+     "episode_index": 15,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1459484,
+     "episode_index": 16,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1472753,
+     "episode_index": 17,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1472865,
+     "episode_index": 18,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1475777,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 20
+  },
+  "1889": {
+   "layout_center_xy": [
+    0.443516,
+    0.070654
+   ],
+   "layout_box_m": 0.5,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.25674,
+    0.257286
+   ],
+   "layout_center_provenance": "midpoint of target-object bbox over the 20 adaptation demos",
+   "target_body": "",
+   "task_id": 1889,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "held-out benchmark: support = the 20 adaptation demos",
+   "train": [
+    {
+     "attempt_id": 1823109,
+     "episode_index": 0,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1823436,
+     "episode_index": 1,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1823641,
+     "episode_index": 2,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1823666,
+     "episode_index": 3,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1823869,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1824050,
+     "episode_index": 5,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1824118,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1824419,
+     "episode_index": 7,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1824919,
+     "episode_index": 8,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1825644,
+     "episode_index": 9,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1826696,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1826749,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1827406,
+     "episode_index": 12,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1827428,
+     "episode_index": 13,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1827443,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1849660,
+     "episode_index": 15,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1875496,
+     "episode_index": 16,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1923290,
+     "episode_index": 17,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1963511,
+     "episode_index": 18,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 2086730,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 20
+  },
+  "945": {
+   "layout_center_xy": [
+    0.509169,
+    0.140916
+   ],
+   "layout_box_m": 0.5,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.365912,
+    0.507848
+   ],
+   "layout_center_provenance": "midpoint of target-object bbox over the 20 adaptation demos",
+   "target_body": "",
+   "task_id": 945,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "held-out benchmark: support = the 20 adaptation demos",
+   "train": [
+    {
+     "attempt_id": 883435,
+     "episode_index": 0,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883448,
+     "episode_index": 1,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883466,
+     "episode_index": 2,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883606,
+     "episode_index": 3,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883649,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883683,
+     "episode_index": 5,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883725,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883792,
+     "episode_index": 7,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883819,
+     "episode_index": 8,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883909,
+     "episode_index": 9,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883927,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883932,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883951,
+     "episode_index": 12,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 883999,
+     "episode_index": 13,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 884028,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 884035,
+     "episode_index": 15,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 884076,
+     "episode_index": 16,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 884080,
+     "episode_index": 17,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 884102,
+     "episode_index": 18,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 891429,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 20
+  },
+  "966": {
+   "layout_center_xy": [
+    0.438037,
+    -0.126042
+   ],
+   "layout_box_m": 0.5,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.307284,
+    0.492824
+   ],
+   "layout_center_provenance": "midpoint of target-object bbox over the 20 adaptation demos",
+   "target_body": "",
+   "task_id": 966,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "held-out benchmark: support = the 20 adaptation demos",
+   "train": [
+    {
+     "attempt_id": 874409,
+     "episode_index": 0,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 874686,
+     "episode_index": 1,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 874705,
+     "episode_index": 2,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 874720,
+     "episode_index": 3,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 874990,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875018,
+     "episode_index": 5,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875030,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875035,
+     "episode_index": 7,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875052,
+     "episode_index": 8,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875111,
+     "episode_index": 9,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875144,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875188,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875407,
+     "episode_index": 12,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875534,
+     "episode_index": 13,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875569,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 875873,
+     "episode_index": 15,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 876016,
+     "episode_index": 16,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 876039,
+     "episode_index": 17,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 876088,
+     "episode_index": 18,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 889619,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 20
+  },
+  "953": {
+   "layout_center_xy": [
+    0.489835,
+    0.130677
+   ],
+   "layout_box_m": 0.5,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.255708,
+    0.491287
+   ],
+   "layout_center_provenance": "midpoint of target-object bbox over the 20 adaptation demos",
+   "target_body": "",
+   "task_id": 953,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "held-out benchmark: support = the 20 adaptation demos",
+   "train": [
+    {
+     "attempt_id": 906061,
+     "episode_index": 0,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 906179,
+     "episode_index": 1,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 906245,
+     "episode_index": 2,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 906628,
+     "episode_index": 3,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 906650,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 906819,
+     "episode_index": 5,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 906924,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 907107,
+     "episode_index": 7,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 907124,
+     "episode_index": 8,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910340,
+     "episode_index": 9,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910376,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910481,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910482,
+     "episode_index": 12,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910489,
+     "episode_index": 13,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910516,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910525,
+     "episode_index": 15,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910559,
+     "episode_index": 16,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910564,
+     "episode_index": 17,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910595,
+     "episode_index": 18,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 910614,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 20
+  },
+  "1426": {
+   "layout_center_xy": [
+    0.509414,
+    0.003071
+   ],
+   "layout_box_m": 0.5,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.462189,
+    0.622179
+   ],
+   "layout_center_provenance": "midpoint of target-object bbox over the 20 adaptation demos",
+   "target_body": "",
+   "task_id": 1426,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "held-out benchmark: support = the 20 adaptation demos",
+   "train": [
+    {
+     "attempt_id": 1421805,
+     "episode_index": 0,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1421834,
+     "episode_index": 1,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1422706,
+     "episode_index": 2,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1422844,
+     "episode_index": 3,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1422910,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423098,
+     "episode_index": 5,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423115,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423189,
+     "episode_index": 7,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423244,
+     "episode_index": 8,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423451,
+     "episode_index": 9,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423660,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423691,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423818,
+     "episode_index": 12,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1423898,
+     "episode_index": 13,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1426559,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1426891,
+     "episode_index": 15,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1427706,
+     "episode_index": 16,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1436488,
+     "episode_index": 17,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1436576,
+     "episode_index": 18,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1436577,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 20
+  },
+  "809": {
+   "layout_center_xy": [
+    0.447863,
+    -0.117332
+   ],
+   "layout_box_m": 0.5,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.213332,
+    0.447927
+   ],
+   "layout_center_provenance": "midpoint of target-object bbox over the 20 adaptation demos",
+   "target_body": "",
+   "task_id": 809,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "held-out benchmark: support = the 20 adaptation demos",
+   "train": [
+    {
+     "attempt_id": 739675,
+     "episode_index": 0,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 740082,
+     "episode_index": 1,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 740327,
+     "episode_index": 2,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 741811,
+     "episode_index": 3,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 746508,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 747842,
+     "episode_index": 5,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 748282,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 748399,
+     "episode_index": 7,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 748696,
+     "episode_index": 8,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 749148,
+     "episode_index": 9,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 763178,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 763947,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 764024,
+     "episode_index": 12,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 764394,
+     "episode_index": 13,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 764540,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 764780,
+     "episode_index": 15,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 764821,
+     "episode_index": 16,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 764863,
+     "episode_index": 17,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 765869,
+     "episode_index": 18,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 766647,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 20
+  },
+  "806": {
+   "layout_center_xy": [
+    0.403789,
+    0.114714
+   ],
+   "layout_box_m": 0.2,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.186951,
+    0.335785
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 806,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 782557,
+     "episode_index": 3,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 782630,
+     "episode_index": 9,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 782667,
+     "episode_index": 10,
+     "scene_variant_index": 16
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 782506,
+     "episode_index": 0,
+     "scene_variant_index": 37
+    },
+    {
+     "attempt_id": 782538,
+     "episode_index": 1,
+     "scene_variant_index": 29
+    },
+    {
+     "attempt_id": 782550,
+     "episode_index": 2,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 782557,
+     "episode_index": 3,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 782563,
+     "episode_index": 4,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 782585,
+     "episode_index": 5,
+     "scene_variant_index": 37
+    },
+    {
+     "attempt_id": 782593,
+     "episode_index": 6,
+     "scene_variant_index": 14
+    },
+    {
+     "attempt_id": 782594,
+     "episode_index": 7,
+     "scene_variant_index": 39
+    },
+    {
+     "attempt_id": 782597,
+     "episode_index": 8,
+     "scene_variant_index": 38
+    },
+    {
+     "attempt_id": 782630,
+     "episode_index": 9,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 782667,
+     "episode_index": 10,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 782705,
+     "episode_index": 11,
+     "scene_variant_index": 24
+    },
+    {
+     "attempt_id": 782710,
+     "episode_index": 12,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 782748,
+     "episode_index": 13,
+     "scene_variant_index": 13
+    },
+    {
+     "attempt_id": 782760,
+     "episode_index": 14,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 782782,
+     "episode_index": 15,
+     "scene_variant_index": 28
+    },
+    {
+     "attempt_id": 782785,
+     "episode_index": 16,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 782804,
+     "episode_index": 17,
+     "scene_variant_index": 17
+    },
+    {
+     "attempt_id": 782814,
+     "episode_index": 18,
+     "scene_variant_index": 13
+    },
+    {
+     "attempt_id": 782839,
+     "episode_index": 19,
+     "scene_variant_index": 0
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "packable box (cap 0.187 m); 83% of probe placements inside the demonstrated region"
+  },
+  "807": {
+   "layout_center_xy": [
+    0.496301,
+    0.055019
+   ],
+   "layout_box_m": 0.2,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.453938,
+    0.163976
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 807,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 782644,
+     "episode_index": 0,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 782734,
+     "episode_index": 7,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 782743,
+     "episode_index": 8,
+     "scene_variant_index": 26
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 782644,
+     "episode_index": 0,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 782670,
+     "episode_index": 1,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 782695,
+     "episode_index": 2,
+     "scene_variant_index": 30
+    },
+    {
+     "attempt_id": 782707,
+     "episode_index": 3,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 782709,
+     "episode_index": 4,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 782728,
+     "episode_index": 5,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 782733,
+     "episode_index": 6,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 782734,
+     "episode_index": 7,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 782743,
+     "episode_index": 8,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 782759,
+     "episode_index": 9,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 782780,
+     "episode_index": 10,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 782798,
+     "episode_index": 11,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 782803,
+     "episode_index": 12,
+     "scene_variant_index": 37
+    },
+    {
+     "attempt_id": 782807,
+     "episode_index": 13,
+     "scene_variant_index": 21
+    },
+    {
+     "attempt_id": 782820,
+     "episode_index": 14,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 782842,
+     "episode_index": 15,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 782852,
+     "episode_index": 16,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 782887,
+     "episode_index": 17,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 782888,
+     "episode_index": 18,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 782905,
+     "episode_index": 19,
+     "scene_variant_index": 10
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "packable box (cap 0.164 m); 58% of probe placements inside the demonstrated region"
+  },
+  "808": {
+   "layout_center_xy": [
+    0.470253,
+    -0.078958
+   ],
+   "layout_box_m": 0.2,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.210924,
+    0.459612
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 808,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 782812,
+     "episode_index": 2,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 782830,
+     "episode_index": 10,
+     "scene_variant_index": 7
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 782789,
+     "episode_index": 0,
+     "scene_variant_index": 4
+    },
+    {
+     "attempt_id": 782808,
+     "episode_index": 1,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 782812,
+     "episode_index": 2,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 782816,
+     "episode_index": 3,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 782821,
+     "episode_index": 4,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 782824,
+     "episode_index": 5,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 782826,
+     "episode_index": 6,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 782827,
+     "episode_index": 7,
+     "scene_variant_index": 8
+    },
+    {
+     "attempt_id": 782828,
+     "episode_index": 8,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 782829,
+     "episode_index": 9,
+     "scene_variant_index": 37
+    },
+    {
+     "attempt_id": 782830,
+     "episode_index": 10,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 782841,
+     "episode_index": 11,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 782843,
+     "episode_index": 12,
+     "scene_variant_index": 20
+    },
+    {
+     "attempt_id": 782844,
+     "episode_index": 13,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 782846,
+     "episode_index": 14,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 782857,
+     "episode_index": 15,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 782859,
+     "episode_index": 16,
+     "scene_variant_index": 14
+    },
+    {
+     "attempt_id": 782876,
+     "episode_index": 17,
+     "scene_variant_index": 27
+    },
+    {
+     "attempt_id": 782879,
+     "episode_index": 18,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 782892,
+     "episode_index": 19,
+     "scene_variant_index": 23
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 2,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.211 m); 100% of probe placements inside the demonstrated region"
+  },
+  "855": {
+   "layout_center_xy": [
+    0.439085,
+    -0.119574
+   ],
+   "layout_box_m": 0.2,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.220838,
+    0.501989
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 855,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 787396,
+     "episode_index": 12,
+     "scene_variant_index": 3
+    },
+    {
+     "attempt_id": 787414,
+     "episode_index": 19,
+     "scene_variant_index": 3
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 787355,
+     "episode_index": 0,
+     "scene_variant_index": 37
+    },
+    {
+     "attempt_id": 787356,
+     "episode_index": 1,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 787361,
+     "episode_index": 2,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 787364,
+     "episode_index": 3,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 787365,
+     "episode_index": 4,
+     "scene_variant_index": 8
+    },
+    {
+     "attempt_id": 787367,
+     "episode_index": 5,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 787370,
+     "episode_index": 6,
+     "scene_variant_index": 2
+    },
+    {
+     "attempt_id": 787376,
+     "episode_index": 7,
+     "scene_variant_index": 30
+    },
+    {
+     "attempt_id": 787378,
+     "episode_index": 8,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 787381,
+     "episode_index": 9,
+     "scene_variant_index": 21
+    },
+    {
+     "attempt_id": 787390,
+     "episode_index": 10,
+     "scene_variant_index": 8
+    },
+    {
+     "attempt_id": 787393,
+     "episode_index": 11,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 787396,
+     "episode_index": 12,
+     "scene_variant_index": 3
+    },
+    {
+     "attempt_id": 787399,
+     "episode_index": 13,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 787406,
+     "episode_index": 14,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 787408,
+     "episode_index": 15,
+     "scene_variant_index": 35
+    },
+    {
+     "attempt_id": 787409,
+     "episode_index": 16,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 787410,
+     "episode_index": 17,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 787411,
+     "episode_index": 18,
+     "scene_variant_index": 38
+    },
+    {
+     "attempt_id": 787414,
+     "episode_index": 19,
+     "scene_variant_index": 3
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 2,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.221 m); 100% of probe placements inside the demonstrated region"
+  },
+  "878": {
+   "layout_center_xy": [
+    0.454689,
+    -0.103097
+   ],
+   "layout_box_m": 0.25,
+   "n_objects": 3,
+   "layout_spread_xy_m": [
+    0.272443,
+    0.485218
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 878,
+   "n_variants": 42,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 856846,
+     "episode_index": 1,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 856856,
+     "episode_index": 2,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 856889,
+     "episode_index": 4,
+     "scene_variant_index": 6
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 856844,
+     "episode_index": 0,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 856846,
+     "episode_index": 1,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 856856,
+     "episode_index": 2,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 856878,
+     "episode_index": 3,
+     "scene_variant_index": 29
+    },
+    {
+     "attempt_id": 856889,
+     "episode_index": 4,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 856896,
+     "episode_index": 5,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 856910,
+     "episode_index": 6,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 856912,
+     "episode_index": 7,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 856924,
+     "episode_index": 8,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 856925,
+     "episode_index": 9,
+     "scene_variant_index": 29
+    },
+    {
+     "attempt_id": 856984,
+     "episode_index": 10,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 857003,
+     "episode_index": 11,
+     "scene_variant_index": 8
+    },
+    {
+     "attempt_id": 857012,
+     "episode_index": 12,
+     "scene_variant_index": 14
+    },
+    {
+     "attempt_id": 857013,
+     "episode_index": 13,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 857014,
+     "episode_index": 14,
+     "scene_variant_index": 14
+    },
+    {
+     "attempt_id": 857016,
+     "episode_index": 15,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 857022,
+     "episode_index": 16,
+     "scene_variant_index": 38
+    },
+    {
+     "attempt_id": 857025,
+     "episode_index": 17,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 857118,
+     "episode_index": 18,
+     "scene_variant_index": 2
+    },
+    {
+     "attempt_id": 857119,
+     "episode_index": 19,
+     "scene_variant_index": 38
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.272 m); 100% of probe placements inside the demonstrated region"
+  },
+  "882": {
+   "layout_center_xy": [
+    0.43508,
+    0.138337
+   ],
+   "layout_box_m": 0.2,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.155925,
+    0.380186
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 882,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 824286,
+     "episode_index": 0,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 852614,
+     "episode_index": 6,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 853040,
+     "episode_index": 8,
+     "scene_variant_index": 1
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 824286,
+     "episode_index": 0,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 824289,
+     "episode_index": 1,
+     "scene_variant_index": 5
+    },
+    {
+     "attempt_id": 824291,
+     "episode_index": 2,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 824298,
+     "episode_index": 3,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 824309,
+     "episode_index": 4,
+     "scene_variant_index": 34
+    },
+    {
+     "attempt_id": 851968,
+     "episode_index": 5,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 852614,
+     "episode_index": 6,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 852997,
+     "episode_index": 7,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 853040,
+     "episode_index": 8,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 853381,
+     "episode_index": 9,
+     "scene_variant_index": 35
+    },
+    {
+     "attempt_id": 853451,
+     "episode_index": 10,
+     "scene_variant_index": 28
+    },
+    {
+     "attempt_id": 853668,
+     "episode_index": 11,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 853705,
+     "episode_index": 12,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 853720,
+     "episode_index": 13,
+     "scene_variant_index": 20
+    },
+    {
+     "attempt_id": 853735,
+     "episode_index": 14,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 853838,
+     "episode_index": 15,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 853887,
+     "episode_index": 16,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 853913,
+     "episode_index": 17,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 854001,
+     "episode_index": 18,
+     "scene_variant_index": 13
+    },
+    {
+     "attempt_id": 854024,
+     "episode_index": 19,
+     "scene_variant_index": 26
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "packable box (cap 0.156 m); 62% of probe placements inside the demonstrated region"
+  },
+  "888": {
+   "layout_center_xy": [
+    0.492057,
+    -0.077058
+   ],
+   "layout_box_m": 0.25,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.252795,
+    0.331249
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 888,
+   "n_variants": 45,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 855810,
+     "episode_index": 3,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 855928,
+     "episode_index": 8,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 856135,
+     "episode_index": 16,
+     "scene_variant_index": 1
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 855760,
+     "episode_index": 0,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 855762,
+     "episode_index": 1,
+     "scene_variant_index": 42
+    },
+    {
+     "attempt_id": 855788,
+     "episode_index": 2,
+     "scene_variant_index": 3
+    },
+    {
+     "attempt_id": 855810,
+     "episode_index": 3,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 855818,
+     "episode_index": 4,
+     "scene_variant_index": 5
+    },
+    {
+     "attempt_id": 855843,
+     "episode_index": 5,
+     "scene_variant_index": 42
+    },
+    {
+     "attempt_id": 855856,
+     "episode_index": 6,
+     "scene_variant_index": 27
+    },
+    {
+     "attempt_id": 855899,
+     "episode_index": 7,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 855928,
+     "episode_index": 8,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 855961,
+     "episode_index": 9,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 855963,
+     "episode_index": 10,
+     "scene_variant_index": 24
+    },
+    {
+     "attempt_id": 855964,
+     "episode_index": 11,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 855971,
+     "episode_index": 12,
+     "scene_variant_index": 23
+    },
+    {
+     "attempt_id": 855986,
+     "episode_index": 13,
+     "scene_variant_index": 41
+    },
+    {
+     "attempt_id": 856023,
+     "episode_index": 14,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 856068,
+     "episode_index": 15,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 856135,
+     "episode_index": 16,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 856165,
+     "episode_index": 17,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 856192,
+     "episode_index": 18,
+     "scene_variant_index": 43
+    },
+    {
+     "attempt_id": 856283,
+     "episode_index": 19,
+     "scene_variant_index": 18
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.253 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1050": {
+   "layout_center_xy": [
+    0.537282,
+    0.057475
+   ],
+   "layout_box_m": 0.4,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.434368,
+    0.643288
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1050,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1038482,
+     "episode_index": 2,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1038487,
+     "episode_index": 7,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1038491,
+     "episode_index": 11,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1038495,
+     "episode_index": 15,
+     "scene_variant_index": 1
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1038480,
+     "episode_index": 0,
+     "scene_variant_index": 17
+    },
+    {
+     "attempt_id": 1038481,
+     "episode_index": 1,
+     "scene_variant_index": 4
+    },
+    {
+     "attempt_id": 1038482,
+     "episode_index": 2,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1038483,
+     "episode_index": 3,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1038484,
+     "episode_index": 4,
+     "scene_variant_index": 4
+    },
+    {
+     "attempt_id": 1038485,
+     "episode_index": 5,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1038486,
+     "episode_index": 6,
+     "scene_variant_index": 21
+    },
+    {
+     "attempt_id": 1038487,
+     "episode_index": 7,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1038488,
+     "episode_index": 8,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 1038489,
+     "episode_index": 9,
+     "scene_variant_index": 13
+    },
+    {
+     "attempt_id": 1038490,
+     "episode_index": 10,
+     "scene_variant_index": 21
+    },
+    {
+     "attempt_id": 1038491,
+     "episode_index": 11,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1038492,
+     "episode_index": 12,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1038493,
+     "episode_index": 13,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 1038494,
+     "episode_index": 14,
+     "scene_variant_index": 21
+    },
+    {
+     "attempt_id": 1038495,
+     "episode_index": 15,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1038496,
+     "episode_index": 16,
+     "scene_variant_index": 13
+    },
+    {
+     "attempt_id": 1038523,
+     "episode_index": 17,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1038524,
+     "episode_index": 18,
+     "scene_variant_index": 17
+    },
+    {
+     "attempt_id": 1038525,
+     "episode_index": 19,
+     "scene_variant_index": 17
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 4,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.434 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1223": {
+   "layout_center_xy": [
+    0.472143,
+    -0.19693
+   ],
+   "layout_box_m": 0.2,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.226998,
+    0.604427
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1223,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1232735,
+     "episode_index": 2,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1232748,
+     "episode_index": 4,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1232754,
+     "episode_index": 5,
+     "scene_variant_index": 7
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1232686,
+     "episode_index": 0,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1232721,
+     "episode_index": 1,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 1232735,
+     "episode_index": 2,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1232742,
+     "episode_index": 3,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1232748,
+     "episode_index": 4,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1232754,
+     "episode_index": 5,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1232758,
+     "episode_index": 6,
+     "scene_variant_index": 27
+    },
+    {
+     "attempt_id": 1234724,
+     "episode_index": 7,
+     "scene_variant_index": 26
+    },
+    {
+     "attempt_id": 1235122,
+     "episode_index": 8,
+     "scene_variant_index": 30
+    },
+    {
+     "attempt_id": 1236063,
+     "episode_index": 9,
+     "scene_variant_index": 27
+    },
+    {
+     "attempt_id": 1237435,
+     "episode_index": 10,
+     "scene_variant_index": 35
+    },
+    {
+     "attempt_id": 1238103,
+     "episode_index": 11,
+     "scene_variant_index": 34
+    },
+    {
+     "attempt_id": 1238135,
+     "episode_index": 12,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 1238192,
+     "episode_index": 13,
+     "scene_variant_index": 8
+    },
+    {
+     "attempt_id": 1238247,
+     "episode_index": 14,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 1238307,
+     "episode_index": 15,
+     "scene_variant_index": 2
+    },
+    {
+     "attempt_id": 1238328,
+     "episode_index": 16,
+     "scene_variant_index": 20
+    },
+    {
+     "attempt_id": 1238330,
+     "episode_index": 17,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 1238338,
+     "episode_index": 18,
+     "scene_variant_index": 17
+    },
+    {
+     "attempt_id": 1238347,
+     "episode_index": 19,
+     "scene_variant_index": 22
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.227 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1435": {
+   "layout_center_xy": [
+    0.485014,
+    -0.157657
+   ],
+   "layout_box_m": 0.3,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.319151,
+    0.489594
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1435,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1423792,
+     "episode_index": 1,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1423884,
+     "episode_index": 8,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1423892,
+     "episode_index": 9,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1423920,
+     "episode_index": 12,
+     "scene_variant_index": 33
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1423790,
+     "episode_index": 0,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 1423792,
+     "episode_index": 1,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1423793,
+     "episode_index": 2,
+     "scene_variant_index": 24
+    },
+    {
+     "attempt_id": 1423813,
+     "episode_index": 3,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1423826,
+     "episode_index": 4,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 1423849,
+     "episode_index": 5,
+     "scene_variant_index": 14
+    },
+    {
+     "attempt_id": 1423859,
+     "episode_index": 6,
+     "scene_variant_index": 25
+    },
+    {
+     "attempt_id": 1423862,
+     "episode_index": 7,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 1423884,
+     "episode_index": 8,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1423892,
+     "episode_index": 9,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1423900,
+     "episode_index": 10,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 1423912,
+     "episode_index": 11,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 1423920,
+     "episode_index": 12,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1423923,
+     "episode_index": 13,
+     "scene_variant_index": 25
+    },
+    {
+     "attempt_id": 1423928,
+     "episode_index": 14,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 1423929,
+     "episode_index": 15,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1423930,
+     "episode_index": 16,
+     "scene_variant_index": 25
+    },
+    {
+     "attempt_id": 1433007,
+     "episode_index": 17,
+     "scene_variant_index": 3
+    },
+    {
+     "attempt_id": 1433031,
+     "episode_index": 18,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 1433068,
+     "episode_index": 19,
+     "scene_variant_index": 37
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 4,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.319 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1436": {
+   "layout_center_xy": [
+    0.57082,
+    -0.102768
+   ],
+   "layout_box_m": 0.3,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.337509,
+    0.365429
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1436,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1453727,
+     "episode_index": 0,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1453882,
+     "episode_index": 1,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1455823,
+     "episode_index": 4,
+     "scene_variant_index": 12
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1453727,
+     "episode_index": 0,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1453882,
+     "episode_index": 1,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1455526,
+     "episode_index": 2,
+     "scene_variant_index": 2
+    },
+    {
+     "attempt_id": 1455817,
+     "episode_index": 3,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 1455823,
+     "episode_index": 4,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1455858,
+     "episode_index": 5,
+     "scene_variant_index": 4
+    },
+    {
+     "attempt_id": 1455859,
+     "episode_index": 6,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1455861,
+     "episode_index": 7,
+     "scene_variant_index": 25
+    },
+    {
+     "attempt_id": 1455871,
+     "episode_index": 8,
+     "scene_variant_index": 23
+    },
+    {
+     "attempt_id": 1455883,
+     "episode_index": 9,
+     "scene_variant_index": 28
+    },
+    {
+     "attempt_id": 1455885,
+     "episode_index": 10,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1455891,
+     "episode_index": 11,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 1455892,
+     "episode_index": 12,
+     "scene_variant_index": 5
+    },
+    {
+     "attempt_id": 1455902,
+     "episode_index": 13,
+     "scene_variant_index": 21
+    },
+    {
+     "attempt_id": 1455909,
+     "episode_index": 14,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 1455913,
+     "episode_index": 15,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 1455925,
+     "episode_index": 16,
+     "scene_variant_index": 2
+    },
+    {
+     "attempt_id": 1456053,
+     "episode_index": 17,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1456084,
+     "episode_index": 18,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1456162,
+     "episode_index": 19,
+     "scene_variant_index": 30
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.338 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1525": {
+   "layout_center_xy": [
+    0.552708,
+    -0.103869
+   ],
+   "layout_box_m": 0.4,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.419491,
+    0.414989
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1525,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1607693,
+     "episode_index": 4,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1607706,
+     "episode_index": 6,
+     "scene_variant_index": 7
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1607680,
+     "episode_index": 0,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1607689,
+     "episode_index": 1,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 1607690,
+     "episode_index": 2,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 1607692,
+     "episode_index": 3,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 1607693,
+     "episode_index": 4,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1607696,
+     "episode_index": 5,
+     "scene_variant_index": 20
+    },
+    {
+     "attempt_id": 1607706,
+     "episode_index": 6,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1607787,
+     "episode_index": 7,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 1614417,
+     "episode_index": 8,
+     "scene_variant_index": 4
+    },
+    {
+     "attempt_id": 1621508,
+     "episode_index": 9,
+     "scene_variant_index": 25
+    },
+    {
+     "attempt_id": 1622336,
+     "episode_index": 10,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1622379,
+     "episode_index": 11,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 1623322,
+     "episode_index": 12,
+     "scene_variant_index": 35
+    },
+    {
+     "attempt_id": 1624404,
+     "episode_index": 13,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 1624824,
+     "episode_index": 14,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1626013,
+     "episode_index": 15,
+     "scene_variant_index": 5
+    }
+   ],
+   "n_adaptation_demos": 16,
+   "n_layout_support_demos": 2,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.415 m); 100% of probe placements inside the demonstrated region"
+  },
+  "890": {
+   "layout_center_xy": [
+    0.410726,
+    0.080584
+   ],
+   "layout_box_m": 0.2,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.180735,
+    0.32824
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 890,
+   "n_variants": 45,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 854033,
+     "episode_index": 1,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 854819,
+     "episode_index": 12,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 855161,
+     "episode_index": 16,
+     "scene_variant_index": 22
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 853779,
+     "episode_index": 0,
+     "scene_variant_index": 25
+    },
+    {
+     "attempt_id": 854033,
+     "episode_index": 1,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 854178,
+     "episode_index": 2,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 854244,
+     "episode_index": 3,
+     "scene_variant_index": 30
+    },
+    {
+     "attempt_id": 854283,
+     "episode_index": 4,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 854308,
+     "episode_index": 5,
+     "scene_variant_index": 36
+    },
+    {
+     "attempt_id": 854364,
+     "episode_index": 6,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 854399,
+     "episode_index": 7,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 854523,
+     "episode_index": 8,
+     "scene_variant_index": 20
+    },
+    {
+     "attempt_id": 854543,
+     "episode_index": 9,
+     "scene_variant_index": 27
+    },
+    {
+     "attempt_id": 854614,
+     "episode_index": 10,
+     "scene_variant_index": 44
+    },
+    {
+     "attempt_id": 854720,
+     "episode_index": 11,
+     "scene_variant_index": 20
+    },
+    {
+     "attempt_id": 854819,
+     "episode_index": 12,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 854820,
+     "episode_index": 13,
+     "scene_variant_index": 17
+    },
+    {
+     "attempt_id": 854849,
+     "episode_index": 14,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 855122,
+     "episode_index": 15,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 855161,
+     "episode_index": 16,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 855168,
+     "episode_index": 17,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 855196,
+     "episode_index": 18,
+     "scene_variant_index": 42
+    },
+    {
+     "attempt_id": 855216,
+     "episode_index": 19,
+     "scene_variant_index": 23
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "packable box (cap 0.181 m); 58% of probe placements inside the demonstrated region"
+  },
+  "1231": {
+   "layout_center_xy": [
+    0.48198,
+    -0.111044
+   ],
+   "layout_box_m": 0.25,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.261323,
+    0.517522
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1231,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1229616,
+     "episode_index": 4,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1229643,
+     "episode_index": 8,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1229669,
+     "episode_index": 10,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1229682,
+     "episode_index": 11,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1233520,
+     "episode_index": 17,
+     "scene_variant_index": 11
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1229560,
+     "episode_index": 0,
+     "scene_variant_index": 13
+    },
+    {
+     "attempt_id": 1229582,
+     "episode_index": 1,
+     "scene_variant_index": 14
+    },
+    {
+     "attempt_id": 1229590,
+     "episode_index": 2,
+     "scene_variant_index": 16
+    },
+    {
+     "attempt_id": 1229608,
+     "episode_index": 3,
+     "scene_variant_index": 3
+    },
+    {
+     "attempt_id": 1229616,
+     "episode_index": 4,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1229620,
+     "episode_index": 5,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1229639,
+     "episode_index": 6,
+     "scene_variant_index": 4
+    },
+    {
+     "attempt_id": 1229642,
+     "episode_index": 7,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1229643,
+     "episode_index": 8,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1229653,
+     "episode_index": 9,
+     "scene_variant_index": 5
+    },
+    {
+     "attempt_id": 1229669,
+     "episode_index": 10,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1229682,
+     "episode_index": 11,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1229688,
+     "episode_index": 12,
+     "scene_variant_index": 8
+    },
+    {
+     "attempt_id": 1229738,
+     "episode_index": 13,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1229739,
+     "episode_index": 14,
+     "scene_variant_index": 3
+    },
+    {
+     "attempt_id": 1229745,
+     "episode_index": 15,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 1229752,
+     "episode_index": 16,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 1233520,
+     "episode_index": 17,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1235287,
+     "episode_index": 18,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 1235330,
+     "episode_index": 19,
+     "scene_variant_index": 32
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 5,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.261 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1438": {
+   "layout_center_xy": [
+    0.494235,
+    -0.15807
+   ],
+   "layout_box_m": 0.45,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.4559,
+    0.462349
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1438,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1456324,
+     "episode_index": 0,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1456335,
+     "episode_index": 1,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1456336,
+     "episode_index": 2,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1456341,
+     "episode_index": 5,
+     "scene_variant_index": 1
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1456324,
+     "episode_index": 0,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1456335,
+     "episode_index": 1,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1456336,
+     "episode_index": 2,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1456339,
+     "episode_index": 3,
+     "scene_variant_index": 8
+    },
+    {
+     "attempt_id": 1456340,
+     "episode_index": 4,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 1456341,
+     "episode_index": 5,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1456342,
+     "episode_index": 6,
+     "scene_variant_index": 5
+    },
+    {
+     "attempt_id": 1456345,
+     "episode_index": 7,
+     "scene_variant_index": 7
+    },
+    {
+     "attempt_id": 1456361,
+     "episode_index": 8,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 1456362,
+     "episode_index": 9,
+     "scene_variant_index": 34
+    },
+    {
+     "attempt_id": 1456364,
+     "episode_index": 10,
+     "scene_variant_index": 9
+    },
+    {
+     "attempt_id": 1456367,
+     "episode_index": 11,
+     "scene_variant_index": 20
+    },
+    {
+     "attempt_id": 1456368,
+     "episode_index": 12,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 1456371,
+     "episode_index": 13,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 1456373,
+     "episode_index": 14,
+     "scene_variant_index": 0
+    },
+    {
+     "attempt_id": 1456375,
+     "episode_index": 15,
+     "scene_variant_index": 28
+    },
+    {
+     "attempt_id": 1456377,
+     "episode_index": 16,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1456378,
+     "episode_index": 17,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 1456380,
+     "episode_index": 18,
+     "scene_variant_index": 30
+    },
+    {
+     "attempt_id": 1456381,
+     "episode_index": 19,
+     "scene_variant_index": 3
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 4,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.456 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1527": {
+   "layout_center_xy": [
+    0.496706,
+    0.104941
+   ],
+   "layout_box_m": 0.3,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.349166,
+    0.42206
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1527,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1502123,
+     "episode_index": 5,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1502132,
+     "episode_index": 8,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1502141,
+     "episode_index": 11,
+     "scene_variant_index": 1
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1502107,
+     "episode_index": 0,
+     "scene_variant_index": 35
+    },
+    {
+     "attempt_id": 1502108,
+     "episode_index": 1,
+     "scene_variant_index": 22
+    },
+    {
+     "attempt_id": 1502110,
+     "episode_index": 2,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 1502111,
+     "episode_index": 3,
+     "scene_variant_index": 11
+    },
+    {
+     "attempt_id": 1502119,
+     "episode_index": 4,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 1502123,
+     "episode_index": 5,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1502128,
+     "episode_index": 6,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1502131,
+     "episode_index": 7,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 1502132,
+     "episode_index": 8,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1502134,
+     "episode_index": 9,
+     "scene_variant_index": 23
+    },
+    {
+     "attempt_id": 1502136,
+     "episode_index": 10,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1502141,
+     "episode_index": 11,
+     "scene_variant_index": 1
+    },
+    {
+     "attempt_id": 1502146,
+     "episode_index": 12,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 1502154,
+     "episode_index": 13,
+     "scene_variant_index": 15
+    },
+    {
+     "attempt_id": 1502160,
+     "episode_index": 14,
+     "scene_variant_index": 30
+    },
+    {
+     "attempt_id": 1502161,
+     "episode_index": 15,
+     "scene_variant_index": 28
+    },
+    {
+     "attempt_id": 1502163,
+     "episode_index": 16,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 1502167,
+     "episode_index": 17,
+     "scene_variant_index": 33
+    },
+    {
+     "attempt_id": 1502168,
+     "episode_index": 18,
+     "scene_variant_index": 30
+    },
+    {
+     "attempt_id": 1502169,
+     "episode_index": 19,
+     "scene_variant_index": 10
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.349 m); 100% of probe placements inside the demonstrated region"
+  },
+  "1632": {
+   "layout_center_xy": [
+    0.472946,
+    -0.125364
+   ],
+   "layout_box_m": 0.25,
+   "n_objects": 4,
+   "layout_spread_xy_m": [
+    0.280442,
+    0.471735
+   ],
+   "layout_center_provenance": "midpoint of the object bbox over the single-variant homogeneous support demos, from each demo's own initial_snapshot.qpos",
+   "target_body": "",
+   "task_id": 1632,
+   "n_variants": 40,
+   "status": "ok",
+   "join_verified": true,
+   "scene_variant_index": 0,
+   "manipulated_object": "",
+   "manipulated_object_determined": false,
+   "variant_selection": "fewshot_20demo_support",
+   "selection": "heldout_new_candidates_v1: support = largest single-variant demo group",
+   "train": [
+    {
+     "attempt_id": 1606521,
+     "episode_index": 5,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1606557,
+     "episode_index": 8,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1606610,
+     "episode_index": 10,
+     "scene_variant_index": 12
+    }
+   ],
+   "adaptation_demos": [
+    {
+     "attempt_id": 1606460,
+     "episode_index": 0,
+     "scene_variant_index": 21
+    },
+    {
+     "attempt_id": 1606474,
+     "episode_index": 1,
+     "scene_variant_index": 38
+    },
+    {
+     "attempt_id": 1606496,
+     "episode_index": 2,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 1606499,
+     "episode_index": 3,
+     "scene_variant_index": 10
+    },
+    {
+     "attempt_id": 1606511,
+     "episode_index": 4,
+     "scene_variant_index": 32
+    },
+    {
+     "attempt_id": 1606521,
+     "episode_index": 5,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1606525,
+     "episode_index": 6,
+     "scene_variant_index": 35
+    },
+    {
+     "attempt_id": 1606526,
+     "episode_index": 7,
+     "scene_variant_index": 25
+    },
+    {
+     "attempt_id": 1606557,
+     "episode_index": 8,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1606575,
+     "episode_index": 9,
+     "scene_variant_index": 19
+    },
+    {
+     "attempt_id": 1606610,
+     "episode_index": 10,
+     "scene_variant_index": 12
+    },
+    {
+     "attempt_id": 1606612,
+     "episode_index": 11,
+     "scene_variant_index": 6
+    },
+    {
+     "attempt_id": 1606618,
+     "episode_index": 12,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 1606630,
+     "episode_index": 13,
+     "scene_variant_index": 3
+    },
+    {
+     "attempt_id": 1606632,
+     "episode_index": 14,
+     "scene_variant_index": 31
+    },
+    {
+     "attempt_id": 1606647,
+     "episode_index": 15,
+     "scene_variant_index": 18
+    },
+    {
+     "attempt_id": 1606665,
+     "episode_index": 16,
+     "scene_variant_index": 14
+    },
+    {
+     "attempt_id": 1606675,
+     "episode_index": 17,
+     "scene_variant_index": 5
+    },
+    {
+     "attempt_id": 1606763,
+     "episode_index": 18,
+     "scene_variant_index": 13
+    },
+    {
+     "attempt_id": 1606829,
+     "episode_index": 19,
+     "scene_variant_index": 4
+    }
+   ],
+   "n_adaptation_demos": 20,
+   "n_layout_support_demos": 3,
+   "layout_box_provenance": "largest packable box within the demonstrated spread (cap 0.280 m); 100% of probe placements inside the demonstrated region"
+  }
+ }
+}

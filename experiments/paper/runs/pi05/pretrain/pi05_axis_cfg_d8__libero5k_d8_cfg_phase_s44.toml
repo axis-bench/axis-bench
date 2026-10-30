@@ -1,0 +1,33 @@
+[arm]
+id = "pi05.pretrain.pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s44"
+backbone = "pi05-openpi"
+stage = "pretrain"
+track = "paper"
+paper_ref = "pi05_axis_cfg_d8"
+
+[init]
+ckpt = "base:pi05_droid"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+action_space = "droid8"
+asset_id = "Devon018/Franka-Datasets-v2"
+image = "center_crop"
+
+[signal]
+bundle = "sha256:b98a395b0ab9ebd7351fc591d21dae9395af15d003c83f98d2f840f5c6abbb79"
+
+[norm]
+artifact = "libero5k_v2_d8#sha256:2fad5134b75426dea10eded094b192a455eb9e557a43d19033dd10c374aebfa6"
+
+[recipe]
+preset = "pi05.pretrain.full.paper"
+seed = 44
+
+[paper]
+cells = []
+checkpoint = "pi05/pretrain/pi05_axis_cfg_d8__libero5k_d8_cfg_phase_s44"
+launch_overrides = ["--data.quality-path=<signal approach_aware.episode.tags>", "--data.ranges-path=<rowspace libero5k_v2_d8>", "--data.roots-index=<rowspace libero5k_v2_d8>", "--lr-schedule.warmup-steps=2060", "--seed=44"]
+registered_config = "pi05_axis_cfg_d8"
+signals = ["approach_aware.episode.tags"]
+train_config = "pi05_axis_cfg_d8"

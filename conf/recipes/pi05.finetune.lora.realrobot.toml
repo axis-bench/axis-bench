@@ -1,0 +1,48 @@
+schema = "qvla.recipe/1"
+id = "pi05.finetune.lora.realrobot"
+backbone = "pi05-openpi"
+stage = "finetune"
+track = "realrobot"
+paper_budget = true
+description = "Real-robot line, stage 2: LoRA on both experts with the vision tower trainable, from a stage-1 run on the FR3 demonstrations, 16,000 steps at global batch 64, 1,600 warmup steps then cosine from 2.5e-5 to 2.5e-6, action horizon 15, centre-cropped 224 images (the centre square of each stored 16:9 frame, cropped at training and at serving). Trained by `qvla train` from the run specs `qvla realrobot pretrain` and `qvla realrobot finetune` write."
+nulls = ["fields.ema_decay", "fields.data.default_prompt", "fields.data.quality_tag"]
+
+[budget]
+steps = 16000
+global_batch = 64
+per_rank_batch = 64
+world = 1
+
+[fields]
+batch_size = 64
+num_train_steps = 16000
+"lr_schedule.warmup_steps" = 1600
+"lr_schedule.peak_lr" = 2.5e-05
+"lr_schedule.decay_steps" = 16000
+"lr_schedule.decay_lr" = 2.5e-06
+"optimizer.b1" = 0.9
+"optimizer.b2" = 0.95
+"optimizer.eps" = 1e-08
+"optimizer.weight_decay" = 1e-10
+"optimizer.clip_gradient_norm" = 1.0
+"model.pi05" = true
+"model.action_dim" = 32
+"model.action_horizon" = 15
+"model.max_token_len" = 200
+"model.dtype" = "bfloat16"
+"model.paligemma_variant" = "gemma_2b_lora"
+"model.action_expert_variant" = "gemma_300m_lora"
+"model.discrete_state_input" = true
+"model.pytorch_compile_mode" = "max-autotune"
+"data.image_center_crop" = true
+"data.repo_id" = "fr3_demonstrations"
+"data.action_units" = "droid_normalized_joint_velocity_command"
+
+[structure]
+freeze = "lora"
+fsdp_devices = 8
+num_workers = 8
+save_interval = 2000
+keep_period = 2000
+log_interval = 100
+prompt_from_task = true

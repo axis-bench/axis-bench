@@ -1,0 +1,22 @@
+schema = "qvla.env/1"
+tier = "render"
+description = "The real-robot kinematic renderer (MuJoCo 3.3.7, mink 0.0.5, numpy 1.x) from its own exact lock, every transitive dependency pinned: `qvla realrobot` re-renders your workspace in it. Simulation evaluation runs in the eval environment (`qvla env build eval`)."
+checkout = "."
+python = "3.11"
+lock = "axis_qvla/realrobot/render/render.lock.txt"
+lock_sha256 = "6c7a9b30e582e5b1d591ed112a9942bc5cb89dd20af2feb2e718170cb6533761"
+# Run in the axis-bench checkout: the lock with no resolution of its own, then this package.
+build = [
+  "uv venv --python 3.11 .venv-render",
+  "uv pip install --python .venv-render/bin/python --no-deps -r axis_qvla/realrobot/render/render.lock.txt",
+  "uv pip install --python .venv-render/bin/python --no-deps -e .",
+]
+
+[versions]
+mujoco = "3.3.7"
+mink = "0.0.5"
+numpy = "1.26.4"
+scipy = "1.17.1"
+
+[gate]
+imports = ["mujoco", "mink", "axis_qvla.realrobot.render.cli"]

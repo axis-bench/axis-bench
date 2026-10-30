@@ -1,0 +1,24 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+π0.5,BC pretraining / plain FT,untagged inference,bc|bare,57.416666666666664,57.416666666666664,0.0,1.887573802712517,the plain-BC reference band; native protocol
+π0.5,BC pretraining / plain FT,tag-5 inference,bc|cond,58.333333333333336,57.416666666666664,1.5965166908563135,1.9217483155919228,Sec. V.D only; not a Fig. 7 bar
+π0.5,BC pretraining / tagged FT,untagged inference,bct|bare,57.75,57.416666666666664,0.5805515239477503,1.8483296322314478,
+π0.5,BC pretraining / tagged FT,tag-5 inference,bct|cond,57.083333333333336,57.416666666666664,-0.5805515239477503,1.858785097223457,native protocol
+π0.5,conditioning / plain FT,untagged inference,cfgnp|bare,57.0,57.416666666666664,-0.7256894049346879,1.8613897871560405,native protocol
+π0.5,conditioning / plain FT,tag-5 inference,cfgnp|cond,57.75,57.416666666666664,0.5805515239477503,1.862634220859864,
+π0.5,conditioning / tagged FT,untagged inference,cfg_ph_ep|bare,57.833333333333336,57.416666666666664,0.7256894049346879,1.8218128632235944,
+π0.5,conditioning / tagged FT,tag-5 inference,cfg_ph_ep|cond,58.0,57.416666666666664,1.0159651669085632,1.856403710341885,native protocol
+SmolVLA,BC pretraining / plain FT,untagged inference,svla_bc|bare,5.083333333333333,5.083333333333333,0.0,11.69117988831176,the plain-BC reference band; native protocol
+SmolVLA,BC pretraining / plain FT,tag-5 inference,svla_bc|cond,4.416666666666667,5.083333333333333,-13.114754098360656,11.04339002826183,Sec. V.D only; not a Fig. 7 bar
+SmolVLA,BC pretraining / tagged FT,untagged inference,svla_bct|bare,5.416666666666667,5.083333333333333,6.557377049180328,11.914322826627293,
+SmolVLA,BC pretraining / tagged FT,tag-5 inference,svla_bct|cond,5.916666666666667,5.083333333333333,16.39344262295082,12.495632131252135,native protocol
+SmolVLA,conditioning / plain FT,untagged inference,svla_cfgnp|bare,6.25,5.083333333333333,22.950819672131146,12.331094799404257,native protocol
+SmolVLA,conditioning / plain FT,tag-5 inference,svla_cfgnp|cond,3.8333333333333335,5.083333333333333,-24.59016393442623,10.440448083993873,
+SmolVLA,conditioning / tagged FT,untagged inference,svla_cfgph|bare,6.916666666666667,5.083333333333333,36.0655737704918,12.993289980612698,
+SmolVLA,conditioning / tagged FT,tag-5 inference,svla_cfgph|cond,8.833333333333334,5.083333333333333,73.77049180327869,14.703008081822079,native protocol
+X-VLA,BC pretraining / plain FT,untagged inference,xvla_bc|bare,25.75,25.75,0.0,3.8621310953471926,the plain-BC reference band; native protocol
+X-VLA,BC pretraining / tagged FT,untagged inference,xvla_bct|bare,25.583333333333332,25.75,-0.6472491909385113,3.9569641620186036,
+X-VLA,BC pretraining / tagged FT,tag-5 inference,xvla_bct|cond,27.5,25.75,6.796116504854369,4.047766243043255,native protocol
+X-VLA,conditioning / plain FT,untagged inference,xvla_cfgnp|bare,24.333333333333332,25.75,-5.501618122977346,4.034289201876355,native protocol
+X-VLA,conditioning / plain FT,tag-5 inference,xvla_cfgnp|cond,25.666666666666668,25.75,-0.32362459546925565,4.04155165456289,
+X-VLA,conditioning / tagged FT,untagged inference,xvla_cfgph|bare,28.333333333333332,25.75,10.032362459546926,4.08690586016489,
+X-VLA,conditioning / tagged FT,tag-5 inference,xvla_cfgph|cond,27.833333333333332,25.75,8.090614886731391,4.062745586142451,native protocol

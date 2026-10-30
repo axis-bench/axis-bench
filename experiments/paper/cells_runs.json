@@ -1,0 +1,620 @@
+{
+ "cells": [
+  {
+   "box": "s2",
+   "cell": "droidinit|bare",
+   "run": "r1droid"
+  },
+  {
+   "box": "s2",
+   "cell": "bc|bare",
+   "run": "r1bc_r2"
+  },
+  {
+   "box": "s2",
+   "cell": "bc|cond",
+   "run": "r1bccond"
+  },
+  {
+   "box": "s2",
+   "cell": "awr_v2_row|bare",
+   "run": "r1awrv2"
+  },
+  {
+   "box": "s2",
+   "cell": "awr_v2_ep|bare",
+   "run": "r1awrv2ep"
+  },
+  {
+   "box": "s2",
+   "cell": "awr_ph_row|bare",
+   "run": "r1awrph"
+  },
+  {
+   "box": "s2",
+   "cell": "awr_ph_ep|bare",
+   "run": "r1awrphep"
+  },
+  {
+   "box": "s2",
+   "cell": "drop_v2_row|bare",
+   "run": "r1dropv2"
+  },
+  {
+   "box": "s2",
+   "cell": "drop_v2_ep|bare",
+   "run": "r1dropv2ep"
+  },
+  {
+   "box": "s2",
+   "cell": "drop_ph_row|bare",
+   "run": "r1dropph"
+  },
+  {
+   "box": "s2",
+   "cell": "drop_ph_ep|bare",
+   "run": "r1dropphep"
+  },
+  {
+   "box": "s2",
+   "cell": "cfg_v2_ep|cond",
+   "run": "r1cfgv2ep_c"
+  },
+  {
+   "box": "s2",
+   "cell": "cfg_v2_row|cond",
+   "run": "r1cfgv2row_c"
+  },
+  {
+   "box": "s2",
+   "cell": "cfg_ph_row|cond",
+   "run": "r1cfgphrow_c"
+  },
+  {
+   "box": "s2",
+   "cell": "cfg_ph_ep|bare",
+   "run": "r1cfgphep_b"
+  },
+  {
+   "box": "s2",
+   "cell": "cfg_ph_ep|cond",
+   "run": "r1cfgphep_c"
+  },
+  {
+   "box": "s2",
+   "cell": "bct|bare",
+   "run": "r1bct_b"
+  },
+  {
+   "box": "s2",
+   "cell": "bct|cond",
+   "run": "r1bct_c"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgnp|bare",
+   "run": "r1cfgnp_b"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgnp|cond",
+   "run": "r1cfgnp_c"
+  },
+  {
+   "box": "s2",
+   "cell": "bc43|bare",
+   "run": "r1bc43"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgpt43|cond",
+   "run": "r1cfgpt43"
+  },
+  {
+   "box": "s2",
+   "cell": "s1000bc|bare",
+   "run": "r1s1000bc"
+  },
+  {
+   "box": "s2",
+   "cell": "s1000cfg|cond",
+   "run": "r1s1000cfg"
+  },
+  {
+   "box": "s2",
+   "cell": "s2500bc|bare",
+   "run": "r1s2500bc"
+  },
+  {
+   "box": "s2",
+   "cell": "s2500cfg|cond",
+   "run": "r1s2500cfg"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_base|bare",
+   "run": "r1xbase"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_bc|bare",
+   "run": "r1xbc"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_cfgph|bare",
+   "run": "r1xcfgph_b"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_cfgph|cond",
+   "run": "r1xcfgph_c"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_s1000bc|bare",
+   "run": "r1xs1000bc"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_s1000cfg|cond",
+   "run": "r1xs1000cfg"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_s2500bc|bare",
+   "run": "r1xs2500bc"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_s2500cfg|cond",
+   "run": "r1xs2500cfg"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_bct|bare",
+   "run": "r1xbct_b"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_bct|cond",
+   "run": "r1xbct_c"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_cfgnp|bare",
+   "run": "r1xcfgnp_b"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_cfgnp|cond",
+   "run": "r1xcfgnp_c"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_cfg_ph_row|cond",
+   "run": "r1xcfg_phrow_c"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_cfg_v2_ep|cond",
+   "run": "r1xcfg_v2ep_c"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_cfg_v2_row|cond",
+   "run": "r1xcfg_v2row_c"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_awr_ph_ep|bare",
+   "run": "r1xawr_phep"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_awr_ph_row|bare",
+   "run": "r1xawr_phrow"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_awr_v2_row|bare",
+   "run": "r1xawr_v2row"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_awr_v2_ep|bare",
+   "run": "r1xawr_v2ep"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_drop_ph_ep|bare",
+   "run": "r1xdrop_phep"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_drop_ph_row|bare",
+   "run": "r1xdrop_phrow"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_drop_v2_row|bare",
+   "run": "r1xdrop_v2row"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_drop_v2_ep|bare",
+   "run": "r1xdrop_v2ep"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_rand_ep|bare",
+   "run": "r1xrand_ep"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_rand_row|bare",
+   "run": "r1xrand_row"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_rand_ep|bare",
+   "run": "r1srand_ep"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_bc_sd1|bare",
+   "run": "r1sbc_sd1"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgph_sd1|cond",
+   "run": "r1scfgph_sd1_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgnp_sd1|bare",
+   "run": "r1scfgnp_sd1_b"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgnp43|bare",
+   "run": "r1cfgnp43"
+  },
+  {
+   "box": "s2",
+   "cell": "bc44|bare",
+   "run": "r1bc44"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgpt44|cond",
+   "run": "r1cfgpt44"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgnp44|bare",
+   "run": "r1cfgnp44"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgnp_sd2|bare",
+   "run": "r1scfgnp_sd2_b"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgpt43|bare",
+   "run": "r1cfgpt43_b"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgnp43|cond",
+   "run": "r1cfgnp43_c"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgpt44|bare",
+   "run": "r1cfgpt44_b"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgnp44|cond",
+   "run": "r1cfgnp44_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgph_sd1|bare",
+   "run": "r1scfgph_sd1_b"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgnp_sd1|cond",
+   "run": "r1scfgnp_sd1_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgph_sd2|bare",
+   "run": "r1scfgph_sd2_b"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgnp_sd2|cond",
+   "run": "r1scfgnp_sd2_c"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgph_sd1|bare",
+   "run": "r1xcfgph_sd1_b"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgnp_sd1|cond",
+   "run": "r1xcfgnp_sd1_c"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgph_sd2|bare",
+   "run": "r1xcfgph_sd2_b"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgnp_sd2|cond",
+   "run": "r1xcfgnp_sd2_c"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgrow43|cond",
+   "run": "r1cfgrow43"
+  },
+  {
+   "box": "s2",
+   "cell": "cfgrow44|cond",
+   "run": "r1cfgrow44"
+  },
+  {
+   "box": "s2",
+   "cell": "dropep43|bare",
+   "run": "r1dropep43"
+  },
+  {
+   "box": "s2",
+   "cell": "dropep44|bare",
+   "run": "r1dropep44"
+  },
+  {
+   "box": "s2",
+   "cell": "droprow43|bare",
+   "run": "r1droprow43"
+  },
+  {
+   "box": "s2",
+   "cell": "droprow44|bare",
+   "run": "r1droprow44"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfg_ph_row_sd1|cond",
+   "run": "r1scfg_phrow_sd1_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfg_ph_row_sd2|cond",
+   "run": "r1scfg_phrow_sd2_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_drop_ph_ep_sd1|bare",
+   "run": "r1sdrop_phep_sd1"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_drop_ph_ep_sd2|bare",
+   "run": "r1sdrop_phep_sd2"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_drop_ph_row_sd1|bare",
+   "run": "r1sdrop_phrow_sd1"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_drop_ph_row_sd2|bare",
+   "run": "r1sdrop_phrow_sd2"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfg_ph_row_sd1|cond",
+   "run": "r1xcfg_phrow_sd1_c"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfg_ph_row_sd2|cond",
+   "run": "r1xcfg_phrow_sd2_c"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_drop_ph_ep_sd1|bare",
+   "run": "r1xdrop_phep_sd1"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_drop_ph_ep_sd2|bare",
+   "run": "r1xdrop_phep_sd2"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_drop_ph_row_sd1|bare",
+   "run": "r1xdrop_phrow_sd1"
+  },
+  {
+   "box": "s2",
+   "cell": "xvla_drop_ph_row_sd2|bare",
+   "run": "r1xdrop_phrow_sd2"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgnp_sd1|bare",
+   "run": "r1xcfgnp_sd1_b"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgnp_sd2|bare",
+   "run": "r1xcfgnp_sd2_b"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_bc_sd2|bare",
+   "run": "r1sbc_sd2"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgph_sd2|cond",
+   "run": "r1scfgph_sd2_c"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_bc_sd1|bare",
+   "run": "r1xbc_sd1"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgph_sd1|cond",
+   "run": "r1xcfgph_sd1_c"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_bc_sd2|bare",
+   "run": "r1xbc_sd2"
+  },
+  {
+   "box": "s3",
+   "cell": "xvla_cfgph_sd2|cond",
+   "run": "r1xcfgph_sd2_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_rand_row|bare",
+   "run": "r1srand_row"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_base_rand|bare",
+   "run": "r1sbase"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_bc|bare",
+   "run": "r1sbc"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_bc|cond",
+   "run": "r1sbc_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_bct|bare",
+   "run": "r1sbct_b"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_bct|cond",
+   "run": "r1sbct_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgnp|bare",
+   "run": "r1scfgnp_b"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgnp|cond",
+   "run": "r1scfgnp_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgph|bare",
+   "run": "r1scfgph_b"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfgph|cond",
+   "run": "r1scfgph_c"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_awr_ph_ep|bare",
+   "run": "r1sawr_phep"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_awr_ph_row|bare",
+   "run": "r1sawr_phrow"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_awr_v2_row|bare",
+   "run": "r1sawr_v2row"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_awr_v2_ep|bare",
+   "run": "r1sawr_v2ep"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_drop_ph_ep|bare",
+   "run": "r1sdrop_phep"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_drop_ph_row|bare",
+   "run": "r1sdrop_phrow"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_drop_v2_row|bare",
+   "run": "r1sdrop_v2row"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_drop_v2_ep|bare",
+   "run": "r1sdrop_v2ep"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_s1000bc|bare",
+   "run": "r1ss1000bc"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_s1000cfg|cond",
+   "run": "r1ss1000cfg"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_s2500bc|bare",
+   "run": "r1ss2500bc"
+  },
+  {
+   "box": "s2",
+   "cell": "svla_s2500cfg|cond",
+   "run": "r1ss2500cfg"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfg_ph_row|cond",
+   "run": "r1scfg_phrow"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfg_v2_ep|cond",
+   "run": "r1scfg_v2ep"
+  },
+  {
+   "box": "s3",
+   "cell": "svla_cfg_v2_row|cond",
+   "run": "r1scfg_v2row"
+  }
+ ],
+ "schema": "qvla.cell_runs/1"
+}

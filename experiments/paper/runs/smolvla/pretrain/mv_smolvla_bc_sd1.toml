@@ -1,0 +1,23 @@
+[arm]
+id = "smolvla.pretrain.mv_smolvla_bc_sd1"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:smolvlm2_500m"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:28702703e8c62bf5e4c8b435eadf57d4cc7db83d4c29f1cd1037db7cd0e986c7"
+
+[recipe]
+preset = "smolvla.pretrain.paper"
+seed = 1
+
+[paper]
+cells = []
+checkpoint = "smolvla/pretrain/mv_smolvla_bc_sd1"
+signals = ["lerobot.rows"]

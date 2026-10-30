@@ -1,0 +1,12 @@
+[submodule "third_party/axis-render"]
+	path = third_party/axis-render
+	url = https://github.com/axis-bench/axis-render.git
+	branch = axis-bench/v1.0
+[submodule "third_party/lerobot"]
+	path = third_party/lerobot
+	url = https://github.com/axis-bench/lerobot-axis.git
+	branch = axis-bench/v1.0
+[submodule "third_party/openpi"]
+	path = third_party/openpi
+	url = https://github.com/axis-bench/openpi-axis.git
+	branch = axis-bench/v1.0

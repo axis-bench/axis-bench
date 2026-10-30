@@ -1,0 +1,15 @@
+lerobot @ git+https://github.com/huggingface/lerobot@0cf864870cf29f4738d3ade893e6fd13fbd7cdb5
+numpy==2.2.6
+datasets==3.6.0
+huggingface-hub==0.32.3
+torch==2.7.1
+torchvision==0.22.1
+torchcodec==0.4.0
+pillow==11.2.1
+av==17.0.0
+pandas==2.2.3
+pyarrow==20.0.0
+rerun-sdk==0.23.4
+h5py==3.13.0
+opencv-python-headless==4.11.0.86
+tyro==0.9.22

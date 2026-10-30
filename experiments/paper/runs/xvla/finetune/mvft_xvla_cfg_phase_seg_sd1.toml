@@ -1,0 +1,28 @@
+[arm]
+id = "xvla.finetune.mvft_xvla_cfg_phase_seg_sd1"
+backbone = "xvla-lerobot"
+stage = "finetune"
+track = "paper"
+
+[init]
+ckpt = "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_cfg_phase_seg_sd1/020621#sha256:4f94e8c0d58d0ba4b8456b6ae0dfd33eb7d7726c5654f45679aa7a1ecc9f81e9"
+
+[data]
+rowspace = "heldout24_ft#sha256:813de4957527d3394cadc9e564f9718769c82415c9091f4971ba5e47641960f9"
+
+[signal]
+bundle = "sha256:fcf305c6c9f2b89a5c2245e26a421a56af6ae6a2083102315679c27efe2a4621"
+
+[recipe]
+preset = "xvla.finetune.paper"
+seed = 1
+
+[recipe.overrides]
+axis_quality_constant_tag = 5
+axis_quality_token_budget = 50
+
+[paper]
+cells = ["xvla_cfg_ph_row_sd1|cond"]
+checkpoint = "xvla/ft/mvft_xvla_cfg_phase_seg_sd1"
+pretrain_seed = 1
+signals = ["lerobot.ft_rows_all"]

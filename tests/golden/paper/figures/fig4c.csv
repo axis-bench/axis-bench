@@ -1,0 +1,9 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+SmolVLA,random selection,episode,svla_rand_ep|bare,4.0,5.083333333333333,-21.311475409836067,10.614042004090914,
+SmolVLA,random selection,chunk,svla_rand_row|bare,3.9166666666666665,5.083333333333333,-22.950819672131146,10.601374566704749,
+SmolVLA,approach-aware filtering,episode,svla_drop_ph_ep|bare,5.083333333333333,5.083333333333333,0.0,11.66817026181918,
+SmolVLA,approach-aware filtering,chunk,svla_drop_ph_row|bare,7.0,5.083333333333333,37.704918032786885,13.110655097135872,
+X-VLA,random selection,episode,xvla_rand_ep|bare,23.0,25.75,-10.679611650485437,3.770747356279485,
+X-VLA,random selection,chunk,xvla_rand_row|bare,26.583333333333332,25.75,3.236245954692557,4.1718712585314535,
+X-VLA,approach-aware filtering,episode,xvla_drop_ph_ep|bare,28.75,25.75,11.650485436893204,4.050094255261621,
+X-VLA,approach-aware filtering,chunk,xvla_drop_ph_row|bare,29.166666666666668,25.75,13.268608414239482,3.794006702848633,

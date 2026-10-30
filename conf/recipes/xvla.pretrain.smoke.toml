@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "xvla.pretrain.smoke"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "smoke"
+paper_budget = false
+description = "The X-VLA smoke: the pretraining template at the smoke track's budget, 20 steps of 8 samples on one GPU. A 20-step run that checks the pipeline end to end."
+template = "lerobot/xvla.pretrain.json"
+
+[budget]
+steps = 20
+global_batch = 8
+per_rank_batch = 8
+world = 1

@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "xvla.pretrain.paper"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "paper"
+paper_budget = true
+description = "Paper pretraining of X-VLA from lerobot/xvla-base: all weights trainable, action chunk 30, domain 20, 20,621 steps at 8 per GPU on 8 GPUs."
+template = "lerobot/xvla.pretrain.json"
+
+[budget]
+steps = 20621
+global_batch = 64
+per_rank_batch = 8
+world = 8

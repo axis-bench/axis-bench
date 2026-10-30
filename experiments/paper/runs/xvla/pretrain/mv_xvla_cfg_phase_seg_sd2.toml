@@ -1,0 +1,27 @@
+[arm]
+id = "xvla.pretrain.mv_xvla_cfg_phase_seg_sd2"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:xvla_base"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:d00665c75383ff7499c03485937dc05390319efcc51edf02c9304f0b188ad333"
+
+[recipe]
+preset = "xvla.pretrain.paper"
+seed = 2
+
+[recipe.overrides]
+axis_expected_reward = "phase"
+axis_quality_token_budget = 50
+
+[paper]
+cells = []
+checkpoint = "xvla/pretrain/mv_xvla_cfg_phase_seg_sd2"
+signals = ["lerobot.rows", "approach_aware.chunk.tags"]

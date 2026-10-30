@@ -1,0 +1,79 @@
+schema = "qvla.realrobot_line/1"
+# The record of the real-robot line: stage 1 pretrains pi0.5 on the re-rendered simulation
+# demonstrations of qvla-v1-realworld (embodiment realalign_sim), stage 2 finetunes it on the FR3
+# demonstrations (embodiment fr3). The runs: the finetune-only control, and one pretrain + finetune
+# pair per signal of the shared signal toolset (BC, approach-aware episode conditioning, AWR,
+# filtering). Each run below has a
+# run spec in runs/ that `python -m axis_qvla.realrobot.fr3 check` checks against this file; the serve
+# conditions are how a finetune run is served, not training runs. The run specs name their inputs
+# `local:`; `qvla realrobot fr3 local-runs` writes the ones `qvla train` trains.
+[stage1]
+embodiment = "realalign_sim"
+init = "base:pi05_base"
+steps = 20000
+global_batch = 64
+warmup = 1000
+peak_lr = 2.5e-5
+decay_lr = 2.5e-6
+freeze = "lora_frozen_vision"   # LoRA on both experts, SigLIP frozen (axis_qvla.train.recipes.FREEZES)
+action_horizon = 15
+image = "center_crop"
+sim_image_aug = true
+norm = "computed"               # `fr3 norm` over the re-rendered simulation demonstrations (their DROID-8D view)
+[stage2]
+embodiment = "fr3"
+steps = 16000
+global_batch = 64
+warmup = 1600
+peak_lr = 2.5e-5
+decay_lr = 2.5e-6
+freeze = "lora"
+action_horizon = 15
+image = "center_crop"           # baked into the stored pixels; the training-side letterbox transform is the identity on square frames
+dataset = "ZhixuLi/tasl-fr3-10task-pbc-v2"
+filter = "tail10"
+norm = "computed"               # fr3 norm over the FR3 finetune set
+[units]
+stage1 = "joint_velocity_rad_s_clipped_1"
+stage2 = "droid_normalized_joint_velocity_command"
+declared_transfer = true        # stage 2 finetunes across this unit change; the check requires it declared
+[serve]
+bare = { prompt_suffix = "", guidance = 0.0 }
+quality5 = { prompt_suffix = "\nQuality: 5", guidance = 0.0 }
+[runs."pi05.pretrain.realrobot_bc"]
+stage = "pretrain"
+signal = "bc"
+[runs."pi05.pretrain.realrobot_cond"]
+stage = "pretrain"
+signal = "conditioning"
+[runs."pi05.pretrain.realrobot_awr"]
+stage = "pretrain"
+signal = "awr"
+[runs."pi05.pretrain.realrobot_drop"]
+stage = "pretrain"
+signal = "filtering"
+[runs."pi05.finetune.realrobot_bc"]
+stage = "finetune"
+init = "run:pi05.pretrain.realrobot_bc"
+quality_tag = false
+serve = "bare"
+[runs."pi05.finetune.realrobot_cond"]
+stage = "finetune"
+init = "run:pi05.pretrain.realrobot_cond"
+quality_tag = true              # "\nQuality: 5" on every FR3 prompt, two-level dropout 0.15 / 0.05
+serve = "quality5"
+[runs."pi05.finetune.realrobot_awr"]
+stage = "finetune"
+init = "run:pi05.pretrain.realrobot_awr"
+quality_tag = false
+serve = "bare"
+[runs."pi05.finetune.realrobot_drop"]
+stage = "finetune"
+init = "run:pi05.pretrain.realrobot_drop"
+quality_tag = false
+serve = "bare"
+[runs."pi05.finetune.realrobot_only"]
+stage = "finetune"
+init = "base:pi05_base"
+quality_tag = false
+serve = "bare"

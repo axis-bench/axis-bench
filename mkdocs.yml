@@ -1,0 +1,74 @@
+site_name: AXIS-Bench
+site_url: https://axis-bench.github.io/axis-bench/
+site_description: A benchmark for quality-aware VLA pretraining
+repo_url: https://github.com/axis-bench/axis-bench
+repo_name: axis-bench/axis-bench
+edit_uri: ""
+copyright: Code under Apache-2.0; data and checkpoints under the licences of their repository cards
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+  - search
+hooks:
+  - tests/docs/site_hooks.py
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - admonition
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Home: index.md
+  - Install: install.md
+  - 1 Reproduce the paper:
+      - From published results: tutorials/reproduce-from-results.md
+      - Re-evaluate released checkpoints: tutorials/reeval-released-checkpoints.md
+  - 2 Train with your quality method:
+      - Write a quality method: tutorials/write-a-quality-method.md
+      - Pretrain: tutorials/pretrain.md
+      - Fine-tune and evaluate: tutorials/fine-tune-and-evaluate.md
+      - Relabel with a new reward: tutorials/relabel-with-a-new-reward.md
+  - 3 Advanced:
+      - Connect your own model: tutorials/connect-your-own-model.md
+      - Real robot: tutorials/real-world-your-workspace.md
+  - Reference:
+      - CLI: reference/cli.md
+      - Data: reference/data.md
+      - Results format: reference/results-format.md
+      - Reporting rules: reference/reporting-rules.md
+      - Policy server: reference/policy-server.md
+      - How results are verified: reference/verification.md
+      - Troubleshooting: reference/troubleshooting.md

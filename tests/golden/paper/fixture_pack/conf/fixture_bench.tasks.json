@@ -1,0 +1,30 @@
+{
+  "tasks": {
+    "806": {
+      "task_name_canonical": "task 806",
+      "task_name": null,
+      "test_seeds": [
+        806000,
+        806001,
+        806002
+      ],
+      "gripper": {
+        "open_w": 0.08,
+        "closed_w": 0.0
+      }
+    },
+    "1050": {
+      "task_name_canonical": "task 1050",
+      "task_name": null,
+      "test_seeds": [
+        1050000,
+        1050001,
+        1050002
+      ],
+      "gripper": {
+        "open_w": 0.08,
+        "closed_w": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+ "H": "1 - median over qualifying judges of U, the share of an episode's decidable trainable steps the judge marked unproductive. A judge's answer counts only when it is a complete submission from a locked answer file -- a draft does not count, and neither does a record that claims an unproductive interval exists but marks none. A judge qualifies on an episode when it decided at least 80% of the episode's trainable steps.",
+ "correlation_set": "an episode is in the correlation set used for Fig. 4(b) when it has at least 2 qualifying judges and both reward curves (object-centric, approach-aware) are scorable for it",
+ "episodes": [
+  {
+   "H": 1.0,
+   "episode_index": 3,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 2,
+   "task_id": 1071
+  },
+  {
+   "H": 0.9704433497536946,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1004
+  },
+  {
+   "H": 1.0,
+   "episode_index": 11,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1604
+  },
+  {
+   "H": 0.9291845493562232,
+   "episode_index": 9,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1787
+  },
+  {
+   "H": 0.7643593519882179,
+   "episode_index": 3,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 948
+  },
+  {
+   "H": 0.7788844621513944,
+   "episode_index": 1,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 814
+  },
+  {
+   "H": 0.9282945736434108,
+   "episode_index": 4,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1452
+  },
+  {
+   "H": 0.9932432432432432,
+   "episode_index": 7,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1792
+  },
+  {
+   "H": 1.0,
+   "episode_index": 4,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 2,
+   "task_id": 1241
+  },
+  {
+   "H": 1.0,
+   "episode_index": 12,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1237
+  },
+  {
+   "H": 1.0,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1774
+  },
+  {
+   "H": 0.8017241379310345,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1714
+  },
+  {
+   "H": 0.714828897338403,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 972
+  },
+  {
+   "H": 1.0,
+   "episode_index": 1,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1875
+  },
+  {
+   "H": 1.0,
+   "episode_index": 8,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 952
+  },
+  {
+   "H": 0.4970414201183432,
+   "episode_index": 5,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1038
+  },
+  {
+   "H": 0.8663366336633663,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 928
+  },
+  {
+   "H": 0.6480836236933798,
+   "episode_index": 6,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1790
+  },
+  {
+   "H": 1.0,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1403
+  },
+  {
+   "H": 0.9013157894736842,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 2246
+  },
+  {
+   "H": 0.8194444444444444,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1466
+  },
+  {
+   "H": 1.0,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 2,
+   "task_id": 1501
+  },
+  {
+   "H": 1.0,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 2026
+  },
+  {
+   "H": 1.0,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1817
+  },
+  {
+   "H": 0.5351437699680511,
+   "episode_index": 20,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 948
+  },
+  {
+   "H": 1.0,
+   "episode_index": 8,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 2,
+   "task_id": 1418
+  },
+  {
+   "H": 1.0,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1022
+  },
+  {
+   "H": 1.0,
+   "episode_index": 8,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1518
+  },
+  {
+   "H": 0.8037135278514589,
+   "episode_index": 9,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1244
+  },
+  {
+   "H": 0.5148063781321184,
+   "episode_index": 11,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1835
+  },
+  {
+   "H": 0.7807017543859649,
+   "episode_index": 14,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 900
+  },
+  {
+   "H": 0.9563106796116505,
+   "episode_index": 3,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1092
+  },
+  {
+   "H": 0.8224101479915433,
+   "episode_index": 25,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1458
+  },
+  {
+   "H": 0.9543568464730291,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1421
+  },
+  {
+   "H": 1.0,
+   "episode_index": 1,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 2024
+  },
+  {
+   "H": 0.7307032590051459,
+   "episode_index": 11,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 904
+  },
+  {
+   "H": 0.8878787878787879,
+   "episode_index": 13,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 2,
+   "task_id": 1475
+  },
+  {
+   "H": 0.9693877551020408,
+   "episode_index": 1,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 2304
+  },
+  {
+   "H": 0.86,
+   "episode_index": 9,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1625
+  },
+  {
+   "H": 1.0,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1062
+  },
+  {
+   "H": 0.9176029962546817,
+   "episode_index": 4,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1860
+  },
+  {
+   "H": 1.0,
+   "episode_index": 16,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1593
+  },
+  {
+   "H": 0.9954648526077098,
+   "episode_index": 11,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1901
+  },
+  {
+   "H": 0.9322033898305084,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1604
+  },
+  {
+   "H": 1.0,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1458
+  },
+  {
+   "H": 1.0,
+   "episode_index": 4,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 1475
+  },
+  {
+   "H": 1.0,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 885
+  },
+  {
+   "H": 1.0,
+   "episode_index": 0,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 3,
+   "task_id": 919
+  },
+  {
+   "H": 1.0,
+   "episode_index": 2,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 2,
+   "task_id": 1866
+  },
+  {
+   "H": 1.0,
+   "episode_index": 1,
+   "in_correlation_set": true,
+   "n_qualifying_judges": 2,
+   "task_id": 2037
+  }
+ ],
+ "params": {
+  "aux_draws_per_resample": 48,
+  "c_min": 0.8,
+  "min_records": 2,
+  "n_boot": 10000,
+  "record_rule": "a judge's answer counts only when it is a complete, locked submission; a record that claims an interval exists but marks none is treated as missing, not as zero",
+  "seed": 42
+ },
+ "schema": "qvla.human_study/1",
+ "study": "unproductive-interval judgments on 50 corpus episodes by 3 judges"
+}

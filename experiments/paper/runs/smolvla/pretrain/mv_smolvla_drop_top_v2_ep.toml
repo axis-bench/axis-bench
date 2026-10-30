@@ -1,0 +1,29 @@
+[arm]
+id = "smolvla.pretrain.mv_smolvla_drop_top_v2_ep"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:smolvlm2_500m"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:f21063c82b43a3289de508b1199bc0f36475ff26be80ae65cd30f1bb4dfe0caa"
+
+[recipe]
+preset = "smolvla.pretrain.paper"
+seed = 0
+
+[recipe.overrides]
+axis_expected_mode = "drop_top"
+axis_expected_reward = "v2_ep"
+batch_size = 64
+"parallelism.dp_replicate" = 1
+
+[paper]
+cells = []
+checkpoint = "smolvla/pretrain/mv_smolvla_drop_top_v2_ep"
+signals = ["lerobot.schedule_drop_top_v2_ep_smolvla"]

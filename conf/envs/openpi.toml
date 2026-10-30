@@ -1,0 +1,20 @@
+schema = "qvla.env/1"
+tier = "openpi"
+description = "pi0.5 training and serving: the openpi line (JAX 0.5.3, numpy 1.x) with LeRobot 0.4.4 as its dataset reader."
+checkout = "third_party/openpi"
+python = "3.11"
+lock = "uv.lock"
+lock_sha256 = "8b701c45cfefaee2df398411a7879bb2ca5b936370ad92d9938d12cc5ae3619a"
+# Run in the checkout. Builds <checkout>/.venv from the lock, nothing else.
+build = ["GIT_LFS_SKIP_SMUDGE=1 uv sync --frozen --python 3.11"]
+
+[versions]   # what the built environment must report (importlib.metadata)
+numpy = "1.26.4"
+jax = "0.5.3"
+torch = "2.7.1"
+lerobot = "0.4.4"
+datasets = "4.0.0"
+transformers = "4.53.2"
+
+[gate]       # modules that must import in the built environment
+imports = ["openpi.training.axis_bundle", "openpi.training.axis_config", "lerobot.datasets.lerobot_dataset"]

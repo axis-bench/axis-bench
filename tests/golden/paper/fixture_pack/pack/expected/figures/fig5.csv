@@ -1,0 +1,43 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+π0.5,plain BC,reference,bc|bare,50.0,50.0,0.0,38.490017945975055,plain FT / untagged inference
+π0.5,FT-only control,no AXIS pretraining,droidinit|bare,,50.0,,,matched FT-only control
+π0.5,weighting,object-centric / episode,awr_v2_ep|bare,,50.0,,,
+π0.5,weighting,object-centric / chunk,awr_v2_row|bare,,50.0,,,
+π0.5,weighting,approach-aware / episode,awr_ph_ep|bare,,50.0,,,
+π0.5,weighting,approach-aware / chunk,awr_ph_row|bare,,50.0,,,
+π0.5,filtering,object-centric / episode,drop_v2_ep|bare,,50.0,,,
+π0.5,filtering,object-centric / chunk,drop_v2_row|bare,,50.0,,,
+π0.5,filtering,approach-aware / episode,drop_ph_ep|bare,,50.0,,,
+π0.5,filtering,approach-aware / chunk,drop_ph_row|bare,,50.0,,,
+π0.5,conditioning,object-centric / episode,cfg_v2_ep|cond,,50.0,,,
+π0.5,conditioning,object-centric / chunk,cfg_v2_row|cond,,50.0,,,
+π0.5,conditioning,approach-aware / episode,cfg_ph_ep|cond,83.33333333333333,50.0,66.66666666666667,27.21655269759087,
+π0.5,conditioning,approach-aware / chunk,cfg_ph_row|cond,,50.0,,,
+SmolVLA,plain BC,reference,svla_bc|bare,,,,,plain FT / untagged inference
+SmolVLA,FT-only control,no AXIS pretraining,svla_base_rand|bare,,,,,matched FT-only control
+SmolVLA,weighting,object-centric / episode,svla_awr_v2_ep|bare,,,,,
+SmolVLA,weighting,object-centric / chunk,svla_awr_v2_row|bare,,,,,
+SmolVLA,weighting,approach-aware / episode,svla_awr_ph_ep|bare,,,,,
+SmolVLA,weighting,approach-aware / chunk,svla_awr_ph_row|bare,,,,,
+SmolVLA,filtering,object-centric / episode,svla_drop_v2_ep|bare,,,,,
+SmolVLA,filtering,object-centric / chunk,svla_drop_v2_row|bare,,,,,
+SmolVLA,filtering,approach-aware / episode,svla_drop_ph_ep|bare,,,,,
+SmolVLA,filtering,approach-aware / chunk,svla_drop_ph_row|bare,,,,,
+SmolVLA,conditioning,object-centric / episode,svla_cfg_v2_ep|cond,,,,,
+SmolVLA,conditioning,object-centric / chunk,svla_cfg_v2_row|cond,,,,,
+SmolVLA,conditioning,approach-aware / episode,svla_cfgph|cond,,,,,
+SmolVLA,conditioning,approach-aware / chunk,svla_cfg_ph_row|cond,,,,,
+X-VLA,plain BC,reference,xvla_bc|bare,,,,,plain FT / untagged inference
+X-VLA,FT-only control,no AXIS pretraining,xvla_base|bare,,,,,matched FT-only control
+X-VLA,weighting,object-centric / episode,xvla_awr_v2_ep|bare,,,,,
+X-VLA,weighting,object-centric / chunk,xvla_awr_v2_row|bare,,,,,
+X-VLA,weighting,approach-aware / episode,xvla_awr_ph_ep|bare,,,,,
+X-VLA,weighting,approach-aware / chunk,xvla_awr_ph_row|bare,,,,,
+X-VLA,filtering,object-centric / episode,xvla_drop_v2_ep|bare,,,,,
+X-VLA,filtering,object-centric / chunk,xvla_drop_v2_row|bare,,,,,
+X-VLA,filtering,approach-aware / episode,xvla_drop_ph_ep|bare,,,,,
+X-VLA,filtering,approach-aware / chunk,xvla_drop_ph_row|bare,,,,,
+X-VLA,conditioning,object-centric / episode,xvla_cfg_v2_ep|cond,,,,,
+X-VLA,conditioning,object-centric / chunk,xvla_cfg_v2_row|cond,,,,,
+X-VLA,conditioning,approach-aware / episode,xvla_cfgph|cond,,,,,
+X-VLA,conditioning,approach-aware / chunk,xvla_cfg_ph_row|cond,,,,,

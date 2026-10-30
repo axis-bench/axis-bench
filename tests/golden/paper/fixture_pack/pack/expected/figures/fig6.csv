@@ -1,0 +1,19 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+π0.5,plain BC,1K,s1000bc|bare,,50.0,,,plain FT / untagged inference
+π0.5,plain BC,2.5K,s2500bc|bare,,50.0,,,plain FT / untagged inference
+π0.5,plain BC,5K,bc|bare,50.0,50.0,0.0,38.490017945975055,plain FT / untagged inference
+π0.5,conditioning,1K,s1000cfg|cond,,50.0,,,tagged FT / tag-5 inference
+π0.5,conditioning,2.5K,s2500cfg|cond,,50.0,,,tagged FT / tag-5 inference
+π0.5,conditioning,5K,cfg_ph_ep|cond,83.33333333333333,50.0,66.66666666666667,27.21655269759087,tagged FT / tag-5 inference
+SmolVLA,plain BC,1K,svla_s1000bc|bare,,,,,plain FT / untagged inference
+SmolVLA,plain BC,2.5K,svla_s2500bc|bare,,,,,plain FT / untagged inference
+SmolVLA,plain BC,5K,svla_bc|bare,,,,,plain FT / untagged inference
+SmolVLA,conditioning,1K,svla_s1000cfg|cond,,,,,tagged FT / tag-5 inference
+SmolVLA,conditioning,2.5K,svla_s2500cfg|cond,,,,,tagged FT / tag-5 inference
+SmolVLA,conditioning,5K,svla_cfgph|cond,,,,,tagged FT / tag-5 inference
+X-VLA,plain BC,1K,xvla_s1000bc|bare,,,,,plain FT / untagged inference
+X-VLA,plain BC,2.5K,xvla_s2500bc|bare,,,,,plain FT / untagged inference
+X-VLA,plain BC,5K,xvla_bc|bare,,,,,plain FT / untagged inference
+X-VLA,conditioning,1K,xvla_s1000cfg|cond,,,,,tagged FT / tag-5 inference
+X-VLA,conditioning,2.5K,xvla_s2500cfg|cond,,,,,tagged FT / tag-5 inference
+X-VLA,conditioning,5K,xvla_cfgph|cond,,,,,tagged FT / tag-5 inference

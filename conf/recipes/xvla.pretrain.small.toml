@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "xvla.pretrain.small"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "small"
+paper_budget = false
+description = "A 2,000-step X-VLA pretraining for quick experiments."
+template = "lerobot/xvla.pretrain.json"
+
+[budget]
+steps = 2000
+global_batch = 64
+per_rank_batch = 8
+world = 8

@@ -1,0 +1,31 @@
+schema = "qvla.env/1"
+tier = "droid_convert"
+description = "openpi's DROID converter (third_party/openpi/examples/droid/convert_droid_data_to_lerobot.py): LeRobot at the v2.1 commit the converter is written for, h5py and OpenCV, on CPU."
+checkout = "."
+python = "3.11"
+lock = "conf/envs/droid_convert.lock.txt"
+lock_sha256 = "6cf5ab79336169a588f39d3e33556e37163b2daf44b4b9427e6c9bcc87a86502"
+# Run in the axis-bench checkout. The lock is `uv pip compile conf/envs/droid_convert.in --python-version
+# 3.11 --python-platform x86_64-manylinux_2_28 --torch-backend cpu --no-header --no-annotate`. The .in
+# takes upstream openpi's lock versions (15a9616, whose examples/droid the pinned fork carries) except
+# numpy 2.2.6 and rerun-sdk 0.23.4: the lerobot commit needs rerun-sdk, whose releases for numpy 1.x
+# ship only glibc >= 2.31 wheels, and numpy 2.4 refuses the float() of a one-element array the
+# converter's episode save makes.
+build = [
+  "uv venv --python 3.11 .venv-droid-convert",
+  "uv pip install --python .venv-droid-convert --torch-backend cpu -r conf/envs/droid_convert.lock.txt",
+]
+
+[versions]
+lerobot = "0.1.0"
+numpy = "2.2.6"
+opencv-python-headless = "4.11.0.86"
+pandas = "2.2.3"
+pyarrow = "20.0.0"
+datasets = "3.6.0"
+torch = "2.7.1+cpu"
+pillow = "11.2.1"
+h5py = "3.13.0"
+
+[gate]
+imports = ["cv2", "h5py", "tyro", "lerobot.common.datasets.lerobot_dataset"]

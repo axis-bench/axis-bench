@@ -1,0 +1,27 @@
+[arm]
+id = "smolvla.pretrain.mv_smolvla_cfgphase_sd2"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:smolvlm2_500m"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:5fc0bd05517bc2b1846f3bd964229c7a50b6f09bbfea8c8e8a724e0f3e1e65ea"
+
+[recipe]
+preset = "smolvla.pretrain.paper"
+seed = 2
+
+[recipe.overrides]
+axis_expected_reward = "phase"
+axis_quality_token_budget = 48
+
+[paper]
+cells = []
+checkpoint = "smolvla/pretrain/mv_smolvla_cfgphase_sd2"
+signals = ["lerobot.rows", "approach_aware.episode.tags"]

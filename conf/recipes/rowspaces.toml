@@ -1,0 +1,83 @@
+schema = "qvla.rowspaces/1"
+# Where each row space's files sit on this machine. `repo` is a published repository, placed by
+# the data layout's default-destination helper, or "local" (this machine's derived data,
+# <cache>/derived: local_dest("derived", ...)); the other paths are relative to it. Names are the
+# signal compiler's (its rowspace module); a quoted name holds a dot. `corpus_base` is the
+# directory the roots index's entries are relative to (the published per-task corpus is
+# `episodes/`, whatever base the index itself records); `lerobot_dataset` is the merged LeRobot
+# copy SmolVLA and X-VLA read. `lerobot_copy` says what that copy is: "published" (the repository's
+# own, lock-verified), "cut" (built here by `axis_merge_datasets --ranges` from this row space's
+# ranges file, reading its action from `action_source`; binding checks the copy's cut record against
+# the ranges file, the action column and the roots index's task directories) or "plain" (built here
+# by a plain merge of whole task directories). A plain merge needs every input's features equal, and
+# every corpus task names its own scene objects in `observation.body_pose`: `qvla train merge-check
+# <task dir> ...` names the feature and the tasks that differ (binding runs it while the copy is not
+# built), and differently-scened tasks are merged from copies whose differing names are cleared, as
+# the smoke fixture does. A copy built here sits in the derived data.
+
+[libero5k_v2_d8]
+repo = "qvla-v1-corpus"
+roots = "index/roots_libero_5k_v2_d8.json"
+ranges = "index/ranges_libero_5k_v2.json"
+corpus_base = "episodes"
+lerobot_dataset = "lerobot_merged"
+lerobot_copy = "published"
+n_rows = 1906469
+
+["libero5k_v2_d8.sub1000"]
+repo = "qvla-v1-corpus"
+roots = "index/roots_libero_5k_v2_d8.json"
+ranges = "index/subsets/scaling_1000.ranges.json"
+corpus_base = "episodes"
+lerobot_dataset = "lerobot_merged"
+lerobot_copy = "published"
+n_rows = 1906469
+
+["libero5k_v2_d8.sub2500"]
+repo = "qvla-v1-corpus"
+roots = "index/roots_libero_5k_v2_d8.json"
+ranges = "index/subsets/scaling_2500.ranges.json"
+corpus_base = "episodes"
+lerobot_dataset = "lerobot_merged"
+lerobot_copy = "published"
+n_rows = 1906469
+
+[heldout24_ft]
+repo = "qvla-v1-bench"
+roots = "ft_demos/splits/qual_v2.roots.json"
+ranges = "ft_demos/splits/qual_v2.ranges.json"
+corpus_base = "."
+lerobot_dataset = "ft_lerobot_merged"
+lerobot_copy = "cut"
+action_source = "action"
+n_rows = 86912
+
+# The 2-task x 3-episode smoke fixture (`qvla train smoke-fixture`, axis_qvla.train.smoke): every file is
+# this machine's own, in <cache>/derived/smoke/; its LeRobot copy is a plain merge of the two tasks.
+[smoke_2x3]
+repo = "local"
+roots = "smoke/index/roots.json"
+ranges = "smoke/index/ranges.json"
+corpus_base = "smoke/corpus_d8"
+lerobot_dataset = "smoke/lerobot_merged"
+lerobot_copy = "plain"
+n_rows = 609
+
+# The real-world line's frame indexes, built on this machine in the local layout of
+# docs/tutorials/real-world-your-workspace.md: the rendered DROID-8D view through its `realign build`,
+# and your demonstrations in the training layout.
+[realworld_pretrain]
+repo = "local"
+roots = "realworld/built/roots.json"
+ranges = "realworld/built/ranges.json"
+corpus_base = "realworld/d8"
+lerobot_dataset = "realworld/d8_lerobot_merged"
+lerobot_copy = "plain"
+
+[realworld_finetune]
+repo = "local"
+roots = "realworld/demos/roots.json"
+ranges = "realworld/demos/ranges.json"
+corpus_base = "realworld/demos"
+lerobot_dataset = "realworld/demos_lerobot_merged"
+lerobot_copy = "plain"

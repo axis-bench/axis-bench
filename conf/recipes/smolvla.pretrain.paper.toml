@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "smolvla.pretrain.paper"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "paper"
+paper_budget = true
+description = "Paper pretraining of SmolVLA: SmolVLM2-500M weights with a fresh action expert, expert-only training with the vision encoder frozen, 20,621 steps at 16 per GPU on 4 GPUs."
+template = "lerobot/smolvla.pretrain.json"
+
+[budget]
+steps = 20621
+global_batch = 64
+per_rank_batch = 16
+world = 4

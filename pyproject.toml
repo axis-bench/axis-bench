@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "axis-qvla"
+version = "1.0.0"
+description = "AXIS-Bench: a benchmark for quality-aware VLA pretraining"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+# Minimums: the lowest version each package has passed the suite with. T0 needs none of them.
+# mujoco is exact: the benchmark's physics version. CI pins its whole environment separately
+# (.github/ci-constraints.txt), on Python 3.11. The signal builders read parquet with pandas:
+# build_awr_weights imports it at module scope and the others inside the functions that read,
+# so `offline` carries it too, at the same minimum as `test`.
+# Pillow: the real-robot data tools decode PNG frames. PyAV: they read video recordings and write the
+# training set's videos (axis_qvla.realrobot.realdata.training_set).
+# SciPy: the label pipeline slerps each body's orientation onto the render rows (axis_qvla.labels.resample).
+offline = ["numpy>=1.26.4", "pandas>=3.0.3", "pyarrow>=25.0.0", "huggingface_hub>=1.22.0", "pillow>=12.2.0",
+           "scipy>=1.17.1", "av>=18.0.0"]
+# Included tests import numpy and pandas at module level; the eval tests need
+# MuJoCo and Pillow. CI adds openpi-client and the axis-render package from their submodules.
+test = ["pytest>=9.1.1", "pandas>=3.0.3", "mujoco==3.3.7", "pillow>=12.2.0"]
+# The real-robot renderer's tier: exact pins, the same as axis_qvla/realrobot/render/render.lock.txt (its own
+# venv; mink 0.0.5 needs numpy < 2). PyAV writes the rendered videos.
+render = ["mujoco==3.3.7", "mink==0.0.5", "qpsolvers==4.13.0", "quadprog==0.1.13", "numpy==1.26.4",
+          "scipy==1.17.1", "pandas==3.0.3", "pyarrow==25.0.0", "av==18.0.0",
+          "typing_extensions==4.16.0", "absl-py==2.5.1", "etils==1.14.0", "fsspec==2026.9.0",
+          "glfw==2.11.0", "iniconfig==2.3.0", "packaging==26.3", "pluggy==1.6.0",
+          "pygments==2.21.0", "pyopengl==3.1.10", "python-dateutil==2.9.0.post0", "six==1.17.0",
+          "zipp==4.1.0"]
+# One extra per goal: `pip install -e ".[<goal>]"`. Reproducing the paper's tables and fetching
+# releases are stdlib only. Evaluating (released checkpoints, your runs, your own model's server)
+# runs in environments `qvla env build` makes: each backbone and the simulator have their own
+# interpreter, which pip cannot co-install with this one. A quality method's labels and `qvla train`'s
+# binding need the offline tier. The real robot needs the renderer's exact pins (`render`, the same as
+# axis_qvla/realrobot/render/render.lock.txt) plus the data tools' image decoder and Hub client.
+reproduce = []
+eval = []
+method = ["numpy>=1.26.4", "pandas>=3.0.3", "pyarrow>=25.0.0", "huggingface_hub>=1.22.0", "pillow>=12.2.0",
+          "scipy>=1.17.1", "av>=18.0.0"]
+realrobot = ["mujoco==3.3.7", "mink==0.0.5", "qpsolvers==4.13.0", "quadprog==0.1.13", "numpy==1.26.4",
+             "scipy==1.17.1", "pandas==3.0.3", "pyarrow==25.0.0", "av==18.0.0",
+             "typing_extensions==4.16.0", "absl-py==2.5.1", "etils==1.14.0", "fsspec==2026.9.0",
+             "glfw==2.11.0", "iniconfig==2.3.0", "packaging==26.3", "pluggy==1.6.0",
+             "pygments==2.21.0", "pyopengl==3.1.10", "python-dateutil==2.9.0.post0", "six==1.17.0",
+             "zipp==4.1.0", "pillow>=12.2.0", "huggingface_hub>=1.22.0"]
+
+[project.scripts]
+qvla = "axis_qvla.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["axis_qvla", "axis_qvla.*"]
+
+# `pytest tests` is the fast suite. Tests marked slow read local copies of published data through
+# the options of tests/conftest.py and run with `-m slow` (the CI `data` job).
+[tool.pytest.ini_options]
+markers = ["slow: needs a local copy of published data (tests/conftest.py); run with -m slow",
+           "network: downloads from a public upstream (a base model's publisher); always also marked slow"]
+addopts = "-m 'not slow'"

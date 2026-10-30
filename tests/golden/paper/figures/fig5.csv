@@ -1,0 +1,43 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+π0.5,plain BC,reference,bc|bare,57.416666666666664,57.416666666666664,0.0,1.887573802712517,plain FT / untagged inference
+π0.5,FT-only control,no AXIS pretraining,droidinit|bare,8.833333333333334,57.416666666666664,-84.61538461538461,1.276223392567815,matched FT-only control
+π0.5,weighting,object-centric / episode,awr_v2_ep|bare,56.666666666666664,57.416666666666664,-1.3062409288824384,1.8645558029319858,
+π0.5,weighting,object-centric / chunk,awr_v2_row|bare,52.333333333333336,57.416666666666664,-8.853410740203193,1.8268933500794855,
+π0.5,weighting,approach-aware / episode,awr_ph_ep|bare,54.666666666666664,57.416666666666664,-4.78955007256894,1.8029840526292642,
+π0.5,weighting,approach-aware / chunk,awr_ph_row|bare,58.083333333333336,57.416666666666664,1.1611030478955007,1.8145137648803475,
+π0.5,filtering,object-centric / episode,drop_v2_ep|bare,49.75,57.416666666666664,-13.352685050798259,1.9914059723412674,
+π0.5,filtering,object-centric / chunk,drop_v2_row|bare,53.833333333333336,57.416666666666664,-6.2409288824383164,1.842965361898401,
+π0.5,filtering,approach-aware / episode,drop_ph_ep|bare,50.333333333333336,57.416666666666664,-12.336719883889696,1.8360945835551201,
+π0.5,filtering,approach-aware / chunk,drop_ph_row|bare,50.333333333333336,57.416666666666664,-12.336719883889696,1.837241497642573,
+π0.5,conditioning,object-centric / episode,cfg_v2_ep|cond,52.916666666666664,57.416666666666664,-7.83744557329463,1.9082181943941423,
+π0.5,conditioning,object-centric / chunk,cfg_v2_row|cond,56.833333333333336,57.416666666666664,-1.0159651669085632,1.8737969339346894,
+π0.5,conditioning,approach-aware / episode,cfg_ph_ep|cond,58.0,57.416666666666664,1.0159651669085632,1.856403710341885,
+π0.5,conditioning,approach-aware / chunk,cfg_ph_row|cond,54.5,57.416666666666664,-5.079825834542816,1.8245857915608388,
+SmolVLA,plain BC,reference,svla_bc|bare,5.083333333333333,5.083333333333333,0.0,11.69117988831176,plain FT / untagged inference
+SmolVLA,FT-only control,no AXIS pretraining,svla_base_rand|bare,2.5,5.083333333333333,-50.81967213114754,8.011010965816796,matched FT-only control
+SmolVLA,weighting,object-centric / episode,svla_awr_v2_ep|bare,5.833333333333333,5.083333333333333,14.754098360655737,12.307097953523582,
+SmolVLA,weighting,object-centric / chunk,svla_awr_v2_row|bare,5.333333333333333,5.083333333333333,4.918032786885246,11.884963252715972,
+SmolVLA,weighting,approach-aware / episode,svla_awr_ph_ep|bare,6.833333333333333,5.083333333333333,34.42622950819672,13.208680051464714,
+SmolVLA,weighting,approach-aware / chunk,svla_awr_ph_row|bare,5.583333333333333,5.083333333333333,9.836065573770492,12.39196799276345,
+SmolVLA,filtering,object-centric / episode,svla_drop_v2_ep|bare,3.75,5.083333333333333,-26.229508196721312,10.349963355845636,
+SmolVLA,filtering,object-centric / chunk,svla_drop_v2_row|bare,7.083333333333333,5.083333333333333,39.34426229508197,12.075637285706815,
+SmolVLA,filtering,approach-aware / episode,svla_drop_ph_ep|bare,5.083333333333333,5.083333333333333,0.0,11.66817026181918,
+SmolVLA,filtering,approach-aware / chunk,svla_drop_ph_row|bare,7.0,5.083333333333333,37.704918032786885,13.110655097135872,
+SmolVLA,conditioning,object-centric / episode,svla_cfg_v2_ep|cond,9.166666666666666,5.083333333333333,80.32786885245902,14.834027574903109,
+SmolVLA,conditioning,object-centric / chunk,svla_cfg_v2_row|cond,6.583333333333333,5.083333333333333,29.508196721311474,12.801588855970257,
+SmolVLA,conditioning,approach-aware / episode,svla_cfgph|cond,8.833333333333334,5.083333333333333,73.77049180327869,14.703008081822079,
+SmolVLA,conditioning,approach-aware / chunk,svla_cfg_ph_row|cond,5.916666666666667,5.083333333333333,16.39344262295082,12.026576321938508,
+X-VLA,plain BC,reference,xvla_bc|bare,25.75,25.75,0.0,3.8621310953471926,plain FT / untagged inference
+X-VLA,FT-only control,no AXIS pretraining,xvla_base|bare,6.166666666666667,25.75,-76.05177993527508,2.5317290893990867,matched FT-only control
+X-VLA,weighting,object-centric / episode,xvla_awr_v2_ep|bare,28.416666666666668,25.75,10.35598705501618,4.1254203184407645,
+X-VLA,weighting,object-centric / chunk,xvla_awr_v2_row|bare,26.5,25.75,2.912621359223301,4.004584672688161,
+X-VLA,weighting,approach-aware / episode,xvla_awr_ph_ep|bare,25.75,25.75,0.0,3.9917490125898647,
+X-VLA,weighting,approach-aware / chunk,xvla_awr_ph_row|bare,28.0,25.75,8.737864077669903,4.203134781891061,
+X-VLA,filtering,object-centric / episode,xvla_drop_v2_ep|bare,28.25,25.75,9.70873786407767,3.950606737917496,
+X-VLA,filtering,object-centric / chunk,xvla_drop_v2_row|bare,23.583333333333332,25.75,-8.414239482200648,3.9833442152398613,
+X-VLA,filtering,approach-aware / episode,xvla_drop_ph_ep|bare,28.75,25.75,11.650485436893204,4.050094255261621,
+X-VLA,filtering,approach-aware / chunk,xvla_drop_ph_row|bare,29.166666666666668,25.75,13.268608414239482,3.794006702848633,
+X-VLA,conditioning,object-centric / episode,xvla_cfg_v2_ep|cond,23.5,25.75,-8.737864077669903,3.952462042918324,
+X-VLA,conditioning,object-centric / chunk,xvla_cfg_v2_row|cond,20.416666666666668,25.75,-20.71197411003236,3.8332783481776143,
+X-VLA,conditioning,approach-aware / episode,xvla_cfgph|cond,27.833333333333332,25.75,8.090614886731391,4.062745586142451,
+X-VLA,conditioning,approach-aware / chunk,xvla_cfg_ph_row|cond,25.833333333333332,25.75,0.32362459546925565,3.8422840335678528,

@@ -1,0 +1,15 @@
+{
+ "eef_ik": "single",
+ "fps": 15,
+ "grip_state": "closedness",
+ "max_steps": 1500,
+ "n_stable_frames": 45,
+ "noise_salt": 1096304979,
+ "render": {
+  "height": 360,
+  "width": 640
+ },
+ "replan": 8,
+ "schema": "qvla.execution/1",
+ "table_texture": null
+}

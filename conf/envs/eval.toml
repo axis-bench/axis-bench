@@ -1,0 +1,43 @@
+schema = "qvla.env/1"
+tier = "eval"
+description = "Benchmark evaluation in simulation: MuJoCo 3.3.7, the renderer (third_party/axis-render) with its runtime dependencies -- robosuite, dm-control, imageio, imageio-ffmpeg -- and the policy-server client from third_party/openpi. `qvla bench eval`, its rollout workers and `qvla bench check-server` run in it ([venv] eval of qvla.toml)."
+checkout = "."
+python = "3.11"
+lock = "conf/envs/eval.lock.txt"
+lock_sha256 = "749f5fe6414164bd8d67ff84153c79e9732119a3991141a0bd5587e4c2a26130"
+# Run in the axis-bench checkout. The lock is `uv pip compile` of conf/envs/eval.in (the `offline` and
+# `test` extras, openpi-client's own dependencies, the asset store's httpx and pydantic, AND the
+# renderer's four declared runtime dependencies at the versions the paper's evaluations ran in --
+# robosuite, dm-control, imageio, imageio-ffmpeg, plus whatever THEY pull in that the CI test job's
+# constraints never had to resolve) under the CI's constraints; the three local packages go in
+# without dependencies. axis-render's pyproject lists further server-side dependencies that
+# evaluation does not need, so axis-render itself is installed --no-deps below, same as the CI
+# test job.
+build = [
+  "uv venv --python 3.11 .venv-eval",
+  "uv pip install --python .venv-eval/bin/python -r conf/envs/eval.lock.txt",
+  # `-e` repeated once per path (not `-e . a b`, which installs only `.` editable and `a`/`b` as
+  # regular copied wheels): axis-render's own PROJECT_ROOT = Path(__file__).resolve().parents[2]
+  # has to land on third_party/axis-render, not .venv-eval/lib/python3.11, or the table-texture
+  # manifest it loads at IMPORT time (TABLE_IMAGE_MATERIAL_FAMILIES, a module-level constant in
+  # robosuite_render.py) raises FileNotFoundError the moment anything imports it -- a regular
+  # install copies only the `where=["src"]` package, never the sibling assets/ directory.
+  "uv pip install --python .venv-eval/bin/python --no-deps -e . -e ./third_party/openpi/packages/openpi-client -e ./third_party/axis-render",
+]
+
+[versions]
+numpy = "1.26.4"
+mujoco = "3.3.7"
+pillow = "12.3.0"
+msgpack = "1.2.3"
+websockets = "17.1"
+httpx = "0.28.1"
+pydantic = "2.13.5"
+robosuite = "1.5.2"
+dm-control = "1.0.34"
+imageio = "2.37.4"
+imageio-ffmpeg = "0.6.0"
+
+[gate]
+imports = ["mujoco", "PIL.Image", "openpi_client.websocket_client_policy", "httpx", "pydantic",
+          "axis_qvla.bench.sim.render_scene", "axis_replay_native.robosuite_render"]

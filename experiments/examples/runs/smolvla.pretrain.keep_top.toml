@@ -1,0 +1,31 @@
+# `qvla train pretrain --labels <name> --backbone smolvla` writes this run spec for your own labels;
+# the overrides below are the ones it derives from keep_top's exported schedule. The pinned LeRobot
+# fork replays the labels' schedule step for step, so the run trains their 20,605 steps, on one GPU at
+# the schedule's batch of 64, and names the schedule's mode and reward: the schedule planner's mode and
+# the method. docs/tutorials/pretrain.md walks through it. Its track is "paper" because
+# the preset it reuses is a paper-track preset (a run's track must be its preset's); it is not a paper run.
+[arm]
+id = "smolvla.pretrain.keep_top"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:smolvlm2_500m"
+
+[data]
+rowspace = "libero5k_v2_d8"
+
+[signal]
+bundle = "name:example.keep_top"
+
+[recipe]
+preset = "smolvla.pretrain.paper"
+seed = 0
+
+[recipe.overrides]
+axis_expected_mode = "drop_top"
+axis_expected_reward = "example.keep_top"
+batch_size = 64
+"parallelism.dp_replicate" = 1
+steps = 20605

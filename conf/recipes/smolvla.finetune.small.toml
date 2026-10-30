@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "smolvla.finetune.small"
+backbone = "smolvla-lerobot"
+stage = "finetune"
+track = "small"
+paper_budget = false
+description = "A 1,000-step SmolVLA finetune for quick experiments."
+template = "lerobot/smolvla.finetune.json"
+
+[budget]
+steps = 1000
+global_batch = 64
+per_rank_batch = 32
+world = 2

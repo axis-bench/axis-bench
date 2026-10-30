@@ -1,0 +1,23 @@
+[arm]
+id = "pi05.pretrain.realrobot_bc"
+backbone = "pi05-openpi"
+stage = "pretrain"
+track = "realrobot"
+
+[init]
+ckpt = "base:pi05_base"
+
+[data]
+rowspace = "local:realalign_droid8d"
+action_space = "droid8"
+image = "center_crop"
+
+[signal]
+bundle = "local:realalign_bc"
+
+[norm]
+artifact = "local:norm_realalign_sim"
+
+[recipe]
+preset = "pi05.pretrain.lora.realrobot"
+seed = 42

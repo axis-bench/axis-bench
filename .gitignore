@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.venv-eval/
+*.egg-info/
+.pytest_cache/
+.qvla-cache/
+site/
+*.log
+MUJOCO_LOG.TXT
+tmp/
+qvla.toml
+eval_results/

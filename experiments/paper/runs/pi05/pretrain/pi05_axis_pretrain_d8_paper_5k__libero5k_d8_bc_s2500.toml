@@ -1,0 +1,37 @@
+[arm]
+id = "pi05.pretrain.pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s2500"
+backbone = "pi05-openpi"
+stage = "pretrain"
+track = "paper"
+paper_ref = "pi05_axis_pretrain_d8_paper_5k"
+
+[init]
+ckpt = "base:pi05_droid"
+
+[data]
+rowspace = "libero5k_v2_d8.sub2500#sha256:f451a87072baf26b87313f1e4d597c800091c059177156c36ec6a031ad8a64a9"
+action_space = "droid8"
+asset_id = "Devon018/Franka-Datasets-v2"
+image = "center_crop"
+
+[signal]
+bundle = "sha256:de4101cbb87012103b13041c4f57ec7c58e8d79ed07ac4350099e69dedbdbddb"
+
+[norm]
+artifact = "libero5k_v2_d8#sha256:2fad5134b75426dea10eded094b192a455eb9e557a43d19033dd10c374aebfa6"
+
+[recipe]
+preset = "pi05.pretrain.full.paper"
+seed = 42
+
+[recipe.overrides]
+"lr_schedule.warmup_steps" = 1047
+num_train_steps = 10472
+
+[paper]
+cells = []
+checkpoint = "pi05/pretrain/pi05_axis_pretrain_d8_paper_5k__libero5k_d8_bc_s2500"
+launch_overrides = ["--data.ranges-path=<rowspace libero5k_v2_d8.sub2500>", "--data.roots-index=<rowspace libero5k_v2_d8.sub2500>", "--lr-schedule.warmup-steps=1047", "--num-train-steps=10472"]
+registered_config = "pi05_axis_pretrain_d8_paper_5k"
+signals = []
+train_config = "pi05_axis_pretrain_d8_paper_5k"

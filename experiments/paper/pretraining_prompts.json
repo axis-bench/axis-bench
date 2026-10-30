@@ -1,0 +1,2931 @@
+{
+ "about": "each pretraining task's prompt (its meta/tasks.parquet) and its episodes in index/ranges_libero_5k_v2.json; read by `qvla bench check --pretraining-prompts`",
+ "corpus": "axisrobotics/qvla-v1-corpus@v1.0",
+ "schema": "qvla.corpus_prompts/1",
+ "tasks": {
+  "1000": {
+   "n_episodes": 8,
+   "prompt": "Rotate the Test Tube"
+  },
+  "1001": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Pipette"
+  },
+  "1003": {
+   "n_episodes": 12,
+   "prompt": "Put the Headphone on the Speaker"
+  },
+  "1004": {
+   "n_episodes": 10,
+   "prompt": "Put the Microphone on the Cassette"
+  },
+  "1006": {
+   "n_episodes": 9,
+   "prompt": "Put the Microphone beside the Headphone"
+  },
+  "1012": {
+   "n_episodes": 1,
+   "prompt": "Put the Bamboo Cylinder into the Basket"
+  },
+  "1013": {
+   "n_episodes": 2,
+   "prompt": "Put the Computer Mouse on the Notebook"
+  },
+  "1014": {
+   "n_episodes": 4,
+   "prompt": "Put the Pen on the Notebook"
+  },
+  "1016": {
+   "n_episodes": 4,
+   "prompt": "Put the Pen on the Keyboard"
+  },
+  "1017": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Computer Mouse"
+  },
+  "1018": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Pen"
+  },
+  "1019": {
+   "n_episodes": 4,
+   "prompt": "Put the Soap on the Tissue Box"
+  },
+  "1022": {
+   "n_episodes": 21,
+   "prompt": "Put the Soap beside the Comb"
+  },
+  "1023": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Soap"
+  },
+  "1024": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Comb"
+  },
+  "1025": {
+   "n_episodes": 1,
+   "prompt": "Put the Pen on the Notebook"
+  },
+  "1026": {
+   "n_episodes": 3,
+   "prompt": "Put the Dice on the Notebook"
+  },
+  "1027": {
+   "n_episodes": 19,
+   "prompt": "Put the Cup on the Notebook"
+  },
+  "1028": {
+   "n_episodes": 4,
+   "prompt": "Insert the Pen into the Cup"
+  },
+  "1029": {
+   "n_episodes": 2,
+   "prompt": "Put the Dice into the Cup"
+  },
+  "1030": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Pen"
+  },
+  "1033": {
+   "n_episodes": 14,
+   "prompt": "Put the Glasses Case on the Book"
+  },
+  "1034": {
+   "n_episodes": 4,
+   "prompt": "Put the Cup on the Book"
+  },
+  "1036": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Pen"
+  },
+  "1037": {
+   "n_episodes": 14,
+   "prompt": "Rotate the Glasses Case"
+  },
+  "1038": {
+   "n_episodes": 7,
+   "prompt": "Put the Donut on the Plate"
+  },
+  "1039": {
+   "n_episodes": 4,
+   "prompt": "Put the Muffin on the Plate"
+  },
+  "1040": {
+   "n_episodes": 23,
+   "prompt": "Put the Teacup on the Plate"
+  },
+  "1041": {
+   "n_episodes": 4,
+   "prompt": "Put the Donut beside the Muffin"
+  },
+  "1042": {
+   "n_episodes": 4,
+   "prompt": "Put the Muffin beside the Teacup"
+  },
+  "1043": {
+   "n_episodes": 6,
+   "prompt": "Rotate the Teacup"
+  },
+  "1044": {
+   "n_episodes": 4,
+   "prompt": "Put the Cube Block into the Basket"
+  },
+  "1045": {
+   "n_episodes": 3,
+   "prompt": "Put the Toy Figurine into the Basket"
+  },
+  "1046": {
+   "n_episodes": 29,
+   "prompt": "Put the Toy Car into the Basket"
+  },
+  "1047": {
+   "n_episodes": 10,
+   "prompt": "Put the Cube Block beside the Toy Car"
+  },
+  "1048": {
+   "n_episodes": 3,
+   "prompt": "Put the Cube Block beside the Toy Figurine"
+  },
+  "1049": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Toy Car"
+  },
+  "1051": {
+   "n_episodes": 2,
+   "prompt": "Put the Plum into the Bowl"
+  },
+  "1053": {
+   "n_episodes": 3,
+   "prompt": "Put the Plum on the Tray"
+  },
+  "1054": {
+   "n_episodes": 3,
+   "prompt": "Put Both Items into the Bowl"
+  },
+  "1055": {
+   "n_episodes": 16,
+   "prompt": "Put the Plum beside the Dice"
+  },
+  "1056": {
+   "n_episodes": 7,
+   "prompt": "Put the Kettle on the Notebook"
+  },
+  "1057": {
+   "n_episodes": 18,
+   "prompt": "Put the Grinder on the Notebook"
+  },
+  "1058": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup on the Notebook"
+  },
+  "1059": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup beside the Notebook"
+  },
+  "1060": {
+   "n_episodes": 11,
+   "prompt": "Rotate the Kettle"
+  },
+  "1061": {
+   "n_episodes": 9,
+   "prompt": "Rotate the Grinder"
+  },
+  "1062": {
+   "n_episodes": 4,
+   "prompt": "Put the Chew Toy into the Bowl"
+  },
+  "1063": {
+   "n_episodes": 4,
+   "prompt": "Put the Dog Ball into the Bowl"
+  },
+  "1064": {
+   "n_episodes": 3,
+   "prompt": "Put the Shovel into the Bowl"
+  },
+  "1065": {
+   "n_episodes": 4,
+   "prompt": "Put the Dog Ball beside the Chew Toy"
+  },
+  "1066": {
+   "n_episodes": 4,
+   "prompt": "Put the Dog Ball in the Shovel"
+  },
+  "1067": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Shovel"
+  },
+  "1068": {
+   "n_episodes": 8,
+   "prompt": "Put the Lipstick into the Basket"
+  },
+  "1070": {
+   "n_episodes": 6,
+   "prompt": "Put the Comb into the Basket"
+  },
+  "1071": {
+   "n_episodes": 9,
+   "prompt": "Put the Lipstick on the Compact Powder"
+  },
+  "1072": {
+   "n_episodes": 6,
+   "prompt": "Put the Lipstick beside the Comb"
+  },
+  "1073": {
+   "n_episodes": 8,
+   "prompt": "Rotate the Comb"
+  },
+  "1074": {
+   "n_episodes": 9,
+   "prompt": "Put the Cup on the Coaster"
+  },
+  "1075": {
+   "n_episodes": 5,
+   "prompt": "Put the Liquor on the Coaster"
+  },
+  "1076": {
+   "n_episodes": 10,
+   "prompt": "Put the Ketchup on the Coaster"
+  },
+  "1077": {
+   "n_episodes": 10,
+   "prompt": "Put the Cup beside the Ketchup"
+  },
+  "1078": {
+   "n_episodes": 9,
+   "prompt": "Put the Cup beside the Liquor"
+  },
+  "1079": {
+   "n_episodes": 11,
+   "prompt": "Put the Ketchup beside the Liquor"
+  },
+  "1080": {
+   "n_episodes": 3,
+   "prompt": "Put the Eggplant on the Plate"
+  },
+  "1081": {
+   "n_episodes": 5,
+   "prompt": "Put the Onion on the Plate"
+  },
+  "1082": {
+   "n_episodes": 6,
+   "prompt": "Put the Bowl on the Plate"
+  },
+  "1083": {
+   "n_episodes": 4,
+   "prompt": "Put the Eggplant into the Bowl"
+  },
+  "1084": {
+   "n_episodes": 5,
+   "prompt": "Put the Onion into the Bowl"
+  },
+  "1085": {
+   "n_episodes": 3,
+   "prompt": "Put the Onion beside the Eggplant"
+  },
+  "1086": {
+   "n_episodes": 10,
+   "prompt": "Put the Medicine Bottle on the Pill Box"
+  },
+  "1087": {
+   "n_episodes": 10,
+   "prompt": "Put the Tablet Tube on the Pill Box"
+  },
+  "1088": {
+   "n_episodes": 8,
+   "prompt": "Put the Medicine Bottle on the Medicine Case"
+  },
+  "1089": {
+   "n_episodes": 11,
+   "prompt": "Put the Tablet Tube on the Medicine Case"
+  },
+  "1090": {
+   "n_episodes": 8,
+   "prompt": "Put the Medicine Bottle beside the Tablet Tube"
+  },
+  "1091": {
+   "n_episodes": 10,
+   "prompt": "Pick up the Medicine Bottle"
+  },
+  "1092": {
+   "n_episodes": 5,
+   "prompt": "Put the Butter Block on the Plate"
+  },
+  "1093": {
+   "n_episodes": 6,
+   "prompt": "Put the Croissant on the Plate"
+  },
+  "1094": {
+   "n_episodes": 7,
+   "prompt": "Put the Fork on the Plate"
+  },
+  "1095": {
+   "n_episodes": 6,
+   "prompt": "Put the Croissant beside the Fork"
+  },
+  "1096": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Fork"
+  },
+  "1097": {
+   "n_episodes": 7,
+   "prompt": "Rotate the Croissant"
+  },
+  "1105": {
+   "n_episodes": 13,
+   "prompt": "Pull object closer"
+  },
+  "1106": {
+   "n_episodes": 8,
+   "prompt": "Controlled small displacement "
+  },
+  "1107": {
+   "n_episodes": 12,
+   "prompt": "Pick from clutter"
+  },
+  "1108": {
+   "n_episodes": 11,
+   "prompt": "Pack tightly"
+  },
+  "1109": {
+   "n_episodes": 3,
+   "prompt": "Precision pinch grasp"
+  },
+  "1111": {
+   "n_episodes": 10,
+   "prompt": "Sort by category"
+  },
+  "1112": {
+   "n_episodes": 13,
+   "prompt": "Regrasp in air "
+  },
+  "1113": {
+   "n_episodes": 5,
+   "prompt": "Sort by size"
+  },
+  "1114": {
+   "n_episodes": 3,
+   "prompt": "Pick one of many similar objects"
+  },
+  "1116": {
+   "n_episodes": 10,
+   "prompt": "Power grasp"
+  },
+  "1137": {
+   "n_episodes": 1,
+   "prompt": "Rearrange Your Table - LH"
+  },
+  "1138": {
+   "n_episodes": 1,
+   "prompt": "Rearrange Your Table 2 - LH"
+  },
+  "1139": {
+   "n_episodes": 1,
+   "prompt": "Rearrange Your Table 3 - LH"
+  },
+  "1140": {
+   "n_episodes": 1,
+   "prompt": "Rearrange Your Table 4 - LH"
+  },
+  "1141": {
+   "n_episodes": 1,
+   "prompt": "Rearrange Your Table 5 - LH"
+  },
+  "1142": {
+   "n_episodes": 1,
+   "prompt": "Rearrange Your Table 6 - LH"
+  },
+  "1149": {
+   "n_episodes": 4,
+   "prompt": "Push object to target"
+  },
+  "1150": {
+   "n_episodes": 4,
+   "prompt": "Push around obstacle"
+  },
+  "1151": {
+   "n_episodes": 3,
+   "prompt": "Put lid back"
+  },
+  "1152": {
+   "n_episodes": 10,
+   "prompt": "Fit lid onto container "
+  },
+  "1153": {
+   "n_episodes": 14,
+   "prompt": "Squeegee/wipe push"
+  },
+  "1158": {
+   "n_episodes": 12,
+   "prompt": "Peg into hole"
+  },
+  "1164": {
+   "n_episodes": 14,
+   "prompt": "Insert utensil into holder"
+  },
+  "1175": {
+   "n_episodes": 3,
+   "prompt": "Put the Glasses Case on the Book"
+  },
+  "1176": {
+   "n_episodes": 13,
+   "prompt": "Put the Cup on the Book"
+  },
+  "1177": {
+   "n_episodes": 11,
+   "prompt": "Put the Candle on the Book"
+  },
+  "1178": {
+   "n_episodes": 7,
+   "prompt": "Put the Glasses Case beside the Candle"
+  },
+  "1179": {
+   "n_episodes": 13,
+   "prompt": "Rotate the Cup"
+  },
+  "1180": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Glasses Case"
+  },
+  "1181": {
+   "n_episodes": 8,
+   "prompt": "Put the Bracelet on the Plate"
+  },
+  "1182": {
+   "n_episodes": 10,
+   "prompt": "Put the Diamond on the Plate"
+  },
+  "1183": {
+   "n_episodes": 7,
+   "prompt": "Put the Ring Box on the Plate"
+  },
+  "1184": {
+   "n_episodes": 9,
+   "prompt": "Put the Bracelet on the Ring Box"
+  },
+  "1185": {
+   "n_episodes": 3,
+   "prompt": "Put the Diamond on the Ring Box"
+  },
+  "1186": {
+   "n_episodes": 5,
+   "prompt": "Rotate the Ring Box"
+  },
+  "1187": {
+   "n_episodes": 3,
+   "prompt": "Put the Croissant on the Plate"
+  },
+  "1188": {
+   "n_episodes": 3,
+   "prompt": "Put the Fork on the Plate"
+  },
+  "1189": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup on the Plate"
+  },
+  "1190": {
+   "n_episodes": 3,
+   "prompt": "Put the Croissant beside the Cup"
+  },
+  "1191": {
+   "n_episodes": 3,
+   "prompt": "Put the Fork beside the Cup"
+  },
+  "1192": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Croissant"
+  },
+  "1193": {
+   "n_episodes": 13,
+   "prompt": "Put the Plum on the Plate"
+  },
+  "1194": {
+   "n_episodes": 11,
+   "prompt": "Put the Banana on the Plate"
+  },
+  "1195": {
+   "n_episodes": 3,
+   "prompt": "Put the Plum in the Bowl"
+  },
+  "1196": {
+   "n_episodes": 13,
+   "prompt": "Put the Banana in the Bowl"
+  },
+  "1197": {
+   "n_episodes": 12,
+   "prompt": "Put the Plum beside the Banana"
+  },
+  "1198": {
+   "n_episodes": 11,
+   "prompt": "Rotate the Banana"
+  },
+  "1222": {
+   "n_episodes": 12,
+   "prompt": "Put the Hammer in the Basket "
+  },
+  "1224": {
+   "n_episodes": 16,
+   "prompt": "Put the Cup in the Basket "
+  },
+  "1226": {
+   "n_episodes": 21,
+   "prompt": "Rotate the Screwdriver"
+  },
+  "1227": {
+   "n_episodes": 22,
+   "prompt": "Rotate the Cup"
+  },
+  "1230": {
+   "n_episodes": 9,
+   "prompt": "Put the Toy Figurine in the Basket "
+  },
+  "1232": {
+   "n_episodes": 6,
+   "prompt": "Put the Ball beside the Toy Figurine"
+  },
+  "1233": {
+   "n_episodes": 16,
+   "prompt": "Put the Toy Figurine beside the Cube Block"
+  },
+  "1235": {
+   "n_episodes": 9,
+   "prompt": "Put the Strawberry into the Bowl"
+  },
+  "1237": {
+   "n_episodes": 20,
+   "prompt": "Put the Spoon beside the Garlic Bulb"
+  },
+  "1238": {
+   "n_episodes": 18,
+   "prompt": "Put the Spoon beside the Strawberry"
+  },
+  "1240": {
+   "n_episodes": 13,
+   "prompt": "Put the Carrot on the Cutting Board"
+  },
+  "1241": {
+   "n_episodes": 18,
+   "prompt": "Put the Cucumber on the Cutting Board"
+  },
+  "1242": {
+   "n_episodes": 18,
+   "prompt": "Put the Knife on the Cutting Board"
+  },
+  "1243": {
+   "n_episodes": 12,
+   "prompt": "Put the Carrot beside the Cucumber"
+  },
+  "1244": {
+   "n_episodes": 18,
+   "prompt": "Put the Cucumber beside the Knife"
+  },
+  "1245": {
+   "n_episodes": 12,
+   "prompt": "Rotate the Cucumber"
+  },
+  "1246": {
+   "n_episodes": 12,
+   "prompt": "Put the Clock on the Book"
+  },
+  "1249": {
+   "n_episodes": 11,
+   "prompt": "Put the Candle beside the Remote Control"
+  },
+  "1250": {
+   "n_episodes": 12,
+   "prompt": "Put the Clock beside the Remote Control"
+  },
+  "1252": {
+   "n_episodes": 24,
+   "prompt": "Remove loose lid"
+  },
+  "1255": {
+   "n_episodes": 12,
+   "prompt": "Put the Flip Flop on the Shoe Box"
+  },
+  "1277": {
+   "n_episodes": 3,
+   "prompt": "Put the Eraser into the Cup"
+  },
+  "1279": {
+   "n_episodes": 3,
+   "prompt": "Put the Eraser on the Calculator"
+  },
+  "1280": {
+   "n_episodes": 3,
+   "prompt": "Put the Carrot on the Plate"
+  },
+  "1281": {
+   "n_episodes": 3,
+   "prompt": "Put the Cucumber on the Plate"
+  },
+  "1282": {
+   "n_episodes": 3,
+   "prompt": "Put the Potato on the Plate"
+  },
+  "1283": {
+   "n_episodes": 2,
+   "prompt": "Put the Potato beside the Cucumber"
+  },
+  "1288": {
+   "n_episodes": 1,
+   "prompt": "Put the Glue on the Toolbox"
+  },
+  "1289": {
+   "n_episodes": 1,
+   "prompt": "Put the Pilers on the Toolbox"
+  },
+  "1292": {
+   "n_episodes": 1,
+   "prompt": "Rotate the Pilers"
+  },
+  "1293": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Scissors"
+  },
+  "1294": {
+   "n_episodes": 3,
+   "prompt": "Put the Jam Jar on the Plate"
+  },
+  "1295": {
+   "n_episodes": 1,
+   "prompt": "Put the Knife on the Plate"
+  },
+  "1296": {
+   "n_episodes": 3,
+   "prompt": "Put the Toast on the Plate"
+  },
+  "1298": {
+   "n_episodes": 3,
+   "prompt": "Put the Jam Jar on the Toast"
+  },
+  "1299": {
+   "n_episodes": 3,
+   "prompt": "Put the Knife on the Jam Jar"
+  },
+  "1300": {
+   "n_episodes": 1,
+   "prompt": "Put the Peach on the Plate"
+  },
+  "1301": {
+   "n_episodes": 3,
+   "prompt": "Put the Lemon on the Plate"
+  },
+  "1302": {
+   "n_episodes": 2,
+   "prompt": "Put the Lemon beside the Peach"
+  },
+  "1304": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Lemon"
+  },
+  "1305": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Coffee Cup"
+  },
+  "1306": {
+   "n_episodes": 3,
+   "prompt": "Put the Computer Mouse on the Laptop"
+  },
+  "1307": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup on the Laptop"
+  },
+  "1308": {
+   "n_episodes": 3,
+   "prompt": "Put the Pen on the Laptop"
+  },
+  "1311": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Pen"
+  },
+  "1313": {
+   "n_episodes": 3,
+   "prompt": "Put the Churro on the Plate"
+  },
+  "1314": {
+   "n_episodes": 3,
+   "prompt": "Put the Macaron on the Plate"
+  },
+  "1315": {
+   "n_episodes": 3,
+   "prompt": "Put the Macaron beside the Churro"
+  },
+  "1316": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Churro"
+  },
+  "1319": {
+   "n_episodes": 3,
+   "prompt": "Put the Popsicle on the Plate"
+  },
+  "1320": {
+   "n_episodes": 3,
+   "prompt": "Put the Sausage on the Plate"
+  },
+  "1321": {
+   "n_episodes": 3,
+   "prompt": "Put the Popsicle beside the Sausage"
+  },
+  "1323": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Sausage"
+  },
+  "1324": {
+   "n_episodes": 3,
+   "prompt": "Put the Beaker on the Tray"
+  },
+  "1325": {
+   "n_episodes": 2,
+   "prompt": "Put the Test Tube on the Tray"
+  },
+  "1326": {
+   "n_episodes": 3,
+   "prompt": "Put the Medicine Bottle on the Tray"
+  },
+  "1330": {
+   "n_episodes": 3,
+   "prompt": "Put the Soap into the Basket"
+  },
+  "1331": {
+   "n_episodes": 3,
+   "prompt": "Put the Toothbrush into the Basket"
+  },
+  "1332": {
+   "n_episodes": 2,
+   "prompt": "Put the Toothpaste into the Basket"
+  },
+  "1333": {
+   "n_episodes": 1,
+   "prompt": "Put the Toothbrush beside the Toothpaste"
+  },
+  "1335": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Soap"
+  },
+  "1338": {
+   "n_episodes": 3,
+   "prompt": "Put the Perfume on the Tray"
+  },
+  "1341": {
+   "n_episodes": 3,
+   "prompt": "Put the Lipstick beside the Comb"
+  },
+  "1343": {
+   "n_episodes": 3,
+   "prompt": "Put the Apple into the Saucepan"
+  },
+  "1345": {
+   "n_episodes": 3,
+   "prompt": "Put the Salt Shaker into the Saucepan"
+  },
+  "1346": {
+   "n_episodes": 3,
+   "prompt": "Put the Apple beside the Chicken Leg"
+  },
+  "1348": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Saucepan"
+  },
+  "1352": {
+   "n_episodes": 3,
+   "prompt": "Put the Croissant on the Tray"
+  },
+  "1353": {
+   "n_episodes": 3,
+   "prompt": "Put the Croissant on the Dough Ball"
+  },
+  "1355": {
+   "n_episodes": 1,
+   "prompt": "Put the Croissant beside the Rolling Pin"
+  },
+  "1356": {
+   "n_episodes": 1,
+   "prompt": "Put the Rolling Pin on the Dough Ball"
+  },
+  "1394": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup on the Plate"
+  },
+  "1395": {
+   "n_episodes": 3,
+   "prompt": "Put the Kiwi on the Plate"
+  },
+  "1396": {
+   "n_episodes": 3,
+   "prompt": "Put the Pear on the Plate"
+  },
+  "1397": {
+   "n_episodes": 3,
+   "prompt": "Put the Kiwi beside the Pear"
+  },
+  "1398": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup beside the Pear"
+  },
+  "1399": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Kiwi"
+  },
+  "1400": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup on the Notebook (F)"
+  },
+  "1401": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Kettle (F)"
+  },
+  "1402": {
+   "n_episodes": 4,
+   "prompt": "Put the Dog Ball into the Bowl (F)"
+  },
+  "1403": {
+   "n_episodes": 4,
+   "prompt": "Put the Dog Ball beside the Chew Toy (F)"
+  },
+  "1404": {
+   "n_episodes": 10,
+   "prompt": "Put the Lipstick into the Basket (F)"
+  },
+  "1405": {
+   "n_episodes": 5,
+   "prompt": "Put the Compact Powder Case on the Tray"
+  },
+  "1406": {
+   "n_episodes": 13,
+   "prompt": "Put the Foundation on the Tray"
+  },
+  "1407": {
+   "n_episodes": 13,
+   "prompt": "Put the Makeup Brush on the Tray"
+  },
+  "1408": {
+   "n_episodes": 13,
+   "prompt": "Put the Foundation on the Compact Powder Case"
+  },
+  "1409": {
+   "n_episodes": 13,
+   "prompt": "Put the Makeup Brush on the Compact Powder Case"
+  },
+  "1410": {
+   "n_episodes": 13,
+   "prompt": "Rotate the Makeup Brush"
+  },
+  "1411": {
+   "n_episodes": 8,
+   "prompt": "Put the Cube Block on the Tray"
+  },
+  "1412": {
+   "n_episodes": 16,
+   "prompt": "Put the Plush Toy on the Tray"
+  },
+  "1413": {
+   "n_episodes": 7,
+   "prompt": "Put the Toy Figurine on the Tray"
+  },
+  "1414": {
+   "n_episodes": 6,
+   "prompt": "Put the Plush Toy on the Cube Block"
+  },
+  "1415": {
+   "n_episodes": 10,
+   "prompt": "Put the Toy Figurine on the Cube Block"
+  },
+  "1416": {
+   "n_episodes": 13,
+   "prompt": "Rotate the Plush Toy"
+  },
+  "1417": {
+   "n_episodes": 8,
+   "prompt": "Put the Card Holder on the Book"
+  },
+  "1418": {
+   "n_episodes": 11,
+   "prompt": "Put the Coffee Cup on the Book"
+  },
+  "1419": {
+   "n_episodes": 9,
+   "prompt": "Put the Earbud Case on the Book"
+  },
+  "1420": {
+   "n_episodes": 11,
+   "prompt": "Put the Card Holder on the Cup"
+  },
+  "1421": {
+   "n_episodes": 11,
+   "prompt": "Put the Earbud Case on the Cup"
+  },
+  "1422": {
+   "n_episodes": 11,
+   "prompt": "Rotate the Coffee Cup"
+  },
+  "1423": {
+   "n_episodes": 4,
+   "prompt": "Put the Cola into the Basket"
+  },
+  "1424": {
+   "n_episodes": 4,
+   "prompt": "Put the Apple into the Basket"
+  },
+  "1425": {
+   "n_episodes": 4,
+   "prompt": "Put the Sausage Roll into the Basket"
+  },
+  "1427": {
+   "n_episodes": 4,
+   "prompt": "Rearrange Three Items 2"
+  },
+  "1428": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Sausage Roll"
+  },
+  "1439": {
+   "n_episodes": 5,
+   "prompt": "Rotate the Remote Control"
+  },
+  "1440": {
+   "n_episodes": 5,
+   "prompt": "Rotate the Game Controller"
+  },
+  "1441": {
+   "n_episodes": 8,
+   "prompt": "Put the Facial Cleanser into the Basket"
+  },
+  "1442": {
+   "n_episodes": 8,
+   "prompt": "Put the Deodorant into the Basket"
+  },
+  "1443": {
+   "n_episodes": 8,
+   "prompt": "Put the Toothpaste into the Basket"
+  },
+  "1444": {
+   "n_episodes": 8,
+   "prompt": "Put the Facial Cleanser beside the Toothpaste"
+  },
+  "1445": {
+   "n_episodes": 8,
+   "prompt": "Put the Deodorant beside the Toothpaste"
+  },
+  "1446": {
+   "n_episodes": 6,
+   "prompt": "Rotate the Toothpaste"
+  },
+  "1447": {
+   "n_episodes": 8,
+   "prompt": "Put the Cup on the Book"
+  },
+  "1449": {
+   "n_episodes": 8,
+   "prompt": "Put the Pencil Case on the Book"
+  },
+  "1450": {
+   "n_episodes": 8,
+   "prompt": "Put the Cup on the Pencil Case"
+  },
+  "1451": {
+   "n_episodes": 8,
+   "prompt": "Put the Pen on the Pencil Case"
+  },
+  "1452": {
+   "n_episodes": 8,
+   "prompt": "Put the Pen into the Cup"
+  },
+  "1458": {
+   "n_episodes": 40,
+   "prompt": "Insert utensil into holder"
+  },
+  "1460": {
+   "n_episodes": 18,
+   "prompt": "Put the Peanut Butter on the Plate"
+  },
+  "1461": {
+   "n_episodes": 9,
+   "prompt": "Put the Toast on the Plate"
+  },
+  "1462": {
+   "n_episodes": 3,
+   "prompt": "Put the Spoon on the Plate"
+  },
+  "1464": {
+   "n_episodes": 1,
+   "prompt": "Put the Spoon on the Peanut Butter"
+  },
+  "1465": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Spoon"
+  },
+  "1466": {
+   "n_episodes": 14,
+   "prompt": "Put the Baby Bottle on the Tissue"
+  },
+  "1467": {
+   "n_episodes": 3,
+   "prompt": "Put the Pacifier into the Bowl"
+  },
+  "1468": {
+   "n_episodes": 13,
+   "prompt": "Put the Baby Bottle into the Bowl"
+  },
+  "1470": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Pacifier"
+  },
+  "1471": {
+   "n_episodes": 5,
+   "prompt": "Rotate the Tissue"
+  },
+  "1473": {
+   "n_episodes": 1,
+   "prompt": "Put the Hammer on the Wooden Board"
+  },
+  "1474": {
+   "n_episodes": 17,
+   "prompt": "Put the Wrench on the Wooden Board"
+  },
+  "1475": {
+   "n_episodes": 31,
+   "prompt": "Put the Wrench beside the Hammer"
+  },
+  "1476": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Wrench"
+  },
+  "1477": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Hammer"
+  },
+  "1478": {
+   "n_episodes": 3,
+   "prompt": "Put the Green Onion on the Plate"
+  },
+  "1479": {
+   "n_episodes": 1,
+   "prompt": "Put the Knife on the Plate"
+  },
+  "1480": {
+   "n_episodes": 3,
+   "prompt": "Put the Tofu on the Plate"
+  },
+  "1481": {
+   "n_episodes": 3,
+   "prompt": "Put the Green Onion on the Tofu"
+  },
+  "1482": {
+   "n_episodes": 6,
+   "prompt": "Put the Knife on the Tofu"
+  },
+  "1483": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Green Onion"
+  },
+  "1484": {
+   "n_episodes": 3,
+   "prompt": "Put the Cinnamon Roll on the Plate"
+  },
+  "1485": {
+   "n_episodes": 3,
+   "prompt": "Put the Cupcake on the Plate"
+  },
+  "1489": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Fork"
+  },
+  "1494": {
+   "n_episodes": 3,
+   "prompt": "Put the Remote Control on the Tissue Box"
+  },
+  "1495": {
+   "n_episodes": 3,
+   "prompt": "Put the Ring Box on the Tissue Box"
+  },
+  "1496": {
+   "n_episodes": 2,
+   "prompt": "Put the Watch on the Tissue Box"
+  },
+  "1497": {
+   "n_episodes": 3,
+   "prompt": "Put the Ring Box on the Remote Control"
+  },
+  "1498": {
+   "n_episodes": 1,
+   "prompt": "Put the Watch on the Remote Control"
+  },
+  "1499": {
+   "n_episodes": 1,
+   "prompt": "Rotate the Remote Control"
+  },
+  "1500": {
+   "n_episodes": 3,
+   "prompt": "Put the Tomato into the Bowl"
+  },
+  "1501": {
+   "n_episodes": 3,
+   "prompt": "Put the Sausage into the Bowl"
+  },
+  "1503": {
+   "n_episodes": 3,
+   "prompt": "Put the Fork beside the Sausage"
+  },
+  "1514": {
+   "n_episodes": 8,
+   "prompt": "Put the Phone on the Notebook"
+  },
+  "1515": {
+   "n_episodes": 15,
+   "prompt": "Put the Cup on the Phone"
+  },
+  "1516": {
+   "n_episodes": 8,
+   "prompt": "Put the Pencil on the Phone"
+  },
+  "1517": {
+   "n_episodes": 10,
+   "prompt": "Rotate the Pencil"
+  },
+  "1518": {
+   "n_episodes": 17,
+   "prompt": "Put the Chicken Nugget on the Plate"
+  },
+  "1519": {
+   "n_episodes": 13,
+   "prompt": "Put the Chicken Wing on the Plate"
+  },
+  "1521": {
+   "n_episodes": 16,
+   "prompt": "Put the Chicken Nugget on the Pizza"
+  },
+  "1524": {
+   "n_episodes": 4,
+   "prompt": "Put the Apricot into the Bowl"
+  },
+  "1528": {
+   "n_episodes": 4,
+   "prompt": "Rearrange Three Fruits 2"
+  },
+  "1557": {
+   "n_episodes": 11,
+   "prompt": "Put the Soap on the Tray"
+  },
+  "1559": {
+   "n_episodes": 32,
+   "prompt": "Put the Toothbrush on the Tray"
+  },
+  "1560": {
+   "n_episodes": 23,
+   "prompt": "Put the Soap on the Sponge"
+  },
+  "1561": {
+   "n_episodes": 3,
+   "prompt": "Put the Toothbrush on the Sponge"
+  },
+  "1562": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Toothbrush"
+  },
+  "1584": {
+   "n_episodes": 2,
+   "prompt": "Put the Coffee Cup on the Laptop"
+  },
+  "1585": {
+   "n_episodes": 2,
+   "prompt": "Put the Earbud Case on the Laptop"
+  },
+  "1586": {
+   "n_episodes": 2,
+   "prompt": "Put the Marker Pen on the Laptop"
+  },
+  "1587": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Coffee Cup"
+  },
+  "1588": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Earbud Case"
+  },
+  "1589": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Marker Pen"
+  },
+  "1590": {
+   "n_episodes": 22,
+   "prompt": "Put the Croissant on the Plate"
+  },
+  "1591": {
+   "n_episodes": 21,
+   "prompt": "Put the Sausage on the Plate"
+  },
+  "1592": {
+   "n_episodes": 16,
+   "prompt": "Put the Fried Egg on the Plate"
+  },
+  "1593": {
+   "n_episodes": 22,
+   "prompt": "Put the Sausage beside the Croissant"
+  },
+  "1594": {
+   "n_episodes": 8,
+   "prompt": "Rotate the Sausage"
+  },
+  "1595": {
+   "n_episodes": 14,
+   "prompt": "Rotate the Croissant"
+  },
+  "1597": {
+   "n_episodes": 3,
+   "prompt": "Put the Camera on the Tray"
+  },
+  "1598": {
+   "n_episodes": 1,
+   "prompt": "Put the Keychain Charm on the Tray"
+  },
+  "1601": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Plush Toy"
+  },
+  "1602": {
+   "n_episodes": 6,
+   "prompt": "Put the Apple into the Bowl"
+  },
+  "1603": {
+   "n_episodes": 15,
+   "prompt": "Put the Lychee into the Bowl"
+  },
+  "1604": {
+   "n_episodes": 12,
+   "prompt": "Put the Tomato into the Bowl"
+  },
+  "1605": {
+   "n_episodes": 4,
+   "prompt": "Rearrange Three Items"
+  },
+  "1607": {
+   "n_episodes": 15,
+   "prompt": "Put the Lychee beside the Apple"
+  },
+  "1613": {
+   "n_episodes": 6,
+   "prompt": "Rotate the Chicken Leg"
+  },
+  "1620": {
+   "n_episodes": 5,
+   "prompt": "Put the Contact Lens Case on the Toilet Paper"
+  },
+  "1621": {
+   "n_episodes": 4,
+   "prompt": "Put the Toothbrush on the Toilet Paper"
+  },
+  "1622": {
+   "n_episodes": 13,
+   "prompt": "Put the Hand Soap on the Toilet Paper"
+  },
+  "1623": {
+   "n_episodes": 13,
+   "prompt": "Put the Contact Lens Case beside the Toothbrush"
+  },
+  "1624": {
+   "n_episodes": 12,
+   "prompt": "Put the Hand Soap beside the Toothbrush"
+  },
+  "1625": {
+   "n_episodes": 13,
+   "prompt": "Rotate the Toothbrush"
+  },
+  "1628": {
+   "n_episodes": 12,
+   "prompt": "Put the Dice into the Basket"
+  },
+  "1629": {
+   "n_episodes": 8,
+   "prompt": "Put the Toy Car into the Basket"
+  },
+  "1633": {
+   "n_episodes": 6,
+   "prompt": "Rotate the Toy Car"
+  },
+  "1634": {
+   "n_episodes": 2,
+   "prompt": "Put the Lemon on the Plate"
+  },
+  "1636": {
+   "n_episodes": 2,
+   "prompt": "Put the Lemon into the Bowl"
+  },
+  "1637": {
+   "n_episodes": 6,
+   "prompt": "Put the Candle into the Bowl"
+  },
+  "1638": {
+   "n_episodes": 3,
+   "prompt": "Put the Lemon beside the Candle"
+  },
+  "1639": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Lemon"
+  },
+  "1640": {
+   "n_episodes": 1,
+   "prompt": "Put the Fired Chicken on the Plate"
+  },
+  "1641": {
+   "n_episodes": 1,
+   "prompt": "Put the Hot Dog on the Plate"
+  },
+  "1642": {
+   "n_episodes": 1,
+   "prompt": "Put the Sandwich on the Plate"
+  },
+  "1643": {
+   "n_episodes": 1,
+   "prompt": "Put the Fired Chicken beside the Sandwich"
+  },
+  "1644": {
+   "n_episodes": 1,
+   "prompt": "Put the Hot Dog beside the Sandwich"
+  },
+  "1645": {
+   "n_episodes": 1,
+   "prompt": "Rotate the Hot Dog"
+  },
+  "1703": {
+   "n_episodes": 9,
+   "prompt": "Put the Cherry beside the Cucumber"
+  },
+  "1704": {
+   "n_episodes": 9,
+   "prompt": "Put the Strawberry beside the Cucumber"
+  },
+  "1706": {
+   "n_episodes": 13,
+   "prompt": "Put the Cupcake on the Tissue Box"
+  },
+  "1712": {
+   "n_episodes": 3,
+   "prompt": "Put the Biscuit on the Tray"
+  },
+  "1713": {
+   "n_episodes": 3,
+   "prompt": "Put the Pacifier on the Tray"
+  },
+  "1714": {
+   "n_episodes": 3,
+   "prompt": "Put the Shoe on the Tray"
+  },
+  "1716": {
+   "n_episodes": 3,
+   "prompt": "Put the Pacifier beside the Shoe"
+  },
+  "1718": {
+   "n_episodes": 3,
+   "prompt": "Put the Kiwi on the Plate"
+  },
+  "1719": {
+   "n_episodes": 3,
+   "prompt": "Put the Strawberry on the Plate"
+  },
+  "1720": {
+   "n_episodes": 3,
+   "prompt": "Put the Kiwi into the Bowl"
+  },
+  "1724": {
+   "n_episodes": 4,
+   "prompt": "Put the Egg on the Plate"
+  },
+  "1725": {
+   "n_episodes": 4,
+   "prompt": "Put the Onion on the Plate"
+  },
+  "1726": {
+   "n_episodes": 4,
+   "prompt": "Put the Spring Onion on the Plate"
+  },
+  "1727": {
+   "n_episodes": 4,
+   "prompt": "Put the Egg beside the Spring Onion"
+  },
+  "1728": {
+   "n_episodes": 4,
+   "prompt": "Put the Onion beside the Spring Onion"
+  },
+  "1730": {
+   "n_episodes": 4,
+   "prompt": "Put the Fork on the Plate"
+  },
+  "1731": {
+   "n_episodes": 4,
+   "prompt": "Put the Pear on the Plate"
+  },
+  "1732": {
+   "n_episodes": 4,
+   "prompt": "Put the Biscuit on the Plate"
+  },
+  "1733": {
+   "n_episodes": 4,
+   "prompt": "Put the Pear beside the Fork"
+  },
+  "1734": {
+   "n_episodes": 3,
+   "prompt": "Put the Biscuit beside the Fork"
+  },
+  "1736": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Console on the Chessboard"
+  },
+  "1737": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Cartridge on the Chessboard"
+  },
+  "1738": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Controller on the Chessboard"
+  },
+  "1739": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Cartridge on the Game Console"
+  },
+  "1742": {
+   "n_episodes": 4,
+   "prompt": "Put the Chess Piece on the Chessboard"
+  },
+  "1743": {
+   "n_episodes": 4,
+   "prompt": "Put the Poker on the Chessboard"
+  },
+  "1744": {
+   "n_episodes": 4,
+   "prompt": "Put the Cube Block on the Chessboard"
+  },
+  "1745": {
+   "n_episodes": 4,
+   "prompt": "Put the Chess Piece on the Poker"
+  },
+  "1746": {
+   "n_episodes": 4,
+   "prompt": "Put the Cube Block on the Poker"
+  },
+  "1754": {
+   "n_episodes": 14,
+   "prompt": "Put the Chicken Leg on the Cutting Board"
+  },
+  "1755": {
+   "n_episodes": 18,
+   "prompt": "Put the Onion on the Cutting Board"
+  },
+  "1756": {
+   "n_episodes": 14,
+   "prompt": "Put the Tomato on the Cutting Board"
+  },
+  "1757": {
+   "n_episodes": 12,
+   "prompt": "Put the Onion beside the Chicken Leg"
+  },
+  "1758": {
+   "n_episodes": 9,
+   "prompt": "Put the Tomato beside the Chicken Leg"
+  },
+  "1760": {
+   "n_episodes": 7,
+   "prompt": "Put the Chocolate on the Plate"
+  },
+  "1761": {
+   "n_episodes": 7,
+   "prompt": "Put the Churro on the Plate"
+  },
+  "1762": {
+   "n_episodes": 9,
+   "prompt": "Put the Popsicle on the Plate"
+  },
+  "1763": {
+   "n_episodes": 8,
+   "prompt": "Put the Chocolate beside the Churro"
+  },
+  "1764": {
+   "n_episodes": 9,
+   "prompt": "Put the Popsicle beside the Churro"
+  },
+  "1772": {
+   "n_episodes": 9,
+   "prompt": "Put the Card Holder on the Tray"
+  },
+  "1773": {
+   "n_episodes": 9,
+   "prompt": "Put the Camera on the Tray"
+  },
+  "1774": {
+   "n_episodes": 11,
+   "prompt": "Put the Sunglasses on the Tray"
+  },
+  "1775": {
+   "n_episodes": 11,
+   "prompt": "Put the Sunglasses beside the Card Holder"
+  },
+  "1778": {
+   "n_episodes": 4,
+   "prompt": "Put the Eye Drop on the Medicine Box"
+  },
+  "1779": {
+   "n_episodes": 5,
+   "prompt": "Put the Ointment Tube on the Medicine Box"
+  },
+  "1780": {
+   "n_episodes": 3,
+   "prompt": "Put the Syringe on the Medicine Box"
+  },
+  "1781": {
+   "n_episodes": 3,
+   "prompt": "Put the Ointment Tube beside the Eye Drop"
+  },
+  "1782": {
+   "n_episodes": 3,
+   "prompt": "Put the Syringe beside the Eye Drop"
+  },
+  "1785": {
+   "n_episodes": 13,
+   "prompt": "Put the Spring Onion on the Plate"
+  },
+  "1786": {
+   "n_episodes": 10,
+   "prompt": "Put the Peeler on the Plate"
+  },
+  "1787": {
+   "n_episodes": 12,
+   "prompt": "Put the Potato beside the Spring Onion"
+  },
+  "1788": {
+   "n_episodes": 12,
+   "prompt": "Put the Peeler beside the Spring Onion"
+  },
+  "1790": {
+   "n_episodes": 9,
+   "prompt": "Put the Fork on the Plate"
+  },
+  "1791": {
+   "n_episodes": 9,
+   "prompt": "Put the Spaghetti on the Plate"
+  },
+  "1792": {
+   "n_episodes": 9,
+   "prompt": "Put the Tomato on the Plate"
+  },
+  "1793": {
+   "n_episodes": 9,
+   "prompt": "Put the Tomato beside the Fork"
+  },
+  "1794": {
+   "n_episodes": 8,
+   "prompt": "Put the Spaghetti beside the Fork"
+  },
+  "1796": {
+   "n_episodes": 7,
+   "prompt": "Put the Cheese on the Plate"
+  },
+  "1797": {
+   "n_episodes": 8,
+   "prompt": "Put the Spoon on the Plate"
+  },
+  "1798": {
+   "n_episodes": 11,
+   "prompt": "Put the Honey on the Plate"
+  },
+  "1799": {
+   "n_episodes": 9,
+   "prompt": "Put the Cheese beside the Spoon"
+  },
+  "1800": {
+   "n_episodes": 10,
+   "prompt": "Put the Honey beside the Spoon"
+  },
+  "1802": {
+   "n_episodes": 4,
+   "prompt": "Put the Oyster on the Plate"
+  },
+  "1803": {
+   "n_episodes": 4,
+   "prompt": "Put the Shrimp on the Plate"
+  },
+  "1804": {
+   "n_episodes": 4,
+   "prompt": "Put the Starfish on the Plate"
+  },
+  "1808": {
+   "n_episodes": 4,
+   "prompt": "Put the Macadamia Nut into the Bowl"
+  },
+  "1809": {
+   "n_episodes": 3,
+   "prompt": "Put the Pine Cone into the Bowl"
+  },
+  "1810": {
+   "n_episodes": 4,
+   "prompt": "Put the Walnut into the Bowl"
+  },
+  "1811": {
+   "n_episodes": 4,
+   "prompt": "Put the Pine Cone beside the Macadamia Nut"
+  },
+  "1812": {
+   "n_episodes": 4,
+   "prompt": "Put the Walnut beside the Macadamia Nut"
+  },
+  "1813": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Pine Cone"
+  },
+  "1814": {
+   "n_episodes": 6,
+   "prompt": "Put the Cube Block into the Bowl"
+  },
+  "1815": {
+   "n_episodes": 12,
+   "prompt": "Put the Tennis Ball into the Bowl"
+  },
+  "1816": {
+   "n_episodes": 8,
+   "prompt": "Put the Toy Car into the Bowl"
+  },
+  "1817": {
+   "n_episodes": 12,
+   "prompt": "Put the Tennis Ball on the Cube Block"
+  },
+  "1818": {
+   "n_episodes": 9,
+   "prompt": "Put the Toy Car on the Cube Block"
+  },
+  "1832": {
+   "n_episodes": 13,
+   "prompt": "Put the Eraser on the Tray"
+  },
+  "1833": {
+   "n_episodes": 13,
+   "prompt": "Put the Paintbrush on the Tray"
+  },
+  "1834": {
+   "n_episodes": 12,
+   "prompt": "Put the Paint Tube on the Tray"
+  },
+  "1835": {
+   "n_episodes": 12,
+   "prompt": "Put the Eraser beside the Paintbrush"
+  },
+  "1836": {
+   "n_episodes": 14,
+   "prompt": "Put the Paint Tube beside the Paintbrush"
+  },
+  "1838": {
+   "n_episodes": 12,
+   "prompt": "Put the Gold Bar on the Tray"
+  },
+  "1839": {
+   "n_episodes": 10,
+   "prompt": "Put the Jade on the Tray"
+  },
+  "1840": {
+   "n_episodes": 9,
+   "prompt": "Put the Diamond on the Tray"
+  },
+  "1841": {
+   "n_episodes": 11,
+   "prompt": "Put the Jade on the Gold Bar"
+  },
+  "1842": {
+   "n_episodes": 8,
+   "prompt": "Put the Diamond on the Gold Bar"
+  },
+  "1844": {
+   "n_episodes": 3,
+   "prompt": "Put the Fish Fillet on the Plate"
+  },
+  "1845": {
+   "n_episodes": 4,
+   "prompt": "Put the Garlic Bread on the Plate"
+  },
+  "1846": {
+   "n_episodes": 3,
+   "prompt": "Put the Pie on the Plate"
+  },
+  "1847": {
+   "n_episodes": 3,
+   "prompt": "Put the Garlic Bread on the Fish Fillet"
+  },
+  "1848": {
+   "n_episodes": 4,
+   "prompt": "Put the Pie on the Fish Fillet"
+  },
+  "1850": {
+   "n_episodes": 2,
+   "prompt": "Put the Apple into the Bowl"
+  },
+  "1851": {
+   "n_episodes": 3,
+   "prompt": "Put the Lychee into the Bowl"
+  },
+  "1852": {
+   "n_episodes": 3,
+   "prompt": "Put the Plum into the Bowl"
+  },
+  "1856": {
+   "n_episodes": 3,
+   "prompt": "Put the Glue Bottle on the Tray"
+  },
+  "1857": {
+   "n_episodes": 5,
+   "prompt": "Put the Scissors on the Tray"
+  },
+  "1858": {
+   "n_episodes": 5,
+   "prompt": "Put the Toy Figurine on the Tray"
+  },
+  "1859": {
+   "n_episodes": 6,
+   "prompt": "Put the Glue Bottle beside the Scissors"
+  },
+  "1860": {
+   "n_episodes": 6,
+   "prompt": "Put the Toy Figurine beside the Scissors"
+  },
+  "1862": {
+   "n_episodes": 6,
+   "prompt": "Put the UNO on the Board Game"
+  },
+  "1863": {
+   "n_episodes": 7,
+   "prompt": "Put the Dice on the Board Game"
+  },
+  "1864": {
+   "n_episodes": 9,
+   "prompt": "Put the Cube Block on the Board Game"
+  },
+  "1865": {
+   "n_episodes": 7,
+   "prompt": "Put the Dice on the UNO"
+  },
+  "1866": {
+   "n_episodes": 8,
+   "prompt": "Put the Cube Block on the UNO"
+  },
+  "1868": {
+   "n_episodes": 3,
+   "prompt": "Put the Biscuit on the Plate"
+  },
+  "1869": {
+   "n_episodes": 3,
+   "prompt": "Put the Spoon on the Plate"
+  },
+  "1870": {
+   "n_episodes": 3,
+   "prompt": "Put the Yogurt on the Plate"
+  },
+  "1874": {
+   "n_episodes": 14,
+   "prompt": "Put the Eggplant on the Plate"
+  },
+  "1875": {
+   "n_episodes": 3,
+   "prompt": "Put the Peach on the Plate"
+  },
+  "1876": {
+   "n_episodes": 3,
+   "prompt": "Put the Potato on the Plate"
+  },
+  "1881": {
+   "n_episodes": 3,
+   "prompt": "Put the Calculator on the Notebook"
+  },
+  "1882": {
+   "n_episodes": 3,
+   "prompt": "Put the Eyeglasses on the Notebook"
+  },
+  "1883": {
+   "n_episodes": 16,
+   "prompt": "Put the Pen on the Notebook"
+  },
+  "1884": {
+   "n_episodes": 15,
+   "prompt": "Put the Eyeglasses on the Calculator"
+  },
+  "1885": {
+   "n_episodes": 17,
+   "prompt": "Put the Pen on the Calculator"
+  },
+  "1887": {
+   "n_episodes": 6,
+   "prompt": "Put the Banana on the Plate"
+  },
+  "1888": {
+   "n_episodes": 8,
+   "prompt": "Put the Kiwi on the Plate"
+  },
+  "1890": {
+   "n_episodes": 8,
+   "prompt": "Put the Orange on the Plate"
+  },
+  "1891": {
+   "n_episodes": 8,
+   "prompt": "Put the Orange beside the Banana"
+  },
+  "1893": {
+   "n_episodes": 7,
+   "prompt": "Put the Butter on the Plate"
+  },
+  "1894": {
+   "n_episodes": 10,
+   "prompt": "Put the Croissant on the Plate"
+  },
+  "1895": {
+   "n_episodes": 9,
+   "prompt": "Put the Yogurt on the Plate"
+  },
+  "1896": {
+   "n_episodes": 8,
+   "prompt": "Put the Croissant on the Butter"
+  },
+  "1897": {
+   "n_episodes": 8,
+   "prompt": "Put the Yogurt on the Butter"
+  },
+  "1899": {
+   "n_episodes": 9,
+   "prompt": "Put the Screwdriver on the Tray"
+  },
+  "1900": {
+   "n_episodes": 11,
+   "prompt": "Put the Scissors on the Tray"
+  },
+  "1901": {
+   "n_episodes": 15,
+   "prompt": "Put the Wrench on the Tray"
+  },
+  "1908": {
+   "n_episodes": 13,
+   "prompt": "Put the Ballet Flat on the Tray"
+  },
+  "1909": {
+   "n_episodes": 13,
+   "prompt": "Put the Sandal on the Tray"
+  },
+  "1910": {
+   "n_episodes": 13,
+   "prompt": "Put the Hanger on the Tray"
+  },
+  "1914": {
+   "n_episodes": 13,
+   "prompt": "Put the Cup on the Laptop"
+  },
+  "1915": {
+   "n_episodes": 10,
+   "prompt": "Put the Toy Figurine on the Laptop"
+  },
+  "1916": {
+   "n_episodes": 13,
+   "prompt": "Put the Pen on the Laptop"
+  },
+  "1917": {
+   "n_episodes": 10,
+   "prompt": "Put the Cup beside the Pen"
+  },
+  "1918": {
+   "n_episodes": 8,
+   "prompt": "Put the Toy Figurine beside the Pen"
+  },
+  "1920": {
+   "n_episodes": 9,
+   "prompt": "Put the Garden Fork on the Tray"
+  },
+  "1921": {
+   "n_episodes": 8,
+   "prompt": "Put the Garden Trowel on the Tray"
+  },
+  "1922": {
+   "n_episodes": 7,
+   "prompt": "Put the Turtle Figurine on the Tray"
+  },
+  "1923": {
+   "n_episodes": 8,
+   "prompt": "Put the Garden Trowel beside the Turtle Figurine"
+  },
+  "1927": {
+   "n_episodes": 14,
+   "prompt": "Put the Apple on the Plate"
+  },
+  "1928": {
+   "n_episodes": 6,
+   "prompt": "Put the Cube Block on the Plate"
+  },
+  "1929": {
+   "n_episodes": 13,
+   "prompt": "Put the Apple into the Bowl"
+  },
+  "1930": {
+   "n_episodes": 11,
+   "prompt": "Put the Cube Block into the Bowl"
+  },
+  "1931": {
+   "n_episodes": 13,
+   "prompt": "Put the Apple on the Cube Block"
+  },
+  "1935": {
+   "n_episodes": 9,
+   "prompt": "Put the Toothpaste into the Cup"
+  },
+  "1945": {
+   "n_episodes": 4,
+   "prompt": "Put the Astronaut Figurine on the Tray"
+  },
+  "1946": {
+   "n_episodes": 4,
+   "prompt": "Put the Cowboy Figurine on the Tray"
+  },
+  "1947": {
+   "n_episodes": 3,
+   "prompt": "Put the Dog Figurine on the Tray"
+  },
+  "1948": {
+   "n_episodes": 3,
+   "prompt": "Put the Astronaut Figurine beside the Dog Figurine"
+  },
+  "1949": {
+   "n_episodes": 3,
+   "prompt": "Put the Cowboy Figurine beside the Dog Figurine"
+  },
+  "1952": {
+   "n_episodes": 3,
+   "prompt": "Put the Onion beside the Spring Onion"
+  },
+  "1953": {
+   "n_episodes": 3,
+   "prompt": "Put the Jam on the Plate"
+  },
+  "1954": {
+   "n_episodes": 3,
+   "prompt": "Put the Spoon on the Plate"
+  },
+  "1961": {
+   "n_episodes": 3,
+   "prompt": "Put the Remote Control on the Magazine"
+  },
+  "1962": {
+   "n_episodes": 3,
+   "prompt": "Put the Cat Figurine beside the Remote Control"
+  },
+  "1963": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup beside the Remote Control"
+  },
+  "1965": {
+   "n_episodes": 3,
+   "prompt": "Put the Cupcake on the Plate"
+  },
+  "1966": {
+   "n_episodes": 3,
+   "prompt": "Put the Macaron on the Plate"
+  },
+  "1967": {
+   "n_episodes": 3,
+   "prompt": "Put the Sausage Roll on the Plate"
+  },
+  "1968": {
+   "n_episodes": 3,
+   "prompt": "Put the Cupcake beside the Sausage Roll"
+  },
+  "1969": {
+   "n_episodes": 3,
+   "prompt": "Put the Macaron beside the Sausage Roll"
+  },
+  "1971": {
+   "n_episodes": 3,
+   "prompt": "Put the Clock on the Book"
+  },
+  "1972": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup on the Book"
+  },
+  "1973": {
+   "n_episodes": 3,
+   "prompt": "Put the Smartphone on the Book"
+  },
+  "1974": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup beside the Clock"
+  },
+  "1975": {
+   "n_episodes": 3,
+   "prompt": "Put the Smartphone beside the Clock"
+  },
+  "1977": {
+   "n_episodes": 3,
+   "prompt": "Put the Eyeglasses Case on the Plate"
+  },
+  "1978": {
+   "n_episodes": 3,
+   "prompt": "Put the Scented Candle on the Plate"
+  },
+  "1979": {
+   "n_episodes": 3,
+   "prompt": "Put the Mug on the Plate"
+  },
+  "1980": {
+   "n_episodes": 3,
+   "prompt": "Put the Mug beside the Eyeglasses Case"
+  },
+  "1983": {
+   "n_episodes": 3,
+   "prompt": "Put the Dumbbell on the Tray"
+  },
+  "1984": {
+   "n_episodes": 3,
+   "prompt": "Put the Kettlebell on the Tray"
+  },
+  "1985": {
+   "n_episodes": 3,
+   "prompt": "Put the Jump Rope on the Tray"
+  },
+  "1993": {
+   "n_episodes": 3,
+   "prompt": "Put the Bird Figurine into the Basket"
+  },
+  "1994": {
+   "n_episodes": 3,
+   "prompt": "Put the Superhero Figurine into the Basket"
+  },
+  "1995": {
+   "n_episodes": 3,
+   "prompt": "Put the Cube Block into the Basket"
+  },
+  "1996": {
+   "n_episodes": 3,
+   "prompt": "Put the Bird Figurine beside the Cube Block"
+  },
+  "1997": {
+   "n_episodes": 3,
+   "prompt": "Put the Superhero Figurine beside the Cube Block"
+  },
+  "1999": {
+   "n_episodes": 3,
+   "prompt": "Put the Donut on the Plate"
+  },
+  "2000": {
+   "n_episodes": 3,
+   "prompt": "Put the Muffin on the Plate"
+  },
+  "2001": {
+   "n_episodes": 3,
+   "prompt": "Put the Teacup on the Plate"
+  },
+  "2002": {
+   "n_episodes": 3,
+   "prompt": "Put the Donut beside the Teacup"
+  },
+  "2003": {
+   "n_episodes": 3,
+   "prompt": "Put the Muffin beside the Teacup"
+  },
+  "2005": {
+   "n_episodes": 2,
+   "prompt": "Put the Eye Cream on the Tissue Box"
+  },
+  "2006": {
+   "n_episodes": 2,
+   "prompt": "Put the Makeup Brush on the Tissue Box"
+  },
+  "2007": {
+   "n_episodes": 2,
+   "prompt": "Put the Tweezers on the Tissue Box"
+  },
+  "2008": {
+   "n_episodes": 2,
+   "prompt": "Put the Makeup Brush beside the Tweezers"
+  },
+  "2011": {
+   "n_episodes": 3,
+   "prompt": "Put the Lychee into the Bowl"
+  },
+  "2012": {
+   "n_episodes": 3,
+   "prompt": "Put the Plum into the Bowl"
+  },
+  "2013": {
+   "n_episodes": 3,
+   "prompt": "Put the Lychee on the Plate"
+  },
+  "2014": {
+   "n_episodes": 3,
+   "prompt": "Put the Plum on the Plate"
+  },
+  "2015": {
+   "n_episodes": 3,
+   "prompt": "Put Both Fruits on the Plate"
+  },
+  "2016": {
+   "n_episodes": 3,
+   "prompt": "Put the Plum beside the Lychee"
+  },
+  "2023": {
+   "n_episodes": 3,
+   "prompt": "Put the Lemon into the Bowl"
+  },
+  "2024": {
+   "n_episodes": 3,
+   "prompt": "Put the Grape into the Bowl"
+  },
+  "2025": {
+   "n_episodes": 3,
+   "prompt": "Put the Cube Block into the Bowl"
+  },
+  "2026": {
+   "n_episodes": 3,
+   "prompt": "Put the Lemon on the Cube Block"
+  },
+  "2027": {
+   "n_episodes": 3,
+   "prompt": "Put the Grape on the Cube Block"
+  },
+  "2028": {
+   "n_episodes": 3,
+   "prompt": "Put the Lemon beside the Grape"
+  },
+  "2034": {
+   "n_episodes": 3,
+   "prompt": "Put the Banana into the Bowl"
+  },
+  "2035": {
+   "n_episodes": 3,
+   "prompt": "Put the Pear into the Bowl"
+  },
+  "2036": {
+   "n_episodes": 3,
+   "prompt": "Put the Walnut into the Bowl"
+  },
+  "2037": {
+   "n_episodes": 3,
+   "prompt": "Put the Pear beside the Banana"
+  },
+  "2038": {
+   "n_episodes": 3,
+   "prompt": "Put the Walnut beside the Banana"
+  },
+  "2088": {
+   "n_episodes": 3,
+   "prompt": "Put the Pine Cone into the Bowl"
+  },
+  "2089": {
+   "n_episodes": 3,
+   "prompt": "Put the Walnut into the Bowl"
+  },
+  "2090": {
+   "n_episodes": 3,
+   "prompt": "Put the Pine Cone beside the Macadamia Nut"
+  },
+  "2091": {
+   "n_episodes": 2,
+   "prompt": "Put the Walnut beside the Macadamia Nut"
+  },
+  "2092": {
+   "n_episodes": 3,
+   "prompt": "Put the Cube Block into the Bowl"
+  },
+  "2093": {
+   "n_episodes": 3,
+   "prompt": "Put the Tennis Ball into the Bowl"
+  },
+  "2095": {
+   "n_episodes": 2,
+   "prompt": "Put the Fish Fillet on the Plate"
+  },
+  "2096": {
+   "n_episodes": 3,
+   "prompt": "Put the Garlic Bread on the Plate"
+  },
+  "2097": {
+   "n_episodes": 3,
+   "prompt": "Put the Pie on the Plate"
+  },
+  "2205": {
+   "n_episodes": 3,
+   "prompt": "Put the Smartphone on the Book"
+  },
+  "2206": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup on the Book"
+  },
+  "2207": {
+   "n_episodes": 3,
+   "prompt": "Put the Clock on the Book"
+  },
+  "2209": {
+   "n_episodes": 3,
+   "prompt": "Put the Macaron beside the Sausage Roll"
+  },
+  "2210": {
+   "n_episodes": 3,
+   "prompt": "Put the Cupcake beside the Sausage Roll"
+  },
+  "2211": {
+   "n_episodes": 3,
+   "prompt": "Put the Sausage Roll on the Plate"
+  },
+  "2212": {
+   "n_episodes": 3,
+   "prompt": "Put the Macaron on the Plate"
+  },
+  "2213": {
+   "n_episodes": 3,
+   "prompt": "Put the Cupcake on the Plate"
+  },
+  "2215": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup beside the Remote Control"
+  },
+  "2216": {
+   "n_episodes": 3,
+   "prompt": "Put the Cat Figurine beside the Remote Control"
+  },
+  "2217": {
+   "n_episodes": 3,
+   "prompt": "Put the Remote Control on the Magazine"
+  },
+  "2218": {
+   "n_episodes": 3,
+   "prompt": "Put the Cup on the Magazine"
+  },
+  "2219": {
+   "n_episodes": 3,
+   "prompt": "Put the Cat Figurine on the Magazine"
+  },
+  "2221": {
+   "n_episodes": 3,
+   "prompt": "Put the Toast beside the Spoon"
+  },
+  "2222": {
+   "n_episodes": 3,
+   "prompt": "Put the Jam beside the Spoon"
+  },
+  "2223": {
+   "n_episodes": 3,
+   "prompt": "Put the Toast on the Plate"
+  },
+  "2224": {
+   "n_episodes": 3,
+   "prompt": "Put the Spoon on the Plate"
+  },
+  "2225": {
+   "n_episodes": 3,
+   "prompt": "Put the Jam on the Plate"
+  },
+  "2227": {
+   "n_episodes": 3,
+   "prompt": "Put the Astronaut Figurine beside the Dog Figurine"
+  },
+  "2228": {
+   "n_episodes": 3,
+   "prompt": "Put the Macadamia Nut into the Bowl"
+  },
+  "2231": {
+   "n_episodes": 3,
+   "prompt": "Put the Spaghetti beside the Fork"
+  },
+  "2232": {
+   "n_episodes": 3,
+   "prompt": "Put the Tomato beside the Fork"
+  },
+  "2233": {
+   "n_episodes": 3,
+   "prompt": "Put the Tomato on the Plate"
+  },
+  "2234": {
+   "n_episodes": 3,
+   "prompt": "Put the Spaghetti on the Plate"
+  },
+  "2235": {
+   "n_episodes": 3,
+   "prompt": "Put the Fork on the Plate"
+  },
+  "2237": {
+   "n_episodes": 3,
+   "prompt": "Put the Peeler beside the Spring Onion"
+  },
+  "2238": {
+   "n_episodes": 3,
+   "prompt": "Put the Potato beside the Spring Onion"
+  },
+  "2239": {
+   "n_episodes": 3,
+   "prompt": "Put the Peeler on the Plate"
+  },
+  "2240": {
+   "n_episodes": 3,
+   "prompt": "Put the Sunglasses beside the Card Holder"
+  },
+  "2241": {
+   "n_episodes": 3,
+   "prompt": "Put the Sunglasses on the Tray"
+  },
+  "2242": {
+   "n_episodes": 3,
+   "prompt": "Put the Camera on the Tray"
+  },
+  "2243": {
+   "n_episodes": 3,
+   "prompt": "Put the Card Holder on the Tray"
+  },
+  "2245": {
+   "n_episodes": 3,
+   "prompt": "Put the Pen beside the Glasses Case"
+  },
+  "2246": {
+   "n_episodes": 3,
+   "prompt": "Put the Toy Figurine on the Plate"
+  },
+  "2247": {
+   "n_episodes": 3,
+   "prompt": "Put the Glasses Case on the Plate"
+  },
+  "2248": {
+   "n_episodes": 3,
+   "prompt": "Put the Cube Block on the Poker"
+  },
+  "2249": {
+   "n_episodes": 3,
+   "prompt": "Put the Chess Piece on the Poker"
+  },
+  "2250": {
+   "n_episodes": 3,
+   "prompt": "Put the Cube Block on the Chessboard"
+  },
+  "2252": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Cartridge on the Game Console"
+  },
+  "2253": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Controller on the Chessboard"
+  },
+  "2254": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Cartridge on the Chessboard"
+  },
+  "2255": {
+   "n_episodes": 1,
+   "prompt": "Put the Game Console on the Chessboard"
+  },
+  "2257": {
+   "n_episodes": 3,
+   "prompt": "Put the Spring Onion on the Plate"
+  },
+  "2258": {
+   "n_episodes": 3,
+   "prompt": "Put the Onion on the Plate"
+  },
+  "2260": {
+   "n_episodes": 3,
+   "prompt": "Put the Salt Shaker beside the Chicken Breast"
+  },
+  "2261": {
+   "n_episodes": 3,
+   "prompt": "Put the Lemon beside the Chicken Breast"
+  },
+  "2262": {
+   "n_episodes": 3,
+   "prompt": "Put the Salt Shaker into the Bowl"
+  },
+  "2263": {
+   "n_episodes": 3,
+   "prompt": "Put the Lemon into the Bowl"
+  },
+  "2264": {
+   "n_episodes": 3,
+   "prompt": "Put the Chicken Breast into the Bowl"
+  },
+  "2265": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Comb"
+  },
+  "2266": {
+   "n_episodes": 3,
+   "prompt": "Put the Lipstick beside the Comb"
+  },
+  "2267": {
+   "n_episodes": 3,
+   "prompt": "Put the Cream Jar beside the Comb"
+  },
+  "2268": {
+   "n_episodes": 3,
+   "prompt": "Put the Lipstick on the Tray"
+  },
+  "2269": {
+   "n_episodes": 3,
+   "prompt": "Put the Cream Jar on the Tray"
+  },
+  "2270": {
+   "n_episodes": 3,
+   "prompt": "Put the Comb on the Tray"
+  },
+  "2271": {
+   "n_episodes": 1,
+   "prompt": "Rotate the Hot Dog"
+  },
+  "2272": {
+   "n_episodes": 1,
+   "prompt": "Put the Hot Dog beside the Sandwich"
+  },
+  "2273": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Toy Car"
+  },
+  "2287": {
+   "n_episodes": 3,
+   "prompt": "Put the Plush Toy on the Tray"
+  },
+  "2288": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Croissant"
+  },
+  "2289": {
+   "n_episodes": 3,
+   "prompt": "Rotate the Sausage"
+  },
+  "2290": {
+   "n_episodes": 3,
+   "prompt": "Put the Sausage beside the Croissant"
+  },
+  "2291": {
+   "n_episodes": 3,
+   "prompt": "Put the Fried Egg on the Plate"
+  },
+  "2292": {
+   "n_episodes": 3,
+   "prompt": "Put the Sausage on the Plate"
+  },
+  "2293": {
+   "n_episodes": 3,
+   "prompt": "Put the Croissant on the Plate"
+  },
+  "2294": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Marker Pen"
+  },
+  "2295": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Earbud Case"
+  },
+  "2296": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Coffee Cup"
+  },
+  "2297": {
+   "n_episodes": 1,
+   "prompt": "Put the Marker Pen on the Laptop"
+  },
+  "2298": {
+   "n_episodes": 1,
+   "prompt": "Put the Earbud Case on the Laptop"
+  },
+  "2299": {
+   "n_episodes": 2,
+   "prompt": "Put the Coffee Cup on the Laptop"
+  },
+  "2301": {
+   "n_episodes": 3,
+   "prompt": "Put the Toothbrush on the Tray"
+  },
+  "2302": {
+   "n_episodes": 3,
+   "prompt": "Put the Sponge on the Tray"
+  },
+  "2303": {
+   "n_episodes": 3,
+   "prompt": "Put the Soap on the Tray"
+  },
+  "2304": {
+   "n_episodes": 2,
+   "prompt": "Rotate the Kiwi"
+  },
+  "2306": {
+   "n_episodes": 3,
+   "prompt": "Put the Tomato into the Bowl"
+  },
+  "800": {
+   "n_episodes": 17,
+   "prompt": "Put the Scissors on the Gift Box"
+  },
+  "801": {
+   "n_episodes": 17,
+   "prompt": "Put the Tape on the Ribbon Roll"
+  },
+  "802": {
+   "n_episodes": 17,
+   "prompt": "Put the Tape beside the Scissors"
+  },
+  "803": {
+   "n_episodes": 17,
+   "prompt": "Put the Tape beside the Gift Box"
+  },
+  "804": {
+   "n_episodes": 17,
+   "prompt": "Put the Scissors beside the Ribbon Roll"
+  },
+  "810": {
+   "n_episodes": 4,
+   "prompt": "Separate the Sandwich from the Napkin Box"
+  },
+  "814": {
+   "n_episodes": 2,
+   "prompt": "Place into container"
+  },
+  "815": {
+   "n_episodes": 1,
+   "prompt": "Place with orientation"
+  },
+  "818": {
+   "n_episodes": 15,
+   "prompt": "Put the Shot Glass on the Coaster"
+  },
+  "828": {
+   "n_episodes": 28,
+   "prompt": "Put the Toy Figurine into the Basket"
+  },
+  "830": {
+   "n_episodes": 22,
+   "prompt": "Place the Toy Figurine on the Left Side of the Toy Car"
+  },
+  "831": {
+   "n_episodes": 27,
+   "prompt": "Place the Toy Figurine on the Right Side of the Toy Car"
+  },
+  "832": {
+   "n_episodes": 6,
+   "prompt": "Rotate the Toy Car"
+  },
+  "837": {
+   "n_episodes": 1,
+   "prompt": "Rearrange Your Bathroom 4"
+  },
+  "844": {
+   "n_episodes": 14,
+   "prompt": "Rotate the Carrot"
+  },
+  "848": {
+   "n_episodes": 4,
+   "prompt": "Put the Sausage in the Bowl"
+  },
+  "849": {
+   "n_episodes": 4,
+   "prompt": "Put the Sausage on the Cereal Box"
+  },
+  "850": {
+   "n_episodes": 4,
+   "prompt": "Put the Sausage on the Milk Carton"
+  },
+  "851": {
+   "n_episodes": 4,
+   "prompt": "Put the Sausage beside the Bowl"
+  },
+  "852": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Sausage"
+  },
+  "856": {
+   "n_episodes": 4,
+   "prompt": "Put the Toy Ball beside the Chew Toy"
+  },
+  "857": {
+   "n_episodes": 4,
+   "prompt": "Put the Toy Ball beside the Bowl"
+  },
+  "858": {
+   "n_episodes": 4,
+   "prompt": "Separate the Chew Toy from the Toy Ball"
+  },
+  "859": {
+   "n_episodes": 4,
+   "prompt": "Put the Chew Toy on the Right Side of the Bowl"
+  },
+  "862": {
+   "n_episodes": 8,
+   "prompt": "Put the Mouse on the Keyboard"
+  },
+  "863": {
+   "n_episodes": 11,
+   "prompt": "Put the Cable on the Keyboard"
+  },
+  "864": {
+   "n_episodes": 9,
+   "prompt": "Put the Mouse on the Phone"
+  },
+  "865": {
+   "n_episodes": 11,
+   "prompt": "Put the Cable on the Phone"
+  },
+  "867": {
+   "n_episodes": 11,
+   "prompt": "Put the Computer Mouse on the Right of the Phone"
+  },
+  "880": {
+   "n_episodes": 1,
+   "prompt": "Put the Eyeglasses on the Notebook"
+  },
+  "881": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup on the Notebook"
+  },
+  "885": {
+   "n_episodes": 2,
+   "prompt": "Put the Eyeglasses Case on the Right of the Cup"
+  },
+  "887": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup on the Soap Dish"
+  },
+  "892": {
+   "n_episodes": 14,
+   "prompt": "Stack the Cup on the Cube Block (F)"
+  },
+  "894": {
+   "n_episodes": 1,
+   "prompt": "Put the Watch on the Box"
+  },
+  "895": {
+   "n_episodes": 1,
+   "prompt": "Put the Bracelet on the Box"
+  },
+  "896": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup on the Box"
+  },
+  "897": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup on the Right Side of the Box"
+  },
+  "898": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup on the Left Side of the Box"
+  },
+  "899": {
+   "n_episodes": 1,
+   "prompt": "Put the Cup in front of the Box"
+  },
+  "900": {
+   "n_episodes": 16,
+   "prompt": "Put the Croissant on the Plate"
+  },
+  "901": {
+   "n_episodes": 14,
+   "prompt": "Put the Tomato on the Plate"
+  },
+  "902": {
+   "n_episodes": 11,
+   "prompt": "Put the Croissant in the Pan"
+  },
+  "903": {
+   "n_episodes": 13,
+   "prompt": "Put the Tomato in the Pan"
+  },
+  "904": {
+   "n_episodes": 12,
+   "prompt": "Rotate the Pan"
+  },
+  "918": {
+   "n_episodes": 5,
+   "prompt": "Put the Butter Block into the Bowl"
+  },
+  "919": {
+   "n_episodes": 5,
+   "prompt": "Put the Rolling Pin into the Bowl"
+  },
+  "920": {
+   "n_episodes": 6,
+   "prompt": "Put the Butter Block on the Bread"
+  },
+  "921": {
+   "n_episodes": 5,
+   "prompt": "Rotate the Rolling Pin"
+  },
+  "923": {
+   "n_episodes": 5,
+   "prompt": "Put the Rolling Pin on the Right Side of the Bread"
+  },
+  "925": {
+   "n_episodes": 15,
+   "prompt": "Put the Tea Pot on the Tray"
+  },
+  "926": {
+   "n_episodes": 15,
+   "prompt": "Put the Tea Cup on the Tray"
+  },
+  "927": {
+   "n_episodes": 15,
+   "prompt": "Put the Tea Cup on the Biscuit Box"
+  },
+  "928": {
+   "n_episodes": 13,
+   "prompt": "Put the Cup on the Right Side of the Biscuit Box"
+  },
+  "929": {
+   "n_episodes": 20,
+   "prompt": "Put the Tea Cup on the Left Side of the Tea Pot"
+  },
+  "930": {
+   "n_episodes": 14,
+   "prompt": "Rotate the Tea Pot"
+  },
+  "937": {
+   "n_episodes": 21,
+   "prompt": "Put the Croissant on the Plate"
+  },
+  "938": {
+   "n_episodes": 13,
+   "prompt": "Put the Jam on the Plate"
+  },
+  "939": {
+   "n_episodes": 21,
+   "prompt": "Put the Cup on the Plate"
+  },
+  "940": {
+   "n_episodes": 21,
+   "prompt": "Put both the Croissant and the Cup on the Plate"
+  },
+  "941": {
+   "n_episodes": 3,
+   "prompt": "Put both the Croissant and the Jam on the Plate"
+  },
+  "942": {
+   "n_episodes": 3,
+   "prompt": "Put both the Jam and the Cup on the Plate"
+  },
+  "943": {
+   "n_episodes": 13,
+   "prompt": "Put the Potato in the Bowl"
+  },
+  "944": {
+   "n_episodes": 15,
+   "prompt": "Put the Green Pepper in the Bowl"
+  },
+  "946": {
+   "n_episodes": 14,
+   "prompt": "Put the Potato on the Cutting Board"
+  },
+  "947": {
+   "n_episodes": 16,
+   "prompt": "Put the Green Pepper on the Cutting Board"
+  },
+  "948": {
+   "n_episodes": 24,
+   "prompt": "Put both the Potato and the Pepper on the Cutting Board"
+  },
+  "949": {
+   "n_episodes": 19,
+   "prompt": "Put the Sweet Potato on the Tissue Box"
+  },
+  "950": {
+   "n_episodes": 17,
+   "prompt": "Put the Muffin on the Tissue Box"
+  },
+  "951": {
+   "n_episodes": 11,
+   "prompt": "Put the Cup on the Tissue Box"
+  },
+  "952": {
+   "n_episodes": 21,
+   "prompt": "Put both the Muffin and the Cup on the Tissue Box"
+  },
+  "954": {
+   "n_episodes": 20,
+   "prompt": "Put the Cup on the Right Side of the Sweet Potato"
+  },
+  "960": {
+   "n_episodes": 16,
+   "prompt": "Put the Toy Car in the Basket"
+  },
+  "961": {
+   "n_episodes": 22,
+   "prompt": "Put the Toy Figurine in the Basket"
+  },
+  "962": {
+   "n_episodes": 16,
+   "prompt": "Put the Toy Car on the Cube Block"
+  },
+  "963": {
+   "n_episodes": 11,
+   "prompt": "Put the Toy Figurine on the Cube Block"
+  },
+  "964": {
+   "n_episodes": 21,
+   "prompt": "Put the Toy Car on the Right Side of the Toy Figurine"
+  },
+  "965": {
+   "n_episodes": 18,
+   "prompt": "Put the Toy Car on the Left Side of the Cube Block"
+  },
+  "967": {
+   "n_episodes": 18,
+   "prompt": "Put the Camera on the Tissue Box"
+  },
+  "968": {
+   "n_episodes": 12,
+   "prompt": "Put the Wallet on the Tissue Box"
+  },
+  "969": {
+   "n_episodes": 26,
+   "prompt": "Put the Camera on the Right Side of the Eyeglasses Case"
+  },
+  "970": {
+   "n_episodes": 23,
+   "prompt": "Rotate the Eyeglasses Case"
+  },
+  "972": {
+   "n_episodes": 10,
+   "prompt": "Put the Tomato into the Pan"
+  },
+  "973": {
+   "n_episodes": 9,
+   "prompt": "Put the Chicken Leg into the Pan"
+  },
+  "974": {
+   "n_episodes": 11,
+   "prompt": "Put the Salt Container into the Pan"
+  },
+  "975": {
+   "n_episodes": 18,
+   "prompt": "Put the Tomato on the Left Side of the Chicken Leg"
+  },
+  "976": {
+   "n_episodes": 12,
+   "prompt": "Rotate the Frying Pan"
+  },
+  "978": {
+   "n_episodes": 15,
+   "prompt": "Put the Ballet Flat into the Basket"
+  },
+  "979": {
+   "n_episodes": 11,
+   "prompt": "Put the Sneaker into the Basket"
+  },
+  "980": {
+   "n_episodes": 15,
+   "prompt": "Rotate the Ballet Flat"
+  },
+  "981": {
+   "n_episodes": 9,
+   "prompt": "Rotate the Sneaker"
+  },
+  "982": {
+   "n_episodes": 15,
+   "prompt": "Put the Sneaker on the Left Side of the Handbag"
+  },
+  "983": {
+   "n_episodes": 11,
+   "prompt": "Put the Ballet Flat on the Left Side of the Handbag"
+  },
+  "984": {
+   "n_episodes": 11,
+   "prompt": "Put the Screwdriver on the Toolbox"
+  },
+  "985": {
+   "n_episodes": 10,
+   "prompt": "Put the Hammer on the Toolbox"
+  },
+  "987": {
+   "n_episodes": 11,
+   "prompt": "Insert the Screwdriver into the Cup"
+  },
+  "988": {
+   "n_episodes": 10,
+   "prompt": "Rotate the Screwdriver"
+  },
+  "989": {
+   "n_episodes": 9,
+   "prompt": "Rotate the Hammer"
+  },
+  "990": {
+   "n_episodes": 1,
+   "prompt": "Put the Trowel into the Pot"
+  },
+  "992": {
+   "n_episodes": 2,
+   "prompt": "Put the Trowel beside the Rose"
+  },
+  "993": {
+   "n_episodes": 14,
+   "prompt": "Put the Trowel beside the Pot"
+  },
+  "994": {
+   "n_episodes": 4,
+   "prompt": "Rotate the Rose"
+  },
+  "996": {
+   "n_episodes": 1,
+   "prompt": "Put the Test Tube into the Beaker"
+  },
+  "997": {
+   "n_episodes": 4,
+   "prompt": "Put the Pipette into the Beaker"
+  },
+  "998": {
+   "n_episodes": 10,
+   "prompt": "Put the Test Tube beside the Pipette"
+  },
+  "999": {
+   "n_episodes": 1,
+   "prompt": "Put the Pipette beside the Beaker"
+  }
+ }
+}

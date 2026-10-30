@@ -1,0 +1,26 @@
+[arm]
+id = "xvla.pretrain.mv_xvla_bc_s1000"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:xvla_base"
+
+[data]
+rowspace = "libero5k_v2_d8.sub1000#sha256:4bdaf94a64b992196f9f02ad01216d5b441013288ef662dc1b5fb00c6e0e4006"
+
+[signal]
+bundle = "sha256:3f6f271f6386f629aa62716b2025559021f51c592304062eb00bc280faf2c47d"
+
+[recipe]
+preset = "xvla.pretrain.paper"
+seed = 0
+
+[recipe.overrides]
+steps = 4168
+
+[paper]
+cells = []
+checkpoint = "xvla/pretrain/mv_xvla_bc_s1000"
+signals = ["lerobot.rows_s1000"]

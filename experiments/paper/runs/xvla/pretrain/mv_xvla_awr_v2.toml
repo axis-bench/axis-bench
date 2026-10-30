@@ -1,0 +1,31 @@
+[arm]
+id = "xvla.pretrain.mv_xvla_awr_v2"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:xvla_base"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:38bd7d618133f05d140a0a3e298c9dafd36306c340e256e7ec80b9ae7ef27ad4"
+
+[recipe]
+preset = "xvla.pretrain.paper"
+seed = 0
+nulls = ["sample_weighting.progress_path"]
+
+[recipe.overrides]
+"sample_weighting.epsilon" = 1e-06
+"sample_weighting.extra_params.expected_frames" = 1906469
+"sample_weighting.head_mode" = "sparse"
+"sample_weighting.kappa" = 0.01
+"sample_weighting.type" = "axis_flat"
+
+[paper]
+cells = []
+checkpoint = "xvla/pretrain/mv_xvla_awr_v2"
+signals = ["lerobot.rows", "lerobot.awr_flat_v2"]

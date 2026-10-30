@@ -1,0 +1,704 @@
+# The paper's training signals as SignalBundles: one entry per distinct signal, and the arms that
+# trained on it. `qvla signals build-paper` compiles every entry from the published corpus pack and
+# the corpus metadata, refuses any bundle whose legacy export differs from its locked file
+# (conf/release/SIGNALS.lock.json), and writes bundles/manifest.json (arm -> bundle id).
+#
+#   method     bc | awr_chunk | awr_episode | awr_imported | cfg | drop_top50 | random50
+#   format     the legacy format the arm's consumer read (openpi-legacy for pi0.5, lerobot-legacy for
+#              SmolVLA and X-VLA, which share every bundle because they read the same files)
+#   source     the locked file the method imports its scores from (lock id)
+#   rowspace   libero5k_v2_d8 (the 5,000-episode corpus), its .sub1000/.sub2500 scaling cuts, or
+#              heldout24_ft (the finetune set's 86,912 frames)
+#   budget     [optimizer steps, global batch]; seed is the planner's seed (the training seed for
+#              permutation plans, the schedule's seed for filtering plans)
+#   exports    the locked files this bundle writes back (lock ids)
+schema = "qvla.paper_bundles/1"
+
+[[bundle]]
+name = "pi05.pt.bc.seed42"
+method = "bc"
+format = "openpi-legacy"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges"]
+arms = ["pi05.pt.libero5k_d8_bc"]
+
+[[bundle]]
+name = "pi05.pt.bc.seed43"
+method = "bc"
+format = "openpi-legacy"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 43
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges"]
+arms = ["pi05.pt.libero5k_d8_bc_s43"]
+
+[[bundle]]
+name = "pi05.pt.bc.seed44"
+method = "bc"
+format = "openpi-legacy"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 44
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges"]
+arms = ["pi05.pt.libero5k_d8_bc_s44"]
+
+[[bundle]]
+name = "pi05.pt.bc.sub1000.seed42"
+method = "bc"
+format = "openpi-legacy"
+rowspace = "libero5k_v2_d8.sub1000"
+budget = [4168, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.scaling_1000"]
+arms = ["pi05.pt.libero5k_d8_bc_s1000"]
+
+[[bundle]]
+name = "pi05.pt.bc.sub2500.seed42"
+method = "bc"
+format = "openpi-legacy"
+rowspace = "libero5k_v2_d8.sub2500"
+budget = [10472, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.scaling_2500"]
+arms = ["pi05.pt.libero5k_d8_bc_s2500"]
+
+[[bundle]]
+name = "pi05.pt.awr.phase.chunk.seed42"
+method = "awr_chunk"
+format = "openpi-legacy"
+scorer = "phase"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+reducer = "global_ratio"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.chunk.awr_weights"]
+arms = ["pi05.pt.libero5k_d8_awr_phase"]
+
+[[bundle]]
+name = "pi05.pt.awr.phase.episode.seed42"
+method = "awr_episode"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+reducer = "global_ratio"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.episode.awr_weights"]
+arms = ["pi05.pt.libero5k_d8_awr_phase_ep"]
+
+[[bundle]]
+name = "pi05.pt.awr.v2.chunk.seed42"
+method = "awr_chunk"
+format = "openpi-legacy"
+scorer = "v2"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+reducer = "global_ratio"
+exports = ["index.roots_d8", "index.ranges", "object_centric.chunk.awr_weights"]
+arms = ["pi05.pt.libero5k_d8_awr_v2"]
+
+[[bundle]]
+name = "pi05.pt.awr.v2.episode.seed42"
+method = "awr_episode"
+format = "openpi-legacy"
+source = "object_centric.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+reducer = "global_ratio"
+exports = ["index.roots_d8", "index.ranges", "object_centric.episode.awr_weights"]
+arms = ["pi05.pt.libero5k_d8_awr_v2_ep"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.episode.seed42"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.episode.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.chunk.seed42"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.chunk.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase_seg"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.episode.seed43"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 43
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.episode.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase_s43"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.chunk.seed43"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 43
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.chunk.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase_seg_s43"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.episode.seed44"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 44
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.episode.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase_s44"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.chunk.seed44"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 44
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.chunk.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase_seg_s44"]
+
+[[bundle]]
+name = "pi05.pt.cfg.v2.episode.seed42"
+method = "cfg"
+format = "openpi-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "object_centric.episode.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_v2"]
+
+[[bundle]]
+name = "pi05.pt.cfg.v2.chunk.seed42"
+method = "cfg"
+format = "openpi-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.ranges", "object_centric.chunk.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_v2_seg"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.episode.sub1000.seed42"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8.sub1000"
+tag_rowspace = "libero5k_v2_d8"
+budget = [4168, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.scaling_1000", "approach_aware.episode.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase_s1000"]
+
+[[bundle]]
+name = "pi05.pt.cfg.phase.episode.sub2500.seed42"
+method = "cfg"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8.sub2500"
+tag_rowspace = "libero5k_v2_d8"
+budget = [10472, 64]
+seed = 42
+planner = "openpi-rowsampler"
+exports = ["index.roots_d8", "index.scaling_2500", "approach_aware.episode.tags"]
+arms = ["pi05.pt.libero5k_d8_cfg_phase_s2500"]
+
+[[bundle]]
+name = "pi05.pt.drop50.phase.chunk"
+method = "drop_top50"
+format = "openpi-legacy"
+source = "approach_aware.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "pi05.pt.random50.chunk"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.chunk.schedule_drop_top50"]
+arms = ["pi05.pt.libero5k_d8_drop_top_phase", "pi05.pt.libero5k_d8_drop_top_phase_s43", "pi05.pt.libero5k_d8_drop_top_phase_s44"]
+
+[[bundle]]
+name = "pi05.pt.drop50.phase.episode"
+method = "drop_top50"
+format = "openpi-legacy"
+source = "approach_aware.episode.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "pi05.pt.random50.episode"
+exports = ["index.roots_d8", "index.ranges", "approach_aware.episode.schedule_drop_top50"]
+arms = ["pi05.pt.libero5k_d8_drop_top_phase_ep", "pi05.pt.libero5k_d8_drop_top_phase_ep_s43", "pi05.pt.libero5k_d8_drop_top_phase_ep_s44"]
+
+[[bundle]]
+name = "pi05.pt.drop50.v2.chunk"
+method = "drop_top50"
+format = "openpi-legacy"
+source = "object_centric.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "pi05.pt.random50.chunk"
+exports = ["index.roots_d8", "index.ranges", "object_centric.chunk.schedule_drop_top50"]
+arms = ["pi05.pt.libero5k_d8_drop_top_v2"]
+
+[[bundle]]
+name = "pi05.pt.drop50.v2.episode"
+method = "drop_top50"
+format = "openpi-legacy"
+source = "object_centric.episode.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "pi05.pt.random50.episode"
+exports = ["index.roots_d8", "index.ranges", "object_centric.episode.schedule_drop_top50"]
+arms = ["pi05.pt.libero5k_d8_drop_top_v2_ep"]
+
+[[bundle]]
+name = "pi05.pt.random50.chunk"
+method = "random50"
+format = "openpi-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "chunk"
+template_name = "awr_weights_v2.json"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 42
+planner = "numpy-schedule"
+paper_arm = false
+exports = ["index.roots_d8", "index.ranges"]
+arms = []
+
+[[bundle]]
+name = "pi05.pt.random50.episode"
+method = "random50"
+format = "openpi-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "episode"
+template_name = "awr_weights_v2.json"
+rowspace = "libero5k_v2_d8"
+budget = [20605, 64]
+seed = 0
+planner = "numpy-schedule"
+paper_arm = false
+exports = ["index.roots_d8", "index.ranges"]
+arms = []
+
+[[bundle]]
+name = "lerobot.pt.bc.seed0"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows"]
+arms = ["svla.pt.mv_smolvla_bc", "xvla.pt.mv_xvla_bc"]
+
+[[bundle]]
+name = "lerobot.pt.bc.seed1"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 1
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows"]
+arms = ["svla.pt.mv_smolvla_bc_sd1", "xvla.pt.mv_xvla_bc_sd1"]
+
+[[bundle]]
+name = "lerobot.pt.bc.seed2"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 2
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows"]
+arms = ["svla.pt.mv_smolvla_bc_sd2", "xvla.pt.mv_xvla_bc_sd2"]
+
+[[bundle]]
+name = "lerobot.pt.bc.sub1000.seed0"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "libero5k_v2_d8.sub1000"
+budget = [4168, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows_s1000"]
+arms = ["svla.pt.mv_smolvla_bc_s1000", "xvla.pt.mv_xvla_bc_s1000"]
+
+[[bundle]]
+name = "lerobot.pt.bc.sub2500.seed0"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "libero5k_v2_d8.sub2500"
+budget = [10472, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows_s2500"]
+arms = ["svla.pt.mv_smolvla_bc_s2500", "xvla.pt.mv_xvla_bc_s2500"]
+
+[[bundle]]
+name = "lerobot.pt.awr.phase.chunk.seed0"
+method = "awr_imported"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+reducer = "per_rank_ratio"
+exports = ["lerobot.rows", "lerobot.awr_flat_phase"]
+arms = ["svla.pt.mv_smolvla_awr_phase", "xvla.pt.mv_xvla_awr_phase"]
+
+[[bundle]]
+name = "lerobot.pt.awr.phase.episode.seed0"
+method = "awr_imported"
+format = "lerobot-legacy"
+source = "approach_aware.episode.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+reducer = "per_rank_ratio"
+exports = ["lerobot.rows", "lerobot.awr_flat_phase_ep"]
+arms = ["svla.pt.mv_smolvla_awr", "xvla.pt.mv_xvla_awr"]
+
+[[bundle]]
+name = "lerobot.pt.awr.v2.chunk.seed0"
+method = "awr_imported"
+format = "lerobot-legacy"
+source = "object_centric.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+reducer = "per_rank_ratio"
+exports = ["lerobot.rows", "lerobot.awr_flat_v2"]
+arms = ["svla.pt.mv_smolvla_awr_v2", "xvla.pt.mv_xvla_awr_v2"]
+
+[[bundle]]
+name = "lerobot.pt.awr.v2.episode.seed0"
+method = "awr_imported"
+format = "lerobot-legacy"
+source = "object_centric.episode.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+reducer = "per_rank_ratio"
+exports = ["lerobot.rows", "lerobot.awr_flat_v2_ep"]
+arms = ["svla.pt.mv_smolvla_awr_v2_ep", "xvla.pt.mv_xvla_awr_v2_ep"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.chunk.seed0"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "approach_aware.chunk.tags"]
+arms = ["svla.pt.mv_smolvla_cfg_phase_seg", "xvla.pt.mv_xvla_cfg_phase_seg"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.episode.seed0"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "approach_aware.episode.tags"]
+arms = ["svla.pt.mv_smolvla_cfgphase", "xvla.pt.mv_xvla_cfgphase"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.chunk.seed1"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 1
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "approach_aware.chunk.tags"]
+arms = ["svla.pt.mv_smolvla_cfg_phase_seg_sd1", "xvla.pt.mv_xvla_cfg_phase_seg_sd1"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.episode.seed1"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 1
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "approach_aware.episode.tags"]
+arms = ["svla.pt.mv_smolvla_cfgphase_sd1", "xvla.pt.mv_xvla_cfgphase_sd1"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.chunk.seed2"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 2
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "approach_aware.chunk.tags"]
+arms = ["svla.pt.mv_smolvla_cfg_phase_seg_sd2", "xvla.pt.mv_xvla_cfg_phase_seg_sd2"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.episode.seed2"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 2
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "approach_aware.episode.tags"]
+arms = ["svla.pt.mv_smolvla_cfgphase_sd2", "xvla.pt.mv_xvla_cfgphase_sd2"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.v2.episode.seed0"
+method = "cfg"
+format = "lerobot-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "object_centric.episode.tags"]
+arms = ["svla.pt.mv_smolvla_cfg_v2", "xvla.pt.mv_xvla_cfg_v2"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.v2.chunk.seed0"
+method = "cfg"
+format = "lerobot-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "row"
+rowspace = "libero5k_v2_d8"
+tag_rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows", "object_centric.chunk.tags"]
+arms = ["svla.pt.mv_smolvla_cfg_v2_seg", "xvla.pt.mv_xvla_cfg_v2_seg"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.episode.sub1000.seed0"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8.sub1000"
+tag_rowspace = "libero5k_v2_d8"
+budget = [4168, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows_s1000", "approach_aware.episode.tags"]
+arms = ["svla.pt.mv_smolvla_cfgphase_s1000", "xvla.pt.mv_xvla_cfgphase_s1000"]
+
+[[bundle]]
+name = "lerobot.pt.cfg.phase.episode.sub2500.seed0"
+method = "cfg"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+granularity = "episode"
+rowspace = "libero5k_v2_d8.sub2500"
+tag_rowspace = "libero5k_v2_d8"
+budget = [10472, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.rows_s2500", "approach_aware.episode.tags"]
+arms = ["svla.pt.mv_smolvla_cfgphase_s2500", "xvla.pt.mv_xvla_cfgphase_s2500"]
+
+[[bundle]]
+name = "lerobot.pt.drop50.phase.chunk"
+method = "drop_top50"
+format = "lerobot-legacy"
+source = "approach_aware.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "lerobot.pt.random50.chunk"
+exports = ["lerobot.schedule_drop_top_phase_smolvla"]
+arms = ["svla.pt.mv_smolvla_drop_top_phase", "svla.pt.mv_smolvla_drop_top_phase_sd1", "svla.pt.mv_smolvla_drop_top_phase_sd2", "xvla.pt.mv_xvla_drop_top_phase", "xvla.pt.mv_xvla_drop_top_phase_sd1", "xvla.pt.mv_xvla_drop_top_phase_sd2"]
+
+[[bundle]]
+name = "lerobot.pt.drop50.phase.episode"
+method = "drop_top50"
+format = "lerobot-legacy"
+source = "approach_aware.episode.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "lerobot.pt.random50.episode"
+exports = ["lerobot.schedule_drop_top_phase_ep_smolvla"]
+arms = ["svla.pt.mv_smolvla_drop50", "svla.pt.mv_smolvla_drop50_sd1", "svla.pt.mv_smolvla_drop50_sd2", "xvla.pt.mv_xvla_drop50", "xvla.pt.mv_xvla_drop50_sd1", "xvla.pt.mv_xvla_drop50_sd2"]
+
+[[bundle]]
+name = "lerobot.pt.drop50.v2.chunk"
+method = "drop_top50"
+format = "lerobot-legacy"
+source = "object_centric.chunk.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "lerobot.pt.random50.chunk"
+exports = ["lerobot.schedule_drop_top_v2_smolvla"]
+arms = ["svla.pt.mv_smolvla_drop_top_v2", "xvla.pt.mv_xvla_drop_top_v2"]
+
+[[bundle]]
+name = "lerobot.pt.drop50.v2.episode"
+method = "drop_top50"
+format = "lerobot-legacy"
+source = "object_centric.episode.awr_weights"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "numpy-schedule"
+control = "lerobot.pt.random50.episode"
+exports = ["lerobot.schedule_drop_top_v2_ep_smolvla"]
+arms = ["svla.pt.mv_smolvla_drop_top_v2_ep", "xvla.pt.mv_xvla_drop_top_v2_ep"]
+
+[[bundle]]
+name = "lerobot.pt.random50.chunk"
+method = "random50"
+format = "lerobot-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "chunk"
+template_name = "awr_weights_v2.json"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 42
+planner = "numpy-schedule"
+exports = ["lerobot.schedule_drop_random_rand50_row_smolvla"]
+arms = ["svla.pt.mv_smolvla_rand50_row", "xvla.pt.mv_xvla_rand50_row"]
+
+[[bundle]]
+name = "lerobot.pt.random50.episode"
+method = "random50"
+format = "lerobot-legacy"
+source = "object_centric.chunk.awr_weights"
+granularity = "episode"
+template_name = "awr_weights_v2.json"
+rowspace = "libero5k_v2_d8"
+budget = [20621, 64]
+seed = 0
+planner = "numpy-schedule"
+exports = ["lerobot.schedule_drop_top_rand50_ep_smolvla"]
+arms = ["svla.pt.mv_smolvla_rand50_ep", "xvla.pt.mv_xvla_rand50_ep"]
+
+[[bundle]]
+name = "lerobot.ft.rows.seed0"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "heldout24_ft"
+budget = [6790, 64]
+seed = 0
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.ft_rows_all"]
+arms = ["svla.ft.mvft_smolvla_awr", "svla.ft.mvft_smolvla_awr_phase", "svla.ft.mvft_smolvla_awr_v2", "svla.ft.mvft_smolvla_awr_v2_ep", "svla.ft.mvft_smolvla_base", "svla.ft.mvft_smolvla_bc", "svla.ft.mvft_smolvla_bc_s1000", "svla.ft.mvft_smolvla_bc_s2500", "svla.ft.mvft_smolvla_bct", "svla.ft.mvft_smolvla_cfg_phase_seg", "svla.ft.mvft_smolvla_cfg_v2", "svla.ft.mvft_smolvla_cfg_v2_seg", "svla.ft.mvft_smolvla_cfgnp", "svla.ft.mvft_smolvla_cfgphase", "svla.ft.mvft_smolvla_cfgphase_s1000", "svla.ft.mvft_smolvla_cfgphase_s2500", "svla.ft.mvft_smolvla_drop50", "svla.ft.mvft_smolvla_drop_top_phase", "svla.ft.mvft_smolvla_drop_top_v2", "svla.ft.mvft_smolvla_drop_top_v2_ep", "svla.ft.mvft_smolvla_rand50_ep", "svla.ft.mvft_smolvla_rand50_row", "xvla.ft.mvft_xvla_awr", "xvla.ft.mvft_xvla_awr_phase", "xvla.ft.mvft_xvla_awr_v2", "xvla.ft.mvft_xvla_awr_v2_ep", "xvla.ft.mvft_xvla_base", "xvla.ft.mvft_xvla_bc", "xvla.ft.mvft_xvla_bc_s1000", "xvla.ft.mvft_xvla_bc_s2500", "xvla.ft.mvft_xvla_bct", "xvla.ft.mvft_xvla_cfg_phase_seg", "xvla.ft.mvft_xvla_cfg_v2", "xvla.ft.mvft_xvla_cfg_v2_seg", "xvla.ft.mvft_xvla_cfgnp", "xvla.ft.mvft_xvla_cfgphase", "xvla.ft.mvft_xvla_cfgphase_s1000", "xvla.ft.mvft_xvla_cfgphase_s2500", "xvla.ft.mvft_xvla_drop50", "xvla.ft.mvft_xvla_drop_top_phase", "xvla.ft.mvft_xvla_drop_top_v2", "xvla.ft.mvft_xvla_drop_top_v2_ep", "xvla.ft.mvft_xvla_rand50_ep", "xvla.ft.mvft_xvla_rand50_row"]
+
+[[bundle]]
+name = "lerobot.ft.rows.seed1"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "heldout24_ft"
+budget = [6790, 64]
+seed = 1
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.ft_rows_all"]
+arms = ["svla.ft.mvft_smolvla_bc_sd1", "svla.ft.mvft_smolvla_cfg_phase_seg_sd1", "svla.ft.mvft_smolvla_cfgnp_sd1", "svla.ft.mvft_smolvla_cfgphase_sd1", "svla.ft.mvft_smolvla_drop50_sd1", "svla.ft.mvft_smolvla_drop_top_phase_sd1", "xvla.ft.mvft_xvla_bc_sd1", "xvla.ft.mvft_xvla_cfg_phase_seg_sd1", "xvla.ft.mvft_xvla_cfgnp_sd1", "xvla.ft.mvft_xvla_cfgphase_sd1", "xvla.ft.mvft_xvla_drop50_sd1", "xvla.ft.mvft_xvla_drop_top_phase_sd1"]
+
+[[bundle]]
+name = "lerobot.ft.rows.seed2"
+method = "bc"
+format = "lerobot-legacy"
+rowspace = "heldout24_ft"
+budget = [6790, 64]
+seed = 2
+planner = "lerobot-axisrowsampler"
+exports = ["lerobot.ft_rows_all"]
+arms = ["svla.ft.mvft_smolvla_bc_sd2", "svla.ft.mvft_smolvla_cfg_phase_seg_sd2", "svla.ft.mvft_smolvla_cfgnp_sd2", "svla.ft.mvft_smolvla_cfgphase_sd2", "svla.ft.mvft_smolvla_drop50_sd2", "svla.ft.mvft_smolvla_drop_top_phase_sd2", "xvla.ft.mvft_xvla_bc_sd2", "xvla.ft.mvft_xvla_cfg_phase_seg_sd2", "xvla.ft.mvft_xvla_cfgnp_sd2", "xvla.ft.mvft_xvla_cfgphase_sd2", "xvla.ft.mvft_xvla_drop50_sd2", "xvla.ft.mvft_xvla_drop_top_phase_sd2"]

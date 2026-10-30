@@ -1,0 +1,88 @@
+{
+ "header": {
+  "action_space": "droid8",
+  "arm": "r1fcfg",
+  "bench": {
+   "declaration_sha256": "80af7635167b0f33de13ff03880de4ff2867eb75b9e0fd9cd75a06e176beb187",
+   "name": "fixture_bench",
+   "units_sha256": "751e0bd29461f4a74e7511b153480d5c9877808d9908553054e2a365b6d37e02"
+  },
+  "checkpoint": {
+   "pub_digest": null,
+   "ref": "axisrobotics/qvla-v1-pi05@v1.0:ft/r1fcfg/13579"
+  },
+  "eval_fingerprint": "ca2d089f8d068466dd3fe096e4c142729d62d733cd290e21888d9f15467cc916",
+  "eval_lock_sha256": null,
+  "execution": {
+   "fps": 15,
+   "max_steps": 1500,
+   "replan": 8
+  },
+  "gpu": null,
+  "harness": null,
+  "image_geometry": "raw",
+  "noise_salt": null,
+  "serve": {
+   "beta": 1.0,
+   "fields": {},
+   "uncond_fields": null
+  },
+  "served": "r1fcfg_dualsim",
+  "training_seed": {
+   "ft": 42,
+   "pretrain": 42
+  },
+  "xla_pin": "--xla_gpu_autotune_level=0"
+ },
+ "rows": [
+  {
+   "n_steps": 100,
+   "reason": "success",
+   "seed": 806000,
+   "sim_time": 6.666666666666667,
+   "success": true,
+   "task": 806
+  },
+  {
+   "n_steps": 101,
+   "reason": "success",
+   "seed": 806001,
+   "sim_time": 6.733333333333333,
+   "success": true,
+   "task": 806
+  },
+  {
+   "n_steps": 102,
+   "reason": "success",
+   "seed": 806002,
+   "sim_time": 6.8,
+   "success": true,
+   "task": 806
+  },
+  {
+   "n_steps": 100,
+   "reason": "timeout",
+   "seed": 1050000,
+   "sim_time": 6.666666666666667,
+   "success": false,
+   "task": 1050
+  },
+  {
+   "n_steps": 101,
+   "reason": "success",
+   "seed": 1050001,
+   "sim_time": 6.733333333333333,
+   "success": true,
+   "task": 1050
+  },
+  {
+   "n_steps": 102,
+   "reason": "success",
+   "seed": 1050002,
+   "sim_time": 6.8,
+   "success": true,
+   "task": 1050
+  }
+ ],
+ "schema": "qvla.results/v1"
+}

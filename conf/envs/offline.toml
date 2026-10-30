@@ -1,0 +1,26 @@
+schema = "qvla.env/1"
+tier = "offline"
+description = "Signals, labels and data tooling: numpy, pandas, pyarrow, the Hub client, Pillow, SciPy and PyAV, at the versions the public CI runs. No training framework."
+checkout = "."
+python = "3.11"
+lock = "conf/envs/offline.lock.txt"
+lock_sha256 = "881cc226c60c847243f64a680d5b83f17d91e1c8a0bfa541c3b9ff2170b72b13"
+# Run in the axis-bench checkout. The lock is `uv pip compile` of conf/envs/offline.in (the `offline`
+# extra) under the CI's constraints; the package itself goes in without dependencies.
+build = [
+  "uv venv --python 3.11 .venv-offline",
+  "uv pip install --python .venv-offline/bin/python -r conf/envs/offline.lock.txt",
+  "uv pip install --python .venv-offline/bin/python --no-deps -e .",
+]
+
+[versions]
+numpy = "1.26.4"
+pandas = "3.0.6"
+pyarrow = "25.0.1"
+huggingface-hub = "2.1.1"
+pillow = "12.3.0"
+scipy = "1.17.1"
+av = "18.0.0"
+
+[gate]
+imports = ["numpy", "pandas", "pyarrow.parquet", "PIL.Image", "huggingface_hub", "scipy.spatial.transform", "av"]

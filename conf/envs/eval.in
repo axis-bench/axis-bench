@@ -1,0 +1,31 @@
+numpy>=1.26.4
+pandas>=3.0.3
+pyarrow>=25.0.0
+huggingface_hub>=1.22.0
+pillow>=12.2.0
+scipy>=1.17.1
+av>=18.0.0
+pytest>=9.1.1
+mujoco==3.3.7
+dm-tree>=0.1.8
+msgpack>=1.0.5
+# The renderer's (third_party/axis-render) own declared runtime dependencies -- it is installed
+# --no-deps (see eval.toml), so the four it actually imports at runtime (render_scene.py ->
+# axis_replay_native.robosuite_render -> robosuite; dm-control and the video writer imageio /
+# imageio-ffmpeg underneath it) must be pinned here instead, or a fresh eval venv imports fine but
+# cannot render. Pinned at the versions the paper's evaluations ran in (the eval environment), not
+# axis-render's own unbounded minimums, which also name server-side dependencies evaluation does
+# not need.
+robosuite==1.5.2
+dm-control==1.0.34
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+# No upper bound on websockets, on purpose: this file only feeds eval.lock.txt, and every version
+# in that lock must equal the CI pin (tests/unit/train/test_envs.py). A new websockets therefore
+# reaches the eval tier only by moving the CI pin, and the CI test job then runs both shipped
+# clients -- check-server and openpi-client's WebsocketClientPolicy (the bench-eval client) --
+# against the reference and in-process servers on it. websockets 17.1 deprecated the bare
+# connect() openpi-client still calls: check that call before moving the pin to a new major.
+websockets>=11.0
+httpx
+pydantic

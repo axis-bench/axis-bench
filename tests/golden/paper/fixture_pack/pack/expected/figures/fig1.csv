@@ -1,0 +1,13 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+π0.5,Episode cond. − BC,seed 42,cfg_ph_ep|cond;bc|bare,83.33333333333333,50.0,66.66666666666667,47.14045207910317,
+π0.5,Episode cond. − BC,seed 43,cfgpt43|cond;bc43|bare,,,,,
+π0.5,Episode cond. − BC,seed 44,cfgpt44|cond;bc44|bare,,,,,
+π0.5,Episode cond. − BC,mean over seeds,,,,,,the value Fig. 1 prints
+SmolVLA,Episode cond. − BC,seed 0,svla_cfgph|cond;svla_bc|bare,,,,,
+SmolVLA,Episode cond. − BC,seed 1,svla_cfgph_sd1|cond;svla_bc_sd1|bare,,,,,
+SmolVLA,Episode cond. − BC,seed 2,svla_cfgph_sd2|cond;svla_bc_sd2|bare,,,,,
+SmolVLA,Episode cond. − BC,mean over seeds,,,,,,the value Fig. 1 prints
+X-VLA,Episode cond. − BC,seed 0,xvla_cfgph|cond;xvla_bc|bare,,,,,
+X-VLA,Episode cond. − BC,seed 1,xvla_cfgph_sd1|cond;xvla_bc_sd1|bare,,,,,
+X-VLA,Episode cond. − BC,seed 2,xvla_cfgph_sd2|cond;xvla_bc_sd2|bare,,,,,
+X-VLA,Episode cond. − BC,mean over seeds,,,,,,the value Fig. 1 prints

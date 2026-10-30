@@ -1,0 +1,35 @@
+schema = "qvla.bases/3"
+# Base weights an ArmSpec names as `base:<name>`. They resolve offline from the local copy
+# <cache>/checkpoints/qvla-v1-base-weights, which `qvla data get base-weights` fills from each base's
+# publisher, verified against bases.lock.json (every file's size and sha256, each GCS object's
+# generation, each Hub repository's commit). The copy holds openpi's download cache under openpi/ (a
+# run's OPENPI_DATA_HOME, so the PaliGemma tokenizer resolves too) and a Hugging Face cache under hf/
+# (a LeRobot run's HF_HOME, with HF_HUB_OFFLINE=1). `local` is what the run reads: for pi0.5 a params
+# directory inside the copy, for LeRobot the Hub id the recorded train_config.json carries ("" when
+# the policy loads its own backbone through policy.vlm_model_name). `upstream` is where the base is
+# published.
+
+[pi05_droid]
+backbone = "pi05-openpi"
+local = "openpi/openpi-assets/checkpoints/pi05_droid/params"
+upstream = "gs://openpi-assets/checkpoints/pi05_droid/params"
+
+[pi05_base]
+backbone = "pi05-openpi"
+local = "openpi/openpi-assets/checkpoints/pi05_base/params"
+upstream = "gs://openpi-assets/checkpoints/pi05_base/params"
+
+[smolvlm2_500m]
+backbone = "smolvla-lerobot"
+local = ""
+upstream = "hf:HuggingFaceTB/SmolVLM2-500M-Video-Instruct"
+
+[smolvla_base]
+backbone = "smolvla-lerobot"
+local = "lerobot/smolvla_base"
+upstream = "hf:lerobot/smolvla_base"
+
+[xvla_base]
+backbone = "xvla-lerobot"
+local = "lerobot/xvla-base"
+upstream = "hf:lerobot/xvla-base"

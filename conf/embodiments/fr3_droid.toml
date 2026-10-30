@@ -1,0 +1,19 @@
+schema = "qvla.embodiment/1"
+id = "fr3_droid"
+about = "Your FR3 demonstrations recorded in the DROID layout, written in the training layout by `qvla realrobot realdata training-set`."
+fps = 15
+[state]
+stored = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "gripper"]
+model = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "gripper"]
+[action]
+stored = ["v0", "v1", "v2", "v3", "v4", "v5", "v6", "gripper_cmd"]
+units = "droid_normalized_joint_velocity_command"   # joint target q + 0.2 * v per step at 15 Hz (DROID's joint_velocity action space)
+range = [-1.0, 1.0]
+gripper_units = "absolute_position_command_0_1"     # 0 = open
+[images]
+keys = ["observation.images.third_person", "observation.images.wrist"]
+# recorded: the DROID cameras' frames. stored: the 320 x 180 frames openpi's DROID converter writes, which
+# training-set keeps; training and serving crop the centre square of either.
+recorded = [1280, 720]
+stored = [320, 180]
+geometry_default = "center_crop224"

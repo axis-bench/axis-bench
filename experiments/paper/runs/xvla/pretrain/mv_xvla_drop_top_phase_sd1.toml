@@ -1,0 +1,27 @@
+[arm]
+id = "xvla.pretrain.mv_xvla_drop_top_phase_sd1"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:xvla_base"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:a7fae0e8aeb4b1885a239c12f46915bd1f29007b1171a2a57152dd997b22d53d"
+
+[recipe]
+preset = "xvla.pretrain.paper"
+seed = 1
+
+[recipe.overrides]
+axis_expected_mode = "drop_top"
+axis_expected_reward = "phase"
+
+[paper]
+cells = []
+checkpoint = "xvla/pretrain/mv_xvla_drop_top_phase_sd1"
+signals = ["lerobot.schedule_drop_top_phase_smolvla"]

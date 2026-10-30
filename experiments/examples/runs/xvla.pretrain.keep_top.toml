@@ -1,0 +1,29 @@
+# `qvla train pretrain --labels <name> --backbone xvla` writes this run spec for your own labels; the
+# overrides below are the ones it derives from keep_top's exported schedule. The pinned LeRobot fork
+# replays the labels' schedule step for step, 8 samples on each of 8 GPUs per step, so the run trains
+# their 20,605 steps and names the schedule's mode and reward: the schedule planner's mode and the
+# method. docs/tutorials/pretrain.md walks through it. Its track is "paper" because the
+# preset it reuses is a paper-track preset (a run's track must be its preset's); it is not a paper run.
+[arm]
+id = "xvla.pretrain.keep_top"
+backbone = "xvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:xvla_base"
+
+[data]
+rowspace = "libero5k_v2_d8"
+
+[signal]
+bundle = "name:example.keep_top"
+
+[recipe]
+preset = "xvla.pretrain.paper"
+seed = 0
+
+[recipe.overrides]
+axis_expected_mode = "drop_top"
+axis_expected_reward = "example.keep_top"
+steps = 20605

@@ -1,0 +1,159 @@
+name: AXIS-Bench CI
+on: [pull_request, push, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Only the submodules this job's tests need: openpi (openpi-client, the policy websocket
+      # client, and the line files the serving and training tests read), lerobot (the uv.lock the
+      # environment tests resolve) and axis-render (axis_replay_native: the asset store and the
+      # task checkers).
+      - run: git submodule update --init --depth 1 -- third_party/openpi third_party/lerobot third_party/axis-render
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # Every resolved package pinned (openpi-client's own dependencies included); the extras in
+      # pyproject.toml are minimums for users.
+      - run: pip install -c .github/ci-constraints.txt -e ".[offline,test]" ./third_party/openpi/packages/openpi-client httpx pydantic
+      # axis-render WITHOUT its declared dependencies (robosuite, dm-control, scipy and server-side
+      # packages): the tests here import only its asset store and checkers, which need the httpx
+      # and pydantic installed above.
+      - run: pip install --no-deps ./third_party/axis-render
+      # `axis_qvla.train.envs`'s own tests shell out to `uv export` to prove a lock's closure; uv
+      # itself is not a project dependency, so it is installed here, pinned, like the render job
+      # pins pytest below.
+      - run: pip install -c .github/ci-constraints.txt uv
+      # The renderer's suites need its own environment and a GL backend: the `render` job runs
+      # them. Tests marked slow read published data: the `data` job runs them.
+      - name: tests (a failure, a collection error or a skipped test fails the build)
+        shell: bash   # bash -eo pipefail: without it the step's status is tee's, and failures pass green
+        run: |
+          set -o pipefail
+          python -m pytest tests -m "not slow" --ignore=tests/smoke/realrobot --ignore=tests/unit/realrobot/render --ignore=tests/docs/render -q -rs -p no:cacheprovider | tee pytest.log
+          ! grep -qE '[0-9]+ skipped' pytest.log
+  # The kinematic renderer's suites, in the renderer's own environment: every package pinned in
+  # axis_qvla/realrobot/render/render.lock.txt (installed without resolving, then checked), and
+  # MuJoCo rendering offscreen through OSMesa, a software GL that needs no GPU. `-m ""` overrides the
+  # public pyproject's default `-m 'not slow'`: this job runs every test here regardless of marker,
+  # so it is the one place a slow renderer test (none exist yet) would run; a "deselected" count
+  # here would mean a marker silently dropped one, which fails the build exactly like a skip does.
+  render:
+    runs-on: ubuntu-latest
+    env:
+      MUJOCO_GL: osmesa
+      PYOPENGL_PLATFORM: osmesa
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update && sudo apt-get install -y libosmesa6
+      - run: pip install --no-deps -r axis_qvla/realrobot/render/render.lock.txt
+      # pytest's own dependencies are not in the renderer's lock; the CI pins resolve them.
+      - run: pip install -c .github/ci-constraints.txt pytest
+      - run: pip install --no-deps -e .
+      # The renderer tutorial's blocks render with the 2F-85 model the axis-render submodule ships.
+      - run: git submodule update --init --depth 1 -- third_party/axis-render
+      - run: python -m pip check
+      - name: renderer suites (a failure, a collection error, a skipped or a deselected test fails the build)
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest tests/smoke/realrobot tests/unit/realrobot/render tests/docs/render -m "" -q -rs -p no:cacheprovider | tee pytest-render.log
+          ! grep -qE '[0-9]+ skipped' pytest-render.log
+          ! grep -qE '[0-9]+ deselected' pytest-render.log
+  # The slow golden tests of the signals, labels and config-parity packages, over the published
+  # data, fetched through `qvla data get` and so checked file by file against
+  # conf/release/v1.0.lock.json. They run on a release tag and on demand; a tag without that lock
+  # file fails here. DATA_TESTS names the goldens that run here (234: 41 signals + 6 labels + 185
+  # config-parity cases, one per paper arm, + 1 finetune row decode + 1 paper-bundle binding) and
+  # CORPUS_INCLUDE the corpus files they read, no videos; the config-parity golden reads only
+  # bundles/manifest.json and the bundle-binding golden every bundle beside it, both covered by
+  # CORPUS_INCLUDE's bundles/* glob, and the row-decode golden reads the bench's splits
+  # and its finetune tasks' meta/ tables, fetched beside the corpus. The contact-label golden
+  # reads the training scenes' MuJoCo models rather than published data, so this job deselects it
+  # by name. 346 is everything else `-m slow` leaves out of these three directories (every
+  # non-slow test there) plus that one named deselect; a different count means a test was added,
+  # removed or re-marked here without this job being told, so the guard below fails loud rather than silently narrowing or widening what "the
+  # data job" covers.
+  # The fetch is on the order of 1 GB of per-task tables and the traces sample; the paper-bundle
+  # rebuild golden adds roughly 810 MB more under the pytest tmp dir, well under a runner's disk.
+  # The fetch is many small files; anonymous Hub downloads can take most of an hour, so the job gets two.
+  data:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      DATA_TESTS: "tests/golden/signals tests/golden/labels tests/golden/train"
+      CORPUS_INCLUDE: "SIGNALS.lock.json index/* signals/v1/* bundles/* episodes/*/meta/episodes/* episodes/*/meta/tasks.parquet episodes/*/meta/info.json episodes/*/data/*"
+    steps:
+      - uses: actions/checkout@v4
+      # axis-render only: the goal-record golden extracts each record through its task checkers
+      # (axis_replay_native.checkers).
+      - run: git submodule update --init --depth 1 -- third_party/axis-render
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -c .github/ci-constraints.txt -e ".[offline,test]" pydantic
+      # Without its declared dependencies, as in the test job: the checkers need only the pydantic
+      # installed above.
+      - run: pip install --no-deps ./third_party/axis-render
+      - name: fetch the corpus pack, the per-task tables and the traces sample
+        shell: bash
+        run: |
+          set -o pipefail
+          test -f conf/release/v1.0.lock.json
+          includes=()
+          read -ra patterns <<< "$CORPUS_INCLUDE"   # word-split only: no pathname expansion of the globs
+          for g in "${patterns[@]}"; do includes+=(--include "$g"); done
+          qvla data get corpus "${includes[@]}" --dest "$RUNNER_TEMP/corpus"
+          qvla data get traces-sample --dest "$RUNNER_TEMP/corpus"
+          qvla data get bench --include "ft_demos/splits/*" --include "ft_demos/*/meta/*" --dest "$RUNNER_TEMP/bench"
+      - name: slow goldens (a failure, a collection error, a skipped test or an unaccounted deselect fails the build)
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest $DATA_TESTS -m slow -q -rs -p no:cacheprovider \
+            --pretraining-data "$RUNNER_TEMP/corpus" --episodes "$RUNNER_TEMP/corpus/episodes" \
+            --traces-sample "$RUNNER_TEMP/corpus/traces_sample" --bench "$RUNNER_TEMP/bench" \
+            --deselect tests/golden/labels/test_traces_sample_golden.py::test_contacts_reproduce_the_published_labels \
+            | tee pytest-data.log
+          ! grep -qE '[0-9]+ skipped' pytest-data.log
+          grep -qE '^234 passed, 346 deselected' pytest-data.log
+      # The tutorials' `data` blocks, run as written (tests/docs/test_run_data.py): each fetches what it
+      # reads with `qvla data get` into its own scratch directory. --basetemp keeps those directories
+      # off /tmp, where T0 refuses its default cache. The count is the number of pages with data
+      # blocks; tests/docs/test_run_data.py checks it.
+      - name: tutorial data blocks (a failure, a collection error or a skipped test fails the build)
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest tests/docs -m slow --ignore=tests/docs/render --basetemp "$RUNNER_TEMP/docs" -q -rs -p no:cacheprovider | tee pytest-docs.log
+          ! grep -qE '[0-9]+ skipped' pytest-docs.log
+          grep -qE '^3 passed, [0-9]+ deselected' pytest-docs.log
+  # T0 must give the same bytes on every supported Python (its float sums are left to right,
+  # axis_qvla.core.ltr). The paper and results suites hold the golden tests that would catch a
+  # drift; T0 itself then runs with the standard library only.
+  t0:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -c .github/ci-constraints.txt pytest
+      - name: paper and results suites (a failure, a collection error or a skipped test fails the build)
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m pytest tests/unit/paper tests/golden/paper tests/ratchets/test_t0_no_clock_env.py tests/unit/bench/results -q -rs -p no:cacheprovider --ignore=tests/unit/paper/test_fig4b.py | tee pytest-t0.log
+          ! grep -qE '[0-9]+ skipped' pytest-t0.log
+      - name: T0 on the two-cell fixture pack, stdlib only
+        run: >
+          python -S -m axis_qvla.cli paper tables --results tests/golden/paper/fixture_pack/pack
+          --results-map tests/golden/paper/fixture_pack/paper_fixture_cells.json --benchmark fixture_bench
+          --bench-conf-dir tests/golden/paper/fixture_pack/conf --check

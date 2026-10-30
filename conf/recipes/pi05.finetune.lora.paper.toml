@@ -1,0 +1,47 @@
+schema = "qvla.recipe/1"
+id = "pi05.finetune.lora.paper"
+backbone = "pi05-openpi"
+stage = "finetune"
+track = "paper"
+paper_budget = true
+description = "Paper held-out finetune of pi0.5: LoRA on both experts with the vision tower trainable, 13,580 steps at global batch 32 (5 epochs of the 86,912-frame finetune set), 500 warmup steps then a constant 2.5e-5, no EMA."
+nulls = ["fields.ema_decay", "fields.data.default_prompt", "fields.data.quality_tag"]
+
+[budget]
+steps = 13580
+global_batch = 32
+per_rank_batch = 32
+world = 1
+
+[fields]
+batch_size = 32
+num_train_steps = 13580
+"lr_schedule.warmup_steps" = 500
+"lr_schedule.peak_lr" = 2.5e-05
+"lr_schedule.decay_steps" = 13580
+"lr_schedule.decay_lr" = 2.5e-05
+"optimizer.b1" = 0.9
+"optimizer.b2" = 0.95
+"optimizer.eps" = 1e-08
+"optimizer.weight_decay" = 1e-10
+"optimizer.clip_gradient_norm" = 1.0
+"model.pi05" = true
+"model.action_dim" = 32
+"model.action_horizon" = 10
+"model.max_token_len" = 200
+"model.dtype" = "bfloat16"
+"model.paligemma_variant" = "gemma_2b_lora"
+"model.action_expert_variant" = "gemma_300m_lora"
+"model.discrete_state_input" = true
+"model.pytorch_compile_mode" = "max-autotune"
+"data.repo_id" = "Devon018/Franka-Datasets-v2"
+"data.image_center_crop" = true
+
+[structure]
+freeze = "lora"
+fsdp_devices = 8
+num_workers = 8
+save_interval = 2716
+keep_period = 2716
+log_interval = 100
+prompt_from_task = true

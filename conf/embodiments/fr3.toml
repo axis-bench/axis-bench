@@ -1,0 +1,20 @@
+schema = "qvla.embodiment/1"
+id = "fr3"
+about = "Franka FR3 + Robotiq 2F-85, teleoperated, LeRobot v2.1 (experiments/realrobot/fr3_data.toml)."
+fps = 15
+[state]
+stored = ["gripper", "q0", "q1", "q2", "q3", "q4", "q5", "q6"]
+model = ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "gripper"]
+[action]
+stored = ["v0", "v1", "v2", "v3", "v4", "v5", "v6", "gripper_cmd"]
+units = "droid_normalized_joint_velocity_command"   # joint target q + 0.2 * v per step, at 15 Hz; not rad/s
+range = [-1.0, 1.0]
+gripper_units = "absolute_position_command_0_1"     # 0 = open
+[images]
+# exterior, wrist: the columns of the image-in-parquet builds -- the finetune set
+# ZhixuLi/tasl-fr3-10task-pbc-v2 and what `realdata idle-ranges --export` writes. The cited video copy
+# names its cameras observation.images.exterior / .wrist; the export reads image-in-parquet copies. No geometry is declared:
+# the stored frames carry it (pbc-v2 is centre-cropped), and the FR3 checks measure it from the pixels.
+keys = ["image", "extra_view_image"]
+recorded = [1280, 720]
+stored = [224, 224]

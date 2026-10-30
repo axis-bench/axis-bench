@@ -1,0 +1,63 @@
+schema = "qvla.workspace_profile/1"
+id = "fr3_reference"
+about = "The paper's reference workspace: a Franka FR3 with a Robotiq 2F-85 gripper on a light grey table, the exterior camera in front of the robot looking back at it, a grey wall behind the table."
+
+# Metres in the robot base frame (x forward, y left, z up, origin where the base stands on the table
+# top); quaternions w, x, y, z. A value with many digits is the float the reference render used.
+
+[camera]                 # the exterior camera; MuJoCo camera axes: x right, y up, looking along -z
+pos = [1.0, -0.13, 0.55]
+quat = [0.574585975703981, 0.41212978116644805, 0.4121297811664481, 0.5745859757039808]
+fovy = 71.5077745089     # vertical field of view in degrees at 640 x 360; the principal point is the image centre
+
+[table]
+height = 0.48            # floor to table top
+center = [0.46, 0.0]     # table-top centre, x and y
+size = [0.94, 1.86, 0.05]   # x and y extent, thickness of the top
+
+[table.surface]          # a flat colour, offset by up to rgb_jitter per episode; texture = "<image>" adds one
+rgb = [0.735, 0.746, 0.792]
+rgb_jitter = 0.015
+emission = 0.0
+material = [0.0, 0.0, 0.2]          # reflectance, shininess, specular
+material_caps = [0.04, 0.04, 0.08]
+
+[materials.dark]
+rgba = [0.025, 0.025, 0.025, 1.0]
+
+[[fixtures]]             # the rear mounting strip and the two side frames of the table
+name = "rear_strip"
+pos = [-0.08349999999999995, 0.0, 0.001]
+half = [0.14, 0.93, 0.001]
+material = "dark"
+
+[[fixtures]]
+name = "side_frame_left"
+pos = [0.4935, 0.921, 0.01]
+half = [0.43649999999999994, 0.009, 0.01]
+material = "dark"
+
+[[fixtures]]
+name = "side_frame_right"
+pos = [0.4935, -0.921, 0.01]
+half = [0.43649999999999994, 0.009, 0.01]
+material = "dark"
+
+[background]             # the floor, and a wall standing on it behind the table
+wall_distance = 0.28     # from the table's rear edge
+wall_half_width = 3.5
+wall_height = 3.0
+
+[background.wall]
+rgb = [0.466, 0.453, 0.406]
+rgb_jitter = 0.02
+emission = 0.3
+material = [0.0, 0.1, 0.1]
+material_caps = [0.02, 0.04, 0.04]
+
+[background.floor]
+rgb = [0.466, 0.453, 0.406]
+rgb_jitter = 0.02
+emission = 0.3
+material = [0.01, 0.0, 0.0]
+material_caps = [0.04, 0.04, 0.05]

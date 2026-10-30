@@ -1,0 +1,24 @@
+{
+  "name": "fixture_bench",
+  "version": "fixture-v1",
+  "n_seeds": 3,
+  "dual_sim": true,
+  "action_space": "droid8",
+  "image_geometry": "raw",
+  "xla_pin": "--xla_gpu_autotune_level=0",
+  "tasks_file": "fixture_bench.tasks.json",
+  "layouts_file": "fixture_bench.layouts.json",
+  "task_ids": [
+    806,
+    1050
+  ],
+  "subsets": {
+    "informative_20": [
+      806,
+      1050
+    ],
+    "usable_12": [
+      806
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+SmolVLA,random selection,episode,svla_rand_ep|bare,,,,,
+SmolVLA,random selection,chunk,svla_rand_row|bare,,,,,
+SmolVLA,approach-aware filtering,episode,svla_drop_ph_ep|bare,,,,,
+SmolVLA,approach-aware filtering,chunk,svla_drop_ph_row|bare,,,,,
+X-VLA,random selection,episode,xvla_rand_ep|bare,,,,,
+X-VLA,random selection,chunk,xvla_rand_row|bare,,,,,
+X-VLA,approach-aware filtering,episode,xvla_drop_ph_ep|bare,,,,,
+X-VLA,approach-aware filtering,chunk,xvla_drop_ph_row|bare,,,,,

@@ -1,0 +1,13 @@
+schema = "qvla.track/1"
+name = "smoke"
+paper_budget = false
+description = "The smoke run's budget: 20 steps of 8 samples on one GPU per backbone, a run that exercises the training path end to end, from run spec to checkpoint. It runs with --smoke."
+
+[budgets.pi05-openpi]
+pretrain = { steps = 20, global_batch = 8 }
+
+[budgets.smolvla-lerobot]
+pretrain = { steps = 20, global_batch = 8 }
+
+[budgets.xvla-lerobot]
+pretrain = { steps = 20, global_batch = 8 }

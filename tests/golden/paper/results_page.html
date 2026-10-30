@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8">
+<title>Simulation results: What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study</title>
+<style>body{font-family:system-ui,sans-serif;max-width:1100px;margin:2em auto;padding:0 1em;color:#222}table{border-collapse:collapse;margin:.5em 0 1.5em}td,th{border:1px solid #ccc;padding:.2em .5em;font-size:.9em}th{background:#f3f3f3}caption{text-align:left;font-weight:600;padding:.3em 0}</style>
+</head>
+<body>
+<h1>Simulation results: What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study</h1>
+<p>Every number on this page is recomputed by qvla paper tables (T0) from the per-seed rollout files of the 123 cells in qvla-v1-results. A cell is one fine-tuned checkpoint served one way and evaluated on the 24 tasks with the same 50 layouts each (1,200 trials). SR is the mean task success (%), and its SE is the task-stratified binomial SE, 100 sqrt(Σ_t p_t(1 − p_t)/50)/24 over the per-task success rates p_t. A relative value is 100(SR/SR_BC − 1) from unrounded rates, where SR_BC is the VLA&#x27;s 5K plain BC (plain FT, untagged inference), and its SE is the SE scaled by 100/SR_BC. Fig. 1 and Table I instead compare two cells of one training seed and divide by that seed&#x27;s own plain BC, 100(SR(A) − SR(B))/SR_BC; the SE of a Fig. 1 per-seed value is that of the difference, 100 sqrt(SE_A² + SE_B²)/SR_BC. A difference in percentage points (pp) is SR(A) − SR(B).</p>
+<h2>Headline gains (Fig. 1)</h2>
+<table><caption>Fig. 1. Mean relative gain of approach-aware episode conditioning over plain BC (Table I, first comparison)</caption><thead><tr><th>VLA</th><th>group</th><th>bar</th><th>SR (%)</th><th>relative (%)</th><th>SE (%)</th><th>note</th><th>cells</th></tr></thead><tbody>
+<tr><td>π0.5</td><td>Episode cond. − BC</td><td>seed 42</td><td>58.00</td><td>+1.0</td><td>2.6</td><td></td><td>cfg_ph_ep|cond; bc|bare</td></tr>
+<tr><td>π0.5</td><td>Episode cond. − BC</td><td>seed 43</td><td>51.33</td><td>0.0</td><td>3.0</td><td></td><td>cfgpt43|cond; bc43|bare</td></tr>
+<tr><td>π0.5</td><td>Episode cond. − BC</td><td>seed 44</td><td>57.58</td><td>+10.6</td><td>2.9</td><td></td><td>cfgpt44|cond; bc44|bare</td></tr>
+<tr><td>π0.5</td><td>Episode cond. − BC</td><td>mean over seeds</td><td>—</td><td>+3.9</td><td>—</td><td>the value Fig. 1 prints</td><td></td></tr>
+<tr><td>SmolVLA</td><td>Episode cond. − BC</td><td>seed 0</td><td>8.83</td><td>+73.8</td><td>18.8</td><td></td><td>svla_cfgph|cond; svla_bc|bare</td></tr>
+<tr><td>SmolVLA</td><td>Episode cond. − BC</td><td>seed 1</td><td>6.75</td><td>+11.0</td><td>14.7</td><td></td><td>svla_cfgph_sd1|cond; svla_bc_sd1|bare</td></tr>
+<tr><td>SmolVLA</td><td>Episode cond. − BC</td><td>seed 2</td><td>5.42</td><td>−14.5</td><td>14.2</td><td></td><td>svla_cfgph_sd2|cond; svla_bc_sd2|bare</td></tr>
+<tr><td>SmolVLA</td><td>Episode cond. − BC</td><td>mean over seeds</td><td>—</td><td>+23.4</td><td>—</td><td>the value Fig. 1 prints</td><td></td></tr>
+<tr><td>X-VLA</td><td>Episode cond. − BC</td><td>seed 0</td><td>27.83</td><td>+8.1</td><td>5.6</td><td></td><td>xvla_cfgph|cond; xvla_bc|bare</td></tr>
+<tr><td>X-VLA</td><td>Episode cond. − BC</td><td>seed 1</td><td>31.25</td><td>+9.3</td><td>5.1</td><td></td><td>xvla_cfgph_sd1|cond; xvla_bc_sd1|bare</td></tr>
+<tr><td>X-VLA</td><td>Episode cond. − BC</td><td>seed 2</td><td>29.58</td><td>−0.6</td><td>5.2</td><td></td><td>xvla_cfgph_sd2|cond; xvla_bc_sd2|bare</td></tr>
+<tr><td>X-VLA</td><td>Episode cond. − BC</td><td>mean over seeds</td><td>—</td><td>+5.6</td><td>—</td><td>the value Fig. 1 prints</td><td></td></tr>
+</tbody></table>
+<h2>IV.B From reward changes to quality labels: quality filtering versus random selection</h2>
+<table><caption>Fig. 4(c). Random selection versus approach-aware quality filtering at the same half-data budget, relative to each VLA&#x27;s full-data plain BC</caption><thead><tr><th>VLA</th><th>group</th><th>bar</th><th>SR (%)</th><th>relative (%)</th><th>SE (%)</th><th>note</th><th>cells</th></tr></thead><tbody>
+<tr><td>SmolVLA</td><td>random selection</td><td>episode</td><td>4.00</td><td>−21.3</td><td>10.6</td><td></td><td>svla_rand_ep|bare</td></tr>
+<tr><td>SmolVLA</td><td>random selection</td><td>chunk</td><td>3.92</td><td>−23.0</td><td>10.6</td><td></td><td>svla_rand_row|bare</td></tr>
+<tr><td>SmolVLA</td><td>approach-aware filtering</td><td>episode</td><td>5.08</td><td>0.0</td><td>11.7</td><td></td><td>svla_drop_ph_ep|bare</td></tr>
+<tr><td>SmolVLA</td><td>approach-aware filtering</td><td>chunk</td><td>7.00</td><td>+37.7</td><td>13.1</td><td></td><td>svla_drop_ph_row|bare</td></tr>
+<tr><td>X-VLA</td><td>random selection</td><td>episode</td><td>23.00</td><td>−10.7</td><td>3.8</td><td></td><td>xvla_rand_ep|bare</td></tr>
+<tr><td>X-VLA</td><td>random selection</td><td>chunk</td><td>26.58</td><td>+3.2</td><td>4.2</td><td></td><td>xvla_rand_row|bare</td></tr>
+<tr><td>X-VLA</td><td>approach-aware filtering</td><td>episode</td><td>28.75</td><td>+11.7</td><td>4.1</td><td></td><td>xvla_drop_ph_ep|bare</td></tr>
+<tr><td>X-VLA</td><td>approach-aware filtering</td><td>chunk</td><td>29.17</td><td>+13.3</td><td>3.8</td><td></td><td>xvla_drop_ph_row|bare</td></tr>
+</tbody></table>
+<table><caption>In-text numbers</caption><thead><tr><th>claim</th><th>value</th><th>cells / per comparison</th></tr></thead><tbody>
+<tr><td>SmolVLA: approach-aware episode filtering − random episode selection (pp)</td><td>+1.08</td><td>svla_drop_ph_ep|bare, svla_rand_ep|bare</td></tr>
+<tr><td>SmolVLA: approach-aware chunk filtering − random chunk selection (pp)</td><td>+3.08</td><td>svla_drop_ph_row|bare, svla_rand_row|bare</td></tr>
+<tr><td>SmolVLA: object-centric chunk filtering − random chunk selection (pp)</td><td>+3.17</td><td>svla_drop_v2_row|bare, svla_rand_row|bare</td></tr>
+<tr><td>X-VLA: approach-aware episode filtering − random episode selection (pp)</td><td>+5.75</td><td>xvla_drop_ph_ep|bare, xvla_rand_ep|bare</td></tr>
+<tr><td>X-VLA: approach-aware chunk filtering − random chunk selection (pp)</td><td>+2.58</td><td>xvla_drop_ph_row|bare, xvla_rand_row|bare</td></tr>
+<tr><td>X-VLA: object-centric chunk filtering − random chunk selection (pp)</td><td>−3.00</td><td>xvla_drop_v2_row|bare, xvla_rand_row|bare</td></tr>
+</tbody></table>
+<h2>V.B Cross-VLA gains from episode conditioning</h2>
+<table><caption>Fig. 5. Weighting, top-50% filtering and conditioning on 24 tasks, relative to plain BC (plain FT, untagged inference)</caption><thead><tr><th>VLA</th><th>group</th><th>bar</th><th>SR (%)</th><th>relative (%)</th><th>SE (%)</th><th>note</th><th>cells</th></tr></thead><tbody>
+<tr><td>π0.5</td><td>plain BC</td><td>reference</td><td>57.42</td><td>0.0</td><td>1.9</td><td>plain FT / untagged inference</td><td>bc|bare</td></tr>
+<tr><td>π0.5</td><td>FT-only control</td><td>no AXIS pretraining</td><td>8.83</td><td>−84.6</td><td>1.3</td><td>matched FT-only control</td><td>droidinit|bare</td></tr>
+<tr><td>π0.5</td><td>weighting</td><td>object-centric / episode</td><td>56.67</td><td>−1.3</td><td>1.9</td><td></td><td>awr_v2_ep|bare</td></tr>
+<tr><td>π0.5</td><td>weighting</td><td>object-centric / chunk</td><td>52.33</td><td>−8.9</td><td>1.8</td><td></td><td>awr_v2_row|bare</td></tr>
+<tr><td>π0.5</td><td>weighting</td><td>approach-aware / episode</td><td>54.67</td><td>−4.8</td><td>1.8</td><td></td><td>awr_ph_ep|bare</td></tr>
+<tr><td>π0.5</td><td>weighting</td><td>approach-aware / chunk</td><td>58.08</td><td>+1.2</td><td>1.8</td><td></td><td>awr_ph_row|bare</td></tr>
+<tr><td>π0.5</td><td>filtering</td><td>object-centric / episode</td><td>49.75</td><td>−13.4</td><td>2.0</td><td></td><td>drop_v2_ep|bare</td></tr>
+<tr><td>π0.5</td><td>filtering</td><td>object-centric / chunk</td><td>53.83</td><td>−6.2</td><td>1.8</td><td></td><td>drop_v2_row|bare</td></tr>
+<tr><td>π0.5</td><td>filtering</td><td>approach-aware / episode</td><td>50.33</td><td>−12.3</td><td>1.8</td><td></td><td>drop_ph_ep|bare</td></tr>
+<tr><td>π0.5</td><td>filtering</td><td>approach-aware / chunk</td><td>50.33</td><td>−12.3</td><td>1.8</td><td></td><td>drop_ph_row|bare</td></tr>
+<tr><td>π0.5</td><td>conditioning</td><td>object-centric / episode</td><td>52.92</td><td>−7.8</td><td>1.9</td><td></td><td>cfg_v2_ep|cond</td></tr>
+<tr><td>π0.5</td><td>conditioning</td><td>object-centric / chunk</td><td>56.83</td><td>−1.0</td><td>1.9</td><td></td><td>cfg_v2_row|cond</td></tr>
+<tr><td>π0.5</td><td>conditioning</td><td>approach-aware / episode</td><td>58.00</td><td>+1.0</td><td>1.9</td><td></td><td>cfg_ph_ep|cond</td></tr>
+<tr><td>π0.5</td><td>conditioning</td><td>approach-aware / chunk</td><td>54.50</td><td>−5.1</td><td>1.8</td><td></td><td>cfg_ph_row|cond</td></tr>
+<tr><td>SmolVLA</td><td>plain BC</td><td>reference</td><td>5.08</td><td>0.0</td><td>11.7</td><td>plain FT / untagged inference</td><td>svla_bc|bare</td></tr>
+<tr><td>SmolVLA</td><td>FT-only control</td><td>no AXIS pretraining</td><td>2.50</td><td>−50.8</td><td>8.0</td><td>matched FT-only control</td><td>svla_base_rand|bare</td></tr>
+<tr><td>SmolVLA</td><td>weighting</td><td>object-centric / episode</td><td>5.83</td><td>+14.8</td><td>12.3</td><td></td><td>svla_awr_v2_ep|bare</td></tr>
+<tr><td>SmolVLA</td><td>weighting</td><td>object-centric / chunk</td><td>5.33</td><td>+4.9</td><td>11.9</td><td></td><td>svla_awr_v2_row|bare</td></tr>
+<tr><td>SmolVLA</td><td>weighting</td><td>approach-aware / episode</td><td>6.83</td><td>+34.4</td><td>13.2</td><td></td><td>svla_awr_ph_ep|bare</td></tr>
+<tr><td>SmolVLA</td><td>weighting</td><td>approach-aware / chunk</td><td>5.58</td><td>+9.8</td><td>12.4</td><td></td><td>svla_awr_ph_row|bare</td></tr>
+<tr><td>SmolVLA</td><td>filtering</td><td>object-centric / episode</td><td>3.75</td><td>−26.2</td><td>10.3</td><td></td><td>svla_drop_v2_ep|bare</td></tr>
+<tr><td>SmolVLA</td><td>filtering</td><td>object-centric / chunk</td><td>7.08</td><td>+39.3</td><td>12.1</td><td></td><td>svla_drop_v2_row|bare</td></tr>
+<tr><td>SmolVLA</td><td>filtering</td><td>approach-aware / episode</td><td>5.08</td><td>0.0</td><td>11.7</td><td></td><td>svla_drop_ph_ep|bare</td></tr>
+<tr><td>SmolVLA</td><td>filtering</td><td>approach-aware / chunk</td><td>7.00</td><td>+37.7</td><td>13.1</td><td></td><td>svla_drop_ph_row|bare</td></tr>
+<tr><td>SmolVLA</td><td>conditioning</td><td>object-centric / episode</td><td>9.17</td><td>+80.3</td><td>14.8</td><td></td><td>svla_cfg_v2_ep|cond</td></tr>
+<tr><td>SmolVLA</td><td>conditioning</td><td>object-centric / chunk</td><td>6.58</td><td>+29.5</td><td>12.8</td><td></td><td>svla_cfg_v2_row|cond</td></tr>
+<tr><td>SmolVLA</td><td>conditioning</td><td>approach-aware / episode</td><td>8.83</td><td>+73.8</td><td>14.7</td><td></td><td>svla_cfgph|cond</td></tr>
+<tr><td>SmolVLA</td><td>conditioning</td><td>approach-aware / chunk</td><td>5.92</td><td>+16.4</td><td>12.0</td><td></td><td>svla_cfg_ph_row|cond</td></tr>
+<tr><td>X-VLA</td><td>plain BC</td><td>reference</td><td>25.75</td><td>0.0</td><td>3.9</td><td>plain FT / untagged inference</td><td>xvla_bc|bare</td></tr>
+<tr><td>X-VLA</td><td>FT-only control</td><td>no AXIS pretraining</td><td>6.17</td><td>−76.1</td><td>2.5</td><td>matched FT-only control</td><td>xvla_base|bare</td></tr>
+<tr><td>X-VLA</td><td>weighting</td><td>object-centric / episode</td><td>28.42</td><td>+10.4</td><td>4.1</td><td></td><td>xvla_awr_v2_ep|bare</td></tr>
+<tr><td>X-VLA</td><td>weighting</td><td>object-centric / chunk</td><td>26.50</td><td>+2.9</td><td>4.0</td><td></td><td>xvla_awr_v2_row|bare</td></tr>
+<tr><td>X-VLA</td><td>weighting</td><td>approach-aware / episode</td><td>25.75</td><td>0.0</td><td>4.0</td><td></td><td>xvla_awr_ph_ep|bare</td></tr>
+<tr><td>X-VLA</td><td>weighting</td><td>approach-aware / chunk</td><td>28.00</td><td>+8.7</td><td>4.2</td><td></td><td>xvla_awr_ph_row|bare</td></tr>
+<tr><td>X-VLA</td><td>filtering</td><td>object-centric / episode</td><td>28.25</td><td>+9.7</td><td>4.0</td><td></td><td>xvla_drop_v2_ep|bare</td></tr>
+<tr><td>X-VLA</td><td>filtering</td><td>object-centric / chunk</td><td>23.58</td><td>−8.4</td><td>4.0</td><td></td><td>xvla_drop_v2_row|bare</td></tr>
+<tr><td>X-VLA</td><td>filtering</td><td>approach-aware / episode</td><td>28.75</td><td>+11.7</td><td>4.1</td><td></td><td>xvla_drop_ph_ep|bare</td></tr>
+<tr><td>X-VLA</td><td>filtering</td><td>approach-aware / chunk</td><td>29.17</td><td>+13.3</td><td>3.8</td><td></td><td>xvla_drop_ph_row|bare</td></tr>
+<tr><td>X-VLA</td><td>conditioning</td><td>object-centric / episode</td><td>23.50</td><td>−8.7</td><td>4.0</td><td></td><td>xvla_cfg_v2_ep|cond</td></tr>
+<tr><td>X-VLA</td><td>conditioning</td><td>object-centric / chunk</td><td>20.42</td><td>−20.7</td><td>3.8</td><td></td><td>xvla_cfg_v2_row|cond</td></tr>
+<tr><td>X-VLA</td><td>conditioning</td><td>approach-aware / episode</td><td>27.83</td><td>+8.1</td><td>4.1</td><td></td><td>xvla_cfgph|cond</td></tr>
+<tr><td>X-VLA</td><td>conditioning</td><td>approach-aware / chunk</td><td>25.83</td><td>+0.3</td><td>3.8</td><td></td><td>xvla_cfg_ph_row|cond</td></tr>
+</tbody></table>
+<table><caption>In-text numbers</caption><thead><tr><th>claim</th><th>value</th><th>cells / per comparison</th></tr></thead><tbody>
+<tr><td>π0.5: approach-aware episode conditioning relative to plain BC (%)</td><td>+1.02</td><td>cfg_ph_ep|cond, bc|bare</td></tr>
+<tr><td>SmolVLA: approach-aware episode conditioning relative to plain BC (%)</td><td>+73.77</td><td>svla_cfgph|cond, svla_bc|bare</td></tr>
+<tr><td>X-VLA: approach-aware episode conditioning relative to plain BC (%)</td><td>+8.09</td><td>xvla_cfgph|cond, xvla_bc|bare</td></tr>
+<tr><td>π0.5: mean success rate (%) of each method over the four reward-granularity settings</td><td>weighting 55.44, filtering 51.06, conditioning 55.56</td><td></td></tr>
+<tr><td>SmolVLA: mean success rate (%) of each method over the four reward-granularity settings</td><td>weighting 5.90, filtering 5.73, conditioning 7.62</td><td></td></tr>
+<tr><td>X-VLA: mean success rate (%) of each method over the four reward-granularity settings</td><td>weighting 27.17, filtering 27.44, conditioning 24.40</td><td></td></tr>
+<tr><td>X-VLA: filtering − conditioning in each matched reward-granularity setting</td><td>4 positive, 0 equal, 0 negative</td><td>object-centric / episode +4.75; object-centric / chunk +3.17; approach-aware / episode +0.92; approach-aware / chunk +3.33</td></tr>
+<tr><td>π0.5: plain-BC success rate (%)</td><td>57.42</td><td>bc|bare</td></tr>
+<tr><td>π0.5: matched FT-only control success rate (%)</td><td>8.83</td><td>droidinit|bare</td></tr>
+<tr><td>SmolVLA: plain-BC success rate (%)</td><td>5.08</td><td>svla_bc|bare</td></tr>
+<tr><td>SmolVLA: matched FT-only control success rate (%)</td><td>2.50</td><td>svla_base_rand|bare</td></tr>
+<tr><td>X-VLA: plain-BC success rate (%)</td><td>25.75</td><td>xvla_bc|bare</td></tr>
+<tr><td>X-VLA: matched FT-only control success rate (%)</td><td>6.17</td><td>xvla_base|bare</td></tr>
+</tbody></table>
+<h2>V.C Coupling between label granularity and learning method</h2>
+<table><caption>In-text numbers</caption><thead><tr><th>claim</th><th>value</th><th>cells / per comparison</th></tr></thead><tbody>
+<tr><td>episode − chunk conditioning in each matched VLA-reward setting</td><td>5 positive, 0 equal, 1 negative</td><td>π0.5 object-centric −3.92; π0.5 approach-aware +3.50; SmolVLA object-centric +2.58; SmolVLA approach-aware +2.92; X-VLA object-centric +3.08; X-VLA approach-aware +2.00</td></tr>
+<tr><td>chunk − episode filtering in each matched VLA-reward setting</td><td>4 positive, 1 equal, 1 negative</td><td>π0.5 object-centric +4.08; π0.5 approach-aware 0.00; SmolVLA object-centric +3.33; SmolVLA approach-aware +1.92; X-VLA object-centric −4.67; X-VLA approach-aware +0.42</td></tr>
+<tr><td>π0.5: approach-aware episode − chunk conditioning (pp)</td><td>+3.50</td><td>cfg_ph_ep|cond, cfg_ph_row|cond</td></tr>
+<tr><td>SmolVLA: approach-aware episode − chunk conditioning (pp)</td><td>+2.92</td><td>svla_cfgph|cond, svla_cfg_ph_row|cond</td></tr>
+<tr><td>X-VLA: approach-aware episode − chunk conditioning (pp)</td><td>+2.00</td><td>xvla_cfgph|cond, xvla_cfg_ph_row|cond</td></tr>
+<tr><td>π0.5: object-centric episode − chunk conditioning (pp)</td><td>−3.92</td><td>cfg_v2_ep|cond, cfg_v2_row|cond</td></tr>
+<tr><td>X-VLA: object-centric chunk − episode filtering (pp)</td><td>−4.67</td><td>xvla_drop_v2_row|bare, xvla_drop_v2_ep|bare</td></tr>
+<tr><td>X-VLA: random chunk − random episode selection (pp)</td><td>+3.58</td><td>xvla_rand_row|bare, xvla_rand_ep|bare</td></tr>
+<tr><td>object-centric weighting: episode − chunk, per VLA</td><td>3 positive, 0 equal, 0 negative</td><td>π0.5 +4.33; SmolVLA +0.50; X-VLA +1.92</td></tr>
+<tr><td>approach-aware weighting: episode − chunk, per VLA</td><td>1 positive, 0 equal, 2 negative</td><td>π0.5 −3.42; SmolVLA +1.25; X-VLA −2.25</td></tr>
+<tr><td>approach-aware chunk weighting − plain BC, per VLA (pp)</td><td>3 positive, 0 equal, 0 negative</td><td>π0.5 +0.67; SmolVLA +0.50; X-VLA +2.25</td></tr>
+</tbody></table>
+<h2>V.D Retaining quality tags during fine-tuning</h2>
+<table><caption>Fig. 7. Conditioning stage and inference context, approach-aware episode labels, relative to plain BC / plain FT / untagged inference</caption><thead><tr><th>VLA</th><th>group</th><th>bar</th><th>SR (%)</th><th>relative (%)</th><th>SE (%)</th><th>note</th><th>cells</th></tr></thead><tbody>
+<tr><td>π0.5</td><td>BC pretraining / plain FT</td><td>untagged inference</td><td>57.42</td><td>0.0</td><td>1.9</td><td>the plain-BC reference band; native protocol</td><td>bc|bare</td></tr>
+<tr><td>π0.5</td><td>BC pretraining / plain FT</td><td>tag-5 inference</td><td>58.33</td><td>+1.6</td><td>1.9</td><td>Sec. V.D only; not a Fig. 7 bar</td><td>bc|cond</td></tr>
+<tr><td>π0.5</td><td>BC pretraining / tagged FT</td><td>untagged inference</td><td>57.75</td><td>+0.6</td><td>1.8</td><td></td><td>bct|bare</td></tr>
+<tr><td>π0.5</td><td>BC pretraining / tagged FT</td><td>tag-5 inference</td><td>57.08</td><td>−0.6</td><td>1.9</td><td>native protocol</td><td>bct|cond</td></tr>
+<tr><td>π0.5</td><td>conditioning / plain FT</td><td>untagged inference</td><td>57.00</td><td>−0.7</td><td>1.9</td><td>native protocol</td><td>cfgnp|bare</td></tr>
+<tr><td>π0.5</td><td>conditioning / plain FT</td><td>tag-5 inference</td><td>57.75</td><td>+0.6</td><td>1.9</td><td></td><td>cfgnp|cond</td></tr>
+<tr><td>π0.5</td><td>conditioning / tagged FT</td><td>untagged inference</td><td>57.83</td><td>+0.7</td><td>1.8</td><td></td><td>cfg_ph_ep|bare</td></tr>
+<tr><td>π0.5</td><td>conditioning / tagged FT</td><td>tag-5 inference</td><td>58.00</td><td>+1.0</td><td>1.9</td><td>native protocol</td><td>cfg_ph_ep|cond</td></tr>
+<tr><td>SmolVLA</td><td>BC pretraining / plain FT</td><td>untagged inference</td><td>5.08</td><td>0.0</td><td>11.7</td><td>the plain-BC reference band; native protocol</td><td>svla_bc|bare</td></tr>
+<tr><td>SmolVLA</td><td>BC pretraining / plain FT</td><td>tag-5 inference</td><td>4.42</td><td>−13.1</td><td>11.0</td><td>Sec. V.D only; not a Fig. 7 bar</td><td>svla_bc|cond</td></tr>
+<tr><td>SmolVLA</td><td>BC pretraining / tagged FT</td><td>untagged inference</td><td>5.42</td><td>+6.6</td><td>11.9</td><td></td><td>svla_bct|bare</td></tr>
+<tr><td>SmolVLA</td><td>BC pretraining / tagged FT</td><td>tag-5 inference</td><td>5.92</td><td>+16.4</td><td>12.5</td><td>native protocol</td><td>svla_bct|cond</td></tr>
+<tr><td>SmolVLA</td><td>conditioning / plain FT</td><td>untagged inference</td><td>6.25</td><td>+23.0</td><td>12.3</td><td>native protocol</td><td>svla_cfgnp|bare</td></tr>
+<tr><td>SmolVLA</td><td>conditioning / plain FT</td><td>tag-5 inference</td><td>3.83</td><td>−24.6</td><td>10.4</td><td></td><td>svla_cfgnp|cond</td></tr>
+<tr><td>SmolVLA</td><td>conditioning / tagged FT</td><td>untagged inference</td><td>6.92</td><td>+36.1</td><td>13.0</td><td></td><td>svla_cfgph|bare</td></tr>
+<tr><td>SmolVLA</td><td>conditioning / tagged FT</td><td>tag-5 inference</td><td>8.83</td><td>+73.8</td><td>14.7</td><td>native protocol</td><td>svla_cfgph|cond</td></tr>
+<tr><td>X-VLA</td><td>BC pretraining / plain FT</td><td>untagged inference</td><td>25.75</td><td>0.0</td><td>3.9</td><td>the plain-BC reference band; native protocol</td><td>xvla_bc|bare</td></tr>
+<tr><td>X-VLA</td><td>BC pretraining / tagged FT</td><td>untagged inference</td><td>25.58</td><td>−0.6</td><td>4.0</td><td></td><td>xvla_bct|bare</td></tr>
+<tr><td>X-VLA</td><td>BC pretraining / tagged FT</td><td>tag-5 inference</td><td>27.50</td><td>+6.8</td><td>4.0</td><td>native protocol</td><td>xvla_bct|cond</td></tr>
+<tr><td>X-VLA</td><td>conditioning / plain FT</td><td>untagged inference</td><td>24.33</td><td>−5.5</td><td>4.0</td><td>native protocol</td><td>xvla_cfgnp|bare</td></tr>
+<tr><td>X-VLA</td><td>conditioning / plain FT</td><td>tag-5 inference</td><td>25.67</td><td>−0.3</td><td>4.0</td><td></td><td>xvla_cfgnp|cond</td></tr>
+<tr><td>X-VLA</td><td>conditioning / tagged FT</td><td>untagged inference</td><td>28.33</td><td>+10.0</td><td>4.1</td><td></td><td>xvla_cfgph|bare</td></tr>
+<tr><td>X-VLA</td><td>conditioning / tagged FT</td><td>tag-5 inference</td><td>27.83</td><td>+8.1</td><td>4.1</td><td>native protocol</td><td>xvla_cfgph|cond</td></tr>
+</tbody></table>
+<table><caption>In-text numbers</caption><thead><tr><th>claim</th><th>value</th><th>cells / per comparison</th></tr></thead><tbody>
+<tr><td>π0.5: tagged − plain FT after conditioning, tag-5 inference (pp)</td><td>+0.25</td><td>cfg_ph_ep|cond, cfgnp|cond</td></tr>
+<tr><td>π0.5: tagged − plain FT after conditioning, untagged inference (pp)</td><td>+0.83</td><td>cfg_ph_ep|bare, cfgnp|bare</td></tr>
+<tr><td>SmolVLA: tagged − plain FT after conditioning, tag-5 inference (pp)</td><td>+5.00</td><td>svla_cfgph|cond, svla_cfgnp|cond</td></tr>
+<tr><td>SmolVLA: tagged − plain FT after conditioning, untagged inference (pp)</td><td>+0.67</td><td>svla_cfgph|bare, svla_cfgnp|bare</td></tr>
+<tr><td>X-VLA: tagged − plain FT after conditioning, tag-5 inference (pp)</td><td>+2.17</td><td>xvla_cfgph|cond, xvla_cfgnp|cond</td></tr>
+<tr><td>X-VLA: tagged − plain FT after conditioning, untagged inference (pp)</td><td>+4.00</td><td>xvla_cfgph|bare, xvla_cfgnp|bare</td></tr>
+<tr><td>π0.5: adding tag 5 at inference after conditioning + plain FT (pp)</td><td>+0.75</td><td>cfgnp|cond, cfgnp|bare</td></tr>
+<tr><td>π0.5: adding tag 5 at inference after conditioning + tagged FT (pp)</td><td>+0.17</td><td>cfg_ph_ep|cond, cfg_ph_ep|bare</td></tr>
+<tr><td>SmolVLA: adding tag 5 at inference after conditioning + plain FT (pp)</td><td>−2.42</td><td>svla_cfgnp|cond, svla_cfgnp|bare</td></tr>
+<tr><td>SmolVLA: adding tag 5 at inference after conditioning + tagged FT (pp)</td><td>+1.92</td><td>svla_cfgph|cond, svla_cfgph|bare</td></tr>
+<tr><td>X-VLA: adding tag 5 at inference after conditioning + plain FT (pp)</td><td>+1.33</td><td>xvla_cfgnp|cond, xvla_cfgnp|bare</td></tr>
+<tr><td>X-VLA: adding tag 5 at inference after conditioning + tagged FT (pp)</td><td>−0.50</td><td>xvla_cfgph|cond, xvla_cfgph|bare</td></tr>
+<tr><td>π0.5: after plain-BC pretraining, tagged FT + tag-5 inference − plain FT + untagged inference (pp)</td><td>−0.33</td><td>bct|cond, bc|bare</td></tr>
+<tr><td>SmolVLA: after plain-BC pretraining, tagged FT + tag-5 inference − plain FT + untagged inference (pp)</td><td>+0.83</td><td>svla_bct|cond, svla_bc|bare</td></tr>
+<tr><td>X-VLA: after plain-BC pretraining, tagged FT + tag-5 inference − plain FT + untagged inference (pp)</td><td>+1.75</td><td>xvla_bct|cond, xvla_bc|bare</td></tr>
+<tr><td>π0.5: after plain-BC pretraining and plain FT, tag-5 − untagged inference (pp)</td><td>+0.92</td><td>bc|cond, bc|bare</td></tr>
+<tr><td>SmolVLA: after plain-BC pretraining and plain FT, tag-5 − untagged inference (pp)</td><td>−0.67</td><td>svla_bc|cond, svla_bc|bare</td></tr>
+</tbody></table>
+<h2>V.E Scaling with dataset size</h2>
+<table><caption>Fig. 6. Scaling with pretraining data size, relative to each VLA&#x27;s fixed 5K plain BC</caption><thead><tr><th>VLA</th><th>group</th><th>bar</th><th>SR (%)</th><th>relative (%)</th><th>SE (%)</th><th>note</th><th>cells</th></tr></thead><tbody>
+<tr><td>π0.5</td><td>plain BC</td><td>1K</td><td>48.42</td><td>−15.7</td><td>2.0</td><td>plain FT / untagged inference</td><td>s1000bc|bare</td></tr>
+<tr><td>π0.5</td><td>plain BC</td><td>2.5K</td><td>56.75</td><td>−1.2</td><td>1.9</td><td>plain FT / untagged inference</td><td>s2500bc|bare</td></tr>
+<tr><td>π0.5</td><td>plain BC</td><td>5K</td><td>57.42</td><td>0.0</td><td>1.9</td><td>plain FT / untagged inference</td><td>bc|bare</td></tr>
+<tr><td>π0.5</td><td>conditioning</td><td>1K</td><td>45.92</td><td>−20.0</td><td>1.8</td><td>tagged FT / tag-5 inference</td><td>s1000cfg|cond</td></tr>
+<tr><td>π0.5</td><td>conditioning</td><td>2.5K</td><td>53.83</td><td>−6.2</td><td>1.9</td><td>tagged FT / tag-5 inference</td><td>s2500cfg|cond</td></tr>
+<tr><td>π0.5</td><td>conditioning</td><td>5K</td><td>58.00</td><td>+1.0</td><td>1.9</td><td>tagged FT / tag-5 inference</td><td>cfg_ph_ep|cond</td></tr>
+<tr><td>SmolVLA</td><td>plain BC</td><td>1K</td><td>1.67</td><td>−67.2</td><td>7.1</td><td>plain FT / untagged inference</td><td>svla_s1000bc|bare</td></tr>
+<tr><td>SmolVLA</td><td>plain BC</td><td>2.5K</td><td>3.08</td><td>−39.3</td><td>9.4</td><td>plain FT / untagged inference</td><td>svla_s2500bc|bare</td></tr>
+<tr><td>SmolVLA</td><td>plain BC</td><td>5K</td><td>5.08</td><td>0.0</td><td>11.7</td><td>plain FT / untagged inference</td><td>svla_bc|bare</td></tr>
+<tr><td>SmolVLA</td><td>conditioning</td><td>1K</td><td>2.33</td><td>−54.1</td><td>8.3</td><td>tagged FT / tag-5 inference</td><td>svla_s1000cfg|cond</td></tr>
+<tr><td>SmolVLA</td><td>conditioning</td><td>2.5K</td><td>5.33</td><td>+4.9</td><td>11.8</td><td>tagged FT / tag-5 inference</td><td>svla_s2500cfg|cond</td></tr>
+<tr><td>SmolVLA</td><td>conditioning</td><td>5K</td><td>8.83</td><td>+73.8</td><td>14.7</td><td>tagged FT / tag-5 inference</td><td>svla_cfgph|cond</td></tr>
+<tr><td>X-VLA</td><td>plain BC</td><td>1K</td><td>10.75</td><td>−58.3</td><td>3.2</td><td>plain FT / untagged inference</td><td>xvla_s1000bc|bare</td></tr>
+<tr><td>X-VLA</td><td>plain BC</td><td>2.5K</td><td>21.50</td><td>−16.5</td><td>3.9</td><td>plain FT / untagged inference</td><td>xvla_s2500bc|bare</td></tr>
+<tr><td>X-VLA</td><td>plain BC</td><td>5K</td><td>25.75</td><td>0.0</td><td>3.9</td><td>plain FT / untagged inference</td><td>xvla_bc|bare</td></tr>
+<tr><td>X-VLA</td><td>conditioning</td><td>1K</td><td>13.17</td><td>−48.9</td><td>3.2</td><td>tagged FT / tag-5 inference</td><td>xvla_s1000cfg|cond</td></tr>
+<tr><td>X-VLA</td><td>conditioning</td><td>2.5K</td><td>20.75</td><td>−19.4</td><td>3.8</td><td>tagged FT / tag-5 inference</td><td>xvla_s2500cfg|cond</td></tr>
+<tr><td>X-VLA</td><td>conditioning</td><td>5K</td><td>27.83</td><td>+8.1</td><td>4.1</td><td>tagged FT / tag-5 inference</td><td>xvla_cfgph|cond</td></tr>
+</tbody></table>
+<table><caption>In-text numbers</caption><thead><tr><th>claim</th><th>value</th><th>cells / per comparison</th></tr></thead><tbody>
+<tr><td>π0.5: conditioning − plain BC at matched pretraining size</td><td>1 positive, 0 equal, 2 negative</td><td>1K −2.50; 2.5K −2.92; 5K +0.58</td></tr>
+<tr><td>π0.5: plain BC at 1K (%)</td><td>48.42</td><td>s1000bc|bare</td></tr>
+<tr><td>π0.5: conditioning at 1K (%)</td><td>45.92</td><td>s1000cfg|cond</td></tr>
+<tr><td>π0.5: plain BC at 2.5K (%)</td><td>56.75</td><td>s2500bc|bare</td></tr>
+<tr><td>π0.5: conditioning at 2.5K (%)</td><td>53.83</td><td>s2500cfg|cond</td></tr>
+<tr><td>π0.5: plain BC at 5K (%)</td><td>57.42</td><td>bc|bare</td></tr>
+<tr><td>π0.5: conditioning at 5K (%)</td><td>58.00</td><td>cfg_ph_ep|cond</td></tr>
+<tr><td>SmolVLA: conditioning − plain BC at matched pretraining size</td><td>3 positive, 0 equal, 0 negative</td><td>1K +0.67; 2.5K +2.25; 5K +3.75</td></tr>
+<tr><td>SmolVLA: plain BC at 1K (%)</td><td>1.67</td><td>svla_s1000bc|bare</td></tr>
+<tr><td>SmolVLA: conditioning at 1K (%)</td><td>2.33</td><td>svla_s1000cfg|cond</td></tr>
+<tr><td>SmolVLA: plain BC at 2.5K (%)</td><td>3.08</td><td>svla_s2500bc|bare</td></tr>
+<tr><td>SmolVLA: conditioning at 2.5K (%)</td><td>5.33</td><td>svla_s2500cfg|cond</td></tr>
+<tr><td>SmolVLA: plain BC at 5K (%)</td><td>5.08</td><td>svla_bc|bare</td></tr>
+<tr><td>SmolVLA: conditioning at 5K (%)</td><td>8.83</td><td>svla_cfgph|cond</td></tr>
+<tr><td>X-VLA: conditioning − plain BC at matched pretraining size</td><td>2 positive, 0 equal, 1 negative</td><td>1K +2.42; 2.5K −0.75; 5K +2.08</td></tr>
+<tr><td>X-VLA: plain BC at 1K (%)</td><td>10.75</td><td>xvla_s1000bc|bare</td></tr>
+<tr><td>X-VLA: conditioning at 1K (%)</td><td>13.17</td><td>xvla_s1000cfg|cond</td></tr>
+<tr><td>X-VLA: plain BC at 2.5K (%)</td><td>21.50</td><td>xvla_s2500bc|bare</td></tr>
+<tr><td>X-VLA: conditioning at 2.5K (%)</td><td>20.75</td><td>xvla_s2500cfg|cond</td></tr>
+<tr><td>X-VLA: plain BC at 5K (%)</td><td>25.75</td><td>xvla_bc|bare</td></tr>
+<tr><td>X-VLA: conditioning at 5K (%)</td><td>27.83</td><td>xvla_cfgph|cond</td></tr>
+</tbody></table>
+<h2>V.F Training-seed replication</h2>
+<table class="table1">
+<caption>Table I. Training-seed replication. Entries are mean ± sample SD of BC-normalized success-rate differences (%) over three seeds per VLA, using approach-aware reward</caption>
+<thead><tr><th>Comparison</th><th>π0.5</th><th>SmolVLA</th><th>X-VLA</th></tr></thead>
+<tbody>
+<tr><td>Episode cond. − BC</td><td>+3.86 ± 5.83</td><td>+23.42 ± 45.42</td><td>+5.62 ± 5.39</td></tr>
+<tr><td>Cond.: episode − chunk</td><td>−0.90 ± 8.52</td><td>+24.71 ± 32.64</td><td>+11.36 ± 15.16</td></tr>
+<tr><td>Filter: chunk − episode</td><td>−1.90 ± 3.56</td><td>+6.63 ± 28.34</td><td>+5.59 ± 8.05</td></tr>
+<tr><td>Tagged − plain: untagged</td><td>+0.36 ± 4.30</td><td>+9.58 ± 12.31</td><td>+7.86 ± 6.81</td></tr>
+<tr><td>Tagged − plain: tag 5</td><td>+0.93 ± 4.28</td><td>+62.29 ± 31.29</td><td>+8.93 ± 1.95</td></tr>
+</tbody>
+</table>
+<table><caption>Table I per training seed (%)</caption><thead><tr><th>VLA</th><th>comparison</th><th>seed</th><th>value</th></tr></thead><tbody>
+<tr><td>π0.5</td><td>Episode cond. − BC</td><td>42</td><td>+1.02</td></tr>
+<tr><td>π0.5</td><td>Episode cond. − BC</td><td>43</td><td>0.00</td></tr>
+<tr><td>π0.5</td><td>Episode cond. − BC</td><td>44</td><td>+10.56</td></tr>
+<tr><td>SmolVLA</td><td>Episode cond. − BC</td><td>0</td><td>+73.77</td></tr>
+<tr><td>SmolVLA</td><td>Episode cond. − BC</td><td>1</td><td>+10.96</td></tr>
+<tr><td>SmolVLA</td><td>Episode cond. − BC</td><td>2</td><td>−14.47</td></tr>
+<tr><td>X-VLA</td><td>Episode cond. − BC</td><td>0</td><td>+8.09</td></tr>
+<tr><td>X-VLA</td><td>Episode cond. − BC</td><td>1</td><td>+9.33</td></tr>
+<tr><td>X-VLA</td><td>Episode cond. − BC</td><td>2</td><td>−0.56</td></tr>
+<tr><td>π0.5</td><td>Cond.: episode − chunk</td><td>42</td><td>+6.10</td></tr>
+<tr><td>π0.5</td><td>Cond.: episode − chunk</td><td>43</td><td>−10.39</td></tr>
+<tr><td>π0.5</td><td>Cond.: episode − chunk</td><td>44</td><td>+1.60</td></tr>
+<tr><td>SmolVLA</td><td>Cond.: episode − chunk</td><td>0</td><td>+57.38</td></tr>
+<tr><td>SmolVLA</td><td>Cond.: episode − chunk</td><td>1</td><td>+24.66</td></tr>
+<tr><td>SmolVLA</td><td>Cond.: episode − chunk</td><td>2</td><td>−7.89</td></tr>
+<tr><td>X-VLA</td><td>Cond.: episode − chunk</td><td>0</td><td>+7.77</td></tr>
+<tr><td>X-VLA</td><td>Cond.: episode − chunk</td><td>1</td><td>+27.99</td></tr>
+<tr><td>X-VLA</td><td>Cond.: episode − chunk</td><td>2</td><td>−1.68</td></tr>
+<tr><td>π0.5</td><td>Filter: chunk − episode</td><td>42</td><td>0.00</td></tr>
+<tr><td>π0.5</td><td>Filter: chunk − episode</td><td>43</td><td>−6.01</td></tr>
+<tr><td>π0.5</td><td>Filter: chunk − episode</td><td>44</td><td>+0.32</td></tr>
+<tr><td>SmolVLA</td><td>Filter: chunk − episode</td><td>0</td><td>+37.70</td></tr>
+<tr><td>SmolVLA</td><td>Filter: chunk − episode</td><td>1</td><td>−17.81</td></tr>
+<tr><td>SmolVLA</td><td>Filter: chunk − episode</td><td>2</td><td>0.00</td></tr>
+<tr><td>X-VLA</td><td>Filter: chunk − episode</td><td>0</td><td>+1.62</td></tr>
+<tr><td>X-VLA</td><td>Filter: chunk − episode</td><td>1</td><td>+0.29</td></tr>
+<tr><td>X-VLA</td><td>Filter: chunk − episode</td><td>2</td><td>+14.85</td></tr>
+<tr><td>π0.5</td><td>Tagged − plain: untagged</td><td>42</td><td>+1.45</td></tr>
+<tr><td>π0.5</td><td>Tagged − plain: untagged</td><td>43</td><td>−4.38</td></tr>
+<tr><td>π0.5</td><td>Tagged − plain: untagged</td><td>44</td><td>+4.00</td></tr>
+<tr><td>SmolVLA</td><td>Tagged − plain: untagged</td><td>0</td><td>+13.11</td></tr>
+<tr><td>SmolVLA</td><td>Tagged − plain: untagged</td><td>1</td><td>−4.11</td></tr>
+<tr><td>SmolVLA</td><td>Tagged − plain: untagged</td><td>2</td><td>+19.74</td></tr>
+<tr><td>X-VLA</td><td>Tagged − plain: untagged</td><td>0</td><td>+15.53</td></tr>
+<tr><td>X-VLA</td><td>Tagged − plain: untagged</td><td>1</td><td>+5.54</td></tr>
+<tr><td>X-VLA</td><td>Tagged − plain: untagged</td><td>2</td><td>+2.52</td></tr>
+<tr><td>π0.5</td><td>Tagged − plain: tag 5</td><td>42</td><td>+0.44</td></tr>
+<tr><td>π0.5</td><td>Tagged − plain: tag 5</td><td>43</td><td>−3.08</td></tr>
+<tr><td>π0.5</td><td>Tagged − plain: tag 5</td><td>44</td><td>+5.44</td></tr>
+<tr><td>SmolVLA</td><td>Tagged − plain: tag 5</td><td>0</td><td>+98.36</td></tr>
+<tr><td>SmolVLA</td><td>Tagged − plain: tag 5</td><td>1</td><td>+42.47</td></tr>
+<tr><td>SmolVLA</td><td>Tagged − plain: tag 5</td><td>2</td><td>+46.05</td></tr>
+<tr><td>X-VLA</td><td>Tagged − plain: tag 5</td><td>0</td><td>+8.41</td></tr>
+<tr><td>X-VLA</td><td>Tagged − plain: tag 5</td><td>1</td><td>+11.08</td></tr>
+<tr><td>X-VLA</td><td>Tagged − plain: tag 5</td><td>2</td><td>+7.28</td></tr>
+</tbody></table>
+<p>A training seed is a replicate of the pretraining run, keyed by its pretraining seed; each cell&#x27;s fine-tuning seed is recorded in cells.json. Cells whose fine-tuning seed differs from the replicate&#x27;s seed:</p>
+<table><thead><tr><th>VLA</th><th>seed</th><th>role</th><th>cell</th><th>pretraining seed</th><th>fine-tuning seed</th></tr></thead><tbody>
+<tr><td>π0.5</td><td>43</td><td>episode conditioning (tagged FT, tag-5 inference)</td><td>cfgpt43|cond</td><td>43</td><td>42</td></tr>
+<tr><td>π0.5</td><td>43</td><td>chunk conditioning (tagged FT, tag-5 inference)</td><td>cfgrow43|cond</td><td>43</td><td>42</td></tr>
+<tr><td>π0.5</td><td>43</td><td>episode filtering</td><td>dropep43|bare</td><td>43</td><td>42</td></tr>
+<tr><td>π0.5</td><td>43</td><td>chunk filtering</td><td>droprow43|bare</td><td>43</td><td>42</td></tr>
+<tr><td>π0.5</td><td>43</td><td>episode conditioning, tagged FT, untagged inference</td><td>cfgpt43|bare</td><td>43</td><td>42</td></tr>
+<tr><td>π0.5</td><td>43</td><td>episode conditioning, plain FT, untagged inference</td><td>cfgnp43|bare</td><td>43</td><td>42</td></tr>
+<tr><td>π0.5</td><td>43</td><td>episode conditioning, plain FT, tag-5 inference</td><td>cfgnp43|cond</td><td>43</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>plain BC (plain FT, untagged inference)</td><td>bc44|bare</td><td>44</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>episode conditioning (tagged FT, tag-5 inference)</td><td>cfgpt44|cond</td><td>44</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>chunk conditioning (tagged FT, tag-5 inference)</td><td>cfgrow44|cond</td><td>44</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>episode filtering</td><td>dropep44|bare</td><td>44</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>chunk filtering</td><td>droprow44|bare</td><td>44</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>episode conditioning, tagged FT, untagged inference</td><td>cfgpt44|bare</td><td>44</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>episode conditioning, plain FT, untagged inference</td><td>cfgnp44|bare</td><td>44</td><td>42</td></tr>
+<tr><td>π0.5</td><td>44</td><td>episode conditioning, plain FT, tag-5 inference</td><td>cfgnp44|cond</td><td>44</td><td>42</td></tr>
+</tbody></table>
+<table><caption>In-text numbers</caption><thead><tr><th>claim</th><th>value</th><th>cells / per comparison</th></tr></thead><tbody>
+<tr><td>seed-level episode conditioning − BC comparisons (nine VLA-seed combinations)</td><td>6 positive, 1 equal, 2 negative</td><td></td></tr>
+<tr><td>conditioning, episode − chunk: equal average over the nine VLA-seed combinations (%)</td><td>+11.72</td><td></td></tr>
+<tr><td>filtering, chunk − episode: equal average over the nine VLA-seed combinations (%)</td><td>+3.44</td><td></td></tr>
+<tr><td>per-VLA means of the Table I comparison Cond.: episode − chunk</td><td>2 positive, 0 equal, 1 negative</td><td></td></tr>
+<tr><td>per-VLA means of the Table I comparison Filter: chunk − episode</td><td>2 positive, 0 equal, 1 negative</td><td></td></tr>
+<tr><td>VLA-inference comparisons of tagged − plain FT (means over seeds)</td><td>6 positive, 0 equal, 0 negative</td><td></td></tr>
+<tr><td>seed-level tagged − plain FT differences</td><td>15 positive, 0 equal, 3 negative</td><td></td></tr>
+<tr><td>SmolVLA: tag-5 − untagged inference after conditioning + tagged FT, per training seed</td><td>1 positive, 0 equal, 2 negative</td><td>seed 0 +1.92; seed 1 −1.42; seed 2 −2.17</td></tr>
+<tr><td>X-VLA: tag-5 − untagged inference after conditioning + tagged FT, per training seed</td><td>0 positive, 0 equal, 3 negative</td><td>seed 0 −0.50; seed 1 −0.75; seed 2 −1.00</td></tr>
+</tbody></table>
+</body>
+</html>

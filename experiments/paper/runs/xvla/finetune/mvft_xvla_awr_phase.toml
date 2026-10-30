@@ -1,0 +1,24 @@
+[arm]
+id = "xvla.finetune.mvft_xvla_awr_phase"
+backbone = "xvla-lerobot"
+stage = "finetune"
+track = "paper"
+
+[init]
+ckpt = "axisrobotics/qvla-v1-xvla:pretrain/mv_xvla_awr_phase/020621#sha256:4e3415510bfaac26447c83a1f156dff5fe5ab990af62abc1eabaa3df6f4111da"
+
+[data]
+rowspace = "heldout24_ft#sha256:813de4957527d3394cadc9e564f9718769c82415c9091f4971ba5e47641960f9"
+
+[signal]
+bundle = "sha256:a83c563e831e3f157532a46f4d4c997f25dc07959e73d59ef97b153212fe548e"
+
+[recipe]
+preset = "xvla.finetune.paper"
+seed = 0
+
+[paper]
+cells = ["xvla_awr_ph_row|bare"]
+checkpoint = "xvla/ft/mvft_xvla_awr_phase"
+pretrain_seed = 0
+signals = ["lerobot.ft_rows_all"]

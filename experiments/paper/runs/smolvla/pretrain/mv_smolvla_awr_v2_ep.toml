@@ -1,0 +1,31 @@
+[arm]
+id = "smolvla.pretrain.mv_smolvla_awr_v2_ep"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:smolvlm2_500m"
+
+[data]
+rowspace = "libero5k_v2_d8#sha256:2da88145ce3a175dda17cd99bcec9685acfb9fa611e20a284688fe75b76810c9"
+
+[signal]
+bundle = "sha256:058c878e57a5b43dd5a59dbe9a47227e2f3b3517263b3448e2981a9ff272e953"
+
+[recipe]
+preset = "smolvla.pretrain.paper"
+seed = 0
+nulls = ["sample_weighting.progress_path"]
+
+[recipe.overrides]
+"sample_weighting.epsilon" = 1e-06
+"sample_weighting.extra_params.expected_frames" = 1906469
+"sample_weighting.head_mode" = "sparse"
+"sample_weighting.kappa" = 0.01
+"sample_weighting.type" = "axis_flat"
+
+[paper]
+cells = []
+checkpoint = "smolvla/pretrain/mv_smolvla_awr_v2_ep"
+signals = ["lerobot.rows", "lerobot.awr_flat_v2_ep"]

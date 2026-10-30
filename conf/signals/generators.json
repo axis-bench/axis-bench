@@ -1,0 +1,758 @@
+{
+ "schema": "qvla.signals_generators/1",
+ "about": "Which generator version, flags and inputs wrote each SIGNALS.lock file. SIGNALS.lock.json does not carry this map: it is vendored byte-for-byte into the LeRobot line, so its generator fields are as originally written and this file carries the map. A generator's `commit` is the commit that wrote that version or, for a module ported into the release, the port commit, with `ported_from` naming the original module. `digest_sources` are the files whose concatenated sha256 the generator stamps into its output (meta.generator_sha256). Module names and paths are those of the tree the files were built in: its import root `axis` is `axis_qvla` in the public repository. Every recorded source, every pinned module (`pins`: modules a generator executes that no output stamps), the names table and every built file is recorded by its sha256.",
+ "lock_sha256": "6a7fdcda80a669ead5ff66689a729cc0875b991645d2242f8ae30f6f09ffeba1",
+ "inputs": {
+  "corpus": {
+   "corpus_fingerprint": "sha256:44e1e35fe778070beac9a2618b44219a",
+   "reads": "task_*/meta/{episodes,tasks.parquet}; the AWR builders and index.ranges also read task_*/data",
+   "body_names": "approach_aware.chunk.awr_weights binds the object through per-episode meta/episodes body_names/object_body, which the corpus fingerprint does not cover, so it binds through the shipped episode_names table (inputs.episode_names), and the builder refuses names that do not digest to its pin"
+  },
+  "episode_names": {
+   "file": "conf/signals/episode_body_names.json",
+   "reward_input_sha256": "106f4cf84397772ad06e5a2ee2531f685d4ea27ff4f02848b8f894cefc81330a",
+   "episodes": 5000,
+   "about": "per-episode body_names (pose-column order) and object_body read from each episode's own recording trace; the digest is over the (key, body_names, object_body) triples in corpus order, so a corpus whose meta carries the same names digests to the same value (axis.dataset.episode_names)"
+  },
+  "roots_v2": {
+   "sha256": "b0064197d005a2bdb00eadb36d5f701e61195f2694194514926bc7e98144c843",
+   "file": "roots_libero_5k_v2.json",
+   "derive": "the d8 roots index (index.roots_d8) with base ../corpus and without derived_from, action_space",
+   "written_by": "axis.dataset.build_roots_index --src-root corpus --out artifacts/roots_libero_5k_v2.json"
+  }
+ },
+ "sources": {
+  "48b416a165809676c6fdff7223ec9f07f155867d75f6a40f3dbc2c384c2cc296": {
+   "path": "axis/dataset/index_schedule.py",
+   "commit": "d0c3388"
+  },
+  "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a": {
+   "path": "axis/dataset/index_schedule.py",
+   "commit": "7d41f7f"
+  },
+  "a6eba5c155af5aa9c4b34d8122791e8c52581789a392a379919f4941a9d84661": {
+   "path": "axis/dataset/build_index_schedule.py",
+   "commit": "d0c3388"
+  },
+  "34d6b9409c08ef3dc256ab973f16a92a3c9f8ac6899fd6a5f303d4ecf715e86f": {
+   "path": "axis/dataset/quality_labels.py",
+   "commit": "9537d7a"
+  },
+  "4f5ddb826dac80a29bec76c7fb35b1139e503c00e4f7048258c89a41914a920e": {
+   "path": "axis/dataset/quality_labels.py",
+   "commit": "89c8c46"
+  },
+  "8339d13df2f5e60fac8e9ccea39e4413648397c82d2fd38f42346c40370c18f0": {
+   "path": "axis/dataset/build_quality_labels.py",
+   "commit": "1076500"
+  },
+  "aeab2bc82cd4afdc3148ff50e89dc0799c5425771415bcf07c9c25e4a377c338": {
+   "path": "axis/dataset/build_quality_labels.py",
+   "commit": "89c8c46"
+  },
+  "fa02ade920d9f14b3ba037f31d8873afdca895a840a9da081fe57b5b7d08fc33": {
+   "path": "axis/dataset/build_quality_labels.py",
+   "commit": "888d0d2"
+  }
+ },
+ "pins": {
+  "axis/dataset/artifact_provenance.py": "fcc9058dc80c03242534ab048051de7fadcb55940d0516b8b3932184ad28183d",
+  "axis/dataset/awr_weights.py": "1e5bb1831648e026a5ed33e0cb567121ec97fb73fd26a1b7b63ab9d876cc25b6",
+  "axis/dataset/build_awr_weights.py": "5c71f131d1acdba2874e5bc2c4eca34903965928f20b604218fff79e8e636ae4",
+  "axis/dataset/build_awr_weights_episode.py": "c2a5623fec6ff99b227a4b1b153c133b59202c399480e20aa148e3e99f5dfd1b",
+  "axis/dataset/build_index_schedule.py": "976dd4d8a1d0c2c0fc5ca610cd55dc5297870aad6909aefe4492c35c85f15212",
+  "axis/dataset/build_lerobot_signals.py": "8dd052f44364bdf65ce0e47552d6a95e4ef4feff9108ebd1a20b2017f6461220",
+  "axis/dataset/build_random_controls.py": "0552157374bed10b2cfe523a9e4e008656987208447691c3cdc527bfaf3bbf42",
+  "axis/dataset/build_roots_index.py": "2db19ffc6838ae77f7449a31d9f58620f49a60e07516502e1e41b03e47a1c664",
+  "axis/dataset/build_scaling_subsets.py": "eaea552c1dc2e4b2585c496261293855eb1e1b3d0f017d2b3370c8b21e9220e5",
+  "axis/dataset/corpus_ranges.py": "d5633c479fd6e0a1d214ec60920c92f0277935449f5469de1522a7416d75942e",
+  "axis/dataset/episode_names.py": "0144f4e116d505a7680a357dd2e50a02d6d342103e17822b201757c2dc36d7ac",
+  "axis/dataset/index_schedule.py": "175eddc1c562657fb769d4d5b30254637b2716710fe998f4b05307313bca1f5c",
+  "axis/dataset/replay_numerics.py": "2a0f01fa820c9c5dc62950542acefa86185355ae1d291b71c3039c09f641f385",
+  "axis/episode/convert_droid_actions.py": "02b6ce30b51116d4850d450054d8f7598d6a307f05125fac98963e65f15c4e41",
+  "axis/episode/idle_filter.py": "0b5287c3bcd0b19a6086aa5cd3ec3def6a36c3d41c47261e34e350bd2f75af68",
+  "axis/episode/lerobot_local.py": "461571f734baa9fc230d896de51c90e02295e05dd92c7b393422d876785031aa"
+ },
+ "generators": {
+  "awr@248275e": {
+   "module": "axis.dataset.build_awr_weights",
+   "commit": "248275e",
+   "needs_corpus": true,
+   "note": "the main-branch builder (81d5f35..248275e): names/mover/verified binding, edge branches, phase-clamped length-normalised windows, per-phase quantile balancing"
+  },
+  "awr_ep@3409f56": {
+   "module": "axis.dataset.build_awr_weights_episode",
+   "commit": "3409f56",
+   "needs_corpus": false
+  },
+  "tags@d0c3388": {
+   "module": "axis.dataset.build_quality_labels",
+   "commit": "d0c3388",
+   "materialize": true,
+   "needs_corpus": true,
+   "digest_sources": [
+    "48b416a165809676c6fdff7223ec9f07f155867d75f6a40f3dbc2c384c2cc296",
+    "a6eba5c155af5aa9c4b34d8122791e8c52581789a392a379919f4941a9d84661",
+    "34d6b9409c08ef3dc256ab973f16a92a3c9f8ac6899fd6a5f303d4ecf715e86f",
+    "8339d13df2f5e60fac8e9ccea39e4413648397c82d2fd38f42346c40370c18f0"
+   ],
+   "generator_sha256": "f7aacc70a40aefc8b5535d8140b25440a374c1fe37b9be461309f8de7081dd5a",
+   "support": [
+    "axis/dataset/awr_weights.py",
+    "axis/dataset/artifact_provenance.py"
+   ]
+  },
+  "tags@7d41f7f": {
+   "module": "axis.dataset.build_quality_labels",
+   "commit": "7d41f7f",
+   "materialize": true,
+   "needs_corpus": true,
+   "digest_sources": [
+    "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a",
+    "a6eba5c155af5aa9c4b34d8122791e8c52581789a392a379919f4941a9d84661",
+    "34d6b9409c08ef3dc256ab973f16a92a3c9f8ac6899fd6a5f303d4ecf715e86f",
+    "8339d13df2f5e60fac8e9ccea39e4413648397c82d2fd38f42346c40370c18f0"
+   ],
+   "generator_sha256": "143a45ea53ff165fe405d778b608f04f488b4fd381b3c2eeb153173abb80cf77",
+   "support": [
+    "axis/dataset/awr_weights.py",
+    "axis/dataset/artifact_provenance.py"
+   ]
+  },
+  "tags@89c8c46": {
+   "module": "axis.dataset.build_quality_labels",
+   "commit": "89c8c46",
+   "materialize": true,
+   "needs_corpus": true,
+   "digest_sources": [
+    "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a",
+    "a6eba5c155af5aa9c4b34d8122791e8c52581789a392a379919f4941a9d84661",
+    "4f5ddb826dac80a29bec76c7fb35b1139e503c00e4f7048258c89a41914a920e",
+    "aeab2bc82cd4afdc3148ff50e89dc0799c5425771415bcf07c9c25e4a377c338"
+   ],
+   "generator_sha256": "1f607014b2efd7fcae02f25dfbcf8f5bc68b55a54f2aaefa480939c04186d695",
+   "support": [
+    "axis/dataset/awr_weights.py",
+    "axis/dataset/artifact_provenance.py"
+   ]
+  },
+  "tags@888d0d2": {
+   "module": "axis.dataset.build_quality_labels",
+   "commit": "888d0d2",
+   "materialize": true,
+   "needs_corpus": true,
+   "digest_sources": [
+    "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a",
+    "a6eba5c155af5aa9c4b34d8122791e8c52581789a392a379919f4941a9d84661",
+    "4f5ddb826dac80a29bec76c7fb35b1139e503c00e4f7048258c89a41914a920e",
+    "fa02ade920d9f14b3ba037f31d8873afdca895a840a9da081fe57b5b7d08fc33"
+   ],
+   "generator_sha256": "32999fdcbe54644812bfbbd4f37ef09e23a514f8381b3e850470deda78ff7a44",
+   "support": [
+    "axis/dataset/awr_weights.py",
+    "axis/dataset/artifact_provenance.py"
+   ]
+  },
+  "schedule@d0c3388": {
+   "module": "axis.dataset.build_index_schedule",
+   "commit": "d0c3388",
+   "materialize": true,
+   "needs_corpus": true,
+   "digest_sources": [
+    "48b416a165809676c6fdff7223ec9f07f155867d75f6a40f3dbc2c384c2cc296"
+   ],
+   "generator_sha256": "48b416a165809676c6fdff7223ec9f07f155867d75f6a40f3dbc2c384c2cc296",
+   "support": [
+    "axis/dataset/build_index_schedule.py",
+    "axis/dataset/awr_weights.py",
+    "axis/dataset/artifact_provenance.py"
+   ]
+  },
+  "schedule@7d41f7f": {
+   "module": "axis.dataset.build_index_schedule",
+   "commit": "7d41f7f",
+   "materialize": true,
+   "needs_corpus": true,
+   "digest_sources": [
+    "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a"
+   ],
+   "generator_sha256": "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a",
+   "support": [
+    "axis/dataset/build_index_schedule.py",
+    "axis/dataset/awr_weights.py",
+    "axis/dataset/artifact_provenance.py"
+   ]
+  },
+  "rand50@777012b": {
+   "module": "axis.dataset.build_random_controls",
+   "commit": "4f68bfe",
+   "materialize": true,
+   "needs_corpus": true,
+   "digest_sources": [
+    "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a"
+   ],
+   "generator_sha256": "48a5903f5f5e78a160ce18f331dd31b80d86efc5f662524c4f1efac940b0fa3a",
+   "support": [
+    "axis/dataset/build_index_schedule.py",
+    "axis/dataset/build_random_controls.py",
+    "axis/dataset/awr_weights.py",
+    "axis/dataset/artifact_provenance.py"
+   ],
+   "ported_from": "build_random50_schedules.py@777012b"
+  },
+  "lerobot@857195b": {
+   "module": "axis.dataset.build_lerobot_signals",
+   "commit": "4f68bfe",
+   "needs_corpus": true,
+   "ported_from": [
+    "axis/dataset/build_lerobot_flat_artifacts.py@857195b",
+    "build_scaling_rows.py",
+    "build_full_artifacts.py (episode-level flats)"
+   ]
+  },
+  "lerobot_ft": {
+   "module": "axis.dataset.build_lerobot_signals",
+   "commit": "4f68bfe",
+   "needs_corpus": false,
+   "ported_from": [
+    "the ft_rows_all.npz writer: arange over the finetune dataset"
+   ]
+  },
+  "scaling@c2e375a": {
+   "module": "axis.dataset.build_scaling_subsets",
+   "commit": "4f68bfe",
+   "needs_corpus": true,
+   "ported_from": "build_p0_subsets.py@c2e375a, scaling half"
+  },
+  "ranges@c924f5f": {
+   "module": "axis.dataset.corpus_ranges",
+   "commit": "c924f5f",
+   "needs_corpus": true
+  },
+  "roots@decc961": {
+   "module": "axis.dataset.build_roots_index",
+   "commit": "decc961",
+   "needs_corpus": true,
+   "note": "build_roots_index writes roots_libero_5k_v2.json; scripts/build_d8_corpus.py (decc961) derives the d8 index from it"
+  }
+ },
+ "files": {
+  "approach_aware.chunk.awr_weights": {
+   "sha256": "0def8a0808dec5c7ad2b7dabc29a1201686d23aae85fcc963cb0a00daa12692e",
+   "generator": "awr@248275e",
+   "product": "awr_weights.json",
+   "argv": [
+    "--reward",
+    "phase",
+    "--binding",
+    "names",
+    "--phase-balanced",
+    "--names-map",
+    "{names_map}",
+    "--names-sha256",
+    "{names_sha256}",
+    "--index",
+    "{roots_v2}",
+    "--out",
+    "{out}"
+   ],
+   "numerics": "tanh-f32-fma",
+   "note": "binds through the shipped names table (inputs.episode_names). contact = 1 - tanh(K*d) runs on float32, and numpy's float32 tanh is its own SIMD kernel where the CPU has FMA (how this file was written) and the C library's tanhf where it does not: the two round 44.6% of the 1,906,469 inputs 1-3 ulp apart, which moves 16.7% of the weights by 1-6 ulp. The generator runs under the tanh-f32-fma numerics, numpy's kernel computed exactly in float64 (axis.signals.numerics.tanh_f32), which writes the locked bytes on either kind of CPU"
+  },
+  "approach_aware.chunk.schedule_drop_top50": {
+   "sha256": "fcd920b6e8a479a20db6c257e72affd79393d29f975195f1a88b1587abd49718",
+   "generator": "schedule@7d41f7f",
+   "product": "schedule_drop_top50.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--keep-top-frac",
+    "0.5"
+   ]
+  },
+  "approach_aware.chunk.tags": {
+   "sha256": "849987860b9e370c5ce1b753be10b4d71b6d14d7afa3ecabb93fc2385747a4f7",
+   "generator": "tags@89c8c46",
+   "product": "tags.npz",
+   "argv": [
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--roots",
+    "{lock:index.roots_d8}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--granularity",
+    "row"
+   ],
+   "numerics": "log2-extended",
+   "tolerance": {
+    "meta.q_given_task_entropy_ratio": 4e-16
+   },
+   "note": "meta.q_given_task_entropy_ratio sums 3,628 p*log2(p) terms (3,623 conditional, 5 marginal), and which log2 runs depends on numpy's SIMD dispatch and the libm: one that rounds them otherwise (here: 206 conditional and 4 marginal terms, one ulp each) writes 0.9368617343176477 for the locked 0.936861734317648, every other byte identical. The generator evaluates log2 in long double (axis.signals.numerics.log2_extended), which gives the locked float; where long double is plain double the declared tolerance (about 3 ulp) names the difference"
+  },
+  "approach_aware.episode.awr_weights": {
+   "sha256": "0fe760afa8ec1063dae2a0eed5277f9a59604b0e9b6f95a156004bd5c80e0989",
+   "generator": "awr_ep@3409f56",
+   "product": "awr_weights.json",
+   "argv": [
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "approach_aware.episode.schedule_drop_top50": {
+   "sha256": "0662d940f7d51e0d98845b51bac564beb1232eab15cc851ca5b07798c2c78242",
+   "generator": "schedule@7d41f7f",
+   "product": "schedule_drop_top50.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:approach_aware.episode.awr_weights}",
+    "--roots",
+    "{lock:index.roots_d8}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--keep-top-frac",
+    "0.5"
+   ]
+  },
+  "approach_aware.episode.tags": {
+   "sha256": "ed532d06f83721b69ad4d14f8a82cb42b6d7eaf6c27cea534e559393c273b9ba",
+   "generator": "tags@7d41f7f",
+   "product": "tags.npz",
+   "argv": [
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "index.ranges": {
+   "sha256": "1618df9297b9e3156743ef5b4045381911dd8563a43ce84b47f9a31f7cfe9f1d",
+   "generator": "ranges@c924f5f",
+   "product": "ranges_libero_5k_v2.json",
+   "argv": [
+    "--corpus",
+    "{corpus}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "index.roots_d8": {
+   "sha256": "5a24a938405193689146184171b08f184c5eecdcc65295109a184d427d52daeb",
+   "generator": "roots@decc961",
+   "product": "roots_libero_5k_v2_d8.json",
+   "argv": [
+    "--src-root",
+    "{corpus}",
+    "--out",
+    "{work}/built/roots_libero_5k_v2.json"
+   ],
+   "post": {
+    "function": "roots_d8_from_v2",
+    "from": "built/roots_libero_5k_v2.json"
+   }
+  },
+  "index.scaling_1000": {
+   "sha256": "3a972e28349e9b7ac463f0dff15bf8885a4c7e3485625ccedca4728bd2e1f79f",
+   "generator": "scaling@c2e375a",
+   "product": "gen/scaling_1000.ranges.json",
+   "argv": [
+    "--roots",
+    "{lock:index.roots_d8}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--out-dir",
+    "{work}/gen"
+   ]
+  },
+  "index.scaling_2500": {
+   "sha256": "d68bf7a4e4f49b7228340c525d1b158047dbd4688abd16b6117a7e9ff6a71a8f",
+   "generator": "scaling@c2e375a",
+   "product": "gen/scaling_2500.ranges.json",
+   "argv": [
+    "--roots",
+    "{lock:index.roots_d8}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--out-dir",
+    "{work}/gen"
+   ]
+  },
+  "lerobot.awr_flat_phase": {
+   "sha256": "787d6049bd9848be32675f71ded28c17bd40c9b119461f5ace186dfa0f1dcef3",
+   "generator": "lerobot@857195b",
+   "product": "lerobot_awr_flat_phase.npz",
+   "argv": [
+    "flat",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "lerobot.awr_flat_phase_ep": {
+   "sha256": "c20222ff49c0e3209d28fb03a94b452549cef59a112626ec43b93ffc9f31bc0e",
+   "generator": "lerobot@857195b",
+   "product": "lerobot_awr_flat_phase_ep.npz",
+   "argv": [
+    "flat",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--weights",
+    "{lock:approach_aware.episode.awr_weights}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "lerobot.awr_flat_v2": {
+   "sha256": "da4ad32b90f6402439c1fe99509b8167573bf52ea8b47ff098aea3f2aaa0f64b",
+   "generator": "lerobot@857195b",
+   "product": "lerobot_awr_flat_v2.npz",
+   "argv": [
+    "flat",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--weights",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "lerobot.awr_flat_v2_ep": {
+   "sha256": "d9c05c487a7555aba5e685155faaa33de4c0f91ef1e4806df6910701acad49c0",
+   "generator": "lerobot@857195b",
+   "product": "lerobot_awr_flat_v2_ep.npz",
+   "argv": [
+    "flat",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--weights",
+    "{lock:object_centric.episode.awr_weights}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "lerobot.ft_rows_all": {
+   "sha256": "998df1bb22bf73f87ac92d0f27424a76a272b1466ebb45a3471cac9e8cd963c6",
+   "generator": "lerobot_ft",
+   "product": "ft_rows_all.npz",
+   "argv": [
+    "ft-rows",
+    "--n-rows",
+    "86912",
+    "--out",
+    "{out}"
+   ],
+   "note": "86,912 = the heldout24_ft row space (SIGNALS.lock rowspaces); the finetune dataset keeps every frame"
+  },
+  "lerobot.rows": {
+   "sha256": "ef2f9ae01c35e62c6c03062372a4567a4869279ab3a280a7c284311d7f7dddd4",
+   "generator": "lerobot@857195b",
+   "product": "lerobot_rows.npz",
+   "argv": [
+    "rows",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "lerobot.rows_s1000": {
+   "sha256": "54ec738ab370e39138c46e440d182fa39788ea75b84a7325b86280a2b93e769a",
+   "generator": "lerobot@857195b",
+   "product": "lerobot_rows_s1000.npz",
+   "argv": [
+    "rows",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.scaling_1000}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "lerobot.rows_s2500": {
+   "sha256": "4ce6b21505dc47f8eded2765b10ef7540b5acc3dbb1063b36dfe00f39e747038",
+   "generator": "lerobot@857195b",
+   "product": "lerobot_rows_s2500.npz",
+   "argv": [
+    "rows",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.scaling_2500}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "lerobot.schedule_drop_random_rand50_row_smolvla": {
+   "sha256": "2172e29109a8555492dbf222cbf80f3ae5e7fa9a872202ade09b2be8b18034a7",
+   "generator": "rand50@777012b",
+   "product": "gen/lerobot_schedule_drop_random_rand50_row_smolvla.npz",
+   "argv": [
+    "--template",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--template-name",
+    "awr_weights_v2.json",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out-dir",
+    "{work}/gen"
+   ]
+  },
+  "lerobot.schedule_drop_top_phase_ep_smolvla": {
+   "sha256": "c313b2509f369460e83540178189088137f5fcad5386b1dbff6592adf45b1887",
+   "generator": "schedule@7d41f7f",
+   "product": "lerobot_schedule_drop_top_phase_ep_smolvla.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:approach_aware.episode.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--total-steps",
+    "20621",
+    "--batch",
+    "64",
+    "--seed",
+    "0",
+    "--keep-top-frac",
+    "0.50"
+   ]
+  },
+  "lerobot.schedule_drop_top_phase_smolvla": {
+   "sha256": "596589b31600b90e2f35f6e87e3ed037427078c519fadfd20578691c045a540d",
+   "generator": "schedule@7d41f7f",
+   "product": "lerobot_schedule_drop_top_phase_smolvla.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:approach_aware.chunk.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--total-steps",
+    "20621",
+    "--batch",
+    "64",
+    "--seed",
+    "0",
+    "--keep-top-frac",
+    "0.50"
+   ]
+  },
+  "lerobot.schedule_drop_top_rand50_ep_smolvla": {
+   "sha256": "80957824a1b64092223b05788ad341525f0a50154a122816683ee87c4955c13c",
+   "generator": "rand50@777012b",
+   "product": "gen/lerobot_schedule_drop_top_rand50_ep_smolvla.npz",
+   "argv": [
+    "--template",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--template-name",
+    "awr_weights_v2.json",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out-dir",
+    "{work}/gen"
+   ]
+  },
+  "lerobot.schedule_drop_top_v2_ep_smolvla": {
+   "sha256": "37460b625425b383f5c1ab5c0a5cd58ae32ee1da37435d0805accfb1d3d35175",
+   "generator": "schedule@7d41f7f",
+   "product": "lerobot_schedule_drop_top_v2_ep_smolvla.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:object_centric.episode.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--total-steps",
+    "20621",
+    "--batch",
+    "64",
+    "--seed",
+    "0",
+    "--keep-top-frac",
+    "0.50"
+   ]
+  },
+  "lerobot.schedule_drop_top_v2_smolvla": {
+   "sha256": "dd53b27f8bc1a0c7fcaf9426ff11a917e9b64b1c4485be9808dec3d0ede6c87d",
+   "generator": "schedule@7d41f7f",
+   "product": "lerobot_schedule_drop_top_v2_smolvla.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--total-steps",
+    "20621",
+    "--batch",
+    "64",
+    "--seed",
+    "0",
+    "--keep-top-frac",
+    "0.50"
+   ]
+  },
+  "object_centric.chunk.awr_weights": {
+   "sha256": "84f3fb4fea2b180833617106399e0220e75488e9029762e4b3874674d207f9a1",
+   "generator": "awr@248275e",
+   "product": "awr_weights.json",
+   "argv": [
+    "--reward",
+    "v2",
+    "--index",
+    "{roots_v2}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "object_centric.chunk.schedule_drop_top50": {
+   "sha256": "900782d354ad0e8a4b9f50e85b704cf940e44ed8b08a3a8d4cf4d63052198edb",
+   "generator": "schedule@d0c3388",
+   "product": "schedule_drop_top50.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--keep-top-frac",
+    "0.5"
+   ]
+  },
+  "object_centric.chunk.tags": {
+   "sha256": "88f692f9cad3fc221733721411d5be7178fc29d1519ec47267a3681046206959",
+   "generator": "tags@888d0d2",
+   "product": "tags.npz",
+   "argv": [
+    "--weights",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--roots",
+    "{lock:index.roots_d8}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--granularity",
+    "row"
+   ],
+   "numerics": "log2-libm",
+   "note": "meta.q_given_task_entropy_ratio sums 3,643 p*log2(p) terms like its approach-aware sibling's, and its locked float is what glibc 2.28's double log2 gives (the fdlibm __ieee754_log2, which rounds 208 of the terms differently from the correctly rounded value); numpy's AVX-512 log2 (210 terms) and the table-based log2 of glibc 2.29 and later (211 terms, measured under glibc 2.36) round differently from it and write a value one ulp off. The generator evaluates log2 by that function's own operations in correctly rounded float64 (axis.signals.numerics.log2_libm), which gives glibc 2.28's value on any host and so the locked bytes"
+  },
+  "object_centric.episode.awr_weights": {
+   "sha256": "023300e1463b59091ea2dc8eebff946714fe6f71b83efd7af2ee6f6cdb2c943d",
+   "generator": "awr_ep@3409f56",
+   "product": "awr_weights.json",
+   "argv": [
+    "--weights",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}"
+   ]
+  },
+  "object_centric.episode.schedule_drop_top50": {
+   "sha256": "20953f84c53cd11720fc954adafa3178d6f1889b15c7380799e2f885b4efb505",
+   "generator": "schedule@7d41f7f",
+   "product": "schedule_drop_top50.npz",
+   "argv": [
+    "--mode",
+    "drop_top",
+    "--weights",
+    "{lock:object_centric.episode.awr_weights}",
+    "--roots",
+    "{lock:index.roots_d8}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}",
+    "--keep-top-frac",
+    "0.5"
+   ]
+  },
+  "object_centric.episode.tags": {
+   "sha256": "621a430addd79e0c27086e809923bceda762b022d8b6b193dc0b53a3d88f7acb",
+   "generator": "tags@d0c3388",
+   "product": "tags.npz",
+   "argv": [
+    "--weights",
+    "{lock:object_centric.chunk.awr_weights}",
+    "--roots",
+    "{roots_v2}",
+    "--ranges",
+    "{lock:index.ranges}",
+    "--out",
+    "{out}"
+   ]
+  }
+ }
+}

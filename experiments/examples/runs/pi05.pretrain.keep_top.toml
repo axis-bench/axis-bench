@@ -1,0 +1,29 @@
+# A quality method of your own on pi0.5, on the paper's pretraining budget: the paper's pretraining run
+# with the compiled labels experiments/examples/keep_top.py compiles (keep 0.5, 20,605 x 64, seed 42).
+# `qvla train pretrain --labels <your labels' name> --backbone pi05` writes this run spec for your own
+# labels. Every input is named by name; `qvla train` resolves each one and checks it before any GPU
+# time. Its track is "paper" because the preset it reuses is a paper-track preset (a run's track must
+# be its preset's); it is not a paper run.
+[arm]
+id = "pi05.pretrain.keep_top"
+backbone = "pi05-openpi"
+stage = "pretrain"
+track = "paper"
+
+[init]
+ckpt = "base:pi05_droid"
+
+[data]
+rowspace = "libero5k_v2_d8"
+action_space = "droid8"
+image = "center_crop"
+
+[signal]
+bundle = "name:example.keep_top"
+
+[norm]
+artifact = "libero5k_v2_d8"
+
+[recipe]
+preset = "pi05.pretrain.full.paper"
+seed = 42

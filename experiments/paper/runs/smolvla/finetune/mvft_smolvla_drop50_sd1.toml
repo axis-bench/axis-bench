@@ -1,0 +1,24 @@
+[arm]
+id = "smolvla.finetune.mvft_smolvla_drop50_sd1"
+backbone = "smolvla-lerobot"
+stage = "finetune"
+track = "paper"
+
+[init]
+ckpt = "axisrobotics/qvla-v1-smolvla:pretrain/mv_smolvla_drop50_sd1/020621#sha256:f63382ecdd6f54205ea453985e009d44e393000a5cac22ce5ed835f091cfab85"
+
+[data]
+rowspace = "heldout24_ft#sha256:813de4957527d3394cadc9e564f9718769c82415c9091f4971ba5e47641960f9"
+
+[signal]
+bundle = "sha256:fcf305c6c9f2b89a5c2245e26a421a56af6ae6a2083102315679c27efe2a4621"
+
+[recipe]
+preset = "smolvla.finetune.paper"
+seed = 1
+
+[paper]
+cells = ["svla_drop_ph_ep_sd1|bare"]
+checkpoint = "smolvla/ft/mvft_smolvla_drop50_sd1"
+pretrain_seed = 1
+signals = ["lerobot.ft_rows_all"]

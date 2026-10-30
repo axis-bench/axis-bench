@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "smolvla.pretrain.small"
+backbone = "smolvla-lerobot"
+stage = "pretrain"
+track = "small"
+paper_budget = false
+description = "A 2,000-step SmolVLA pretraining for quick experiments."
+template = "lerobot/smolvla.pretrain.json"
+
+[budget]
+steps = 2000
+global_batch = 64
+per_rank_batch = 16
+world = 4

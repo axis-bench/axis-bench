@@ -1,0 +1,25 @@
+# Copy to qvla.toml (in the directory you run qvla from) and set every path for your machine. Each
+# path below starts with a placeholder, @ROOT@ (a directory for the data and caches)
+# or @CHECKOUT@ (this checkout): replace it, with the slash before it, by an absolute path. Roots
+# must be absolute. `qvla bench eval` and `qvla data get` read it; --host <file>.toml picks another.
+gpus = 1
+
+[roots]
+corpus  = "/@ROOT@/corpus"
+cache   = "/@ROOT@/cache"
+scratch = "/@ROOT@/scratch"
+runs    = "/@ROOT@/runs"
+r1      = "/@ROOT@/r1"                              # campaign root: out_<run>/ q_<run>/
+rollout_logs = "/@ROOT@/r1/rollout_logs"            # every evaluation's per-seed rollout files
+bench   = "/@CHECKOUT@"                             # this checkout
+openpi  = "/@CHECKOUT@/third_party/openpi"          # serve_policy.py and its venv
+eval    = "/@ROOT@/eval"                            # the evaluation's asset cache (asset_cache/)
+# SmolVLA / X-VLA evaluations only (--backend smolvla | xvla):
+smolvla_bench = "/@CHECKOUT@"                       # checkout with axis_qvla/bench/servers/*.py
+smolvla_venv  = "/@CHECKOUT@/third_party/lerobot/.venv"  # `qvla env build smolvla` builds it (bin/python serves)
+hf_cache      = "/@ROOT@/hf"                        # HF_HOME with the base models; read with HF_HUB_OFFLINE=1
+
+# Each a directory holding bin/python, where `qvla env build <environment>` builds it.
+[venv]
+eval   = "/@CHECKOUT@/.venv-eval"                  # eval tier: runs `qvla bench eval` and its rollout workers
+online = "/@CHECKOUT@/third_party/openpi/.venv"    # openpi tier: the pi0.5 reference server

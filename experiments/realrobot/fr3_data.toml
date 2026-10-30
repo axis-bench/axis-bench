@@ -1,0 +1,19 @@
+schema = "qvla.realrobot.fr3_data/1"
+# The FR3 recording the real-robot tools run on. It is cited, not redistributed.
+dataset = "Litian2002/tasl-fr3-10task-250ep-video"
+format = "LeRobot v2.1"
+tasks = 10
+recordings = 250
+frames = 66463
+fps = 15
+# Runs on the cited copy. `--export <dir>` also writes the filtered set; it cuts parquet rows, so it
+# reads an image-in-parquet copy of the recordings and refuses a video-backed one.
+derive = "python -m axis_qvla.realrobot.realdata idle-ranges --dataset <copy> --out <dir>/source_segments.json"
+# validate_fr3 reproduces the counts and the segments below from the two cited copies.
+validated_by = "python -m axis_qvla.realrobot.realdata.validate_fr3 --recording <copy> --published <finetune set> --tail-reference <finetune set>/train_side/nonidle_ranges_tail10.json"
+derived_episodes = 392
+derived_frames = 62680
+# The finetune set: those 392 segments, image-in-parquet. The cited recording stores video under
+# observation.images.exterior / .wrist; idle-ranges finds the segments on it.
+finetune_set = "ZhixuLi/tasl-fr3-10task-pbc-v2"
+finetune_images = "centre-cropped 224 x 224 PNG frames in the parquet, under image (exterior) and extra_view_image (wrist)"

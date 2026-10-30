@@ -1,0 +1,100 @@
+{
+ "bench": {
+  "n_seeds": 3,
+  "name": "fixture_bench",
+  "r1_declaration_sha256": "80af7635167b0f33de13ff03880de4ff2867eb75b9e0fd9cd75a06e176beb187",
+  "task_ids": [
+   806,
+   1050
+  ],
+  "units_sha256": "751e0bd29461f4a74e7511b153480d5c9877808d9908553054e2a365b6d37e02"
+ },
+ "cells": [
+  {
+   "backbone": "pi05",
+   "box": "s2",
+   "cell": "bc|bare",
+   "checkpoint": {
+    "id": "pi05/ft/r1fbc",
+    "ref": "axisrobotics/qvla-v1-pi05@v1.0:ft/r1fbc/13579"
+   },
+   "eval_command": "qvla bench eval --run r1fbc",
+   "eval_fingerprint": "84129b260a39f031d9d69b7400a292a150cf797b784d248cb82fbb2c17ccaacc",
+   "lineage": {
+    "arm": "pi05.finetune.r1fbc",
+    "base": null,
+    "init": null,
+    "norm_stats_sha256": null,
+    "step": "13579",
+    "train_config": null,
+    "train_overrides": []
+   },
+   "manifest": {
+    "path": "runs/s2/r1fbc/run_manifest.json",
+    "sha256": "fbca72e9a01e2cdbfcb9c5fb7bde80d9a9f06680616d39dd550cd8ec93d6959c"
+   },
+   "results": {
+    "path": "results/s2/r1fbc_dualsim.json",
+    "sha256": "bee689cbfeab2a8369288a5f4be920bc0df9e14b4d845c50c74404bc7a90abee"
+   },
+   "rollouts": {
+    "path": "rollouts/s2/r1fbc_dualsim.tar",
+    "sha256": "ade9b3a0308e5fb4e829bcc969c2a44e116e94791b8a09bcd6eb89fc72b7c93c",
+    "size": 10240
+   },
+   "run": "r1fbc",
+   "serve": {
+    "beta": 1.0,
+    "fields": {},
+    "uncond_fields": null
+   },
+   "served": "r1fbc_dualsim",
+   "training_seed": {
+    "ft": 42,
+    "pretrain": 42
+   }
+  },
+  {
+   "backbone": "pi05",
+   "box": "s2",
+   "cell": "cfg_ph_ep|cond",
+   "checkpoint": {
+    "id": "pi05/ft/r1fcfg",
+    "ref": "axisrobotics/qvla-v1-pi05@v1.0:ft/r1fcfg/13579"
+   },
+   "eval_command": "qvla bench eval --run r1fcfg",
+   "eval_fingerprint": "ca2d089f8d068466dd3fe096e4c142729d62d733cd290e21888d9f15467cc916",
+   "lineage": {
+    "arm": "pi05.finetune.r1fcfg",
+    "base": null,
+    "init": null,
+    "norm_stats_sha256": null,
+    "step": "13579",
+    "train_config": null,
+    "train_overrides": []
+   },
+   "results": {
+    "path": "results/s2/r1fcfg_dualsim.json",
+    "sha256": "5e3a062f0fb15c01cd797c4ec115d8a298e8834ec7c3cc380e93077aa5cdfa7d"
+   },
+   "rollouts": {
+    "path": "rollouts/s2/r1fcfg_dualsim.tar",
+    "sha256": "33e95a6c7114917e26db9970c5f651e726aebf8dad55a0db9b82569b224c301a",
+    "size": 10240
+   },
+   "run": "r1fcfg",
+   "serve": {
+    "beta": 1.0,
+    "fields": {},
+    "uncond_fields": null
+   },
+   "served": "r1fcfg_dualsim",
+   "training_seed": {
+    "ft": 42,
+    "pretrain": 42
+   }
+  }
+ ],
+ "release": "v1.0",
+ "schema": "qvla.cells/1"
+}

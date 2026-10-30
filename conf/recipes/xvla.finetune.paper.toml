@@ -1,0 +1,14 @@
+schema = "qvla.recipe/1"
+id = "xvla.finetune.paper"
+backbone = "xvla-lerobot"
+stage = "finetune"
+track = "paper"
+paper_budget = true
+description = "Paper held-out finetune of X-VLA: 6,790 steps at 8 per GPU on 8 GPUs, domain 20."
+template = "lerobot/xvla.finetune.json"
+
+[budget]
+steps = 6790
+global_batch = 64
+per_rank_batch = 8
+world = 8

@@ -1,0 +1,2479 @@
+{
+ "claims": {
+  "Fig5.caption.bc_sr.pi05": {
+   "cells": [
+    "bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: plain-BC success rate (%)",
+   "section": "V.B",
+   "text": "57.42",
+   "value": 57.416666666666664
+  },
+  "Fig5.caption.bc_sr.smolvla": {
+   "cells": [
+    "svla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: plain-BC success rate (%)",
+   "section": "V.B",
+   "text": "5.08",
+   "value": 5.083333333333333
+  },
+  "Fig5.caption.bc_sr.xvla": {
+   "cells": [
+    "xvla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: plain-BC success rate (%)",
+   "section": "V.B",
+   "text": "25.75",
+   "value": 25.75
+  },
+  "Fig5.caption.ft_only_sr.pi05": {
+   "cells": [
+    "droidinit|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: matched FT-only control success rate (%)",
+   "section": "V.B",
+   "text": "8.83",
+   "value": 8.833333333333334
+  },
+  "Fig5.caption.ft_only_sr.smolvla": {
+   "cells": [
+    "svla_base_rand|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: matched FT-only control success rate (%)",
+   "section": "V.B",
+   "text": "2.50",
+   "value": 2.5
+  },
+  "Fig5.caption.ft_only_sr.xvla": {
+   "cells": [
+    "xvla_base|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: matched FT-only control success rate (%)",
+   "section": "V.B",
+   "text": "6.17",
+   "value": 6.166666666666667
+  },
+  "IV.B.aa_filter_minus_random.smolvla.chunk": {
+   "cells": [
+    "svla_drop_ph_row|bare",
+    "svla_rand_row|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: approach-aware chunk filtering − random chunk selection (pp)",
+   "section": "IV.B",
+   "text": "+3.08",
+   "value": 3.0833333333333335
+  },
+  "IV.B.aa_filter_minus_random.smolvla.episode": {
+   "cells": [
+    "svla_drop_ph_ep|bare",
+    "svla_rand_ep|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: approach-aware episode filtering − random episode selection (pp)",
+   "section": "IV.B",
+   "text": "+1.08",
+   "value": 1.0833333333333333
+  },
+  "IV.B.aa_filter_minus_random.xvla.chunk": {
+   "cells": [
+    "xvla_drop_ph_row|bare",
+    "xvla_rand_row|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: approach-aware chunk filtering − random chunk selection (pp)",
+   "section": "IV.B",
+   "text": "+2.58",
+   "value": 2.5833333333333335
+  },
+  "IV.B.aa_filter_minus_random.xvla.episode": {
+   "cells": [
+    "xvla_drop_ph_ep|bare",
+    "xvla_rand_ep|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: approach-aware episode filtering − random episode selection (pp)",
+   "section": "IV.B",
+   "text": "+5.75",
+   "value": 5.75
+  },
+  "IV.B.oc_filter_minus_random.smolvla.chunk": {
+   "cells": [
+    "svla_drop_v2_row|bare",
+    "svla_rand_row|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: object-centric chunk filtering − random chunk selection (pp)",
+   "section": "IV.B",
+   "text": "+3.17",
+   "value": 3.1666666666666665
+  },
+  "IV.B.oc_filter_minus_random.xvla.chunk": {
+   "cells": [
+    "xvla_drop_v2_row|bare",
+    "xvla_rand_row|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: object-centric chunk filtering − random chunk selection (pp)",
+   "section": "IV.B",
+   "text": "-3.00",
+   "value": -3.0
+  },
+  "V.B.cond_relative_to_bc.pi05": {
+   "cells": [
+    "cfg_ph_ep|cond",
+    "bc|bare"
+   ],
+   "dp": 2,
+   "kind": "rel",
+   "label": "π0.5: approach-aware episode conditioning relative to plain BC (%)",
+   "section": "V.B",
+   "text": "+1.02",
+   "value": 1.0159651669085632
+  },
+  "V.B.cond_relative_to_bc.smolvla": {
+   "cells": [
+    "svla_cfgph|cond",
+    "svla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "rel",
+   "label": "SmolVLA: approach-aware episode conditioning relative to plain BC (%)",
+   "section": "V.B",
+   "text": "+73.77",
+   "value": 73.77049180327869
+  },
+  "V.B.cond_relative_to_bc.xvla": {
+   "cells": [
+    "xvla_cfgph|cond",
+    "xvla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "rel",
+   "label": "X-VLA: approach-aware episode conditioning relative to plain BC (%)",
+   "section": "V.B",
+   "text": "+8.09",
+   "value": 8.090614886731391
+  },
+  "V.B.method_means.pi05": {
+   "groups": {
+    "conditioning": {
+     "cells": [
+      "cfg_v2_ep|cond",
+      "cfg_v2_row|cond",
+      "cfg_ph_ep|cond",
+      "cfg_ph_row|cond"
+     ],
+     "dp": 2,
+     "text": "55.56",
+     "value": 55.5625
+    },
+    "filtering": {
+     "cells": [
+      "drop_v2_ep|bare",
+      "drop_v2_row|bare",
+      "drop_ph_ep|bare",
+      "drop_ph_row|bare"
+     ],
+     "dp": 2,
+     "text": "51.06",
+     "value": 51.0625
+    },
+    "weighting": {
+     "cells": [
+      "awr_v2_ep|bare",
+      "awr_v2_row|bare",
+      "awr_ph_ep|bare",
+      "awr_ph_row|bare"
+     ],
+     "dp": 2,
+     "text": "55.44",
+     "value": 55.4375
+    }
+   },
+   "kind": "means",
+   "label": "π0.5: mean success rate (%) of each method over the four reward-granularity settings",
+   "section": "V.B"
+  },
+  "V.B.method_means.smolvla": {
+   "groups": {
+    "conditioning": {
+     "cells": [
+      "svla_cfg_v2_ep|cond",
+      "svla_cfg_v2_row|cond",
+      "svla_cfgph|cond",
+      "svla_cfg_ph_row|cond"
+     ],
+     "dp": 2,
+     "text": "7.62",
+     "value": 7.625
+    },
+    "filtering": {
+     "cells": [
+      "svla_drop_v2_ep|bare",
+      "svla_drop_v2_row|bare",
+      "svla_drop_ph_ep|bare",
+      "svla_drop_ph_row|bare"
+     ],
+     "dp": 2,
+     "text": "5.73",
+     "value": 5.729166666666667
+    },
+    "weighting": {
+     "cells": [
+      "svla_awr_v2_ep|bare",
+      "svla_awr_v2_row|bare",
+      "svla_awr_ph_ep|bare",
+      "svla_awr_ph_row|bare"
+     ],
+     "dp": 2,
+     "text": "5.90",
+     "value": 5.895833333333333
+    }
+   },
+   "kind": "means",
+   "label": "SmolVLA: mean success rate (%) of each method over the four reward-granularity settings",
+   "section": "V.B"
+  },
+  "V.B.method_means.xvla": {
+   "groups": {
+    "conditioning": {
+     "cells": [
+      "xvla_cfg_v2_ep|cond",
+      "xvla_cfg_v2_row|cond",
+      "xvla_cfgph|cond",
+      "xvla_cfg_ph_row|cond"
+     ],
+     "dp": 2,
+     "text": "24.40",
+     "value": 24.395833333333332
+    },
+    "filtering": {
+     "cells": [
+      "xvla_drop_v2_ep|bare",
+      "xvla_drop_v2_row|bare",
+      "xvla_drop_ph_ep|bare",
+      "xvla_drop_ph_row|bare"
+     ],
+     "dp": 2,
+     "text": "27.44",
+     "value": 27.4375
+    },
+    "weighting": {
+     "cells": [
+      "xvla_awr_v2_ep|bare",
+      "xvla_awr_v2_row|bare",
+      "xvla_awr_ph_ep|bare",
+      "xvla_awr_ph_row|bare"
+     ],
+     "dp": 2,
+     "text": "27.17",
+     "value": 27.166666666666668
+    }
+   },
+   "kind": "means",
+   "label": "X-VLA: mean success rate (%) of each method over the four reward-granularity settings",
+   "section": "V.B"
+  },
+  "V.B.xvla_filtering_vs_conditioning": {
+   "kind": "signs",
+   "label": "X-VLA: filtering − conditioning in each matched reward-granularity setting",
+   "missing": 0,
+   "negative": 0,
+   "pairs": [
+    {
+     "cells": [
+      "xvla_drop_v2_ep|bare",
+      "xvla_cfg_v2_ep|cond"
+     ],
+     "diff": 4.75,
+     "label": "object-centric / episode",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_drop_v2_row|bare",
+      "xvla_cfg_v2_row|cond"
+     ],
+     "diff": 3.1666666666666665,
+     "label": "object-centric / chunk",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_drop_ph_ep|bare",
+      "xvla_cfgph|cond"
+     ],
+     "diff": 0.9166666666666666,
+     "label": "approach-aware / episode",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_drop_ph_row|bare",
+      "xvla_cfg_ph_row|cond"
+     ],
+     "diff": 3.3333333333333335,
+     "label": "approach-aware / chunk",
+     "sign": 1
+    }
+   ],
+   "positive": 4,
+   "section": "V.B",
+   "zero": 0
+  },
+  "V.C.aa_chunk_weighting_vs_bc": {
+   "kind": "signs",
+   "label": "approach-aware chunk weighting − plain BC, per VLA (pp)",
+   "missing": 0,
+   "negative": 0,
+   "pairs": [
+    {
+     "cells": [
+      "awr_ph_row|bare",
+      "bc|bare"
+     ],
+     "diff": 0.6666666666666666,
+     "label": "π0.5",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_awr_ph_row|bare",
+      "svla_bc|bare"
+     ],
+     "diff": 0.5,
+     "label": "SmolVLA",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_awr_ph_row|bare",
+      "xvla_bc|bare"
+     ],
+     "diff": 2.25,
+     "label": "X-VLA",
+     "sign": 1
+    }
+   ],
+   "positive": 3,
+   "section": "V.C",
+   "zero": 0
+  },
+  "V.C.aa_conditioning_episode_minus_chunk.pi05": {
+   "cells": [
+    "cfg_ph_ep|cond",
+    "cfg_ph_row|cond"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: approach-aware episode − chunk conditioning (pp)",
+   "section": "V.C",
+   "text": "+3.50",
+   "value": 3.5
+  },
+  "V.C.aa_conditioning_episode_minus_chunk.smolvla": {
+   "cells": [
+    "svla_cfgph|cond",
+    "svla_cfg_ph_row|cond"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: approach-aware episode − chunk conditioning (pp)",
+   "section": "V.C",
+   "text": "+2.92",
+   "value": 2.9166666666666665
+  },
+  "V.C.aa_conditioning_episode_minus_chunk.xvla": {
+   "cells": [
+    "xvla_cfgph|cond",
+    "xvla_cfg_ph_row|cond"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: approach-aware episode − chunk conditioning (pp)",
+   "section": "V.C",
+   "text": "+2.00",
+   "value": 2.0
+  },
+  "V.C.aa_weighting_episode_vs_chunk": {
+   "kind": "signs",
+   "label": "approach-aware weighting: episode − chunk, per VLA",
+   "missing": 0,
+   "negative": 2,
+   "pairs": [
+    {
+     "cells": [
+      "awr_ph_ep|bare",
+      "awr_ph_row|bare"
+     ],
+     "diff": -3.4166666666666665,
+     "label": "π0.5",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "svla_awr_ph_ep|bare",
+      "svla_awr_ph_row|bare"
+     ],
+     "diff": 1.25,
+     "label": "SmolVLA",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_awr_ph_ep|bare",
+      "xvla_awr_ph_row|bare"
+     ],
+     "diff": -2.25,
+     "label": "X-VLA",
+     "sign": -1
+    }
+   ],
+   "positive": 1,
+   "section": "V.C",
+   "zero": 0
+  },
+  "V.C.conditioning_episode_vs_chunk": {
+   "kind": "signs",
+   "label": "episode − chunk conditioning in each matched VLA-reward setting",
+   "missing": 0,
+   "negative": 1,
+   "pairs": [
+    {
+     "cells": [
+      "cfg_v2_ep|cond",
+      "cfg_v2_row|cond"
+     ],
+     "diff": -3.9166666666666665,
+     "label": "π0.5 object-centric",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "cfg_ph_ep|cond",
+      "cfg_ph_row|cond"
+     ],
+     "diff": 3.5,
+     "label": "π0.5 approach-aware",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_cfg_v2_ep|cond",
+      "svla_cfg_v2_row|cond"
+     ],
+     "diff": 2.5833333333333335,
+     "label": "SmolVLA object-centric",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_cfgph|cond",
+      "svla_cfg_ph_row|cond"
+     ],
+     "diff": 2.9166666666666665,
+     "label": "SmolVLA approach-aware",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_cfg_v2_ep|cond",
+      "xvla_cfg_v2_row|cond"
+     ],
+     "diff": 3.0833333333333335,
+     "label": "X-VLA object-centric",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_cfgph|cond",
+      "xvla_cfg_ph_row|cond"
+     ],
+     "diff": 2.0,
+     "label": "X-VLA approach-aware",
+     "sign": 1
+    }
+   ],
+   "positive": 5,
+   "section": "V.C",
+   "zero": 0
+  },
+  "V.C.filtering_chunk_vs_episode": {
+   "kind": "signs",
+   "label": "chunk − episode filtering in each matched VLA-reward setting",
+   "missing": 0,
+   "negative": 1,
+   "pairs": [
+    {
+     "cells": [
+      "drop_v2_row|bare",
+      "drop_v2_ep|bare"
+     ],
+     "diff": 4.083333333333333,
+     "label": "π0.5 object-centric",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "drop_ph_row|bare",
+      "drop_ph_ep|bare"
+     ],
+     "diff": 0.0,
+     "label": "π0.5 approach-aware",
+     "sign": 0
+    },
+    {
+     "cells": [
+      "svla_drop_v2_row|bare",
+      "svla_drop_v2_ep|bare"
+     ],
+     "diff": 3.3333333333333335,
+     "label": "SmolVLA object-centric",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_drop_ph_row|bare",
+      "svla_drop_ph_ep|bare"
+     ],
+     "diff": 1.9166666666666667,
+     "label": "SmolVLA approach-aware",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_drop_v2_row|bare",
+      "xvla_drop_v2_ep|bare"
+     ],
+     "diff": -4.666666666666667,
+     "label": "X-VLA object-centric",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "xvla_drop_ph_row|bare",
+      "xvla_drop_ph_ep|bare"
+     ],
+     "diff": 0.4166666666666667,
+     "label": "X-VLA approach-aware",
+     "sign": 1
+    }
+   ],
+   "positive": 4,
+   "section": "V.C",
+   "zero": 1
+  },
+  "V.C.oc_conditioning_episode_minus_chunk.pi05": {
+   "cells": [
+    "cfg_v2_ep|cond",
+    "cfg_v2_row|cond"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: object-centric episode − chunk conditioning (pp)",
+   "section": "V.C",
+   "text": "-3.92",
+   "value": -3.9166666666666665
+  },
+  "V.C.oc_filtering_chunk_minus_episode.xvla": {
+   "cells": [
+    "xvla_drop_v2_row|bare",
+    "xvla_drop_v2_ep|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: object-centric chunk − episode filtering (pp)",
+   "section": "V.C",
+   "text": "-4.67",
+   "value": -4.666666666666667
+  },
+  "V.C.oc_weighting_episode_vs_chunk": {
+   "kind": "signs",
+   "label": "object-centric weighting: episode − chunk, per VLA",
+   "missing": 0,
+   "negative": 0,
+   "pairs": [
+    {
+     "cells": [
+      "awr_v2_ep|bare",
+      "awr_v2_row|bare"
+     ],
+     "diff": 4.333333333333333,
+     "label": "π0.5",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_awr_v2_ep|bare",
+      "svla_awr_v2_row|bare"
+     ],
+     "diff": 0.5,
+     "label": "SmolVLA",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_awr_v2_ep|bare",
+      "xvla_awr_v2_row|bare"
+     ],
+     "diff": 1.9166666666666667,
+     "label": "X-VLA",
+     "sign": 1
+    }
+   ],
+   "positive": 3,
+   "section": "V.C",
+   "zero": 0
+  },
+  "V.C.random_chunk_minus_episode.xvla": {
+   "cells": [
+    "xvla_rand_row|bare",
+    "xvla_rand_ep|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: random chunk − random episode selection (pp)",
+   "section": "V.C",
+   "text": "+3.58",
+   "value": 3.5833333333333335
+  },
+  "V.D.add_tag5.after_plain_ft.pi05": {
+   "cells": [
+    "cfgnp|cond",
+    "cfgnp|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: adding tag 5 at inference after conditioning + plain FT (pp)",
+   "section": "V.D",
+   "text": "+0.75",
+   "value": 0.75
+  },
+  "V.D.add_tag5.after_plain_ft.smolvla": {
+   "cells": [
+    "svla_cfgnp|cond",
+    "svla_cfgnp|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: adding tag 5 at inference after conditioning + plain FT (pp)",
+   "section": "V.D",
+   "text": "-2.42",
+   "value": -2.4166666666666665
+  },
+  "V.D.add_tag5.after_plain_ft.xvla": {
+   "cells": [
+    "xvla_cfgnp|cond",
+    "xvla_cfgnp|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: adding tag 5 at inference after conditioning + plain FT (pp)",
+   "section": "V.D",
+   "text": "+1.33",
+   "value": 1.3333333333333333
+  },
+  "V.D.add_tag5.after_tagged_ft.pi05": {
+   "cells": [
+    "cfg_ph_ep|cond",
+    "cfg_ph_ep|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: adding tag 5 at inference after conditioning + tagged FT (pp)",
+   "section": "V.D",
+   "text": "+0.17",
+   "value": 0.16666666666666666
+  },
+  "V.D.add_tag5.after_tagged_ft.smolvla": {
+   "cells": [
+    "svla_cfgph|cond",
+    "svla_cfgph|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: adding tag 5 at inference after conditioning + tagged FT (pp)",
+   "section": "V.D",
+   "text": "+1.92",
+   "value": 1.9166666666666667
+  },
+  "V.D.add_tag5.after_tagged_ft.xvla": {
+   "cells": [
+    "xvla_cfgph|cond",
+    "xvla_cfgph|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: adding tag 5 at inference after conditioning + tagged FT (pp)",
+   "section": "V.D",
+   "text": "-0.50",
+   "value": -0.5
+  },
+  "V.D.bc_pretraining.tag5_only_minus_plain.pi05": {
+   "cells": [
+    "bc|cond",
+    "bc|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: after plain-BC pretraining and plain FT, tag-5 − untagged inference (pp)",
+   "section": "V.D",
+   "text": "+0.92",
+   "value": 0.9166666666666666
+  },
+  "V.D.bc_pretraining.tag5_only_minus_plain.smolvla": {
+   "cells": [
+    "svla_bc|cond",
+    "svla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: after plain-BC pretraining and plain FT, tag-5 − untagged inference (pp)",
+   "section": "V.D",
+   "text": "-0.67",
+   "value": -0.6666666666666666
+  },
+  "V.D.bc_pretraining.tagged_ft_tag5_minus_plain.pi05": {
+   "cells": [
+    "bct|cond",
+    "bc|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: after plain-BC pretraining, tagged FT + tag-5 inference − plain FT + untagged inference (pp)",
+   "section": "V.D",
+   "text": "-0.33",
+   "value": -0.3333333333333333
+  },
+  "V.D.bc_pretraining.tagged_ft_tag5_minus_plain.smolvla": {
+   "cells": [
+    "svla_bct|cond",
+    "svla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: after plain-BC pretraining, tagged FT + tag-5 inference − plain FT + untagged inference (pp)",
+   "section": "V.D",
+   "text": "+0.83",
+   "value": 0.8333333333333334
+  },
+  "V.D.bc_pretraining.tagged_ft_tag5_minus_plain.xvla": {
+   "cells": [
+    "xvla_bct|cond",
+    "xvla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: after plain-BC pretraining, tagged FT + tag-5 inference − plain FT + untagged inference (pp)",
+   "section": "V.D",
+   "text": "+1.75",
+   "value": 1.75
+  },
+  "V.D.tagged_minus_plain_ft.tag5.pi05": {
+   "cells": [
+    "cfg_ph_ep|cond",
+    "cfgnp|cond"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: tagged − plain FT after conditioning, tag-5 inference (pp)",
+   "section": "V.D",
+   "text": "+0.25",
+   "value": 0.25
+  },
+  "V.D.tagged_minus_plain_ft.tag5.smolvla": {
+   "cells": [
+    "svla_cfgph|cond",
+    "svla_cfgnp|cond"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: tagged − plain FT after conditioning, tag-5 inference (pp)",
+   "section": "V.D",
+   "text": "+5.00",
+   "value": 5.0
+  },
+  "V.D.tagged_minus_plain_ft.tag5.xvla": {
+   "cells": [
+    "xvla_cfgph|cond",
+    "xvla_cfgnp|cond"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: tagged − plain FT after conditioning, tag-5 inference (pp)",
+   "section": "V.D",
+   "text": "+2.17",
+   "value": 2.1666666666666665
+  },
+  "V.D.tagged_minus_plain_ft.untagged.pi05": {
+   "cells": [
+    "cfg_ph_ep|bare",
+    "cfgnp|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "π0.5: tagged − plain FT after conditioning, untagged inference (pp)",
+   "section": "V.D",
+   "text": "+0.83",
+   "value": 0.8333333333333334
+  },
+  "V.D.tagged_minus_plain_ft.untagged.smolvla": {
+   "cells": [
+    "svla_cfgph|bare",
+    "svla_cfgnp|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "SmolVLA: tagged − plain FT after conditioning, untagged inference (pp)",
+   "section": "V.D",
+   "text": "+0.67",
+   "value": 0.6666666666666666
+  },
+  "V.D.tagged_minus_plain_ft.untagged.xvla": {
+   "cells": [
+    "xvla_cfgph|bare",
+    "xvla_cfgnp|bare"
+   ],
+   "dp": 2,
+   "kind": "diff",
+   "label": "X-VLA: tagged − plain FT after conditioning, untagged inference (pp)",
+   "section": "V.D",
+   "text": "+4.00",
+   "value": 4.0
+  },
+  "V.E.conditioning_vs_bc.pi05": {
+   "kind": "signs",
+   "label": "π0.5: conditioning − plain BC at matched pretraining size",
+   "missing": 0,
+   "negative": 2,
+   "pairs": [
+    {
+     "cells": [
+      "s1000cfg|cond",
+      "s1000bc|bare"
+     ],
+     "diff": -2.5,
+     "label": "1K",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "s2500cfg|cond",
+      "s2500bc|bare"
+     ],
+     "diff": -2.9166666666666665,
+     "label": "2.5K",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "cfg_ph_ep|cond",
+      "bc|bare"
+     ],
+     "diff": 0.5833333333333334,
+     "label": "5K",
+     "sign": 1
+    }
+   ],
+   "positive": 1,
+   "section": "V.E",
+   "zero": 0
+  },
+  "V.E.conditioning_vs_bc.smolvla": {
+   "kind": "signs",
+   "label": "SmolVLA: conditioning − plain BC at matched pretraining size",
+   "missing": 0,
+   "negative": 0,
+   "pairs": [
+    {
+     "cells": [
+      "svla_s1000cfg|cond",
+      "svla_s1000bc|bare"
+     ],
+     "diff": 0.6666666666666666,
+     "label": "1K",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_s2500cfg|cond",
+      "svla_s2500bc|bare"
+     ],
+     "diff": 2.25,
+     "label": "2.5K",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_cfgph|cond",
+      "svla_bc|bare"
+     ],
+     "diff": 3.75,
+     "label": "5K",
+     "sign": 1
+    }
+   ],
+   "positive": 3,
+   "section": "V.E",
+   "zero": 0
+  },
+  "V.E.conditioning_vs_bc.xvla": {
+   "kind": "signs",
+   "label": "X-VLA: conditioning − plain BC at matched pretraining size",
+   "missing": 0,
+   "negative": 1,
+   "pairs": [
+    {
+     "cells": [
+      "xvla_s1000cfg|cond",
+      "xvla_s1000bc|bare"
+     ],
+     "diff": 2.4166666666666665,
+     "label": "1K",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "xvla_s2500cfg|cond",
+      "xvla_s2500bc|bare"
+     ],
+     "diff": -0.75,
+     "label": "2.5K",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "xvla_cfgph|cond",
+      "xvla_bc|bare"
+     ],
+     "diff": 2.0833333333333335,
+     "label": "5K",
+     "sign": 1
+    }
+   ],
+   "positive": 2,
+   "section": "V.E",
+   "zero": 0
+  },
+  "V.E.sr.pi05.1K.bc": {
+   "cells": [
+    "s1000bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: plain BC at 1K (%)",
+   "section": "V.E",
+   "text": "48.42",
+   "value": 48.416666666666664
+  },
+  "V.E.sr.pi05.1K.conditioning": {
+   "cells": [
+    "s1000cfg|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: conditioning at 1K (%)",
+   "section": "V.E",
+   "text": "45.92",
+   "value": 45.916666666666664
+  },
+  "V.E.sr.pi05.2.5K.bc": {
+   "cells": [
+    "s2500bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: plain BC at 2.5K (%)",
+   "section": "V.E",
+   "text": "56.75",
+   "value": 56.75
+  },
+  "V.E.sr.pi05.2.5K.conditioning": {
+   "cells": [
+    "s2500cfg|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: conditioning at 2.5K (%)",
+   "section": "V.E",
+   "text": "53.83",
+   "value": 53.833333333333336
+  },
+  "V.E.sr.pi05.5K.bc": {
+   "cells": [
+    "bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: plain BC at 5K (%)",
+   "section": "V.E",
+   "text": "57.42",
+   "value": 57.416666666666664
+  },
+  "V.E.sr.pi05.5K.conditioning": {
+   "cells": [
+    "cfg_ph_ep|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "π0.5: conditioning at 5K (%)",
+   "section": "V.E",
+   "text": "58.00",
+   "value": 58.0
+  },
+  "V.E.sr.smolvla.1K.bc": {
+   "cells": [
+    "svla_s1000bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: plain BC at 1K (%)",
+   "section": "V.E",
+   "text": "1.67",
+   "value": 1.6666666666666667
+  },
+  "V.E.sr.smolvla.1K.conditioning": {
+   "cells": [
+    "svla_s1000cfg|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: conditioning at 1K (%)",
+   "section": "V.E",
+   "text": "2.33",
+   "value": 2.3333333333333335
+  },
+  "V.E.sr.smolvla.2.5K.bc": {
+   "cells": [
+    "svla_s2500bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: plain BC at 2.5K (%)",
+   "section": "V.E",
+   "text": "3.08",
+   "value": 3.0833333333333335
+  },
+  "V.E.sr.smolvla.2.5K.conditioning": {
+   "cells": [
+    "svla_s2500cfg|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: conditioning at 2.5K (%)",
+   "section": "V.E",
+   "text": "5.33",
+   "value": 5.333333333333333
+  },
+  "V.E.sr.smolvla.5K.bc": {
+   "cells": [
+    "svla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: plain BC at 5K (%)",
+   "section": "V.E",
+   "text": "5.08",
+   "value": 5.083333333333333
+  },
+  "V.E.sr.smolvla.5K.conditioning": {
+   "cells": [
+    "svla_cfgph|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "SmolVLA: conditioning at 5K (%)",
+   "section": "V.E",
+   "text": "8.83",
+   "value": 8.833333333333334
+  },
+  "V.E.sr.xvla.1K.bc": {
+   "cells": [
+    "xvla_s1000bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: plain BC at 1K (%)",
+   "section": "V.E",
+   "text": "10.75",
+   "value": 10.75
+  },
+  "V.E.sr.xvla.1K.conditioning": {
+   "cells": [
+    "xvla_s1000cfg|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: conditioning at 1K (%)",
+   "section": "V.E",
+   "text": "13.17",
+   "value": 13.166666666666666
+  },
+  "V.E.sr.xvla.2.5K.bc": {
+   "cells": [
+    "xvla_s2500bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: plain BC at 2.5K (%)",
+   "section": "V.E",
+   "text": "21.50",
+   "value": 21.5
+  },
+  "V.E.sr.xvla.2.5K.conditioning": {
+   "cells": [
+    "xvla_s2500cfg|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: conditioning at 2.5K (%)",
+   "section": "V.E",
+   "text": "20.75",
+   "value": 20.75
+  },
+  "V.E.sr.xvla.5K.bc": {
+   "cells": [
+    "xvla_bc|bare"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: plain BC at 5K (%)",
+   "section": "V.E",
+   "text": "25.75",
+   "value": 25.75
+  },
+  "V.E.sr.xvla.5K.conditioning": {
+   "cells": [
+    "xvla_cfgph|cond"
+   ],
+   "dp": 2,
+   "kind": "sr",
+   "label": "X-VLA: conditioning at 5K (%)",
+   "section": "V.E",
+   "text": "27.83",
+   "value": 27.833333333333332
+  },
+  "V.F.add_tag5_after_tagged_ft.smolvla": {
+   "kind": "replicate_signs",
+   "label": "SmolVLA: tag-5 − untagged inference after conditioning + tagged FT, per training seed",
+   "missing": 0,
+   "negative": 2,
+   "pairs": [
+    {
+     "cells": [
+      "svla_cfgph|cond",
+      "svla_cfgph|bare"
+     ],
+     "diff": 1.9166666666666667,
+     "label": "seed 0",
+     "sign": 1
+    },
+    {
+     "cells": [
+      "svla_cfgph_sd1|cond",
+      "svla_cfgph_sd1|bare"
+     ],
+     "diff": -1.4166666666666667,
+     "label": "seed 1",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "svla_cfgph_sd2|cond",
+      "svla_cfgph_sd2|bare"
+     ],
+     "diff": -2.1666666666666665,
+     "label": "seed 2",
+     "sign": -1
+    }
+   ],
+   "positive": 1,
+   "section": "V.F",
+   "zero": 0
+  },
+  "V.F.add_tag5_after_tagged_ft.xvla": {
+   "kind": "replicate_signs",
+   "label": "X-VLA: tag-5 − untagged inference after conditioning + tagged FT, per training seed",
+   "missing": 0,
+   "negative": 3,
+   "pairs": [
+    {
+     "cells": [
+      "xvla_cfgph|cond",
+      "xvla_cfgph|bare"
+     ],
+     "diff": -0.5,
+     "label": "seed 0",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "xvla_cfgph_sd1|cond",
+      "xvla_cfgph_sd1|bare"
+     ],
+     "diff": -0.75,
+     "label": "seed 1",
+     "sign": -1
+    },
+    {
+     "cells": [
+      "xvla_cfgph_sd2|cond",
+      "xvla_cfgph_sd2|bare"
+     ],
+     "diff": -1.0,
+     "label": "seed 2",
+     "sign": -1
+    }
+   ],
+   "positive": 0,
+   "section": "V.F",
+   "zero": 0
+  },
+  "V.F.cond_episode_minus_chunk_mean": {
+   "dp": 2,
+   "kind": "table1_mean",
+   "label": "conditioning, episode − chunk: equal average over the nine VLA-seed combinations (%)",
+   "section": "V.F",
+   "text": "+11.72",
+   "value": 11.724520379045925
+  },
+  "V.F.cond_vs_bc_seed_level": {
+   "kind": "table1_signs",
+   "label": "seed-level episode conditioning − BC comparisons (nine VLA-seed combinations)",
+   "missing": 0,
+   "negative": 2,
+   "positive": 6,
+   "section": "V.F",
+   "values": [
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 42,
+     "sign": 1,
+     "value": 1.0159651669085632,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 43,
+     "sign": 0,
+     "value": 0.0,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 44,
+     "sign": 1,
+     "value": 10.56,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 0,
+     "sign": 1,
+     "value": 73.77049180327869,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 1,
+     "sign": 1,
+     "value": 10.95890410958904,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 2,
+     "sign": -1,
+     "value": -14.473684210526315,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 0,
+     "sign": 1,
+     "value": 8.090614886731391,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 1,
+     "sign": 1,
+     "value": 9.329446064139942,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "cond_minus_bc",
+     "seed": 2,
+     "sign": -1,
+     "value": -0.5602240896358543,
+     "vla": "xvla"
+    }
+   ],
+   "zero": 1
+  },
+  "V.F.filter_chunk_minus_episode_mean": {
+   "dp": 2,
+   "kind": "table1_mean",
+   "label": "filtering, chunk − episode: equal average over the nine VLA-seed combinations (%)",
+   "section": "V.F",
+   "text": "+3.44",
+   "value": 3.4406457656013307
+  },
+  "V.F.tagged_vs_plain_seed_level": {
+   "kind": "table1_signs",
+   "label": "seed-level tagged − plain FT differences",
+   "missing": 0,
+   "negative": 3,
+   "positive": 15,
+   "section": "V.F",
+   "values": [
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 42,
+     "sign": 1,
+     "value": 1.4513788098693758,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 43,
+     "sign": -1,
+     "value": -4.383116883116883,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 44,
+     "sign": 1,
+     "value": 4.0,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 0,
+     "sign": 1,
+     "value": 13.114754098360656,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 1,
+     "sign": -1,
+     "value": -4.109589041095891,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 2,
+     "sign": 1,
+     "value": 19.736842105263158,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 0,
+     "sign": 1,
+     "value": 15.533980582524272,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 1,
+     "sign": 1,
+     "value": 5.539358600583091,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "seed": 2,
+     "sign": 1,
+     "value": 2.5210084033613445,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 42,
+     "sign": 1,
+     "value": 0.43541364296081275,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 43,
+     "sign": -1,
+     "value": -3.0844155844155843,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 44,
+     "sign": 1,
+     "value": 5.44,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 0,
+     "sign": 1,
+     "value": 98.36065573770492,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 1,
+     "sign": 1,
+     "value": 42.465753424657535,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 2,
+     "sign": 1,
+     "value": 46.05263157894737,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 0,
+     "sign": 1,
+     "value": 8.414239482200648,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 1,
+     "sign": 1,
+     "value": 11.078717201166182,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "seed": 2,
+     "sign": 1,
+     "value": 7.282913165266106,
+     "vla": "xvla"
+    }
+   ],
+   "zero": 0
+  },
+  "V.F.tagged_vs_plain_vla_means": {
+   "kind": "table1_vla_mean_signs",
+   "label": "VLA-inference comparisons of tagged − plain FT (means over seeds)",
+   "missing": 0,
+   "negative": 0,
+   "positive": 6,
+   "section": "V.F",
+   "values": [
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "sign": 1,
+     "value": 0.35608730891749757,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "sign": 1,
+     "value": 9.580669054175974,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_untagged",
+     "sign": 1,
+     "value": 7.864782528822902,
+     "vla": "xvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "sign": 1,
+     "value": 0.9303326861817428,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "sign": 1,
+     "value": 62.29301358043661,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "tagged_minus_plain_tag5",
+     "sign": 1,
+     "value": 8.925289949544311,
+     "vla": "xvla"
+    }
+   ],
+   "zero": 0
+  },
+  "V.F.vla_means.cond_episode_minus_chunk": {
+   "kind": "table1_vla_mean_signs",
+   "label": "per-VLA means of the Table I comparison Cond.: episode − chunk",
+   "missing": 0,
+   "negative": 1,
+   "positive": 2,
+   "section": "V.F",
+   "values": [
+    {
+     "comparison": "cond_episode_minus_chunk",
+     "sign": -1,
+     "value": -0.8979397960530036,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "cond_episode_minus_chunk",
+     "sign": 1,
+     "value": 24.71328219493265,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "cond_episode_minus_chunk",
+     "sign": 1,
+     "value": 11.358218738258133,
+     "vla": "xvla"
+    }
+   ],
+   "zero": 0
+  },
+  "V.F.vla_means.filter_chunk_minus_episode": {
+   "kind": "table1_vla_mean_signs",
+   "label": "per-VLA means of the Table I comparison Filter: chunk − episode",
+   "missing": 0,
+   "negative": 1,
+   "positive": 2,
+   "section": "V.F",
+   "values": [
+    {
+     "comparison": "filter_chunk_minus_episode",
+     "sign": -1,
+     "value": -1.8954978354978356,
+     "vla": "pi05"
+    },
+    {
+     "comparison": "filter_chunk_minus_episode",
+     "sign": 1,
+     "value": 6.6322329515682314,
+     "vla": "smolvla"
+    },
+    {
+     "comparison": "filter_chunk_minus_episode",
+     "sign": 1,
+     "value": 5.585202180733597,
+     "vla": "xvla"
+    }
+   ],
+   "zero": 0
+  }
+ },
+ "n_cells": 123,
+ "paper": "What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study",
+ "schema": "qvla.paper_claims/1",
+ "table1": {
+  "comparisons": [
+   {
+    "a": "cond_ep",
+    "b": "bc",
+    "id": "cond_minus_bc",
+    "label": "Episode cond. − BC"
+   },
+   {
+    "a": "cond_ep",
+    "b": "cond_chunk",
+    "id": "cond_episode_minus_chunk",
+    "label": "Cond.: episode − chunk"
+   },
+   {
+    "a": "filter_chunk",
+    "b": "filter_ep",
+    "id": "filter_chunk_minus_episode",
+    "label": "Filter: chunk − episode"
+   },
+   {
+    "a": "tagged_untagged",
+    "b": "plain_untagged",
+    "id": "tagged_minus_plain_untagged",
+    "label": "Tagged − plain: untagged"
+   },
+   {
+    "a": "cond_ep",
+    "b": "plain_tag5",
+    "id": "tagged_minus_plain_tag5",
+    "label": "Tagged − plain: tag 5"
+   }
+  ],
+  "vlas": {
+   "pi05": {
+    "entries": {
+     "cond_episode_minus_chunk": {
+      "mean": -0.8979397960530036,
+      "sd": 8.521847931912086,
+      "seeds": [
+       42,
+       43,
+       44
+      ],
+      "signs": [
+       1,
+       -1,
+       1
+      ],
+      "values": [
+       6.095791001451379,
+       -10.38961038961039,
+       1.6
+      ]
+     },
+     "cond_minus_bc": {
+      "mean": 3.858655055636188,
+      "sd": 5.825724362910221,
+      "seeds": [
+       42,
+       43,
+       44
+      ],
+      "signs": [
+       1,
+       0,
+       1
+      ],
+      "values": [
+       1.0159651669085632,
+       0.0,
+       10.56
+      ]
+     },
+     "filter_chunk_minus_episode": {
+      "mean": -1.8954978354978356,
+      "sd": 3.5638201491109034,
+      "seeds": [
+       42,
+       43,
+       44
+      ],
+      "signs": [
+       0,
+       -1,
+       1
+      ],
+      "values": [
+       0.0,
+       -6.0064935064935066,
+       0.32
+      ]
+     },
+     "tagged_minus_plain_tag5": {
+      "mean": 0.9303326861817428,
+      "sd": 4.283704460915093,
+      "seeds": [
+       42,
+       43,
+       44
+      ],
+      "signs": [
+       1,
+       -1,
+       1
+      ],
+      "values": [
+       0.43541364296081275,
+       -3.0844155844155843,
+       5.44
+      ]
+     },
+     "tagged_minus_plain_untagged": {
+      "mean": 0.35608730891749757,
+      "sd": 4.297546948323299,
+      "seeds": [
+       42,
+       43,
+       44
+      ],
+      "signs": [
+       1,
+       -1,
+       1
+      ],
+      "values": [
+       1.4513788098693758,
+       -4.383116883116883,
+       4.0
+      ]
+     }
+    },
+    "label": "π0.5",
+    "replicates": [
+     {
+      "cells": {
+       "bc": {
+        "cell": "bc|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       },
+       "cond_chunk": {
+        "cell": "cfg_ph_row|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       },
+       "cond_ep": {
+        "cell": "cfg_ph_ep|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       },
+       "filter_chunk": {
+        "cell": "drop_ph_row|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       },
+       "filter_ep": {
+        "cell": "drop_ph_ep|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       },
+       "plain_tag5": {
+        "cell": "cfgnp|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       },
+       "plain_untagged": {
+        "cell": "cfgnp|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       },
+       "tagged_untagged": {
+        "cell": "cfg_ph_ep|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 42
+        }
+       }
+      },
+      "seed": 42
+     },
+     {
+      "cells": {
+       "bc": {
+        "cell": "bc43|bare",
+        "lineage": {
+         "ft": 43,
+         "pretrain": 43
+        }
+       },
+       "cond_chunk": {
+        "cell": "cfgrow43|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 43
+        }
+       },
+       "cond_ep": {
+        "cell": "cfgpt43|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 43
+        }
+       },
+       "filter_chunk": {
+        "cell": "droprow43|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 43
+        }
+       },
+       "filter_ep": {
+        "cell": "dropep43|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 43
+        }
+       },
+       "plain_tag5": {
+        "cell": "cfgnp43|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 43
+        }
+       },
+       "plain_untagged": {
+        "cell": "cfgnp43|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 43
+        }
+       },
+       "tagged_untagged": {
+        "cell": "cfgpt43|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 43
+        }
+       }
+      },
+      "seed": 43
+     },
+     {
+      "cells": {
+       "bc": {
+        "cell": "bc44|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       },
+       "cond_chunk": {
+        "cell": "cfgrow44|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       },
+       "cond_ep": {
+        "cell": "cfgpt44|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       },
+       "filter_chunk": {
+        "cell": "droprow44|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       },
+       "filter_ep": {
+        "cell": "dropep44|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       },
+       "plain_tag5": {
+        "cell": "cfgnp44|cond",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       },
+       "plain_untagged": {
+        "cell": "cfgnp44|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       },
+       "tagged_untagged": {
+        "cell": "cfgpt44|bare",
+        "lineage": {
+         "ft": 42,
+         "pretrain": 44
+        }
+       }
+      },
+      "seed": 44
+     }
+    ]
+   },
+   "smolvla": {
+    "entries": {
+     "cond_episode_minus_chunk": {
+      "mean": 24.71328219493265,
+      "sd": 32.63592872150085,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       -1
+      ],
+      "values": [
+       57.377049180327866,
+       24.65753424657534,
+       -7.894736842105263
+      ]
+     },
+     "cond_minus_bc": {
+      "mean": 23.418570567447137,
+      "sd": 45.42236361385937,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       -1
+      ],
+      "values": [
+       73.77049180327869,
+       10.95890410958904,
+       -14.473684210526315
+      ]
+     },
+     "filter_chunk_minus_episode": {
+      "mean": 6.6322329515682314,
+      "sd": 28.34461123725451,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       -1,
+       0
+      ],
+      "values": [
+       37.704918032786885,
+       -17.80821917808219,
+       0.0
+      ]
+     },
+     "tagged_minus_plain_tag5": {
+      "mean": 62.29301358043661,
+      "sd": 31.286938677537613,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       1
+      ],
+      "values": [
+       98.36065573770492,
+       42.465753424657535,
+       46.05263157894737
+      ]
+     },
+     "tagged_minus_plain_untagged": {
+      "mean": 9.580669054175974,
+      "sd": 12.309767968128323,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       -1,
+       1
+      ],
+      "values": [
+       13.114754098360656,
+       -4.109589041095891,
+       19.736842105263158
+      ]
+     }
+    },
+    "label": "SmolVLA",
+    "replicates": [
+     {
+      "cells": {
+       "bc": {
+        "cell": "svla_bc|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "cond_chunk": {
+        "cell": "svla_cfg_ph_row|cond",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "cond_ep": {
+        "cell": "svla_cfgph|cond",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "filter_chunk": {
+        "cell": "svla_drop_ph_row|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "filter_ep": {
+        "cell": "svla_drop_ph_ep|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "plain_tag5": {
+        "cell": "svla_cfgnp|cond",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "plain_untagged": {
+        "cell": "svla_cfgnp|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "tagged_untagged": {
+        "cell": "svla_cfgph|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       }
+      },
+      "seed": 0
+     },
+     {
+      "cells": {
+       "bc": {
+        "cell": "svla_bc_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "cond_chunk": {
+        "cell": "svla_cfg_ph_row_sd1|cond",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "cond_ep": {
+        "cell": "svla_cfgph_sd1|cond",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "filter_chunk": {
+        "cell": "svla_drop_ph_row_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "filter_ep": {
+        "cell": "svla_drop_ph_ep_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "plain_tag5": {
+        "cell": "svla_cfgnp_sd1|cond",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "plain_untagged": {
+        "cell": "svla_cfgnp_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "tagged_untagged": {
+        "cell": "svla_cfgph_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       }
+      },
+      "seed": 1
+     },
+     {
+      "cells": {
+       "bc": {
+        "cell": "svla_bc_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "cond_chunk": {
+        "cell": "svla_cfg_ph_row_sd2|cond",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "cond_ep": {
+        "cell": "svla_cfgph_sd2|cond",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "filter_chunk": {
+        "cell": "svla_drop_ph_row_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "filter_ep": {
+        "cell": "svla_drop_ph_ep_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "plain_tag5": {
+        "cell": "svla_cfgnp_sd2|cond",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "plain_untagged": {
+        "cell": "svla_cfgnp_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "tagged_untagged": {
+        "cell": "svla_cfgph_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       }
+      },
+      "seed": 2
+     }
+    ]
+   },
+   "xvla": {
+    "entries": {
+     "cond_episode_minus_chunk": {
+      "mean": 11.358218738258133,
+      "sd": 15.157019388965413,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       -1
+      ],
+      "values": [
+       7.766990291262136,
+       27.988338192419825,
+       -1.680672268907563
+      ]
+     },
+     "cond_minus_bc": {
+      "mean": 5.619945620411826,
+      "sd": 5.3879076555999905,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       -1
+      ],
+      "values": [
+       8.090614886731391,
+       9.329446064139942,
+       -0.5602240896358543
+      ]
+     },
+     "filter_chunk_minus_episode": {
+      "mean": 5.585202180733597,
+      "sd": 8.047414386404464,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       1
+      ],
+      "values": [
+       1.6181229773462784,
+       0.2915451895043732,
+       14.84593837535014
+      ]
+     },
+     "tagged_minus_plain_tag5": {
+      "mean": 8.925289949544311,
+      "sd": 1.9488231076390583,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       1
+      ],
+      "values": [
+       8.414239482200648,
+       11.078717201166182,
+       7.282913165266106
+      ]
+     },
+     "tagged_minus_plain_untagged": {
+      "mean": 7.864782528822902,
+      "sd": 6.811024781076618,
+      "seeds": [
+       0,
+       1,
+       2
+      ],
+      "signs": [
+       1,
+       1,
+       1
+      ],
+      "values": [
+       15.533980582524272,
+       5.539358600583091,
+       2.5210084033613445
+      ]
+     }
+    },
+    "label": "X-VLA",
+    "replicates": [
+     {
+      "cells": {
+       "bc": {
+        "cell": "xvla_bc|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "cond_chunk": {
+        "cell": "xvla_cfg_ph_row|cond",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "cond_ep": {
+        "cell": "xvla_cfgph|cond",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "filter_chunk": {
+        "cell": "xvla_drop_ph_row|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "filter_ep": {
+        "cell": "xvla_drop_ph_ep|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "plain_tag5": {
+        "cell": "xvla_cfgnp|cond",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "plain_untagged": {
+        "cell": "xvla_cfgnp|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       },
+       "tagged_untagged": {
+        "cell": "xvla_cfgph|bare",
+        "lineage": {
+         "ft": 0,
+         "pretrain": 0
+        }
+       }
+      },
+      "seed": 0
+     },
+     {
+      "cells": {
+       "bc": {
+        "cell": "xvla_bc_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "cond_chunk": {
+        "cell": "xvla_cfg_ph_row_sd1|cond",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "cond_ep": {
+        "cell": "xvla_cfgph_sd1|cond",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "filter_chunk": {
+        "cell": "xvla_drop_ph_row_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "filter_ep": {
+        "cell": "xvla_drop_ph_ep_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "plain_tag5": {
+        "cell": "xvla_cfgnp_sd1|cond",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "plain_untagged": {
+        "cell": "xvla_cfgnp_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       },
+       "tagged_untagged": {
+        "cell": "xvla_cfgph_sd1|bare",
+        "lineage": {
+         "ft": 1,
+         "pretrain": 1
+        }
+       }
+      },
+      "seed": 1
+     },
+     {
+      "cells": {
+       "bc": {
+        "cell": "xvla_bc_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "cond_chunk": {
+        "cell": "xvla_cfg_ph_row_sd2|cond",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "cond_ep": {
+        "cell": "xvla_cfgph_sd2|cond",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "filter_chunk": {
+        "cell": "xvla_drop_ph_row_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "filter_ep": {
+        "cell": "xvla_drop_ph_ep_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "plain_tag5": {
+        "cell": "xvla_cfgnp_sd2|cond",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "plain_untagged": {
+        "cell": "xvla_cfgnp_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       },
+       "tagged_untagged": {
+        "cell": "xvla_cfgph_sd2|bare",
+        "lineage": {
+         "ft": 2,
+         "pretrain": 2
+        }
+       }
+      },
+      "seed": 2
+     }
+    ]
+   }
+  }
+ }
+}

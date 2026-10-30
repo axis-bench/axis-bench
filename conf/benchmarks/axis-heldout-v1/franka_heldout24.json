@@ -1,0 +1,102 @@
+{
+  "name": "franka_heldout24",
+  "version": "axis-heldout-v1",
+  "description": "The 24 held-out Franka pick-and-place tasks, 50 layout seeds each, dual-sim; `qvla bench eval` runs them and the scorer refuses any other task set.",
+  "n_seeds": 50,
+  "dual_sim": true,
+  "action_space": "droid8",
+  "image_geometry": "raw",
+  "xla_pin": "--xla_gpu_autotune_level=0",
+  "tasks_file": "franka_heldout24.tasks.json",
+  "layouts_file": "franka_heldout24.layouts.json",
+  "harness": "qvla bench eval (--dual-sim)",
+  "task_ids": [
+    806,
+    807,
+    808,
+    809,
+    855,
+    878,
+    882,
+    888,
+    890,
+    945,
+    953,
+    966,
+    1050,
+    1223,
+    1231,
+    1426,
+    1435,
+    1436,
+    1438,
+    1459,
+    1525,
+    1527,
+    1632,
+    1889
+  ],
+  "subsets": {
+    "informative_20": [
+      806,
+      807,
+      808,
+      809,
+      855,
+      878,
+      882,
+      888,
+      890,
+      945,
+      953,
+      966,
+      1050,
+      1223,
+      1231,
+      1438,
+      1525,
+      1527,
+      1632,
+      1889
+    ],
+    "usable_12": [
+      806,
+      807,
+      808,
+      882,
+      890,
+      953,
+      1050,
+      1223,
+      1231,
+      1438,
+      1632,
+      1889
+    ]
+  },
+  "excluded": {
+    "811": "reach-to-pose; no grasp",
+    "866": "not in the benchmark's task set",
+    "868": "not in the benchmark's task set"
+  },
+  "inputs": {
+    "demos": "axisrobotics/qvla-v1-bench@v1.0:ft_demos/",
+    "task_definitions": "axisrobotics/qvla-v1-bench@v1.0:tasks/",
+    "scene_assets": "axisrobotics/qvla-v1-bench@v1.0:assets/",
+    "norm_stats": "axisrobotics/qvla-v1-bench@v1.0:norm_stats/"
+  },
+  "dev_seeds": {
+    "offset": 500,
+    "n": 50
+  },
+  "compatible_declarations": [
+    {
+      "sha256": "fcff87cbf738fb15849f15adf91e06e8d3e88434c6aa0b0f8d19d6fe209eb037",
+      "reason": "The declaration the paper's results stamp. This file adds the loader keys (version, tasks_file, layouts_file, action_space, image_geometry, dual_sim, xla_pin), subsets.informative_20, the v1 input pins and dev_seeds, names its layouts by layouts_file in place of layout_manifest, names its harness by the `qvla bench eval` command, and words its description and exclusions as here; task_ids and n_seeds, hence units_sha256, are identical, so those results score here with matching units."
+    }
+  ],
+  "assets": {
+    "fetch": "refuse",
+    "root": "axisrobotics/qvla-v1-bench@v1.0:assets/"
+  }
+}

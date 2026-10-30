@@ -1,0 +1,13 @@
+vla,group,label,cells,sr,sr_bc,rel,se_rel,note
+π0.5,Episode cond. − BC,seed 42,cfg_ph_ep|cond;bc|bare,58.0,57.416666666666664,1.0159651669085632,2.6474836347856257,
+π0.5,Episode cond. − BC,seed 43,cfgpt43|cond;bc43|bare,51.333333333333336,51.333333333333336,0.0,2.9765839960224474,
+π0.5,Episode cond. − BC,seed 44,cfgpt44|cond;bc44|bare,57.583333333333336,52.083333333333336,10.56,2.9375581696368154,
+π0.5,Episode cond. − BC,mean over seeds,,,,3.858655055636188,,the value Fig. 1 prints
+SmolVLA,Episode cond. − BC,seed 0,svla_cfgph|cond;svla_bc|bare,8.833333333333334,5.083333333333333,73.77049180327869,18.784624931975372,
+SmolVLA,Episode cond. − BC,seed 1,svla_cfgph_sd1|cond;svla_bc_sd1|bare,6.75,6.083333333333333,10.95890410958904,14.720770007681852,
+SmolVLA,Episode cond. − BC,seed 2,svla_cfgph_sd2|cond;svla_bc_sd2|bare,5.416666666666667,6.333333333333333,-14.473684210526315,14.238520185177672,
+SmolVLA,Episode cond. − BC,mean over seeds,,,,23.418570567447137,,the value Fig. 1 prints
+X-VLA,Episode cond. − BC,seed 0,xvla_cfgph|cond;xvla_bc|bare,27.833333333333332,25.75,8.090614886731391,5.60552926095009,
+X-VLA,Episode cond. − BC,seed 1,xvla_cfgph_sd1|cond;xvla_bc_sd1|bare,31.25,28.583333333333332,9.329446064139942,5.054421675281478,
+X-VLA,Episode cond. − BC,seed 2,xvla_cfgph_sd2|cond;xvla_bc_sd2|bare,29.583333333333332,29.75,-0.5602240896358543,5.189864684826202,
+X-VLA,Episode cond. − BC,mean over seeds,,,,5.619945620411826,,the value Fig. 1 prints

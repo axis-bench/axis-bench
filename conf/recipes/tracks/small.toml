@@ -1,0 +1,16 @@
+schema = "qvla.track/1"
+name = "small"
+paper_budget = false
+description = "About a tenth of the paper budgets, for trying a method quickly."
+
+[budgets.pi05-openpi]
+pretrain = { steps = 2000, global_batch = 64 }
+finetune = { steps = 1000, global_batch = 32 }
+
+[budgets.smolvla-lerobot]
+pretrain = { steps = 2000, global_batch = 64 }
+finetune = { steps = 1000, global_batch = 64 }
+
+[budgets.xvla-lerobot]
+pretrain = { steps = 2000, global_batch = 64 }
+finetune = { steps = 1000, global_batch = 64 }
